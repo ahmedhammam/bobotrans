@@ -10,3 +10,7 @@ Amer
  * == Stanica i id ==
    treba promijeniti u dijagramu klasa atribut "id" u "sifraStanice", da bude dosljedno imenovanje.
 Amer
+
+ * == Linija i dodajVoznju ==
+  Na dijagramu klasa potrebno dodati parametar sifraAutobusa u dodajVoznju
+Amer
