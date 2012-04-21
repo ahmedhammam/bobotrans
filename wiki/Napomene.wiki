@@ -8,13 +8,16 @@ Amer
    Kako bi klasa Voznja trebala ovo da radi? Po meni ovo samo treba u Linija. Izmijeniti dijagram Klasa...
 Amer
  * == Stanica i id ==
-   treba promijeniti u dijagramu klasa atribut "id" u "sifraStanice", da bude dosljedno imenovanje.
+   Treba promijeniti u dijagramu klasa atribut "id" u "sifraStanice", da bude dosljedno imenovanje.
 Amer
 
  * == Linija i dodajVoznju ==
   Na dijagramu klasa potrebno dodati parametar sifraAutobusa u dodajVoznju
 Amer
 
- * == lista voznji u klasi Linija ==
+ * == Lista voznji u klasi Linija ==
  Da li da ona bude nesto tipa Priority queue-a, sortiran po vremenu polaska (tako bismo najlakse brisali stare voznje)?
+Amer
+ * == Kupac ==
+  Promijeniti u klasi Kupac atribut "sifra" u "sifraKupca", zbog dosljednog imenovanja.
 Amer
