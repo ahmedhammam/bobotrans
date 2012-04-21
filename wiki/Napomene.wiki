@@ -9,3 +9,4 @@ Amer
 Amer
  * == Stanica i id ==
    treba promijeniti u dijagramu klasa atribut "id" u "sifraStanice", da bude dosljedno imenovanje.
+Amer
