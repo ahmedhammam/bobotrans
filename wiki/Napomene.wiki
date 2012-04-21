@@ -5,5 +5,7 @@
 Amer
 
  * == Voznja i dajCijenu ==
-   Kako bi klasa Voznja trebala ovo da radi, po meni ovo samo treba u Linija. Izmijeniti dijagram Klasa
+   Kako bi klasa Voznja trebala ovo da radi? Po meni ovo samo treba u Linija. Izmijeniti dijagram Klasa...
 Amer
+ * == Stanica i id ==
+   treba promijeniti u dijagramu klasa atribut "id" u "sifraStanice", da bude dosljedno imenovanje.
