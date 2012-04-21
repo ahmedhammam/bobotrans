@@ -12,7 +12,7 @@ Amer
 Amer
 
  * == Linija i dodajVoznju ==
-  Na dijagramu klasa potrebno dodati parametar sifraAutobusa u dodajVoznju
+  Na dijagramu klasa potrebno dodati parametar autobus:Autobus u dodajVoznju
 Amer
 
  * == Lista voznji u klasi Linija ==
