@@ -1,0 +1,85 @@
+#labels Phase-Implementation
+=Baza podataka za aplikaciju=
+
+==Tabele:==
+
+ # Linije
+ # Voznje
+ # Stanice
+ # Autobusi
+ # Poruke
+ # Izvjestaji
+ # Korisnici
+ # Karte
+ # ZakupiAutobusa
+ # KupciKarti
+ # LinijeCijene
+ # StaniceULiniji
+ # RasporedVoznji
+
+
+===Linije:===
+
+- id (primary, int, autoincrement)
+
+- naziv (varchar)
+
+===Voznje:===
+
+- id (primary, int ,autoincrement)
+
+- idRasporedaVoznje(int)
+
+- idAutobusa(int)
+
+- vrijemePolaska (date)
+
+
+===Stanice:===
+
+- id (primary,int, autoincrement)
+
+- naziv (varchar)
+
+- mjesto (varchar)
+
+
+===Autobusi:===
+
+- id (primary,int, autoincrement)
+
+- registracijskeTablice (varchar)
+
+- istekRegistracije (Date)
+
+- brojSjedista(integer)
+
+- datumServisa (Date)
+
+- toalet (Boolean)
+
+- slobodan (Boolean)
+
+- klima (boolean)
+
+
+===Poruke:===
+
+- id (primary, int, autoincrement)
+
+- idPosiljaoca (int)
+
+- idPrimaoca (int)
+
+- vrijemeSlanja (Date)
+
+
+
+===Izvjestaji===
+- id (primary, int, autoincrement)
+
+- datum (Date)
+
+- tekst (Text)
+
+- idKreatora (int)
