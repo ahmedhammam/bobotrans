@@ -21,3 +21,5 @@ Amer
  * == Kupac ==
   Promijeniti u klasi Kupac atribut "sifra" u "sifraKupca", zbog dosljednog imenovanja.
 Amer
+ * == KupacKarte ==
+ Sadrzi metodu "proracunajCijenu()", dok je u KupacSaPopustom ta metoda nasljedjena kao virtualna, i opet implementirana u Student i Penzioner...
