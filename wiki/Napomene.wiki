@@ -14,3 +14,7 @@ Amer
  * == Linija i dodajVoznju ==
   Na dijagramu klasa potrebno dodati parametar sifraAutobusa u dodajVoznju
 Amer
+
+ * == lista voznji u klasi Linija ==
+ Da li da ona bude nesto tipa Priority queue-a, sortiran po vremenu polaska (tako bismo najlakse brisali stare voznje)?
+Amer
