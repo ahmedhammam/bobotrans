@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.5.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,12 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL.cs" />
-    <Compile Include="Entities\Autobus.cs" />
-    <Compile Include="Entities\Poruka.cs" />
+    <Compile Include="Entiteti\Autobus.cs" />
+    <Compile Include="Entiteti\Izvjestaj.cs" />
+    <Compile Include="Entiteti\Kupac.cs" />
+    <Compile Include="Entiteti\KupacKarte.cs" />
+    <Compile Include="Entiteti\KupacSaPopustom.cs" />
+    <Compile Include="Entiteti\Linija.cs" />
+    <Compile Include="Entiteti\Poruka.cs" />
+    <Compile Include="Entiteti\Stanica.cs" />
+    <Compile Include="Entiteti\Voznja.cs" />
+    <Compile Include="Entiteti\ZakupacAutobusa.cs" />
+    <Compile Include="Interfejsi\IDaoCrud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfejsi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

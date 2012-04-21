@@ -75,7 +75,7 @@
 
 - vrijemeSlanja (Date)
 
-- tekst (Text)
+
 
 ===Izvjestaji:===
 
@@ -159,7 +159,6 @@
 
 - tipKupca (int)
 
-- dodatniPodaci (varchar)     u slučaju studenta i penzionera, to su npr. broj indeksa, podaci o zadnjem čeku isl.
 
 ===TipoviKupacaKarte:===
 
@@ -175,8 +174,6 @@
 - id (primary, int, autoincrement)
 
 - idLinije (int)
-
-- idStanice (int)
 
 - idPrveStanice (int)
 
