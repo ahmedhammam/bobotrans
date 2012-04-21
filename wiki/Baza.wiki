@@ -83,3 +83,60 @@
 - tekst (Text)
 
 - idKreatora (int)
+
+===RasporedVoznji===
+- id (primary, int, autoincrement)
+- idLinije (int)
+- danUSedmici (string)
+- vrijeme (time)
+- potrebanBrojSjedista (int)
+
+===Korisnici===
+- id (primary, int, autoincrement)    (to je ujedno sifra korisnika)
+- imeIPrezime (varchar)
+- tip (int)
+- username (varchar)
+- lozinka (varchar)
+
+===TipoviKorisnika===
+- id (primary, int, autoincrement)
+- tip (varchar)
+
+===Karte===
+- id (primary, int, autoincrement)
+- idVoznje (int)
+- idPocetneStanice (int)
+- idKrajnjeStanice (int)
+- idSjedista (int)
+- cijena (decimal)
+
+===ZakupiAutobusa===
+- id (primary, int, autoincrement)
+- idAutobusa (int)
+- cijena (decimal)
+- pocetakZakupa (Date)
+- krajZakupa (Date)
+
+===KupciKarti===
+- id (primary, int, autoincrement)
+- imeIPrezime (varchar)
+- idKarte (int)
+- tipKupca (int)
+
+===TipoviKupacaKarte===
+- id (primary, int, autoincrement)
+- naziv (varchar)
+- popust (decimal)
+
+===LinijeCijene===
+- id (primary, int, autoincrement)
+- idLinije (int)
+- idPrveStanice (int)
+- idDrugeStanice (int)
+- cijena (decimal)
+
+===StaniceULiniji===
+- id (primary, int, autoincrement)
+- idLinije (int)
+- trajanjeDoDolaska (int)
+- trajanjeDoPolaska (int)
