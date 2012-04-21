@@ -1,9 +1,9 @@
 = Spisak napomena =
 
- # == Autobus i sifra voznje? ==
+ * == Autobus i sifra voznje? ==
    Da li treba klasa Autobus imati podatak o tome, tako nam je u dijagramu klasa, ako odlucimo da ne treba, treba dijagram izmijeniti
 Amer
 
- # == Voznja i dajCijenu ==
+ * == Voznja i dajCijenu ==
    Kako bi klasa Voznja trebala ovo da radi, po meni ovo samo treba u Linija. Izmijeniti dijagram Klasa
 Amer
