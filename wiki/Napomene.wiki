@@ -22,4 +22,4 @@ Amer
   Promijeniti u klasi Kupac atribut "sifra" u "sifraKupca", zbog dosljednog imenovanja.
 Amer
  * == KupacSaPopustom ==
- Ne vidim potrebu da imamo klasu i za studenta i za penzionera, pa sam sve to stopio u klasu KupacSaPopustom, gdje cu dodati jos atribut "osnovaPopusta" i konstante za iznos popusta za studenta i penzionera
+ Ne vidim potrebu da imamo klasu i za studenta i za penzionera, pa sam sve to stopio u klasu KupacSaPopustom, gdje cu dodati jos atribut tipKupca, podaci. Konstante vezane za iznos popusta ce se nalaziti u poseboj klasi sa konstantama.
