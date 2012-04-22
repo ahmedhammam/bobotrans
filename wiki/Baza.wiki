@@ -5,6 +5,7 @@
 
  # Linije
  # Voznje
+ # LinijeVoznje
  # Stanice
  # Autobusi
  # Poruke
@@ -30,12 +31,17 @@
 
 - id (primary, int ,autoincrement)
 
-- idLinije(int)
-
 - idAutobusa(int)
 
 - vrijemePolaska (date)
 
+===LinijeVoznje:===
+
+- id (primary, int, autoincrement)
+
+- idLinije (int)
+
+- idVoznje (int)
 
 ===Stanice:===
 
