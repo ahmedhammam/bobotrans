@@ -100,7 +100,9 @@
 
 - danUSedmici (string)
 
-- vrijeme (time)
+- sati(int)
+
+- minute(int)
 
 - potrebanBrojSjedista (int)
 
