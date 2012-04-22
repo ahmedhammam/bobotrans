@@ -11,7 +11,7 @@
  * RasporedVoznjiDAO
  * VoznjeDAO
  * LinijeDAO
- * Karte
+ * Karta
  * KarteDAO
  * KupacKarteDAO
  * KupacKarteSPopustomDAO
