@@ -142,6 +142,8 @@
 
 - id (primary, int, autoincrement)
 
+- imeZakupca (varchar)
+
 - idAutobusa (int)
 
 - cijena (decimal)
