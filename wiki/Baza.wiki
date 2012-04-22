@@ -30,7 +30,7 @@
 
 - id (primary, int ,autoincrement)
 
-- idRasporedaVoznje(int)
+- idLinije(int)
 
 - idAutobusa(int)
 
