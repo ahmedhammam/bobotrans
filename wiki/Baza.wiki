@@ -163,7 +163,7 @@
 
 - imeIPrezime (varchar)
 
-- tipKupca (int)
+- tipKupca (int): foreign key na TipoviKupcaKarte.id: on UPDATE NO ACTION, DELETE NO ACTION
 
 
 ===TipoviKupacaKarte:===
