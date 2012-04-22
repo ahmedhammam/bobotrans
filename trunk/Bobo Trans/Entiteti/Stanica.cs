@@ -11,14 +11,20 @@ namespace DAL.Entiteti
         private string naziv;
         private string mjesto;
 
-        public Stanica(int i, string n, string m)
+        public Stanica(int sS, string n, string m)
         {
-            sifraStanice = i;
+            sifraStanice = sS;
             naziv = n;
             mjesto = m;
         }
 
-        public int Id
+        public Stanica(string n, string m)
+        {
+            naziv = n;
+            mjesto = m;
+        }
+
+        public int SifraStanice
         {
             get { return sifraStanice; }
             set { sifraStanice = value; }
