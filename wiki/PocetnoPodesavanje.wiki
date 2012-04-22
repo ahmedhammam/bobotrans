@@ -1,0 +1,10 @@
+= Koraci u podesavanju Visual Studia i SQL-a =
+
+1. Instalirati wamp server
+2. Dodati referencu u projekat (ako vec ne postoji)
+3. Preuzeti bazu i importovati je u phpmyadminu
+4. U konzolu sql-a upisati:
+
+use mysql;
+
+GRANT ALL PRIVILEGES ON *.* to root@'%' IDENTIFIED BY 'sys';
