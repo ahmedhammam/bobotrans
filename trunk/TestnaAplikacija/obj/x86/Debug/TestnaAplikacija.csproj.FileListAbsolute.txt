@@ -1,0 +1,7 @@
+C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\TestnaAplikacija.exe
+C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\TestnaAplikacija.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\Bobo Trans.dll
+C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\Bobo Trans.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\obj\x86\Debug\TestnaAplikacija.exe
+C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\obj\x86\Debug\TestnaAplikacija.pdb

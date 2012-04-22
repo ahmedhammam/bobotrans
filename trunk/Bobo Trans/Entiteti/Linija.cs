@@ -11,8 +11,26 @@ namespace DAL.Entiteti
         private string nazivLinije;
 
         private List<Stanica> stanice;
+
+        public List<Stanica> Stanice
+        {
+            get { return stanice; }
+            set { stanice = value; }
+        }
         private List<int> trajanjeDoDolaska;
+
+        public List<int> TrajanjeDoDolaska
+        {
+            get { return trajanjeDoDolaska; }
+            set { trajanjeDoDolaska = value; }
+        }
         private List<int> trajanjeDoPolaska;
+
+        public List<int> TrajanjeDoPolaska
+        {
+            get { return trajanjeDoPolaska; }
+            set { trajanjeDoPolaska = value; }
+        }
         private List<List<int>> cijene;
 
         public List<List<int>> Cijene
