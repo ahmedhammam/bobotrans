@@ -8,8 +8,8 @@
  * ZakupacAutobusaDAO
  * PorukeDAO
  * RasporedVoznji
- * RasporedVoznjiDAO
- * VoznjeDAO
+ * RasporedVoznjiDAO    //ukinuto
+ * VoznjeDAO            //ukinuto
  * LinijeDAO
  * Karta
  * KarteDAO
