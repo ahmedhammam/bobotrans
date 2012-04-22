@@ -16,7 +16,7 @@ namespace DAL.Entiteti
 
         private List<List<int>> cijene;
         private List<Voznja> voznje;
-
+        private List<RasporedVoznji> rasporediVoznje;
 
         #region GetteriSetteri
         public long SifraLinije
@@ -59,12 +59,18 @@ namespace DAL.Entiteti
         {
             get { return voznje; }
             set { voznje = value; }
-        } 
+        }
+
+        public List<RasporedVoznji> RasporediVoznje
+        {
+            get { return rasporediVoznje; }
+            set { rasporediVoznje = value; }
+        }
         #endregion
 
 
 
-        public Linija(long sifra, string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v)
+        public Linija(long sifra, string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v, List<RasporedVoznji> rV)
         {
             sifraLinije = sifra;
             nazivLinije = naziv;
@@ -75,7 +81,7 @@ namespace DAL.Entiteti
             voznje = v;
         }
 
-        public Linija(string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v)
+        public Linija(string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v, List<RasporedVoznji> rV)
         {
             nazivLinije = naziv;
             stanice = stan;

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.9
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 22, 2012 at 05:37 PM
+-- Generation Time: Apr 22, 2012 at 09:29 PM
 -- Server version: 5.5.20
--- PHP Version: 5.3.9
+-- PHP Version: 5.3.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `bobotrans`
 --
-CREATE DATABASE `bobotrans` DEFAULT CHARACTER SET utf8 COLLATE utf8_slovenian_ci;
-USE `bobotrans`;
 
 -- --------------------------------------------------------
 
@@ -51,7 +49,8 @@ CREATE TABLE IF NOT EXISTS `izvjestaji` (
   `datum` date NOT NULL,
   `tekst` text COLLATE utf8_slovenian_ci NOT NULL,
   `idKreatora` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idKreatora` (`idKreatora`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -68,7 +67,11 @@ CREATE TABLE IF NOT EXISTS `karte` (
   `idSjedista` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
   `idKupca` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idVoznje` (`idVoznje`),
+  KEY `idPocetneStanice` (`idPocetneStanice`),
+  KEY `idKrajnjeStanice` (`idKrajnjeStanice`),
+  KEY `idKupca` (`idKupca`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -124,7 +127,25 @@ CREATE TABLE IF NOT EXISTS `linijecijene` (
   `idPrveStanice` int(11) NOT NULL,
   `idDrugeStanice` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idLinije` (`idLinije`),
+  KEY `idPrveStanice` (`idPrveStanice`),
+  KEY `idDrugeStanice` (`idDrugeStanice`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `linijevoznje`
+--
+
+CREATE TABLE IF NOT EXISTS `linijevoznje` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idLinije` int(11) NOT NULL,
+  `idVoznje` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idLinije` (`idLinije`),
+  KEY `idVoznje` (`idVoznje`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -139,7 +160,9 @@ CREATE TABLE IF NOT EXISTS `poruke` (
   `idPrimaoca` int(11) NOT NULL,
   `vrijemeSlanja` date NOT NULL,
   `tekst` text COLLATE utf8_slovenian_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idPosiljaoca` (`idPosiljaoca`),
+  KEY `idPrimaoca` (`idPrimaoca`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -182,7 +205,9 @@ CREATE TABLE IF NOT EXISTS `staniceuliniji` (
   `idStanice` int(11) NOT NULL,
   `trajanjeDoDolaska` int(11) NOT NULL,
   `trajanjeDoPolaska` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idLinije` (`idLinije`),
+  KEY `idStanice` (`idStanice`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -236,10 +261,10 @@ INSERT INTO `tipovikupacakarte` (`id`, `naziv`, `popust`) VALUES
 
 CREATE TABLE IF NOT EXISTS `voznje` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idRasporedaVoznje` int(11) NOT NULL,
   `idAutobusa` int(11) NOT NULL,
   `vrijemePolaska` date NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idAutobusa` (`idAutobusa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -254,8 +279,69 @@ CREATE TABLE IF NOT EXISTS `zakupiautobusa` (
   `idAutobusa` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
   `pocetakZakupa` date NOT NULL,
-  `krajZakupa` date NOT NULL
+  `krajZakupa` date NOT NULL,
+  KEY `idAutobusa` (`idAutobusa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `izvjestaji`
+--
+ALTER TABLE `izvjestaji`
+  ADD CONSTRAINT `izvjestaji_ibfk_1` FOREIGN KEY (`idKreatora`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `karte`
+--
+ALTER TABLE `karte`
+  ADD CONSTRAINT `karte_ibfk_4` FOREIGN KEY (`idKupca`) REFERENCES `kupcikarti` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `karte_ibfk_1` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `karte_ibfk_2` FOREIGN KEY (`idPocetneStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `karte_ibfk_3` FOREIGN KEY (`idKrajnjeStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `linijecijene`
+--
+ALTER TABLE `linijecijene`
+  ADD CONSTRAINT `linijecijene_ibfk_3` FOREIGN KEY (`idDrugeStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `linijecijene_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `linijecijene_ibfk_2` FOREIGN KEY (`idPrveStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `linijevoznje`
+--
+ALTER TABLE `linijevoznje`
+  ADD CONSTRAINT `linijevoznje_ibfk_2` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `linijevoznje_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `poruke`
+--
+ALTER TABLE `poruke`
+  ADD CONSTRAINT `poruke_ibfk_2` FOREIGN KEY (`idPrimaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `poruke_ibfk_1` FOREIGN KEY (`idPosiljaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `staniceuliniji`
+--
+ALTER TABLE `staniceuliniji`
+  ADD CONSTRAINT `staniceuliniji_ibfk_2` FOREIGN KEY (`idStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `staniceuliniji_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `voznje`
+--
+ALTER TABLE `voznje`
+  ADD CONSTRAINT `voznje_ibfk_1` FOREIGN KEY (`idAutobusa`) REFERENCES `autobusi` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `zakupiautobusa`
+--
+ALTER TABLE `zakupiautobusa`
+  ADD CONSTRAINT `zakupiautobusa_ibfk_1` FOREIGN KEY (`idAutobusa`) REFERENCES `autobusi` (`id`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
