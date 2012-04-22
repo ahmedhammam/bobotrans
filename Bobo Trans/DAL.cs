@@ -23,10 +23,10 @@ namespace DAL
         ~DAL() { terminirajKonekciju(); }
 
 
-        public void kreirajKonekciju(string server, string host, string db, string user, string pass)
+        public void kreirajKonekciju(string host, string db, string user, string pass)
         {
             if (con != null) return;
-            string connectionString = "server=" + server + ";user=" + user + ";pwd=" + pass + ";database=" + db;
+            string connectionString = "server=" + host + ";user=" + user + ";pwd=" + pass + ";database=" + db;
             con = new MySqlConnection(connectionString);
 
             try
@@ -38,6 +38,11 @@ namespace DAL
                 throw e;
             }
 
+        }
+
+        public DAOFactory getDAO
+        {
+            get { return DAOFactory.Instanca; }
         }
 
         public void terminirajKonekciju()
