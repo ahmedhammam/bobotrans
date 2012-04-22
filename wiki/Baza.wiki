@@ -194,6 +194,8 @@
 
 - idLinije (int) - foreign key na Linije.id: ON UPDATE i DELETE - CASCADE
 
+- idStanice (int) - foreign key na Stanice.id: ON UPDATE - CASCADE i DELETE - RESTRICT
+
 - trajanjeDoDolaska (int)
 
 - trajanjeDoPolaska (int)
