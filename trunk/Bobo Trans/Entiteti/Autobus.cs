@@ -7,7 +7,8 @@ namespace DAL.Entiteti
 {
     public class Autobus
     {
-        private int sifraAutobusa, brojSjedista;
+        private long sifraAutobusa;
+        private int brojSjedista;
         private string registracijskeTablice;
         private bool imaToalet, slobodan, imaKlimu;
         private DateTime istekRegistracije, datumServisa;
@@ -15,6 +16,17 @@ namespace DAL.Entiteti
         public Autobus(int idAutobusa, int brSjedista, string regTablice, bool toalet, bool slob, bool klima, DateTime istekReg, DateTime datServisa)
         {
             sifraAutobusa = idAutobusa;
+            brojSjedista = brSjedista;
+            registracijskeTablice = regTablice;
+            imaToalet = toalet;
+            slobodan = slob;
+            imaKlimu = klima;
+            istekRegistracije = istekReg;
+            datumServisa = datServisa;
+        }
+
+        public Autobus(int brSjedista, string regTablice, bool toalet, bool slob, bool klima, DateTime istekReg, DateTime datServisa)
+        {
             brojSjedista = brSjedista;
             registracijskeTablice = regTablice;
             imaToalet = toalet;
@@ -36,7 +48,7 @@ namespace DAL.Entiteti
             set { istekRegistracije = value; }
         }
 
-        public int SifraAutobusa
+        public long SifraAutobusa
         {
             get { return sifraAutobusa; }
             set { sifraAutobusa = value; }

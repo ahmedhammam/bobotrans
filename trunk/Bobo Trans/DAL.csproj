@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL.cs" />
+    <Compile Include="DAOFactory.cs" />
     <Compile Include="DAO\AutobusDAO.cs" />
     <Compile Include="Entiteti\Autobus.cs" />
     <Compile Include="TipoviPodataka\TipoviKupaca.cs" />

@@ -12,7 +12,7 @@ namespace DAL
 {
     partial class DAL
     {
-        class AutobusDAO:IDaoCrud<Autobus>
+        public class AutobusDAO:IDaoCrud<Autobus>
         {
             protected MySqlCommand c;
 
@@ -20,8 +20,10 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("INSERT INTO autobusi VALUES ('"+entity.RegistracijskeTablice+ "," + entity.IstekRegistracije+","+ entity.BrojSjedista+","+entity.DatumServisa
-                        + "," + Convert.ToInt16(entity.ImaToalet) + "," + Convert.ToInt16(entity.Slobodan) + "," + Convert.ToInt16(entity.ImaKlimu)+"');", con);
+
+                    c = new MySqlCommand("INSERT INTO autobusi VALUES ('','"
+                        + entity.RegistracijskeTablice + "','" + entity.IstekRegistracije.Date.ToString("yyyy-MM-dd") + "','" + entity.BrojSjedista + "','" + entity.DatumServisa.Date.ToString("yyyy-MM-dd")
+                        + "','" + Convert.ToInt16(entity.ImaToalet) + "','" + Convert.ToInt16(entity.Slobodan) + "','" + Convert.ToInt16(entity.ImaKlimu)+"');", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -33,18 +35,45 @@ namespace DAL
 
             public Autobus read(Autobus entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("SELECT * FROM autobusi WHERE registracijskeTablice='" + entity.RegistracijskeTablice + "' AND istekRegistracije='"
+                        + entity.IstekRegistracije.Date.ToString("yyyy-MM-dd") + "' AND brojSjedista = '"
+                        + entity.BrojSjedista + "' AND datumServisa='" + entity.DatumServisa.ToString("yyyy-MM-dd") + "' AND toalet='" + Convert.ToInt16(entity.ImaToalet) + "' AND slobodan = '" + Convert.ToInt16(entity.Slobodan)
+                        + "'AND klima='" + Convert.ToInt16(entity.ImaKlimu) + "';", con);
+
+                    MySqlDataReader r = c.ExecuteReader();
+
+                    if (r.Read())
+                    {
+                        Autobus autobus = new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"),
+                            r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa"));
+                        return autobus;
+                    }
+                    else throw 
+                     new Exception("nije nadjen nijedan autobus");
+                    
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Autobus update(Autobus entity)
             {
                 try
                 {
-                    c = new MySqlCommand("UPDATE autobusi SET registracijskeTablice="+entity.RegistracijskeTablice+", istekRegistracije="+entity.IstekRegistracije+", brojSjedista = "
-                        +entity.BrojSjedista+" , datumServisa="+entity.DatumServisa+", toalet="+Convert.ToInt16(entity.ImaToalet)+", slobodan = "+Convert.ToInt16(entity.Slobodan)
-                        +", klima="+Convert.ToInt16(entity.ImaKlimu)
-                        +"WHERE id="+entity.SifraAutobusa+";",con);
+                    c = new MySqlCommand("UPDATE autobusi SET registracijskeTablice='" + entity.RegistracijskeTablice + "', istekRegistracije='" + entity.IstekRegistracije.ToString("yyyy-MM-dd") + "', brojSjedista = '"
+                        + entity.BrojSjedista + "' , datumServisa='" + entity.DatumServisa.ToString("yyyy-MM-dd") + "', toalet='" + Convert.ToInt16(entity.ImaToalet) + "', slobodan = '" + Convert.ToInt16(entity.Slobodan)
+                        +"', klima='"+Convert.ToInt16(entity.ImaKlimu)
+                        +"' WHERE id='"+entity.SifraAutobusa+"';",con);
+                    Console.WriteLine("UPDATE autobusi SET registracijskeTablice='" + entity.RegistracijskeTablice + "', istekRegistracije='" + entity.IstekRegistracije.ToString("yyyy-MM-dd") + "', brojSjedista = '"
+                        + entity.BrojSjedista + "' , datumServisa='" + entity.DatumServisa.ToString("yyyy-MM-dd") + "', toalet='" + Convert.ToInt16(entity.ImaToalet) + "', slobodan = '" + Convert.ToInt16(entity.Slobodan)
+                        + "', klima='" + Convert.ToInt16(entity.ImaKlimu)
+                        + "' WHERE id=" + entity.SifraAutobusa + ";");
                     c.ExecuteNonQuery();
+                    return entity;
                 }
                 catch(Exception e)
                 {
@@ -56,7 +85,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("DELETE FROM autobusi WHERE id ="+entity.SifraAutobusa, con);
+                    c = new MySqlCommand("DELETE FROM autobusi WHERE id ='"+entity.SifraAutobusa+"';", con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -69,10 +98,16 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("SELECT * FROM autobusi WHERE id=" + id + ";", con);
+                    c = new MySqlCommand("SELECT * FROM autobusi WHERE id='" + id + "';", con);
                     MySqlDataReader r = c.ExecuteReader();
-                    Autobus a = new Autobus(id,r.GetInt32("brojSjedista"),r.GetString("registracijskeTablice"),r.GetBoolean("toalet"),r.GetBoolean("slobodan"),r.GetBoolean("klima"),r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa"));
-                    return a;
+                    if (r.Read())
+                    {
+                        Autobus a = new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"),
+                            r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa"));
+                        return a;
+                    }
+                    else throw
+                        new Exception("nije nadjen nijedan autobus");
                 }
                 catch (Exception e)
                 {
@@ -87,9 +122,10 @@ namespace DAL
                     c = new MySqlCommand("SELECT * FROM autobusi;", con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Autobus> autobusi = new List<Autobus>();
-                    while (r.Read()) 
-                          autobusi.Add(new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"), 
-                              r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa")));
+                    while (r.Read())
+                        autobusi.Add(new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"),
+                          r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa")));
+
                     return autobusi;
                     
                 }
@@ -103,7 +139,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("SELECT * FROM autobusi; WHERE "+name+"="+values+";", con);
+                    c = new MySqlCommand("SELECT * FROM autobusi WHERE "+name+"='"+values+"';", con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Autobus> autobusi = new List<Autobus>();
                     while (r.Read())
