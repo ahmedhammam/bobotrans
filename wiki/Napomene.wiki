@@ -23,3 +23,7 @@ Amer
 Amer
  * == KupacSaPopustom ==
  Ne vidim potrebu da imamo klasu i za studenta i za penzionera, pa sam sve to stopio u klasu KupacSaPopustom, gdje cu dodati jos atribut tipKupca, podaci. Konstante vezane za iznos popusta ce se nalaziti u poseboj klasi sa konstantama.
+
+ * == Izvjestaj ==
+  updateovati atribude i metode izjvestaja
+Amer
