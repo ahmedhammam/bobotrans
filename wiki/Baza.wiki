@@ -135,6 +135,8 @@
 
 - cijena (decimal)
 
+- idKupca (int)
+
 
 ===ZakupiAutobusa:===
 
@@ -154,8 +156,6 @@
 - id (primary, int, autoincrement)
 
 - imeIPrezime (varchar)
-
-- idKarte (int)
 
 - tipKupca (int)
 
