@@ -31,7 +31,7 @@
 
 - id (primary, int ,autoincrement)
 
-- idAutobusa(int)
+- idAutobusa(int) - Foreign Key na Autobusi.id: on update: cascade, on delete - RESTRICT
 
 - vrijemePolaska (date)
 
@@ -39,9 +39,9 @@
 
 - id (primary, int, autoincrement) 
 
-- idLinije (int) - ForeignKey na Linije.id: on update i delete - cascade
+- idLinije (int) - Foreign Key na Linije.id: on update i delete - cascade
 
-- idVoznje (int) - ForeignKey na Voznje.id: on update i delete - cascade
+- idVoznje (int) - Foreign Key na Voznje.id: on update i delete - cascade
 
 ===Stanice:===
 
@@ -75,9 +75,9 @@
 
 - id (primary, int, autoincrement)
 
-- idPosiljaoca (int)
+- idPosiljaoca (int) - foreign key na korisnici.id: on update i delete - cascade
 
-- idPrimaoca (int)
+- idPrimaoca (int) - foreign key na korisnici.id: on update i delete - cascade
 
 - vrijemeSlanja (Date)
 
@@ -91,14 +91,12 @@
 
 - tekst (Text)
 
-- idKreatora (int)
+- idKreatora (int) - foreign key na korisnici.id: on update i delete - cascade
 
 
 ===RasporedVoznji:===
 
 - id (primary, int, autoincrement)
-
-- idLinije (int)
 
 - danUSedmici (string)
 
@@ -133,15 +131,15 @@
 
 - idVoznje (int)
 
-- idPocetneStanice (int)
+- idPocetneStanice (int) : foreignKey na Stanice.id: on update: CASCADE, on DELETE: RESTRICT
 
-- idKrajnjeStanice (int)
+- idKrajnjeStanice (int) : foreignKey na Stanice.id: on update: CASCADE, on DELETE: RESTRICT
 
 - idSjedista (int)
 
 - cijena (decimal)
 
-- idKupca (int)
+- idKupca (int): foreignKey na KupciKarti.id: on update:CASCADE, on DELETE: RESTRICT
 
 
 ===ZakupiAutobusa:===
@@ -150,7 +148,7 @@
 
 - imeZakupca (varchar)
 
-- idAutobusa (int)
+- idAutobusa (int) - Foreign Key na Autobusi.id: on update: cascade, on delete - RESTRICT
 
 - cijena (decimal)
 
@@ -181,11 +179,11 @@
 
 - id (primary, int, autoincrement)
 
-- idLinije (int)
+- idLinije (int) - foreign key na Linije.id: ON UPDATE i DELETE - CASCADE
 
-- idPrveStanice (int)
+- idPrveStanice (int)- foreign key na Stanice.id: ON UPDATE - CASCADE i DELETE - RESTRICT
 
-- idDrugeStanice (int)
+- idDrugeStanice (int)- foreign key na Stanice.id: ON UPDATE - CASCADE i DELETE - RESTRICT
 
 - cijena (decimal)
 
@@ -194,7 +192,7 @@
 
 - id (primary, int, autoincrement)
 
-- idLinije (int)
+- idLinije (int) - foreign key na Linije.id: ON UPDATE i DELETE - CASCADE
 
 - trajanjeDoDolaska (int)
 
