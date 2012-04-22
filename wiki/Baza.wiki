@@ -39,7 +39,7 @@
 
 - id (primary, int, autoincrement) 
 
-- idLinije (int) - Foreign Key na Linije.id: on update i delete - cascade
+- idLinije (int) - Foreign Key na Linije.id: update: cascade, on delete - RESTRICT
 
 - idVoznje (int) - Foreign Key na Voznje.id: on update i delete - cascade
 
