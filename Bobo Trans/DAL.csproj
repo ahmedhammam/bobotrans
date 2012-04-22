@@ -47,6 +47,7 @@
     <Compile Include="DAL.cs" />
     <Compile Include="DAOFactory.cs" />
     <Compile Include="DAO\AutobusDAO.cs" />
+    <Compile Include="DAO\IzvjestajDAO.cs" />
     <Compile Include="Entiteti\Autobus.cs" />
     <Compile Include="TipoviPodataka\TipoviKupaca.cs" />
     <Compile Include="Entiteti\Izvjestaj.cs" />
