@@ -111,7 +111,7 @@
 
 - imeIPrezime (varchar)
 
-- tip (int)
+- tip (int): foreign key na TipoviKorisnika.id: on UPDATE NO ACTION, DELETE NO ACTION
 
 - username (varchar)
 
