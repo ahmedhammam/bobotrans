@@ -37,11 +37,11 @@
 
 ===LinijeVoznje:===
 
-- id (primary, int, autoincrement)
+- id (primary, int, autoincrement) 
 
-- idLinije (int)
+- idLinije (int) - ForeignKey na Linije.id: on update i delete - cascade
 
-- idVoznje (int)
+- idVoznje (int) - ForeignKey na Voznje.id: on update i delete - cascade
 
 ===Stanice:===
 
