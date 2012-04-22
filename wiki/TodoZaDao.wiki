@@ -8,7 +8,7 @@
  * ZakupacAutobusaDAO
  * PorukeDAO
  * RasporedVoznji
- * RasporedVoznjiDAO    //ukinuto
+ * RasporedVoznjiDAO    EDIT - uvedeno opet
  * VoznjeDAO
  * LinijeDAO
  * Karta
