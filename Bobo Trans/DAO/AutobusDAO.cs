@@ -51,7 +51,7 @@ namespace DAL
                         return autobus;
                     }
                     else throw 
-                     new Exception("nije nadjen nijedan autobus");
+                     new Exception("nije nadjen nijedan element");
                     
                 }
                 catch (Exception e)
@@ -68,10 +68,6 @@ namespace DAL
                         + entity.BrojSjedista + "' , datumServisa='" + entity.DatumServisa.ToString("yyyy-MM-dd") + "', toalet='" + Convert.ToInt16(entity.ImaToalet) + "', slobodan = '" + Convert.ToInt16(entity.Slobodan)
                         +"', klima='"+Convert.ToInt16(entity.ImaKlimu)
                         +"' WHERE id='"+entity.SifraAutobusa+"';",con);
-                    Console.WriteLine("UPDATE autobusi SET registracijskeTablice='" + entity.RegistracijskeTablice + "', istekRegistracije='" + entity.IstekRegistracije.ToString("yyyy-MM-dd") + "', brojSjedista = '"
-                        + entity.BrojSjedista + "' , datumServisa='" + entity.DatumServisa.ToString("yyyy-MM-dd") + "', toalet='" + Convert.ToInt16(entity.ImaToalet) + "', slobodan = '" + Convert.ToInt16(entity.Slobodan)
-                        + "', klima='" + Convert.ToInt16(entity.ImaKlimu)
-                        + "' WHERE id=" + entity.SifraAutobusa + ";");
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -107,7 +103,7 @@ namespace DAL
                         return a;
                     }
                     else throw
-                        new Exception("nije nadjen nijedan autobus");
+                        new Exception("nije nadjen nijedan element");
                 }
                 catch (Exception e)
                 {
