@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL.cs" />
+    <Compile Include="DAO\AutobusDAO.cs" />
     <Compile Include="Entiteti\Autobus.cs" />
+    <Compile Include="TipoviPodataka\TipoviKupaca.cs" />
     <Compile Include="Entiteti\Izvjestaj.cs" />
     <Compile Include="Entiteti\Kupac.cs" />
     <Compile Include="Entiteti\KupacKarte.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Interfejsi\IDaoCrud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
