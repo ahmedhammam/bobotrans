@@ -7,6 +7,8 @@ namespace DAL.Entiteti
 {
     public class Poruka
     {
+
+        private long sifraPoruke;
         private string tekst, posiljaoc, primalac;
         private DateTime vrijemeSlanja;
 

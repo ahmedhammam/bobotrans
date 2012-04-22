@@ -11,27 +11,43 @@ namespace DAL.Entiteti
         private string nazivLinije;
 
         private List<Stanica> stanice;
+        private List<int> trajanjeDoDolaska;
+        private List<int> trajanjeDoPolaska;
+
+        private List<List<int>> cijene;
+        private List<Voznja> voznje;
+
+
+        #region GetteriSetteri
+        public long SifraLinije
+        {
+            get { return sifraLinije; }
+            set { sifraLinije = value; }
+        }
+
+        public string NazivLinije
+        {
+            get { return nazivLinije; }
+            set { nazivLinije = value; }
+        }
 
         public List<Stanica> Stanice
         {
             get { return stanice; }
             set { stanice = value; }
         }
-        private List<int> trajanjeDoDolaska;
 
         public List<int> TrajanjeDoDolaska
         {
             get { return trajanjeDoDolaska; }
             set { trajanjeDoDolaska = value; }
         }
-        private List<int> trajanjeDoPolaska;
 
         public List<int> TrajanjeDoPolaska
         {
             get { return trajanjeDoPolaska; }
             set { trajanjeDoPolaska = value; }
         }
-        private List<List<int>> cijene;
 
         public List<List<int>> Cijene
         {
@@ -39,13 +55,12 @@ namespace DAL.Entiteti
             set { cijene = value; }
         }
 
-        private List<Voznja> voznje;
-
         public List<Voznja> Voznje
         {
             get { return voznje; }
             set { voznje = value; }
-        }
+        } 
+        #endregion
 
 
 

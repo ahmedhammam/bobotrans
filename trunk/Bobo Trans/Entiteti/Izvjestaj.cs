@@ -36,17 +36,19 @@ namespace DAL.Entiteti
             set { sifraIzvjestaja = value; }
         }
 
-        public Izvjestaj(DateTime dat, string t)
+        public Izvjestaj(DateTime dat, string t,long sK)
         {
             datumServisa = dat;
             tekst = t;
+            sifraKreatora = sK;
         }
 
-        public Izvjestaj(long sI,DateTime dat, string t)
+        public Izvjestaj(long sI,DateTime dat, string t,long sK)
         {
             sifraIzvjestaja = sI;
             datumServisa = dat;
             tekst = t;
+            sifraKreatora = sK;
         }
 
 
