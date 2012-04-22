@@ -9,7 +9,7 @@
  * PorukeDAO
  * RasporedVoznji
  * RasporedVoznjiDAO    //ukinuto
- * VoznjeDAO            //ukinuto
+ * VoznjeDAO
  * LinijeDAO
  * Karta
  * KarteDAO
