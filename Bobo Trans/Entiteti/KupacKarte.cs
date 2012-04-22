@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DAL.TipoviPodataka;
 
 namespace DAL.Entiteti
 {
-    class KupacKarte : Kupac
+    public class KupacKarte : Kupac
     {
         protected List<int> sjedista;
         protected Stanica pocetnaStanica;
@@ -21,8 +22,9 @@ namespace DAL.Entiteti
             sjedista = s;
         }
 
-        public void proracunajCijenu()
+        public double proracunajCijenu()
         {
+            return 1;
         }
     }
 }

@@ -1,1 +1,5 @@
 C:\Users\Amer\Desktop\Bobo Trans\trunk\Bobo Trans\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Amer\Desktop\Bobo Trans\trunk\Bobo Trans\bin\Debug\Bobo Trans.dll
+C:\Users\Amer\Desktop\Bobo Trans\trunk\Bobo Trans\bin\Debug\Bobo Trans.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\Bobo Trans\obj\Debug\Bobo Trans.dll
+C:\Users\Amer\Desktop\Bobo Trans\trunk\Bobo Trans\obj\Debug\Bobo Trans.pdb
