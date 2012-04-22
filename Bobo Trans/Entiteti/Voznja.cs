@@ -7,17 +7,17 @@ namespace DAL.Entiteti
 {
     public class Voznja
     {
-        private int sifraVoznje;
+        private long sifraVoznje;
         private DateTime vrijemePolaska;
         private Autobus autobus;
 
-        public Voznja(int sifra, DateTime vrijeme, Autobus a)
+        public Voznja(long sifra, DateTime vrijeme, Autobus a)
         {
             sifraVoznje = sifra;
             vrijemePolaska = vrijeme;
             autobus = a;
         }
-        public int SifraVoznje
+        public long SifraVoznje
         {
             get { return sifraVoznje; } 
         }

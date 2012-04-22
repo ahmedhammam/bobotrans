@@ -7,17 +7,52 @@ namespace DAL.Entiteti
 {
     public class Linija
     {
-        private int sifraLinije;
+        private long sifraLinije;
         private string nazivLinije;
 
-        private List<Stanica> stanice = new List<Stanica>();
-        private List<int> trajanjeDoDolaska = new List<int>();
-        private List<int> trajanjeDoPolaska = new List<int>();
+        private List<Stanica> stanice;
+        private List<int> trajanjeDoDolaska;
+        private List<int> trajanjeDoPolaska;
         private List<List<int>> cijene;
 
-        private List<Voznja> voznje = new List<Voznja>();
+        public List<List<int>> Cijene
+        {
+            get { return cijene; }
+            set { cijene = value; }
+        }
 
-        public void dodajVoznju(int sifraVoznje, DateTime vrijemePolaska, Autobus autobus)
+        private List<Voznja> voznje;
+
+        public List<Voznja> Voznje
+        {
+            get { return voznje; }
+            set { voznje = value; }
+        }
+
+
+
+        public Linija(long sifra, string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v)
+        {
+            sifraLinije = sifra;
+            nazivLinije = naziv;
+            stanice = stan;
+            trajanjeDoDolaska = tDoDolaska;
+            trajanjeDoPolaska = tDoPolaska;
+            cijene = c;
+            voznje = v;
+        }
+
+        public Linija(string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v)
+        {
+            nazivLinije = naziv;
+            stanice = stan;
+            trajanjeDoDolaska = tDoDolaska;
+            trajanjeDoPolaska = tDoPolaska;
+            cijene = c;
+            voznje = v;
+        }
+
+        public void dodajVoznju(long sifraVoznje, DateTime vrijemePolaska, Autobus autobus)
         {
             voznje.Add(new Voznja(sifraVoznje, vrijemePolaska, autobus));
         }

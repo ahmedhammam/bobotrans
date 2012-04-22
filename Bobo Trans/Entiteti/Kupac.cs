@@ -7,12 +7,28 @@ namespace DAL.Entiteti
 {
     public abstract class Kupac
     {
-        protected int sifraKupca;
+        protected long sifraKupca;
         protected string ime;
 
-        public Kupac(int sK, string i)
+        public string Ime
+        {
+            get { return ime; }
+            set { ime = value; }
+        }
+
+        public long SifraKupca
+        {
+            get { return sifraKupca; }
+            set { sifraKupca = value; }
+        }
+
+        public Kupac(long sK, string i)
         {
             sifraKupca = sK;
+            ime = i;
+        }
+        public Kupac(string i)
+        {
             ime = i;
         }
     }
