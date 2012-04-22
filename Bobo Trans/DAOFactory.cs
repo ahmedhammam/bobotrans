@@ -18,6 +18,11 @@ namespace DAL
 
             private DAOFactory() { }
 
+            public PorukeDAO getPorukeDAO()
+            {
+                return new PorukeDAO();
+            }
+
             public AutobusDAO getAutobusDAO()
             {
                 return new AutobusDAO();
@@ -33,9 +38,9 @@ namespace DAL
                 return new KorisnikDAO();
             }
 
-            public StaniceDAO getStaniceDAO()
+            public StanicaDAO getStaniceDAO()
             {
-                return new StaniceDAO();
+                return new StanicaDAO();
             }
 
             public ZakupacAutobusaDAO getZakupacAutobusaDAO()
@@ -43,40 +48,36 @@ namespace DAL
                 return new ZakupacAutobusaDAO();
             }
 
-            public PorukeDAO getPorukeDAO()
-            {
-                return new PorukeDAO();
-            }
-
+            /*
             public RasporedVoznjiDAO getRasporedVoznjiDAO()
             {
                 return new RasporedVoznjiDAO();
-            }
+            }*/
 
-            public VoznjeDAO getVoznjeDAO()
+           /* public VoznjeDAO getVoznjeDAO()
             {
                 return new VoznjeDAO();
-            }
+            }*/
 
-            public LinijeDAO getLinijeDAO()
+           /* public LinijeDAO getLinijeDAO()
             {
                 return new LinijeDAO();
-            }
+            }*/
 
-            public KarteDAO getKarteDAO()
+            /*public KarteDAO getKarteDAO()
             {
                 return new KarteDAO();
-            }
+            }*/
 
-            public KupacKarteDAO getKupacKarteDAO()
+           /* public KupacKarteDAO getKupacKarteDAO()
             {
                 return new KupacKarteDAO();
-            }
+            }*/
 
-            public KupacKarteSPopustomDAO getKupacKarteSPopustomDAO()
+            /*public KupacKarteSPopustomDAO getKupacKarteSPopustomDAO()
             {
                 return new KupacKarteSPopustomDAO();
-            }
+            }*/
         }
     }
 }

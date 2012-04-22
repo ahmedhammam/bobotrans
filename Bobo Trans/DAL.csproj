@@ -48,7 +48,13 @@
     <Compile Include="DAOFactory.cs" />
     <Compile Include="DAO\AutobusDAO.cs" />
     <Compile Include="DAO\IzvjestajDAO.cs" />
+    <Compile Include="DAO\KorisnikDAO.cs" />
+    <Compile Include="DAO\PorukeDAO.cs" />
+    <Compile Include="DAO\StaniceDAO.cs" />
+    <Compile Include="DAO\ZakupacAutobusaDAO.cs" />
     <Compile Include="Entiteti\Autobus.cs" />
+    <Compile Include="Entiteti\Korisnik.cs" />
+    <Compile Include="TipoviPodataka\TipoviKorisnika.cs" />
     <Compile Include="TipoviPodataka\TipoviKupaca.cs" />
     <Compile Include="Entiteti\Izvjestaj.cs" />
     <Compile Include="Entiteti\Kupac.cs" />

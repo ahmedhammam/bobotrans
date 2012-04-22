@@ -47,7 +47,7 @@ namespace DAL
 
                     if (r.Read())
                     {
-                        ZakupacAutobusa ZakupacAutobusa = new ZakupacAutobusa(r.GetInt32("id"),r.GetString("imeZakupca"),r.GetInt32("idAutobusa"),r.GetDouble("cijena"),r.GetDateTime("pocetakZakupa"),r.GetDateTime("krajZakupa"));
+                        ZakupacAutobusa ZakupacAutobusa = new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"),(DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa")));
                         return ZakupacAutobusa;
                     }
                     else throw
@@ -99,7 +99,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        ZakupacAutobusa a = new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetInt32("idAutobusa"), r.GetDouble("cijena"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"));
+                        ZakupacAutobusa a = new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"), (DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa")));
                         return a;
                     }
                     else throw
@@ -119,7 +119,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<ZakupacAutobusa> ZakupacAutobusai = new List<ZakupacAutobusa>();
                     while (r.Read())
-                        ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetInt32("idAutobusa"), r.GetDouble("cijena"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa")));
+                        ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"), (DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa"))));
 
                     return ZakupacAutobusai;
 
@@ -138,7 +138,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<ZakupacAutobusa> ZakupacAutobusai = new List<ZakupacAutobusa>();
                     while (r.Read())
-                        ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetInt32("idAutobusa"), r.GetDouble("cijena"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa")));
+                        ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"),(DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa"))));
                     return ZakupacAutobusai;
                 }
                 catch (Exception e)

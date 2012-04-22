@@ -9,7 +9,7 @@ namespace DAL.Entiteti
     {
         private DateTime pocetakZakupa;
         private DateTime krajZakupa;
-        private float cijena;
+        private double cijena;
         private Autobus autobus;
 
         public DateTime PocetakZakupa
@@ -24,7 +24,7 @@ namespace DAL.Entiteti
             set { krajZakupa = value; }
         }
 
-        public float Cijena
+        public double Cijena
         {
             get { return cijena; }
             set { cijena = value; }
@@ -36,7 +36,7 @@ namespace DAL.Entiteti
             set { autobus = value; }
         }
 
-        public ZakupacAutobusa(int sK, string i, DateTime pZ, DateTime kZ, float c, Autobus a)
+        public ZakupacAutobusa(int sK, string i, DateTime pZ, DateTime kZ, double c, Autobus a)
             : base(sK, i)
         {
             pocetakZakupa = pZ;
@@ -45,7 +45,7 @@ namespace DAL.Entiteti
             autobus = a;
         }
 
-        public ZakupacAutobusa(string i, DateTime pZ, DateTime kZ, float c, Autobus a)
+        public ZakupacAutobusa(string i, DateTime pZ, DateTime kZ, double c, Autobus a)
             : base(i)
         {
             pocetakZakupa = pZ;
