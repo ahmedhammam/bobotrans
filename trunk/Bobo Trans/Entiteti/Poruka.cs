@@ -13,6 +13,8 @@ namespace DAL.Entiteti
         private string tekst, posiljaoc, primalac;
         private DateTime vrijemeSlanja;
 
+
+        #region GetteriSetteri
         public long SifraPoruke
         {
             get { return sifraPoruke; }
@@ -40,7 +42,8 @@ namespace DAL.Entiteti
         {
             get { return vrijemeSlanja; }
             set { vrijemeSlanja = value; }
-        }
+        } 
+        #endregion
 
 
 

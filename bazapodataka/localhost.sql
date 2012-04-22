@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 21, 2012 at 04:44 PM
+-- Generation Time: Apr 22, 2012 at 05:37 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.9
 
@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `karte` (
   `idKrajnjeStanice` int(11) NOT NULL,
   `idSjedista` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
+  `idKupca` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
@@ -94,7 +95,6 @@ CREATE TABLE IF NOT EXISTS `korisnici` (
 CREATE TABLE IF NOT EXISTS `kupcikarti` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `imeIPrezime` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
-  `idKarte` int(11) NOT NULL,
   `tipKupca` int(11) NOT NULL,
   `dodatniPodaci` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -250,6 +250,7 @@ CREATE TABLE IF NOT EXISTS `voznje` (
 
 CREATE TABLE IF NOT EXISTS `zakupiautobusa` (
   `id` int(11) NOT NULL,
+  `imeZakupca` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `idAutobusa` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
   `pocetakZakupa` date NOT NULL,
