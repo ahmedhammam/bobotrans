@@ -27,3 +27,7 @@ Amer
  * == Izvjestaj ==
   updateovati atribude i metode izjvestaja
 Amer
+
+ * == Poruka ==
+ dodati sifraPoruke
+Amer
