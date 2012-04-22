@@ -1,0 +1,17 @@
+=Topoloski sort klasa koje je potrebno napraviti za implementaciju DAO-a:=
+
+ * AutobusDAO
+ * IzvjestajDAO
+ * KorisnikDAO
+ * StaniceDAO
+
+ * ZakupacAutobusaDAO
+ * PorukeDAO
+ * RasporedVoznji
+ * RasporedVoznjiDAO
+ * VoznjeDAO
+ * LinijeDAO
+ * Karte
+ * KarteDAO
+ * KupacKarteDAO
+ * KupacKarteSPopustomDAO
