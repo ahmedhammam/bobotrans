@@ -9,6 +9,7 @@ namespace DAL.Entiteti
     public class KupacKarte : Kupac
     {
         protected List<int> sjedista;
+        protected List<double> cijene;
         protected Stanica pocetnaStanica;
         protected Stanica krajnjaStanica;
         protected Voznja voznja;
@@ -39,24 +40,32 @@ namespace DAL.Entiteti
             get { return sjedista; }
             set { sjedista = value; }
         }
-        
 
-        public KupacKarte(int sK, string i, Stanica pS, Stanica kS, Voznja v, List<int> s)
+        public List<double> Cijene
+        {
+            get { return cijene; }
+            set { cijene = value; }
+        }
+
+
+        public KupacKarte(int sK, string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c)
             : base(sK, i)
         {
             pocetnaStanica = pS;
             krajnjaStanica = kS;
             voznja = v;
             sjedista = s;
+            cijene = c;
         }
 
-        public KupacKarte(string i, Stanica pS, Stanica kS, Voznja v, List<int> s)
+        public KupacKarte(string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c)
             : base(i)
         {
             pocetnaStanica = pS;
             krajnjaStanica = kS;
             voznja = v;
             sjedista = s;
+            cijene = c;
         }
 
         public double proracunajCijenu()

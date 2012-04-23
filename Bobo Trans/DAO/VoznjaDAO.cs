@@ -12,7 +12,7 @@ namespace DAL
 {
     partial class DAL
     {
-        class VoznjaDAO:IDaoCrud<Voznja>
+        public class VoznjaDAO:IDaoCrud<Voznja>
         {
             protected MySqlCommand c;
             public long create(Voznja entity)
