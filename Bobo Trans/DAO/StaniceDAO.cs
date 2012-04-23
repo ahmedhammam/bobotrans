@@ -44,6 +44,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Stanica Stanica = new Stanica(r.GetInt32("id"), r.GetString("naziv"), r.GetString("mjesto"));
+                        r.Close();
                         return Stanica;
                     }
                     else throw
@@ -92,6 +93,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Stanica a = new Stanica(r.GetInt32("id"), r.GetString("naziv"), r.GetString("mjesto"));
+                        r.Close();
                         return a;
                     }
                     else throw
@@ -112,7 +114,7 @@ namespace DAL
                     List<Stanica> Stanice = new List<Stanica>();
                     while (r.Read())
                         Stanice.Add(new Stanica(r.GetInt32("id"), r.GetString("naziv"), r.GetString("mjesto")));
-
+                    r.Close();
                     return Stanice;
 
                 }
@@ -131,6 +133,7 @@ namespace DAL
                     List<Stanica> Stanice = new List<Stanica>();
                     while (r.Read())
                         Stanice.Add(new Stanica(r.GetInt32("id"), r.GetString("naziv"), r.GetString("mjesto")));
+                    r.Close();
                     return Stanice;
                 }
                 catch (Exception e)

@@ -44,6 +44,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Voznja voznja = new Voznja(r.GetInt32("id"), r.GetDateTime("vrijemePolaska"), entity.Autobus);
+                        r.Close();
                         return voznja;
                     }
                     else throw
@@ -92,6 +93,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Voznja v = new Voznja(r.GetInt32("id"), r.GetDateTime("vrijemePolaska"),DAL.Instanca.getDAO.getAutobusDAO().getById(r.GetInt32("idAutobusa")));
+                        r.Close();
                         return v;
                     }
                     else throw
@@ -112,7 +114,7 @@ namespace DAL
                     List<Voznja> voznje = new List<Voznja>();
                     while (r.Read())
                         voznje.Add(new Voznja(r.GetInt32("id"), r.GetDateTime("vrijemePolaska"),DAL.Instanca.getDAO.getAutobusDAO().getById(r.GetInt32("idAutobusa"))));
-
+                    r.Close();
                     return voznje;
 
                 }
@@ -131,6 +133,7 @@ namespace DAL
                     List<Voznja> voznje = new List<Voznja>();
                     while (r.Read())
                         voznje.Add(new Voznja(r.GetInt32("id"), r.GetDateTime("vrijemePolaska"), DAL.Instanca.getDAO.getAutobusDAO().getById(r.GetInt32("idAutobusa"))));
+                    r.Close();
                     return voznje;
                 }
                 catch (Exception e)

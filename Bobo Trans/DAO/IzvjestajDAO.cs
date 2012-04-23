@@ -44,6 +44,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Izvjestaj izvjestaj = new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"));
+                        r.Close();
                         return izvjestaj;
                     }
                     else throw
@@ -92,6 +93,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Izvjestaj a = new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"));
+                        r.Close();
                         return a;
                     }
                     else throw
@@ -113,6 +115,7 @@ namespace DAL
                     while (r.Read())
                         izvjestaji.Add(new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora")));
 
+                    r.Close();
                     return izvjestaji;
 
                 }
@@ -131,6 +134,7 @@ namespace DAL
                     List<Izvjestaj> izvjestaji = new List<Izvjestaj>();
                     while (r.Read())
                         izvjestaji.Add(new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora")));
+                    r.Close();
                     return izvjestaji;
                 }
                 catch (Exception e)

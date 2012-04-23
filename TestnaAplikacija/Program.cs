@@ -17,17 +17,19 @@ namespace TestnaAplikacija
                 //d.kreirajKonekciju("127.0.0.1", "bobotrans", "amer", "jCwB448bWhWcCuAC");
                 d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
 
-                DAL.DAL.RasporedVoznjeDAO rvd = d.getDAO.getRasporedVoznjiDAO();
+                DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
                 try
                 {
 
-                    List<RasporedVoznje> rv = rvd.GetAll();
+                    //List<RasporedVoznje> rv = rvd.GetAll();
                    
-
-                    foreach (RasporedVoznje trv in rv)
+                    /*foreach (RasporedVoznje trv in rv)
                     {
                         Console.WriteLine(trv.DanUSedmici);
-                    }
+                    }*/
+                    Korisnik k = new Korisnik("amesanovic", "Amer Mešanović", DAL.TipoviPodataka.TipoviKorisnika.MENAGER, "nekipass");
+                    k.SifraKorisnika = kd.create(k);
+                   // kd.delete(kd.getById(7));
                 }
                 catch (Exception e)
                 {

@@ -68,6 +68,8 @@ namespace DAL
                             voznjaId=r2.GetInt32("idVoznje");
                         }
                         KupacKarte KupacKarte = new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")),(DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij);
+                        r2.Close();
+                        r.Close();
                         return KupacKarte;
                     }
                     else throw
@@ -141,6 +143,8 @@ namespace DAL
                             voznjaId = r2.GetInt32("idVoznje");
                         }
                         KupacKarte KupacKarte = new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij);
+                        r2.Close();
+                        r.Close();
                         return KupacKarte;
                     }
                     else throw
@@ -172,9 +176,10 @@ namespace DAL
                             cij.Add(r2.GetInt32("cijena"));
                             voznjaId = r2.GetInt32("idVoznje");
                         }
-
                         KupacKartei.Add(new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij));
+                        r2.Close();
                     }
+                    r.Close();
                     return KupacKartei;
 
                 }
@@ -204,9 +209,10 @@ namespace DAL
                             cij.Add(r2.GetInt32("cijena"));
                             voznjaId = r2.GetInt32("idVoznje");
                         }
-
                         KupacKartei.Add(new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij));
+                        r2.Close();
                     }
+                    r.Close();
                     return KupacKartei;
                 }
                 catch (Exception e)

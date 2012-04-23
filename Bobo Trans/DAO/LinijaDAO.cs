@@ -152,6 +152,7 @@ namespace DAL
                     }
                     else throw
                      new Exception("nije nadjen nijedan element");
+                    r.Close();
 
                 //ucitavanje stanica, trajanjaDO, trajanjaOD iz tabele staniceuliniji sortirane po vremenu trajanjaDoDolaska
                     c = new MySqlCommand(String.Format("SELECT sul.*,s.naziv,s.mjesto FROM (SELECT * FROM staniceuliniji WHERE idLinije='{0}') AS sul LEFT JOIN stanice AS s ON s.id = sul.idStanice ORDER BY sul.trajanjeDoDolaska;", 
@@ -164,6 +165,7 @@ namespace DAL
                         trajanjeDoDolaska.Add(r.GetInt32("trajanjeDoDolaska"));
                         trajanjeDoPolaska.Add(r.GetInt32("trajanjeDoPolaska"));
                     }
+                    r.Close();
                 //ucitavanje voznji
 
                     c = new MySqlCommand(String.Format("SELECT * FROM linijevoznje WHERE idLinije='{0}';", sifra), con);
@@ -175,6 +177,7 @@ namespace DAL
                         voznje.Add(DAOFactory.Instanca.getVoznjaDAO().getById(sifraVoznje));
                     }
 
+                    r.Close();
 
                 //ucitavanje rasporeda voznji
                     c = new MySqlCommand(String.Format("SELECT * FROM linijerasporedvoznji WHERE idLinije='{0}';", sifra), con);
@@ -185,6 +188,7 @@ namespace DAL
                         sifraRasporedaVoznje = r.GetInt32("idRasporedaVoznje");
                         rasporediVoznje.Add(DAOFactory.Instanca.getRasporedVoznjiDAO().getById(sifraRasporedaVoznje));
                     }
+                    r.Close();
 
                  // ucitavanje cijena
 
@@ -202,8 +206,11 @@ namespace DAL
                             c = new MySqlCommand(string.Format("SELECT cijena FROM linijecijene WHERE idLinije='{0} AND idPrveStanice = '{1}' AND idDrugeStanice='{2}';",
                                 sifra,stanice[i].SifraStanice,stanice[j].SifraStanice),con);
                             r = c.ExecuteReader();
-                            if (!r.Read()) throw new Exception("Ne postoji cijena za liniju " + sifra.ToString() + " i stanice "+stanice[j].SifraStanice.ToString() + " i " +stanice[j].SifraStanice.ToString());
+                            if (!r.Read()) 
+                                throw new Exception("Ne postoji cijena za liniju " + sifra.ToString() + " i stanice "+stanice[j].SifraStanice.ToString() + " i " +stanice[j].SifraStanice.ToString());
+                            
                             cijene[i][j] = r.GetDouble("cijena");
+                            r.Close();
                         }
 
                     }
@@ -313,7 +320,7 @@ namespace DAL
                     }
                     else throw
                      new Exception("nije nadjen nijedan element");
-
+                    r.Close();
                 //ucitavanje stanica, trajanjaDO, trajanjaOD iz tabele staniceuliniji sortirane po vremenu trajanjaDoDolaska
                     c = new MySqlCommand(String.Format("SELECT sul.*,s.naziv,s.mjesto FROM (SELECT * FROM staniceuliniji WHERE idLinije='{0}') AS sul LEFT JOIN stanice AS s ON s.id = sul.idStanice ORDER BY sul.trajanjeDoDolaska;", 
                         id), con);
@@ -325,6 +332,7 @@ namespace DAL
                         trajanjeDoDolaska.Add(r.GetInt32("trajanjeDoDolaska"));
                         trajanjeDoPolaska.Add(r.GetInt32("trajanjeDoPolaska"));
                     }
+                    r.Close();
                 //ucitavanje voznji
 
                     c = new MySqlCommand(String.Format("SELECT * FROM linijevoznje WHERE idLinije='{0}';", id), con);
@@ -335,7 +343,7 @@ namespace DAL
                         sifraVoznje = r.GetInt32("idVoznje");
                         voznje.Add(DAOFactory.Instanca.getVoznjaDAO().getById(sifraVoznje));
                     }
-
+                    r.Close();
 
                 //ucitavanje rasporeda voznji
                     c = new MySqlCommand(String.Format("SELECT * FROM linijerasporedvoznji WHERE idLinije='{0}';", id), con);
@@ -346,7 +354,7 @@ namespace DAL
                         sifraRasporedaVoznje = r.GetInt32("idRasporedaVoznje");
                         rasporediVoznje.Add(DAOFactory.Instanca.getRasporedVoznjiDAO().getById(sifraRasporedaVoznje));
                     }
-
+                    r.Close();
                  // ucitavanje cijena
 
                     cijene = new List<List<double>>(stanice.Count);
@@ -363,8 +371,10 @@ namespace DAL
                             c = new MySqlCommand(string.Format("SELECT cijena FROM linijecijene WHERE idLinije='{0} AND idPrveStanice = '{1}' AND idDrugeStanice='{2}';",
                                 id,stanice[i].SifraStanice,stanice[j].SifraStanice),con);
                             r = c.ExecuteReader();
-                            if (!r.Read()) throw new Exception("Ne postoji cijena za liniju " + id.ToString() + " i stanice "+stanice[j].SifraStanice.ToString() + " i " +stanice[j].SifraStanice.ToString());
+                            if (!r.Read()) 
+                                throw new Exception("Ne postoji cijena za liniju " + id.ToString() + " i stanice "+stanice[j].SifraStanice.ToString() + " i " +stanice[j].SifraStanice.ToString());
                             cijene[i][j] = r.GetDouble("cijena");
+                            r.Close();
                         }
 
                     }
@@ -386,7 +396,7 @@ namespace DAL
                 {
                     linije.Add(getById(r.GetInt32("id")));
                 }
-
+                r.Close();
                 return linije;
             }
 

@@ -48,6 +48,7 @@ namespace DAL
                     if (r.Read())
                     {
                         ZakupacAutobusa ZakupacAutobusa = new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"),(DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa")));
+                        r.Close();
                         return ZakupacAutobusa;
                     }
                     else throw
@@ -100,6 +101,7 @@ namespace DAL
                     if (r.Read())
                     {
                         ZakupacAutobusa a = new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"), (DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa")));
+                        r.Close();
                         return a;
                     }
                     else throw
@@ -120,7 +122,7 @@ namespace DAL
                     List<ZakupacAutobusa> ZakupacAutobusai = new List<ZakupacAutobusa>();
                     while (r.Read())
                         ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"), (DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa"))));
-
+                    r.Close();
                     return ZakupacAutobusai;
 
                 }
@@ -139,6 +141,7 @@ namespace DAL
                     List<ZakupacAutobusa> ZakupacAutobusai = new List<ZakupacAutobusa>();
                     while (r.Read())
                         ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"),(DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa"))));
+                    r.Close();
                     return ZakupacAutobusai;
                 }
                 catch (Exception e)
