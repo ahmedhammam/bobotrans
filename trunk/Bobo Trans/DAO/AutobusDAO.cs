@@ -48,6 +48,7 @@ namespace DAL
                     {
                         Autobus autobus = new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"),
                             r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa"));
+                        r.Close();
                         return autobus;
                     }
                     else throw 
@@ -100,6 +101,7 @@ namespace DAL
                     {
                         Autobus a = new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"),
                             r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa"));
+                        r.Close();
                         return a;
                     }
                     else throw
@@ -121,7 +123,7 @@ namespace DAL
                     while (r.Read())
                         autobusi.Add(new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"),
                           r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa")));
-
+                    r.Close();
                     return autobusi;
                     
                 }
@@ -141,6 +143,7 @@ namespace DAL
                     while (r.Read())
                         autobusi.Add(new Autobus(r.GetInt32("id"), r.GetInt32("brojSjedista"), r.GetString("registracijskeTablice"), r.GetBoolean("toalet"),
                             r.GetBoolean("slobodan"), r.GetBoolean("klima"), r.GetDateTime("istekRegistracije"), r.GetDateTime("datumServisa")));
+                    r.Close();
                     return autobusi;
                 }
                 catch (Exception e)

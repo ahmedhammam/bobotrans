@@ -68,6 +68,8 @@ namespace DAL
                             voznjaId = r2.GetInt32("idVoznje");
                         }
                         KupacSaPopustom KupacSaPopustom = new KupacSaPopustom(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij,dajPopust(entity.TipKupca),"",entity.TipKupca);
+                        r.Close();
+                        r2.Close();
                         return KupacSaPopustom;
                     }
                     else throw
@@ -141,6 +143,8 @@ namespace DAL
                             voznjaId = r2.GetInt32("idVoznje");
                         }
                         KupacSaPopustom KupacSaPopustom = new KupacSaPopustom(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij, dajPopust(r.GetInt32("tipKupca")), "", (TipoviPodataka.TipoviKupaca)r.GetInt32("tipKupca"));
+                        r.Close();
+                        r2.Close();
                         return KupacSaPopustom;
                     }
                     else throw
@@ -174,7 +178,9 @@ namespace DAL
                         }
 
                         KupacSaPopustomi.Add(new KupacSaPopustom(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij, dajPopust(r.GetInt32("tipKupca")), "", (TipoviPodataka.TipoviKupaca)r.GetInt32("tipKupca")));
+                        r2.Close();
                     }
+                    r.Close();
                     return KupacSaPopustomi;
 
                 }
@@ -206,7 +212,9 @@ namespace DAL
                         }
 
                         KupacSaPopustomi.Add(new KupacSaPopustom(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij, dajPopust(r.GetInt32("tipKupca")), "", (TipoviPodataka.TipoviKupaca)r.GetInt32("tipKupca")));
+                        r2.Close();
                     }
+                    r.Close();
                     return KupacSaPopustomi;
                 }
                 catch (Exception e)
@@ -225,7 +233,9 @@ namespace DAL
                 MySqlDataReader rx = c.ExecuteReader();
                 if (rx.Read())
                 {
-                    return rx.GetDouble("popust");
+                    double p = rx.GetDouble("popust");
+                    rx.Close();
+                    return p;
                 }
                 else throw
                         new Exception("nije nadjen nijedan element");
@@ -239,7 +249,9 @@ namespace DAL
                 MySqlDataReader rx = c.ExecuteReader();
                 if (rx.Read())
                 {
-                    return rx.GetDouble("popust");
+                    double p = rx.GetDouble("popust");
+                    rx.Close();
+                    return p;
                 }
                 else throw
                         new Exception("nije nadjen nijedan element");

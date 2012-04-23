@@ -47,6 +47,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Poruka poruka = new Poruka(r.GetInt32("id"),r.GetString("tekst"),r.GetString("posiljaoc"), r.GetString("primalac"), r.GetDateTime("vrijemeSlanja"));
+                        r.Close();
                         return poruka;
                     }
                     else throw
@@ -99,6 +100,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Poruka a = new Poruka(r.GetInt32("id"), r.GetString("tekst"), r.GetString("usernamePosiljaoca"), r.GetString("usernamePrimaoca"), r.GetDateTime("vrijemeSlanja"));
+                        r.Close();
                         return a;
                     }
                     else throw
@@ -119,7 +121,7 @@ namespace DAL
                     List<Poruka> poruke = new List<Poruka>();
                     while (r.Read())
                         poruke.Add(new Poruka(r.GetInt32("id"), r.GetString("tekst"), r.GetString("usernamePosiljaoca"), r.GetString("usernamePrimaoca"), r.GetDateTime("vrijemeSlanja")));
-
+                    r.Close();
                     return poruke;
 
                 }
@@ -138,7 +140,7 @@ namespace DAL
                     List<Poruka> poruke = new List<Poruka>();
                     while (r.Read())
                         poruke.Add(new Poruka(r.GetInt32("id"), r.GetString("tekst"), r.GetString("usernamePosiljaoca"), r.GetString("usernamePrimaoca"), r.GetDateTime("vrijemeSlanja")));
-
+                    r.Close();
                     return poruke;
                 }
                 catch (Exception e)

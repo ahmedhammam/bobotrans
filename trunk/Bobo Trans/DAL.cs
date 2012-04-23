@@ -9,7 +9,7 @@ namespace DAL
 {
     public partial class DAL
     {
-        private string db, user, pass;
+        //private string db, user, pass;
         private static MySqlConnection con = null;
 
         private static DAL instanca = null;

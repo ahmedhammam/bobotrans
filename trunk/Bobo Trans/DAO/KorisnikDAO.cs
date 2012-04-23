@@ -44,6 +44,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Korisnik korisnik = new Korisnik(r.GetInt32("id"), r.GetString("username"), r.GetString("imeIPrezime"), (TipoviPodataka.TipoviKorisnika)r.GetInt32("tip"), r.GetString("lozinka"));
+                        r.Close();
                         return korisnik;
                     }
                     else throw
@@ -93,6 +94,7 @@ namespace DAL
                     if (r.Read())
                     {
                         Korisnik a = new Korisnik(r.GetInt32("id"), r.GetString("username"), r.GetString("imeIPrezime"), (TipoviPodataka.TipoviKorisnika)r.GetInt32("tip"), r.GetString("lozinka"));
+                        r.Close();
                         return a;
                     }
                     else throw
@@ -114,6 +116,7 @@ namespace DAL
                     while (r.Read())
                         korisnici.Add(new Korisnik(r.GetInt32("id"), r.GetString("username"), r.GetString("imeIPrezime"), (TipoviPodataka.TipoviKorisnika)r.GetInt32("tip"), r.GetString("lozinka")));
 
+                    r.Close();
                     return korisnici;
 
                 }
@@ -133,6 +136,7 @@ namespace DAL
                     while (r.Read())
                         korisnici.Add(new Korisnik(r.GetInt32("id"), r.GetString("username"), r.GetString("imeIPrezime"), (TipoviPodataka.TipoviKorisnika)r.GetInt32("tip"), r.GetString("lozinka")));
 
+                    r.Close();
                     return korisnici;
                 }
                 catch (Exception e)
@@ -153,6 +157,8 @@ namespace DAL
                     if (r.Read())
                     {
                         Korisnik korisnik = new Korisnik(r.GetInt32("id"), r.GetString("username"), r.GetString("imeIPrezime"), (TipoviPodataka.TipoviKorisnika)r.GetInt32("tip"), r.GetString("lozinka"));
+
+                        r.Close();
                         return korisnik;
                     }
                     else throw
