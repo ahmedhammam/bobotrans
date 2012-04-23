@@ -108,9 +108,13 @@
 - potrebanBrojSjedista (int)
 
 ===LinijeRasporedVoznji===
+
 - id (primary, int, autoincrement)
+
 - idLinije (int): Foreign Key na Linije.id: update: cascade, on delete - RESTRICT
+
 - idRasporedaVoznje : Foreign Key na Linije.id: update: cascade, on delete - CASCADE
+
 
 ===Korisnici:===
 
