@@ -90,7 +90,7 @@ namespace DAL
                 }
             }
 
-            public Autobus getById(int id)
+            public Autobus getById(long id)
             {
                 try
                 {

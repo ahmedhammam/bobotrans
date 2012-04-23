@@ -83,7 +83,7 @@ namespace DAL
                 }
             }
 
-            public Voznja getById(int id)
+            public Voznja getById(long id)
             {
                 try
                 {

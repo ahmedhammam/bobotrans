@@ -17,25 +17,23 @@ namespace TestnaAplikacija
                 //d.kreirajKonekciju("127.0.0.1", "bobotrans", "amer", "jCwB448bWhWcCuAC");
                 d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
 
-                DAL.DAL.PorukeDAO pd = d.getDAO.getPorukeDAO();
+                DAL.DAL.RasporedVoznjeDAO rvd = d.getDAO.getRasporedVoznjiDAO();
                 try
                 {
-                    Poruka nova = pd.getById(1);
 
-                    /*foreach (Poruka p in nova)
-                    {*/
-                        Console.WriteLine(nova.Tekst);/*
-                    }*/
+                    List<RasporedVoznje> rv = rvd.GetAll();
+                   
+
+                    foreach (RasporedVoznje trv in rv)
+                    {
+                        Console.WriteLine(trv.DanUSedmici);
+                    }
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
 
-                //Autobus novi = new Autobus(50, "138-J-197", true, true, true, new DateTime(2011, 11, 2), new DateTime(2010, 3, 3));
-
-               // novi.SifraAutobusa = ad.create(novi);
-                //Console.WriteLine(novi.SifraAutobusa);
 
                 Console.ReadKey();
                 d.terminirajKonekciju();

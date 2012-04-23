@@ -48,16 +48,16 @@ namespace DAL
                 return new ZakupacAutobusaDAO();
             }
 
-            /*
-            public RasporedVoznjiDAO getRasporedVoznjiDAO()
+            
+            public RasporedVoznjeDAO getRasporedVoznjiDAO()
             {
-                return new RasporedVoznjiDAO();
-            }*/
+                return new RasporedVoznjeDAO();
+            }
 
-           /* public VoznjeDAO getVoznjeDAO()
+            public VoznjaDAO getVoznjaDAO()
             {
-                return new VoznjeDAO();
-            }*/
+                return new VoznjaDAO();
+            }
 
            /* public LinijeDAO getLinijeDAO()
             {
