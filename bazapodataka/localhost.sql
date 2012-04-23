@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 23, 2012 at 12:15 AM
+-- Generation Time: Apr 23, 2012 at 07:44 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -126,7 +126,14 @@ CREATE TABLE IF NOT EXISTS `linije` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `naziv` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `linije`
+--
+
+INSERT INTO `linije` (`id`, `naziv`) VALUES
+(1, 'Sarajevo - Kakanj');
 
 -- --------------------------------------------------------
 
@@ -144,6 +151,21 @@ CREATE TABLE IF NOT EXISTS `linijecijene` (
   KEY `idLinije` (`idLinije`),
   KEY `idPrveStanice` (`idPrveStanice`),
   KEY `idDrugeStanice` (`idDrugeStanice`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `linijerasporedvoznji`
+--
+
+CREATE TABLE IF NOT EXISTS `linijerasporedvoznji` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idLinije` int(11) NOT NULL,
+  `idRasporedaVoznje` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idLinije` (`idLinije`),
+  KEY `idRasporedaVoznje` (`idRasporedaVoznje`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -176,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `poruke` (
   PRIMARY KEY (`id`),
   KEY `idPosiljaoca` (`idPosiljaoca`),
   KEY `idPrimaoca` (`idPrimaoca`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -213,7 +235,18 @@ CREATE TABLE IF NOT EXISTS `stanice` (
   `naziv` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `mjesto` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `stanice`
+--
+
+INSERT INTO `stanice` (`id`, `naziv`, `mjesto`) VALUES
+(1, 'Podlugovi', 'Podlugovi'),
+(2, 'Reljevo', 'Reljevo'),
+(3, 'Visoko', 'Visoko'),
+(4, 'Dobrinje', 'Dobrinje'),
+(5, 'Kakanj', 'Kakanj');
 
 -- --------------------------------------------------------
 
@@ -230,7 +263,18 @@ CREATE TABLE IF NOT EXISTS `staniceuliniji` (
   PRIMARY KEY (`id`),
   KEY `idLinije` (`idLinije`),
   KEY `idStanice` (`idStanice`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `staniceuliniji`
+--
+
+INSERT INTO `staniceuliniji` (`id`, `idLinije`, `idStanice`, `trajanjeDoDolaska`, `trajanjeDoPolaska`) VALUES
+(1, 1, 2, 15, 16),
+(2, 1, 1, 30, 31),
+(3, 1, 3, 40, 45),
+(4, 1, 4, 50, 51),
+(5, 1, 5, 70, 70);
 
 -- --------------------------------------------------------
 
@@ -319,10 +363,10 @@ ALTER TABLE `izvjestaji`
 -- Constraints for table `karte`
 --
 ALTER TABLE `karte`
-  ADD CONSTRAINT `karte_ibfk_5` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `karte_ibfk_2` FOREIGN KEY (`idPocetneStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `karte_ibfk_3` FOREIGN KEY (`idKrajnjeStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `karte_ibfk_4` FOREIGN KEY (`idKupca`) REFERENCES `kupcikarti` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `karte_ibfk_4` FOREIGN KEY (`idKupca`) REFERENCES `kupcikarti` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `karte_ibfk_5` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `korisnici`
@@ -340,30 +384,37 @@ ALTER TABLE `kupcikarti`
 -- Constraints for table `linijecijene`
 --
 ALTER TABLE `linijecijene`
-  ADD CONSTRAINT `linijecijene_ibfk_3` FOREIGN KEY (`idDrugeStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `linijecijene_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `linijecijene_ibfk_2` FOREIGN KEY (`idPrveStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `linijecijene_ibfk_2` FOREIGN KEY (`idPrveStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `linijecijene_ibfk_3` FOREIGN KEY (`idDrugeStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `linijerasporedvoznji`
+--
+ALTER TABLE `linijerasporedvoznji`
+  ADD CONSTRAINT `linijerasporedvoznji_ibfk_2` FOREIGN KEY (`idRasporedaVoznje`) REFERENCES `rasporedvoznji` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `linijerasporedvoznji_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `linijevoznje`
 --
 ALTER TABLE `linijevoznje`
-  ADD CONSTRAINT `linijevoznje_ibfk_3` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `linijevoznje_ibfk_2` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `linijevoznje_ibfk_2` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `linijevoznje_ibfk_3` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `poruke`
 --
 ALTER TABLE `poruke`
-  ADD CONSTRAINT `poruke_ibfk_2` FOREIGN KEY (`idPrimaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `poruke_ibfk_1` FOREIGN KEY (`idPosiljaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `poruke_ibfk_1` FOREIGN KEY (`idPosiljaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `poruke_ibfk_2` FOREIGN KEY (`idPrimaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `staniceuliniji`
 --
 ALTER TABLE `staniceuliniji`
-  ADD CONSTRAINT `staniceuliniji_ibfk_2` FOREIGN KEY (`idStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `staniceuliniji_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `staniceuliniji_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `staniceuliniji_ibfk_2` FOREIGN KEY (`idStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `voznje`

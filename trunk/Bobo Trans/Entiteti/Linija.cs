@@ -14,7 +14,7 @@ namespace DAL.Entiteti
         private List<int> trajanjeDoDolaska;
         private List<int> trajanjeDoPolaska;
 
-        private List<List<int>> cijene;
+        private List<List<double>> cijene;
         private List<Voznja> voznje;
         private List<RasporedVoznje> rasporediVoznje;
 
@@ -49,7 +49,7 @@ namespace DAL.Entiteti
             set { trajanjeDoPolaska = value; }
         }
 
-        public List<List<int>> Cijene
+        public List<List<double>> Cijene
         {
             get { return cijene; }
             set { cijene = value; }
@@ -70,7 +70,7 @@ namespace DAL.Entiteti
 
 
 
-        public Linija(long sifra, string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v, List<RasporedVoznje> rV)
+        public Linija(long sifra, string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<double>> c, List<Voznja> v, List<RasporedVoznje> rV)
         {
             sifraLinije = sifra;
             nazivLinije = naziv;
@@ -81,7 +81,7 @@ namespace DAL.Entiteti
             voznje = v;
         }
 
-        public Linija(string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<int>> c, List<Voznja> v, List<RasporedVoznje> rV)
+        public Linija(string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<double>> c, List<Voznja> v, List<RasporedVoznje> rV)
         {
             nazivLinije = naziv;
             stanice = stan;

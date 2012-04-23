@@ -7,11 +7,11 @@ namespace DAL.Entiteti
 {
     public class Stanica
     {
-        private int sifraStanice;
+        private long sifraStanice;
         private string naziv;
         private string mjesto;
 
-        public Stanica(int sS, string n, string m)
+        public Stanica(long sS, string n, string m)
         {
             sifraStanice = sS;
             naziv = n;
@@ -24,7 +24,7 @@ namespace DAL.Entiteti
             mjesto = m;
         }
 
-        public int SifraStanice
+        public long SifraStanice
         {
             get { return sifraStanice; }
             set { sifraStanice = value; }
