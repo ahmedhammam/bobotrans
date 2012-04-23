@@ -26,7 +26,7 @@
 
 - id (primary, int, autoincrement)
 
-- naziv (varchar)
+- naziv (varchar):unique
 
 ===Voznje:===
 
@@ -42,7 +42,7 @@
 
 - idLinije (int) - Foreign Key na Linije.id: update: cascade, on delete - RESTRICT
 
-- idVoznje (int) - Foreign Key na Voznje.id: on update i delete - cascade
+- idVoznje (int) - Foreign Key na Voznje.id: on update i delete - cascade, unique
 
 ===Stanice:===
 
@@ -57,7 +57,7 @@
 
 - id (primary,int, autoincrement)
 
-- registracijskeTablice (varchar)
+- registracijskeTablice (varchar): unique
 
 - istekRegistracije (Date)
 
@@ -113,7 +113,7 @@
 
 - idLinije (int): Foreign Key na Linije.id: update: cascade, on delete - RESTRICT
 
-- idRasporedaVoznje : Foreign Key na Linije.id: update: cascade, on delete - CASCADE
+- idRasporedaVoznje : Foreign Key na Linije.id: update: cascade, on delete - CASCADE, unique
 
 
 ===Korisnici:===
@@ -133,7 +133,7 @@
 
 - id (primary, int, autoincrement)
 
-- tip (varchar)
+- tip (varchar):unique
 
 
 ===Karte:===
@@ -181,7 +181,7 @@
 
 - id (primary, int, autoincrement)
 
-- naziv (varchar)
+- naziv (varchar): unique
 
 - popust (decimal)
 
