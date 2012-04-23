@@ -11,6 +11,7 @@
  # Poruke
  # Izvjestaji
  # RasporedVoznji
+ # LinijeRasporedVoznji
  # Korisnici
  # TipoviKorisnika
  # Karte
@@ -96,7 +97,7 @@
 
 ===RasporedVoznji:===
 
-- id (primary, int, autoincrement)
+- id (primary, int, autoincrement) 
 
 - danUSedmici (string)
 
@@ -106,6 +107,10 @@
 
 - potrebanBrojSjedista (int)
 
+===LinijeRasporedVoznji===
+- id (primary, int, autoincrement)
+- idLinije (int): Foreign Key na Linije.id: update: cascade, on delete - RESTRICT
+- idRasporedaVoznje : Foreign Key na Linije.id: update: cascade, on delete - CASCADE
 
 ===Korisnici:===
 
