@@ -124,7 +124,7 @@
 
 - tip (int): foreign key na TipoviKorisnika.id: on UPDATE NO ACTION, DELETE NO ACTION
 
-- username (varchar)
+- username (varchar) - unique
 
 - lozinka (varchar)
 
