@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 23, 2012 at 07:44 PM
+-- Generation Time: Apr 23, 2012 at 10:34 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -37,7 +37,8 @@ CREATE TABLE IF NOT EXISTS `autobusi` (
   `toalet` tinyint(1) NOT NULL,
   `slobodan` tinyint(1) NOT NULL,
   `klima` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `registracijskeTablice` (`registracijskeTablice`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -89,8 +90,9 @@ CREATE TABLE IF NOT EXISTS `korisnici` (
   `username` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `lozinka` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
   KEY `tip` (`tip`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `korisnici`
@@ -99,7 +101,8 @@ CREATE TABLE IF NOT EXISTS `korisnici` (
 INSERT INTO `korisnici` (`id`, `imeIPrezime`, `tip`, `username`, `lozinka`) VALUES
 (1, 'Marina Miličević', 1, 'mmarina', 'mmarina'),
 (3, 'Dženisa Husić', 2, 'dzhusic', 'dzhusic'),
-(5, 'Adnan Ademović', 3, 'aademovic', 'aademovic');
+(5, 'Adnan Ademović', 3, 'aademovic', 'aademovic'),
+(8, 'Amer Mešanovic', 2, 'amesanovic', 'nekipass');
 
 -- --------------------------------------------------------
 
@@ -125,7 +128,8 @@ CREATE TABLE IF NOT EXISTS `kupcikarti` (
 CREATE TABLE IF NOT EXISTS `linije` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `naziv` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `naziv` (`naziv`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=2 ;
 
 --
@@ -164,6 +168,7 @@ CREATE TABLE IF NOT EXISTS `linijerasporedvoznji` (
   `idLinije` int(11) NOT NULL,
   `idRasporedaVoznje` int(11) NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `idRasporedaVoznje_2` (`idRasporedaVoznje`),
   KEY `idLinije` (`idLinije`),
   KEY `idRasporedaVoznje` (`idRasporedaVoznje`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
@@ -179,6 +184,7 @@ CREATE TABLE IF NOT EXISTS `linijevoznje` (
   `idLinije` int(11) NOT NULL,
   `idVoznje` int(11) NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `idVoznje_2` (`idVoznje`),
   KEY `idLinije` (`idLinije`),
   KEY `idVoznje` (`idVoznje`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
@@ -285,7 +291,8 @@ INSERT INTO `staniceuliniji` (`id`, `idLinije`, `idStanice`, `trajanjeDoDolaska`
 CREATE TABLE IF NOT EXISTS `tipovikorisnika` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tip` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tip` (`tip`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=4 ;
 
 --
@@ -293,8 +300,8 @@ CREATE TABLE IF NOT EXISTS `tipovikorisnika` (
 --
 
 INSERT INTO `tipovikorisnika` (`id`, `tip`) VALUES
-(1, 'Radnik za šalterom'),
 (2, 'Menadžer'),
+(1, 'Radnik za šalterom'),
 (3, 'Serviser');
 
 -- --------------------------------------------------------
@@ -307,7 +314,8 @@ CREATE TABLE IF NOT EXISTS `tipovikupacakarte` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `naziv` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `popust` decimal(10,0) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `naziv` (`naziv`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=4 ;
 
 --
