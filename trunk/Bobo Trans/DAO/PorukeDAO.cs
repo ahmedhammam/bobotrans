@@ -67,7 +67,7 @@ namespace DAL
                     Korisnik primalac = (DAL.Instanca.getDAO.getKorisnikDAO()).getByExample("username", entity.Primalac)[0];
 
                     c = new MySqlCommand(String.Format("UPDATE poruke SET idPosiljaoca='{0}', idPrimaoca='{1}', vrijemeSlanja='{2}', tekst = '{4}' WHERE id='{3}';",
-                        posiljaoc.SifraKorisnika,primalac.SifraKorisnika, entity.VrijemeSlanja.ToString("yyyy-MM-dd"),entity.SifraPoruke,entity.Tekst), con);
+                        posiljaoc.SifraKorisnika, primalac.SifraKorisnika, entity.VrijemeSlanja.ToString("yyyy-MM-dd HH:mm"), entity.SifraPoruke, entity.Tekst), con);
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -90,7 +90,7 @@ namespace DAL
                 }
             }
             
-            public Poruka getById(int id)
+            public Poruka getById(long id)
             {
                 try
                 {

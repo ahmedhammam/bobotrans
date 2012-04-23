@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 22, 2012 at 09:29 PM
+-- Generation Time: Apr 23, 2012 at 12:15 AM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `bobotrans`
 --
+CREATE DATABASE `bobotrans` DEFAULT CHARACTER SET utf8 COLLATE utf8_slovenian_ci;
+USE `bobotrans`;
 
 -- --------------------------------------------------------
 
@@ -86,8 +88,18 @@ CREATE TABLE IF NOT EXISTS `korisnici` (
   `tip` int(11) NOT NULL,
   `username` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `lozinka` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `tip` (`tip`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `korisnici`
+--
+
+INSERT INTO `korisnici` (`id`, `imeIPrezime`, `tip`, `username`, `lozinka`) VALUES
+(1, 'Marina Miličević', 1, 'mmarina', 'mmarina'),
+(3, 'Dženisa Husić', 2, 'dzhusic', 'dzhusic'),
+(5, 'Adnan Ademović', 3, 'aademovic', 'aademovic');
 
 -- --------------------------------------------------------
 
@@ -100,7 +112,8 @@ CREATE TABLE IF NOT EXISTS `kupcikarti` (
   `imeIPrezime` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `tipKupca` int(11) NOT NULL,
   `dodatniPodaci` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `tipKupca` (`tipKupca`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -163,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `poruke` (
   PRIMARY KEY (`id`),
   KEY `idPosiljaoca` (`idPosiljaoca`),
   KEY `idPrimaoca` (`idPrimaoca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
 
@@ -173,12 +186,21 @@ CREATE TABLE IF NOT EXISTS `poruke` (
 
 CREATE TABLE IF NOT EXISTS `rasporedvoznji` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idLinije` int(11) NOT NULL,
   `danUSedmici` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
-  `vrijeme` time NOT NULL,
+  `sati` int(11) NOT NULL,
+  `minute` int(11) NOT NULL,
   `potrebanBrojSjedista` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `rasporedvoznji`
+--
+
+INSERT INTO `rasporedvoznji` (`id`, `danUSedmici`, `sati`, `minute`, `potrebanBrojSjedista`) VALUES
+(2, 'Ponedjeljak', 13, 25, 50),
+(5, 'Utorak', 15, 40, 40),
+(6, 'petak', 18, 55, 20);
 
 -- --------------------------------------------------------
 
@@ -297,10 +319,22 @@ ALTER TABLE `izvjestaji`
 -- Constraints for table `karte`
 --
 ALTER TABLE `karte`
-  ADD CONSTRAINT `karte_ibfk_4` FOREIGN KEY (`idKupca`) REFERENCES `kupcikarti` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `karte_ibfk_1` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `karte_ibfk_5` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `karte_ibfk_2` FOREIGN KEY (`idPocetneStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `karte_ibfk_3` FOREIGN KEY (`idKrajnjeStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `karte_ibfk_3` FOREIGN KEY (`idKrajnjeStanice`) REFERENCES `stanice` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `karte_ibfk_4` FOREIGN KEY (`idKupca`) REFERENCES `kupcikarti` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `korisnici`
+--
+ALTER TABLE `korisnici`
+  ADD CONSTRAINT `korisnici_ibfk_1` FOREIGN KEY (`tip`) REFERENCES `tipovikorisnika` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `kupcikarti`
+--
+ALTER TABLE `kupcikarti`
+  ADD CONSTRAINT `kupcikarti_ibfk_1` FOREIGN KEY (`tipKupca`) REFERENCES `tipovikupacakarte` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `linijecijene`
@@ -314,8 +348,8 @@ ALTER TABLE `linijecijene`
 -- Constraints for table `linijevoznje`
 --
 ALTER TABLE `linijevoznje`
-  ADD CONSTRAINT `linijevoznje_ibfk_2` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `linijevoznje_ibfk_1` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `linijevoznje_ibfk_3` FOREIGN KEY (`idLinije`) REFERENCES `linije` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `linijevoznje_ibfk_2` FOREIGN KEY (`idVoznje`) REFERENCES `voznje` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `poruke`

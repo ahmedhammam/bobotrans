@@ -91,7 +91,7 @@ namespace DAL
                 }
             }
 
-            public ZakupacAutobusa getById(int id)
+            public ZakupacAutobusa getById(long id)
             {
                 try
                 {

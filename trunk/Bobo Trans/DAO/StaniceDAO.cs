@@ -83,7 +83,7 @@ namespace DAL
                 }
             }
 
-            public Stanica getById(int id)
+            public Stanica getById(long id)
             {
                 try
                 {

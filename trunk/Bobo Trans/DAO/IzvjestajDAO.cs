@@ -83,7 +83,7 @@ namespace DAL
                 }
             }
 
-            public Izvjestaj getById(int id)
+            public Izvjestaj getById(long id)
             {
                 try
                 {

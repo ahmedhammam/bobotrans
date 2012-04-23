@@ -84,7 +84,7 @@ namespace DAL
                 }
             }
 
-            public Korisnik getById(int id)
+            public Korisnik getById(long id)
             {
                 try
                 {
