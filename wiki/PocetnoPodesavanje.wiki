@@ -1,6 +1,9 @@
 = Koraci u podesavanju Visual Studia i SQL-a =
 
  # Instalirati wamp server, i mysql connector
+ 
+ # Skinuti projekat preko turtoise svn, link je:
+   https://code.google.com/p/bobotrans/
 
  # Dodati referencu na connector u projekat (ako vec ne postoji)
 
