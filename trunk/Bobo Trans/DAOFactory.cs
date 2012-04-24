@@ -59,10 +59,10 @@ namespace DAL
                 return new VoznjaDAO();
             }
 
-           /* public LinijeDAO getLinijeDAO()
+            public LinijaDAO getLinijaDAO()
             {
-                return new LinijeDAO();
-            }*/
+                return new LinijaDAO();
+            }
 
             /*public KarteDAO getKarteDAO()
             {

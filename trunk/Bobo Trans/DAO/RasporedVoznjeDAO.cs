@@ -20,7 +20,6 @@ namespace DAL
             {
                 try
                 {
-                    
                     c = new MySqlCommand(String.Format("INSERT INTO rasporedvoznji VALUES ('','{0}','{1}','{2}','{3}');"
                         , entity.DanUSedmici, entity.Vrijeme.Hour,entity.Vrijeme.Minute, entity.PotrebanBrojSjedista)
                         , con);
