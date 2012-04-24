@@ -2,12 +2,11 @@
 
  # Instalirati wamp server, i mysql connector
  
- # Skinuti projekat preko turtoise svn, link je:
-   https://code.google.com/p/bobotrans/
+ # Skinuti projekat preko turtoise svn. Napraviti folder za projekat i povezati ga sa projektom isto kao sto je Teo uradio, link projekta je: https://code.google.com/p/bobotrans/
 
  # Dodati referencu na connector u projekat (ako vec ne postoji)
 
- # Preuzeti bazu i importovati je u phpmyadminu
+ # Importovati bazu u phpmyadminu
 
  # U konzolu sql-a upisati:
 
