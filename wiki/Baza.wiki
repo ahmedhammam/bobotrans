@@ -36,6 +36,10 @@
 
 - vrijemePolaska (date)
 
+- sati(int)
+
+- minute(int)
+
 ===LinijeVoznje:===
 
 - id (primary, int, autoincrement) 
