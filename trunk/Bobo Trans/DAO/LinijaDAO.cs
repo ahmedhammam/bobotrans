@@ -20,14 +20,18 @@ namespace DAL
             #region funkcije za unos linije u bazu
             public long create(Linija entity)
             {
+                if (entity.TrajanjeDoDolaska.Count != entity.Stanice.Count || entity.TrajanjeDoPolaska.Count != entity.Stanice.Count)
+                    throw new Exception("Neispravan ulazni oblik za unos u bazu!");
+
                 c = new MySqlCommand("START TRANSACTION;",con);
                 try
                 {
                     c.ExecuteNonQuery();
-                    long idLinije = unesiLinije(entity);
-                    unesiStaniceULiniji(entity, idLinije);
-                    unesiVoznje(entity, idLinije);
-                    unesiRasporedeVoznje(entity, idLinije);
+                    long idLinije = unesiLinije(ref entity);
+                    unesiStaniceULiniji(ref entity, idLinije);
+                    unesiVoznje(ref entity, idLinije);
+                    unesiRasporedeVoznje(ref entity, idLinije);
+                    unesiCijene(ref entity, idLinije);
                     c = new MySqlCommand("COMMIT;", con);
                     c.ExecuteNonQuery();
                     return idLinije;
@@ -40,7 +44,7 @@ namespace DAL
                 }
             }
 
-            private void unesiCijene(Linija entity, long idLinije)
+            private void unesiCijene(ref Linija entity, long idLinije)
             {
                 if (entity.Cijene.Count != entity.Stanice.Count-1) throw new Exception("Nedovoljno unesenih cijena!");
                 for (int i = 0; i < entity.Cijene.Count; i++)
@@ -48,15 +52,15 @@ namespace DAL
                     for (int j = 0; j < entity.Cijene[i].Count; j++)
                     {
                         c = new MySqlCommand(string.Format("INSERT INTO linijecijene VALUES ('','{0}','{1}','{2}','{3}');",
-                            idLinije, entity.Stanice[i].SifraStanice, entity.Stanice[j].SifraStanice, entity.Cijene[i][j]), con);
+                            idLinije, entity.Stanice[i].SifraStanice, entity.Stanice[i+j+1].SifraStanice, entity.Cijene[i][j].ToString().Replace(',','.')), con);
                         c.ExecuteNonQuery();
+
                     }
                 }
             }
 
-            private void unesiRasporedeVoznje(Linija entity, long idLinije)
+            private void unesiRasporedeVoznje(ref Linija entity, long idLinije)
             {
-
                 if (entity.RasporediVoznje.Count < 1) throw new Exception("Nedovoljno rasporeda voznje!");
                 for (int i = 0; i < entity.RasporediVoznje.Count; i++)
                 {
@@ -67,7 +71,7 @@ namespace DAL
                 }
             }
 
-            private void unesiVoznje(Linija entity, long idLinije)
+            private void unesiVoznje(ref Linija entity, long idLinije)
             {
                 if (entity.Voznje.Count < 1) throw new Exception("Nedovoljno voznji u liniji");
                 for (int i = 0; i < entity.Voznje.Count; i++)
@@ -78,16 +82,16 @@ namespace DAL
                 }
             }
 
-            private long unesiLinije(Linija entity)
+            private long unesiLinije(ref Linija entity)
             {
                 c = new MySqlCommand(String.Format("INSERT INTO linije VALUES ('','{0}');", entity.NazivLinije), con);
                 c.ExecuteNonQuery();
                 return c.LastInsertedId;
             }
 
-            private void unesiStaniceULiniji(Linija entity, long idLinije)
+            private void unesiStaniceULiniji(ref Linija entity, long idLinije)
             {
-                if (entity.Stanice.Count < 2) throw new Exception("Nedovoljno stanica u liniji");
+                if (entity.Stanice.Count < 1) throw new Exception("Nedovoljno stanica u liniji");
                 for (int i = 0; i < entity.Stanice.Count; i++)
                 {
                     c = new MySqlCommand(String.Format("INSERT INTO staniceuliniji VALUES ('','{0}','{1}','{2}','{3}')",
@@ -113,25 +117,31 @@ namespace DAL
             {
                 try
                 {
-
+                    c = new MySqlCommand("START TRANSACTION;", con);
+                    c.ExecuteNonQuery();
                     foreach (Voznja v in entity.Voznje)
                         DAOFactory.Instanca.getVoznjaDAO().delete(v);
 
                     foreach (RasporedVoznje rv in entity.RasporediVoznje)
                         DAOFactory.Instanca.getRasporedVoznjiDAO().delete(rv);
 
-                    c = new MySqlCommand(string.Format("DELETE * FROM staniceuliniji WHERE idLinije='{0}'", entity.SifraLinije), con);
+                    c = new MySqlCommand(string.Format("DELETE FROM staniceuliniji WHERE idLinije='{0}'", entity.SifraLinije), con);
                     c.ExecuteNonQuery();
 
-                    c = new MySqlCommand(string.Format("DELETE * FROM linijecijene WHERE idLinije='{0}'", entity.SifraLinije), con);
+                    c = new MySqlCommand(string.Format("DELETE FROM linijecijene WHERE idLinije='{0}'", entity.SifraLinije), con);
                     c.ExecuteNonQuery();
 
-                    c = new MySqlCommand(string.Format("DELETE * FROM linije WHERE id='{0}'", entity.SifraLinije), con);
+                    c = new MySqlCommand(string.Format("DELETE FROM linije WHERE id='{0}'", entity.SifraLinije), con);
                     c.ExecuteNonQuery();
 
+                    c = new MySqlCommand("COMMIT;", con);
+                    c.ExecuteNonQuery();
+                    Console.WriteLine("AAAA");
                 }
                 catch (Exception e)
                 {
+                    c = new MySqlCommand("ROLLBACK;", con);
+                    c.ExecuteNonQuery();
                     throw e;
                 }
             }
@@ -150,41 +160,50 @@ namespace DAL
 
                 try
                 {
+                    c = new MySqlCommand("START TRANSACTION;", con);
+                    c.ExecuteNonQuery();
                     naziv = ucitajNaziv(id);
                     ucitavanjeIzStaniceULiniji(sifra, ref stanice, ref trajanjeDoDolaska, ref trajanjeDoPolaska);
                     ucitajVoznje(sifra, ref voznje);
                     ucitajRasporedVoznji(sifra, ref rasporediVoznje);
+                    cijene = new List<List<double>>();
 
-                    cijene = new List<List<double>>(stanice.Count);
-                    for (int i = 0; i < stanice.Count; i++)
-                        cijene[i] = new List<double>(stanice.Count - i - 1);
-
+                    for (int i = 0; i < stanice.Count - 1; i++)
+                    {
+                        cijene.Add(new List<double>());
+                        for (int j = 0; j < stanice.Count  - i - 1; j++)
+                            cijene[i].Add(0);
+                    }
                     ucitajCijene(sifra, stanice.Count, ref cijene);
+                    c = new MySqlCommand("COMMIT;", con);
+                    c.ExecuteNonQuery();
                 }
                 catch (Exception e)
                 {
+                    c = new MySqlCommand("ROLLBACK;", con);
+                    c.ExecuteNonQuery();
                     throw e;
                 }
 
                 return new Linija(sifra, naziv, stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporediVoznje);
             }
 
-            #region funkcije za ucitavanje4
+            #region funkcije za ucitavanje
             private void ucitajCijene(long sifraLinije, int brStanica, ref List<List<double>> cijene)
             {
-                c = new MySqlCommand(string.Format("SELECT lc.*, sul.trajanjeDoDolaska FROM (SELECT * FROM linijecijene WHERE idLinije='{0}') AS lc LEFT JOIN staniceuliniji AS sul ON sul.idLinije='{0}' AND sul.idStanice = lc.idPrveStanice ORDER BY sul.trajanjeDoDolaska;",
+                c = new MySqlCommand(string.Format("SELECT lc.*, sul.trajanjeDoDolaska FROM (SELECT * FROM linijecijene WHERE idLinije='{0}') AS lc LEFT JOIN staniceuliniji AS sul ON sul.idLinije='{0}' AND sul.idStanice = lc.idPrveStanice ORDER BY sul.trajanjeDoDolaska,lc.cijena;",
                     sifraLinije), con);
                 MySqlDataReader r = c.ExecuteReader();
 
                 int sifra1, sifra2;
-                for (int i = 0; i < brStanica; i++)
+                for (int i = 0; i < brStanica-1; i++)
                 {
-                    if (!r.Read()) throw new Exception("Neispravan broj cijena u tabeli");
                     for (int j = 0; j < brStanica - i - 1; j++)
                     {
+                        r.Read();
                         sifra1 = r.GetInt16("idPrveStanice");
-                        sifra2 = r.GetInt16("idDrugeStanice");
-                        cijene[sifra1][sifra2] = r.GetDouble("cijena");
+                        sifra2 = r.GetInt16("idDrugeStanice");   
+                        cijene[i][j] = r.GetDouble("cijena");
                     }
                 }
                 r.Close();
@@ -195,26 +214,28 @@ namespace DAL
                 rasporediVoznje = new List<RasporedVoznje>();
                 c = new MySqlCommand(String.Format("SELECT * FROM linijerasporedvoznji WHERE idLinije='{0}';", sifra), con);
                 MySqlDataReader r = c.ExecuteReader();
-                long sifraRasporedaVoznje;
+                List<long> sifraRasporedaVoznje = new List<long>();
                 while (r.Read())
-                {
-                    sifraRasporedaVoznje = r.GetInt32("idRasporedaVoznje");
-                    rasporediVoznje.Add(DAOFactory.Instanca.getRasporedVoznjiDAO().getById(sifraRasporedaVoznje));
-                }
+                    sifraRasporedaVoznje.Add(r.GetInt32("idRasporedaVoznje"));
                 r.Close();
+                foreach (long sifraR in sifraRasporedaVoznje)
+                {
+                    rasporediVoznje.Add(DAOFactory.Instanca.getRasporedVoznjiDAO().getById(sifraR));
+                }
             }
 
             private void ucitajVoznje(long sifra, ref List<Voznja> voznje)
             {
                 voznje = new List<Voznja>();
                 c = new MySqlCommand(String.Format("SELECT idVoznje FROM linijevoznje WHERE idLinije='{0}';", sifra), con);
-                long sifraVoznje;
+                List<long> sifraVoznje = new List<long>();
                 MySqlDataReader r = c.ExecuteReader();
                 while (r.Read())
-                {
-                    sifraVoznje = r.GetInt32("idVoznje");
-                    voznje.Add(DAOFactory.Instanca.getVoznjaDAO().getById(sifraVoznje));
-                }
+                    sifraVoznje.Add(r.GetInt32("idVoznje"));
+                r.Close();
+                foreach(long sifraV in sifraVoznje)
+                    voznje.Add(DAOFactory.Instanca.getVoznjaDAO().getById(sifraV));
+
                 r.Close();
             }
 
@@ -272,11 +293,13 @@ namespace DAL
                 List<Linija> linije = new List<Linija>();
                 c = new MySqlCommand("SELECT id FROM linije",con);
                 MySqlDataReader r = c.ExecuteReader();
+                List<long> sifre = new List<long>();
                 while (r.Read())
-                {
-                    linije.Add(getById(r.GetInt32("id")));
-                }
+                    sifre.Add(r.GetInt32("id"));
                 r.Close();
+
+                foreach(long sifra in sifre)
+                   linije.Add(getById(sifra));
                 return linije;
             }
 
