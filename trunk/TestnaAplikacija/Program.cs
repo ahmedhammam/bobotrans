@@ -18,12 +18,18 @@ namespace TestnaAplikacija
 d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
 
 DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
+DAL.DAL.VoznjaDAO vd = d.getDAO.getVoznjaDAO();
+                DAL.DAL.AutobusDAO ad = d.getDAO.getAutobusDAO();
+Voznja v = new Voznja(new DateTime(2012,5,24,15,3,0),ad.getById(1));
+v.SifraVoznje = vd.create(v);
+Console.WriteLine(v.SifraVoznje);
 
-List<Korisnik> korisnici = kd.GetAll();
+                
+//List<Korisnik> korisnici = kd.GetAll();
 
-foreach (Korisnik k in korisnici)
-Console.WriteLine(k.ImeIPrezime);
-                }
+//foreach (Korisnik k in korisnici)
+//Console.WriteLine(k.ImeIPrezime);
+               }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
