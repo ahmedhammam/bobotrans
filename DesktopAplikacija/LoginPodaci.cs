@@ -5,11 +5,11 @@ using System.Text;
 
 namespace DesktopAplikacija
 {
-    public static class LoginPodaci
+    public  class LoginPodaci
     {
-        public static long sifraKorisnika;
+        public static string sifraKorisnika;
         public static string usernameKorisnika;
-        public LoginPodaci(long sifra, string user)
+        public LoginPodaci(string sifra, string user)
         {
             sifraKorisnika = sifra;
             usernameKorisnika = user;
