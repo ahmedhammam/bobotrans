@@ -79,6 +79,7 @@ namespace DAL.Entiteti
             trajanjeDoPolaska = tDoPolaska;
             cijene = c;
             voznje = v;
+            rasporediVoznje = rV;
         }
 
         public Linija(string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<double>> c, List<Voznja> v, List<RasporedVoznje> rV)
@@ -89,6 +90,7 @@ namespace DAL.Entiteti
             trajanjeDoPolaska = tDoPolaska;
             cijene = c;
             voznje = v;
+            rasporediVoznje = rV;
         }
 
         public void dodajVoznju(long sifraVoznje, DateTime vrijemePolaska, Autobus autobus)
