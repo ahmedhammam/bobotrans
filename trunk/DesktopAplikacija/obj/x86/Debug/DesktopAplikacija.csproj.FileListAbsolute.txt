@@ -1,0 +1,12 @@
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Login.resources
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Properties.Resources.resources
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.serviserAplikacija.resources
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\bin\Debug\DesktopAplikacija.exe
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\bin\Debug\DesktopAplikacija.pdb
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\bin\Debug\Bobo Trans.dll
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\bin\Debug\Bobo Trans.pdb
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.exe
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.pdb
