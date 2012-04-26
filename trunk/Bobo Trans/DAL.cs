@@ -10,6 +10,11 @@ namespace DAL
     public partial class DAL
     {
         //private string db, user, pass;
+        const string databaseServer = "localhost";
+        const string databaseName = "bobotrans";
+        const string databaseUser = "root";
+        const string databasePassword = "";
+
         private static MySqlConnection con = null;
 
         private static DAL instanca = null;
@@ -23,7 +28,7 @@ namespace DAL
         ~DAL() { terminirajKonekciju(); }
 
 
-        public void kreirajKonekciju(string host, string db, string user, string pass)
+        public void kreirajKonekciju(string host=databaseServer, string db=databaseName, string user=databaseUser, string pass=databasePassword)
         {
             if (con != null) return;
             string connectionString = "server=" + host + ";user=" + user + ";pwd=" + pass + ";database=" + db;
