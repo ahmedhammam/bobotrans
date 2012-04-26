@@ -18,7 +18,8 @@ namespace TestnaAplikacija
                 DAL.DAL d = DAL.DAL.Instanca;
                 //d.kreirajKonekciju("127.0.0.1", "bobotrans", "amer", "jCwB448bWhWcCuAC");
                 d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
-
+                List<Autobus> autobusi = new List<Autobus>();
+                autobusi.Sort();
 
                 /*
                     List<Stanica> stanice = new List<Stanica>();
