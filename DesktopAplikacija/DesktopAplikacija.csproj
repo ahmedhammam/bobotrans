@@ -55,6 +55,36 @@
     <Compile Include="LoginPodaci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serviser\IzmijeniPodatke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serviser\IzmijeniPodatke.Designer.cs">
+      <DependentUpon>IzmijeniPodatke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serviser\KreirajIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serviser\KreirajIzvjestaj.Designer.cs">
+      <DependentUpon>KreirajIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serviser\PrikaziIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serviser\PrikaziIzvjestaj.Designer.cs">
+      <DependentUpon>PrikaziIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serviser\PrikaziPoruke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serviser\PrikaziPoruke.Designer.cs">
+      <DependentUpon>PrikaziPoruke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serviser\serviserAplikacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serviser\serviserAplikacija.Designer.cs">
+      <DependentUpon>serviserAplikacija.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Serviser\serviserAplikacija.resx">
+      <DependentUpon>serviserAplikacija.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,7 +119,6 @@
   <ItemGroup>
     <Folder Include="Menadzer\" />
     <Folder Include="RadnikZaSalterom\" />
-    <Folder Include="Serviser\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
