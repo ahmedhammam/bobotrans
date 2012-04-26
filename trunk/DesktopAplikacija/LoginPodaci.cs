@@ -7,8 +7,8 @@ namespace DesktopAplikacija
 {
     public  class LoginPodaci
     {
-         static string sifraKorisnika;
-         static string usernameKorisnika;
+       private  static string sifraKorisnika;
+        private static string usernameKorisnika;
         public LoginPodaci(string sifra, string user)
         {
             sifraKorisnika = sifra;

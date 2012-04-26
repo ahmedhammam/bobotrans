@@ -85,13 +85,18 @@ namespace DesktopAplikacija
 
         private void Login_Load(object sender, EventArgs e)
         {
-            d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
+            d.kreirajKonekciju();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             d.terminirajKonekciju();
             Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         
