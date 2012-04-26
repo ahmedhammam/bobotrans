@@ -74,6 +74,7 @@
             // 
             this.t_sifraKorisnika.Location = new System.Drawing.Point(165, 82);
             this.t_sifraKorisnika.Name = "t_sifraKorisnika";
+            this.t_sifraKorisnika.PasswordChar = '*';
             this.t_sifraKorisnika.Size = new System.Drawing.Size(116, 20);
             this.t_sifraKorisnika.TabIndex = 3;
             this.t_sifraKorisnika.Validating += new System.ComponentModel.CancelEventHandler(this.t_sifraKorisnika_Validating);

@@ -14,10 +14,13 @@ namespace DesktopAplikacija
 {
     public partial class Login : Form
     {
+        DAL.DAL d = DAL.DAL.Instanca;
         public Login()
         {
             
+           
                 InitializeComponent();
+                
         }
 
 
@@ -25,8 +28,7 @@ namespace DesktopAplikacija
         {
             if (Validiraj())
             {
-                DAL.DAL d = DAL.DAL.Instanca;
-                d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
+               
                 DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
                 
                 try
@@ -83,11 +85,12 @@ namespace DesktopAplikacija
 
         private void Login_Load(object sender, EventArgs e)
         {
-        
+            d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            d.terminirajKonekciju();
             Close();
         }
 
