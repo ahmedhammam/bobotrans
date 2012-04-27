@@ -35,3 +35,6 @@ Amer
  * == SistemskiEntiteti ==
  Da li idu na dijagram klasa?
 Amer
+
+ * == SuceljeRedaVoznje ==
+ vratiPolazneVoznjeStanice i vratiDolazneVoznjeStanice preimenovati u vratiPolazneLinijeStanice i vratiDolazneLinijeStanice
