@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <DBMODEL Version="1.0" TYPE="MySQL">
-<MODELSETTINGS MDDVERSION="1.9.10 (build 555)" ModelProject="" ModelName="bobotrans_baza" ModelCompany="" ModelAuthor="" ModelVersion="" ModelVersionAI="0" ModelCreated="2012-04-25 02:38:11" MaintainModelUpdated="1" ModelCopyright="\169" ModelUpdated="2012-04-25 02:35:12" Description="" Annotation="" ZoomFac="66.00" XPos="0" YPos="0" PrintLink="" WorkspaceColor="16777215" SnapGrid="1" DisplaySnap="1" SnapSize="10" ShowPages="1" ShowTableColumns="1" ShowTableIndeces="1" ShowColumnTypes="1" ShowDomains="0" ShowIndexInd="0" ShowNullInd="0" ShowForeignKeys="1" EntityFillColor="16777215" EntityLineColor="8388608" EntityFontColor="0" ShowTableColumnComment="0" ShowTableTriggers="1" ShowTableComment="0" ShowMaxEnumItems="3" ShowRefName="1" ShowCardinality="0" ShowJoin="0" Notation="0" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" DefaultDelete="3" DefaultUpdate="3" DefaultTableType="0" DefaultDataType="3" CreateFKRef="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="`" EncloseNames="1" HPageCount="5" VPageCount="5" SPFillColor="13499135" SPLineColor="8388608" SPFontColor="0" ViewFillColor="3329434" ViewLineColor="8388608" ViewFontColor="0" TrimSPBody="0" MinimapBackColor="16777215" MinimapShapesStyle="2" MinimapVisibleAreaStyle="2" />
+<MODELSETTINGS MDDVERSION="1.9.10 (build 555)" ModelProject="" ModelName="bobotrans_baza" ModelCompany="" ModelAuthor="" ModelVersion="" ModelVersionAI="0" ModelCreated="2012-04-28 23:16:23" MaintainModelUpdated="1" ModelCopyright="\169" ModelUpdated="2012-04-28 23:14:51" Description="" Annotation="" ZoomFac="75.00" XPos="243" YPos="0" PrintLink="" WorkspaceColor="16777215" SnapGrid="1" DisplaySnap="1" SnapSize="10" ShowPages="1" ShowTableColumns="1" ShowTableIndeces="1" ShowColumnTypes="1" ShowDomains="0" ShowIndexInd="0" ShowNullInd="0" ShowForeignKeys="1" EntityFillColor="16777215" EntityLineColor="8388608" EntityFontColor="0" ShowTableColumnComment="0" ShowTableTriggers="1" ShowTableComment="0" ShowMaxEnumItems="3" ShowRefName="1" ShowCardinality="0" ShowJoin="0" Notation="0" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" DefaultDelete="3" DefaultUpdate="3" DefaultTableType="0" DefaultDataType="3" CreateFKRef="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="`" EncloseNames="1" HPageCount="5" VPageCount="5" SPFillColor="13499135" SPLineColor="8388608" SPFontColor="0" ViewFillColor="3329434" ViewLineColor="8388608" ViewFontColor="0" TrimSPBody="0" MinimapBackColor="16777215" MinimapShapesStyle="2" MinimapVisibleAreaStyle="2" />
 <GENERATIONSETTINGS TextCharCase="2" NameInComment="0" ModelCheck="1" ISQL="0" Delimiter="||" TypeInsteadOfEngine="0">
   <DBGENSETTINGS DBCreate="0" BeginScript="0" Comment="0" Drop="0" EndScript="0" />
   <FKGENSETTINGS CreateFK="1" GenerateInsideTables="1" />
@@ -16,571 +16,575 @@
 </DOMAINS>
 <METADATA>
 <ENTITIES>
-<ENTITY ID="1005" Name="autobusi" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="330" YPos="350" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1000" Name="autobusi" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1710" YPos="380" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1022" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1017" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1023" Name="registracijskeTablice" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1018" Name="registracijskeTablice" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
-<COLUMN ID="1024" Name="istekRegistracije" DomainID="-1" Pos="3" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1019" Name="istekRegistracije" DomainID="-1" Pos="3" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1025" Name="brojSjedista" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1020" Name="brojSjedista" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1026" Name="datumServisa" DomainID="-1" Pos="5" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1021" Name="datumServisa" DomainID="-1" Pos="5" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1027" Name="toalet" DomainID="-1" Pos="6" Datatype="0" Type="tinyint" Width="1" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1022" Name="toalet" DomainID="-1" Pos="6" Datatype="0" Type="tinyint" Width="1" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1028" Name="slobodan" DomainID="-1" Pos="7" Datatype="0" Type="tinyint" Width="1" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1023" Name="slobodan" DomainID="-1" Pos="7" Datatype="0" Type="tinyint" Width="1" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1029" Name="klima" DomainID="-1" Pos="8" Datatype="0" Type="tinyint" Width="1" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1024" Name="klima" DomainID="-1" Pos="8" Datatype="0" Type="tinyint" Width="1" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1156" />
-<REFERENCE_BEGIN ID="1157" />
+<REFERENCE_BEGIN ID="1153" />
+<REFERENCE_BEGIN ID="1154" />
 </REFERENCES_BEGIN>
 <INDEXES>
-<INDEX ID="1030" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1025" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1022=" />
+<INDEXCOLUMN ID="1017=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1031" Name="registracijskeTablice" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1026" Name="registracijskeTablice" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1023=" />
+<INDEXCOLUMN ID="1018=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1006" Name="izvjestaji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="480" YPos="230" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1001" Name="izvjestaji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="510" YPos="130" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1032" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1027" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1033" Name="datum" DomainID="-1" Pos="2" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1028" Name="datum" DomainID="-1" Pos="2" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1034" Name="tekst" DomainID="-1" Pos="3" Datatype="20" Type="text" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1029" Name="tekst" DomainID="-1" Pos="3" Datatype="20" Type="text" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
-<COLUMN ID="1035" Name="idKreatora" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1030" Name="idKreatora" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_END>
-<REFERENCE_END ID="1138" />
+<REFERENCE_END ID="1135" />
 </REFERENCES_END>
 <INDEXES>
-<INDEX ID="1036" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1031" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1032=" />
+<INDEXCOLUMN ID="1027=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1037" Name="idKreatora" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1032" Name="idKreatora" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1030=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1002" Name="karte" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1070" YPos="620" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1033" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1034" Name="idVoznje" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1035" Name="idPocetneStanice" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1036" Name="idKrajnjeStanice" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1037" Name="idSjedista" DomainID="-1" Pos="5" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1038" Name="cijena" DomainID="-1" Pos="6" Datatype="7" Type="decimal" Width="10" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1039" Name="idKupca" DomainID="-1" Pos="7" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1136" />
+<REFERENCE_END ID="1137" />
+<REFERENCE_END ID="1138" />
+<REFERENCE_END ID="1139" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1040" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1033=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1041" Name="idVoznje" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1034=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1042" Name="idPocetneStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1035=" />
 </INDEXCOLUMNS>
 </INDEX>
-</INDEXES>
-</ENTITY>
-<ENTITY ID="1007" Name="karte" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="530" YPos="700" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
-<COLUMNS>
-<COLUMN ID="1038" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1039" Name="idVoznje" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1040" Name="idPocetneStanice" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1041" Name="idKrajnjeStanice" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1042" Name="idSjedista" DomainID="-1" Pos="5" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1043" Name="cijena" DomainID="-1" Pos="6" Datatype="7" Type="decimal" Width="10" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1044" Name="idKupca" DomainID="-1" Pos="7" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-</COLUMNS>
-<REFERENCES_END>
-<REFERENCE_END ID="1139" />
-<REFERENCE_END ID="1140" />
-<REFERENCE_END ID="1141" />
-<REFERENCE_END ID="1142" />
-</REFERENCES_END>
-<INDEXES>
-<INDEX ID="1045" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1043" Name="idKrajnjeStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1038=" />
+<INDEXCOLUMN ID="1036=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1046" Name="idVoznje" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1044" Name="idKupca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1039=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1047" Name="idPocetneStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1003" Name="korisnici" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="740" YPos="70" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1045" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1046" Name="imeIPrezime" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+</COLUMN>
+<COLUMN ID="1047" Name="tip" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1048" Name="username" DomainID="-1" Pos="4" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+</COLUMN>
+<COLUMN ID="1049" Name="lozinka" DomainID="-1" Pos="5" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1135" />
+<REFERENCE_BEGIN ID="1149" />
+<REFERENCE_BEGIN ID="1150" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1140" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1050" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1040=" />
+<INDEXCOLUMN ID="1045=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1048" Name="idKrajnjeStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1051" Name="username" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1041=" />
+<INDEXCOLUMN ID="1048=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1049" Name="idKupca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1052" Name="tip" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1044=" />
+<INDEXCOLUMN ID="1047=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1008" Name="korisnici" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="780" YPos="200" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1004" Name="kupcikarti" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1440" YPos="80" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1050" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1053" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1051" Name="imeIPrezime" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1054" Name="imeIPrezime" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
-<COLUMN ID="1052" Name="tip" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1055" Name="tipKupca" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1053" Name="username" DomainID="-1" Pos="4" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
-</COLUMN>
-<COLUMN ID="1054" Name="lozinka" DomainID="-1" Pos="5" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1056" Name="dodatniPodaci" DomainID="-1" Pos="4" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_BEGIN>
 <REFERENCE_BEGIN ID="1138" />
-<REFERENCE_BEGIN ID="1152" />
-<REFERENCE_BEGIN ID="1153" />
 </REFERENCES_BEGIN>
 <REFERENCES_END>
-<REFERENCE_END ID="1143" />
+<REFERENCE_END ID="1141" />
 </REFERENCES_END>
 <INDEXES>
-<INDEX ID="1055" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1050=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1056" Name="username" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1057" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1053=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1057" Name="tip" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1058" Name="tipKupca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1052=" />
+<INDEXCOLUMN ID="1055=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1009" Name="kupcikarti" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="800" YPos="780" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1005" Name="linije" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1200" YPos="250" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1058" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1059" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1059" Name="imeIPrezime" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
-</COLUMN>
-<COLUMN ID="1060" Name="tipKupca" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1061" Name="dodatniPodaci" DomainID="-1" Pos="4" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1060" Name="naziv" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1141" />
+<REFERENCE_BEGIN ID="1142" />
+<REFERENCE_BEGIN ID="1145" />
+<REFERENCE_BEGIN ID="1148" />
+<REFERENCE_BEGIN ID="1151" />
 </REFERENCES_BEGIN>
-<REFERENCES_END>
-<REFERENCE_END ID="1144" />
-</REFERENCES_END>
 <INDEXES>
-<INDEX ID="1062" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1061" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1058=" />
+<INDEXCOLUMN ID="1059=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1063" Name="tipKupca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1062" Name="naziv" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1060=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1010" Name="linije" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1320" YPos="350" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1006" Name="linijecijene" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="560" YPos="640" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1064" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1063" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1065" Name="naziv" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1064" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1065" Name="idPrveStanice" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1066" Name="idDrugeStanice" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1067" Name="cijena" DomainID="-1" Pos="5" Datatype="7" Type="decimal" Width="10" Prec="1" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
-<REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1145" />
-<REFERENCE_BEGIN ID="1148" />
-<REFERENCE_BEGIN ID="1151" />
-<REFERENCE_BEGIN ID="1154" />
-</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1142" />
+<REFERENCE_END ID="1143" />
+<REFERENCE_END ID="1144" />
+</REFERENCES_END>
 <INDEXES>
-<INDEX ID="1066" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1068" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1063=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1069" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1064=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1067" Name="naziv" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1070" Name="idPrveStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1065=" />
 </INDEXCOLUMNS>
 </INDEX>
+<INDEX ID="1071" Name="idDrugeStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1066=" />
+</INDEXCOLUMNS>
+</INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1011" Name="linijecijene" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1010" YPos="300" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1007" Name="linijerasporedvoznji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1600" YPos="220" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1068" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1072" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1069" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1073" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1070" Name="idPrveStanice" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1071" Name="idDrugeStanice" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1072" Name="cijena" DomainID="-1" Pos="5" Datatype="7" Type="decimal" Width="10" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1074" Name="idRasporedaVoznje" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_END>
 <REFERENCE_END ID="1145" />
 <REFERENCE_END ID="1146" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1075" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1072=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1076" Name="idRasporedaVoznje_2" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1074=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1077" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1073=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1078" Name="idRasporedaVoznje" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1074=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1008" Name="linijevoznje" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1030" YPos="440" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1079" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1080" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1081" Name="idVoznje" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
 <REFERENCE_END ID="1147" />
-</REFERENCES_END>
-<INDEXES>
-<INDEX ID="1073" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1068=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1074" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1069=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1075" Name="idPrveStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1070=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1076" Name="idDrugeStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1071=" />
-</INDEXCOLUMNS>
-</INDEX>
-</INDEXES>
-</ENTITY>
-<ENTITY ID="1012" Name="linijerasporedvoznji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1310" YPos="160" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
-<COLUMNS>
-<COLUMN ID="1077" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1078" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1079" Name="idRasporedaVoznje" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-</COLUMNS>
-<REFERENCES_END>
 <REFERENCE_END ID="1148" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1082" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1079=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1083" Name="idVoznje_2" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1081=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1084" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1080=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1085" Name="idVoznje" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1081=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1009" Name="poruke" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1000" YPos="20" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1086" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1087" Name="idPosiljaoca" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1088" Name="idPrimaoca" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1089" Name="vrijemeSlanja" DomainID="-1" Pos="4" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1090" Name="tekst" DomainID="-1" Pos="5" Datatype="20" Type="text" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
 <REFERENCE_END ID="1149" />
-</REFERENCES_END>
-<INDEXES>
-<INDEX ID="1080" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1077=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1081" Name="idRasporedaVoznje_2" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1079=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1082" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1078=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1083" Name="idRasporedaVoznje" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1079=" />
-</INDEXCOLUMNS>
-</INDEX>
-</INDEXES>
-</ENTITY>
-<ENTITY ID="1013" Name="linijevoznje" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1510" YPos="550" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
-<COLUMNS>
-<COLUMN ID="1084" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1085" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1086" Name="idVoznje" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-</COLUMNS>
-<REFERENCES_END>
 <REFERENCE_END ID="1150" />
-<REFERENCE_END ID="1151" />
 </REFERENCES_END>
 <INDEXES>
-<INDEX ID="1087" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1084=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1088" Name="idVoznje_2" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1091" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1086=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1089" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1092" Name="idPosiljaoca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1085=" />
+<INDEXCOLUMN ID="1087=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1090" Name="idVoznje" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1093" Name="idPrimaoca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1086=" />
+<INDEXCOLUMN ID="1088=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1014" Name="poruke" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="480" YPos="70" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1010" Name="rasporedvoznji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1890" YPos="150" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1091" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1094" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1092" Name="idPosiljaoca" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1095" Name="danUSedmici" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
-<COLUMN ID="1093" Name="idPrimaoca" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1096" Name="sati" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1094" Name="vrijemeSlanja" DomainID="-1" Pos="4" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1097" Name="minute" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1095" Name="tekst" DomainID="-1" Pos="5" Datatype="20" Type="text" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1098" Name="potrebanBrojSjedista" DomainID="-1" Pos="5" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1146" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1099" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1094=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1011" Name="stanice" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="550" YPos="340" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1100" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1101" Name="naziv" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+</COLUMN>
+<COLUMN ID="1102" Name="mjesto" DomainID="-1" Pos="3" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1136" />
+<REFERENCE_BEGIN ID="1137" />
+<REFERENCE_BEGIN ID="1143" />
+<REFERENCE_BEGIN ID="1144" />
+<REFERENCE_BEGIN ID="1152" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1103" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1100=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1012" Name="staniceuliniji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="940" YPos="190" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1104" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1105" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1106" Name="idStanice" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1107" Name="trajanjeDoDolaska" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1108" Name="trajanjeDoPolaska" DomainID="-1" Pos="5" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_END>
+<REFERENCE_END ID="1151" />
 <REFERENCE_END ID="1152" />
-<REFERENCE_END ID="1153" />
 </REFERENCES_END>
 <INDEXES>
-<INDEX ID="1096" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1109" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1091=" />
+<INDEXCOLUMN ID="1104=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1097" Name="idPosiljaoca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1092=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1098" Name="idPrimaoca" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1093=" />
-</INDEXCOLUMNS>
-</INDEX>
-</INDEXES>
-</ENTITY>
-<ENTITY ID="1015" Name="rasporedvoznji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1020" YPos="140" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
-<COLUMNS>
-<COLUMN ID="1099" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1100" Name="danUSedmici" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
-</COLUMN>
-<COLUMN ID="1101" Name="sati" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1102" Name="minute" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1103" Name="potrebanBrojSjedista" DomainID="-1" Pos="5" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-</COLUMNS>
-<REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1149" />
-</REFERENCES_BEGIN>
-<INDEXES>
-<INDEX ID="1104" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1099=" />
-</INDEXCOLUMNS>
-</INDEX>
-</INDEXES>
-</ENTITY>
-<ENTITY ID="1016" Name="stanice" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="630" YPos="520" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
-<COLUMNS>
-<COLUMN ID="1105" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1106" Name="naziv" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
-</COLUMN>
-<COLUMN ID="1107" Name="mjesto" DomainID="-1" Pos="3" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
-</COLUMN>
-</COLUMNS>
-<REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1139" />
-<REFERENCE_BEGIN ID="1140" />
-<REFERENCE_BEGIN ID="1146" />
-<REFERENCE_BEGIN ID="1147" />
-<REFERENCE_BEGIN ID="1155" />
-</REFERENCES_BEGIN>
-<INDEXES>
-<INDEX ID="1108" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1110" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1105=" />
 </INDEXCOLUMNS>
 </INDEX>
-</INDEXES>
-</ENTITY>
-<ENTITY ID="1017" Name="staniceuliniji" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1300" YPos="730" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
-<COLUMNS>
-<COLUMN ID="1109" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1110" Name="idLinije" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1111" Name="idStanice" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1112" Name="trajanjeDoDolaska" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1113" Name="trajanjeDoPolaska" DomainID="-1" Pos="5" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-</COLUMNS>
-<REFERENCES_END>
-<REFERENCE_END ID="1154" />
-<REFERENCE_END ID="1155" />
-</REFERENCES_END>
-<INDEXES>
-<INDEX ID="1114" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1111" Name="idStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1109=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1115" Name="idLinije" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1110=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1116" Name="idStanice" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1111=" />
+<INDEXCOLUMN ID="1106=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1018" Name="tipovikorisnika" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="800" YPos="40" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1013" Name="tipovikorisnika" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="510" YPos="10" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1117" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1112" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1118" Name="tip" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1113" Name="tip" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1143" />
+<REFERENCE_BEGIN ID="1140" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1114" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1112=" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1115" Name="tip" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1113=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1014" Name="tipovikupacakarte" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1160" YPos="30" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1116" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1117" Name="naziv" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+</COLUMN>
+<COLUMN ID="1118" Name="popust" DomainID="-1" Pos="3" Datatype="7" Type="decimal" Width="10" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1141" />
 </REFERENCES_BEGIN>
 <INDEXES>
 <INDEX ID="1119" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1117=" />
+<INDEXCOLUMN ID="1116=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1120" Name="tip" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1120" Name="naziv" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1118=" />
+<INDEXCOLUMN ID="1117=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1019" Name="tipovikupacakarte" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1050" YPos="790" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1015" Name="voznje" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1480" YPos="500" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
 <COLUMN ID="1121" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1122" Name="naziv" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1122" Name="idAutobusa" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1123" Name="popust" DomainID="-1" Pos="3" Datatype="7" Type="decimal" Width="10" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1123" Name="vrijemePolaska" DomainID="-1" Pos="3" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1124" Name="sati" DomainID="-1" Pos="4" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1125" Name="minute" DomainID="-1" Pos="5" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1144" />
+<REFERENCE_BEGIN ID="1139" />
+<REFERENCE_BEGIN ID="1147" />
 </REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1153" />
+</REFERENCES_END>
 <INDEXES>
-<INDEX ID="1124" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1126" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1121=" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1125" Name="naziv" Primary="0" Unique="1" FullText="0" Reference_ID="-1">
+<INDEX ID="1127" Name="idAutobusa" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN ID="1122=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
-<ENTITY ID="1020" Name="voznje" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1010" YPos="500" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<ENTITY ID="1016" Name="zakupiautobusa" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="1730" YPos="660" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
 <COLUMNS>
-<COLUMN ID="1126" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1128" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1127" Name="idAutobusa" DomainID="-1" Pos="2" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1129" Name="imeZakupca" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
 </COLUMN>
-<COLUMN ID="1128" Name="vrijemePolaska" DomainID="-1" Pos="3" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1130" Name="idAutobusa" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-</COLUMNS>
-<REFERENCES_BEGIN>
-<REFERENCE_BEGIN ID="1142" />
-<REFERENCE_BEGIN ID="1150" />
-</REFERENCES_BEGIN>
-<REFERENCES_END>
-<REFERENCE_END ID="1156" />
-</REFERENCES_END>
-<INDEXES>
-<INDEX ID="1129" Name="PRIMARY" Primary="1" Unique="1" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1126=" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="1130" Name="idAutobusa" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
-<INDEXCOLUMNS>
-<INDEXCOLUMN ID="1127=" />
-</INDEXCOLUMNS>
-</INDEX>
-</INDEXES>
-</ENTITY>
-<ENTITY ID="1021" Name="zakupiautobusa" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="200" YPos="630" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
-<COLUMNS>
-<COLUMN ID="1131" Name="id" DomainID="-1" Pos="1" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1131" Name="cijena" DomainID="-1" Pos="4" Datatype="7" Type="decimal" Width="10" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1132" Name="imeZakupca" DomainID="-1" Pos="2" Datatype="14" Type="varchar" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="utf8" Collate="utf8_slovenian_ci" >
+<COLUMN ID="1132" Name="pocetakZakupa" DomainID="-1" Pos="5" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1133" Name="idAutobusa" DomainID="-1" Pos="3" Datatype="3" Type="int" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1134" Name="cijena" DomainID="-1" Pos="4" Datatype="7" Type="decimal" Width="10" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1135" Name="pocetakZakupa" DomainID="-1" Pos="5" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
-</COLUMN>
-<COLUMN ID="1136" Name="krajZakupa" DomainID="-1" Pos="6" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1133" Name="krajZakupa" DomainID="-1" Pos="6" Datatype="8" Type="date" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_END>
-<REFERENCE_END ID="1157" />
+<REFERENCE_END ID="1154" />
 </REFERENCES_END>
 <INDEXES>
-<INDEX ID="1137" Name="idAutobusa" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
+<INDEX ID="1134" Name="idAutobusa" Primary="0" Unique="0" FullText="0" Reference_ID="-1">
 <INDEXCOLUMNS>
-<INDEXCOLUMN ID="1133=" />
+<INDEXCOLUMN ID="1130=" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDEXES>
 </ENTITY>
 </ENTITIES>
 <REFERENCES>
-<REFERENCE  ID="1138" Name="izvjestaji_ibfk_1" Comments="" SOURCE="1008" DESTINATION="1006" FKIDS="1050=1035\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1055" AutoColumnIDs="" />
-<REFERENCE  ID="1139" Name="karte_ibfk_2" Comments="" SOURCE="1016" DESTINATION="1007" FKIDS="1105=1040\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1108" AutoColumnIDs="" />
-<REFERENCE  ID="1140" Name="karte_ibfk_3" Comments="" SOURCE="1016" DESTINATION="1007" FKIDS="1105=1041\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1108" AutoColumnIDs="" />
-<REFERENCE  ID="1141" Name="karte_ibfk_4" Comments="" SOURCE="1009" DESTINATION="1007" FKIDS="1058=1044\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1062" AutoColumnIDs="" />
-<REFERENCE  ID="1142" Name="karte_ibfk_5" Comments="" SOURCE="1020" DESTINATION="1007" FKIDS="1126=1039\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1129" AutoColumnIDs="" />
-<REFERENCE  ID="1143" Name="korisnici_ibfk_1" Comments="" SOURCE="1018" DESTINATION="1008" FKIDS="1117=1052\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1119" AutoColumnIDs="" />
-<REFERENCE  ID="1144" Name="kupcikarti_ibfk_1" Comments="" SOURCE="1019" DESTINATION="1009" FKIDS="1121=1060\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1124" AutoColumnIDs="" />
-<REFERENCE  ID="1145" Name="linijecijene_ibfk_1" Comments="" SOURCE="1010" DESTINATION="1011" FKIDS="1064=1069\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1066" AutoColumnIDs="" />
-<REFERENCE  ID="1146" Name="linijecijene_ibfk_2" Comments="" SOURCE="1016" DESTINATION="1011" FKIDS="1105=1070\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1108" AutoColumnIDs="" />
-<REFERENCE  ID="1147" Name="linijecijene_ibfk_3" Comments="" SOURCE="1016" DESTINATION="1011" FKIDS="1105=1071\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1108" AutoColumnIDs="" />
-<REFERENCE  ID="1148" Name="linijerasporedvoznji_ibfk_1" Comments="" SOURCE="1010" DESTINATION="1012" FKIDS="1064=1078\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1066" AutoColumnIDs="" />
-<REFERENCE  ID="1149" Name="linijerasporedvoznji_ibfk_2" Comments="" SOURCE="1015" DESTINATION="1012" FKIDS="1099=1079\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1104" AutoColumnIDs="" />
-<REFERENCE  ID="1150" Name="linijevoznje_ibfk_2" Comments="" SOURCE="1020" DESTINATION="1013" FKIDS="1126=1086\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1129" AutoColumnIDs="" />
-<REFERENCE  ID="1151" Name="linijevoznje_ibfk_3" Comments="" SOURCE="1010" DESTINATION="1013" FKIDS="1064=1085\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1066" AutoColumnIDs="" />
-<REFERENCE  ID="1152" Name="poruke_ibfk_1" Comments="" SOURCE="1008" DESTINATION="1014" FKIDS="1050=1092\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1055" AutoColumnIDs="" />
-<REFERENCE  ID="1153" Name="poruke_ibfk_2" Comments="" SOURCE="1008" DESTINATION="1014" FKIDS="1050=1093\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1055" AutoColumnIDs="" />
-<REFERENCE  ID="1154" Name="staniceuliniji_ibfk_1" Comments="" SOURCE="1010" DESTINATION="1017" FKIDS="1064=1110\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1066" AutoColumnIDs="" />
-<REFERENCE  ID="1155" Name="staniceuliniji_ibfk_2" Comments="" SOURCE="1016" DESTINATION="1017" FKIDS="1105=1111\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1108" AutoColumnIDs="" />
-<REFERENCE  ID="1156" Name="voznje_ibfk_1" Comments="" SOURCE="1005" DESTINATION="1020" FKIDS="1022=1127\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1030" AutoColumnIDs="" />
-<REFERENCE  ID="1157" Name="zakupiautobusa_ibfk_1" Comments="" SOURCE="1005" DESTINATION="1021" FKIDS="1022=1133\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1030" AutoColumnIDs="" />
+<REFERENCE  ID="1135" Name="izvjestaji_ibfk_1" Comments="" SOURCE="1003" DESTINATION="1001" FKIDS="1045=1030\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1050" AutoColumnIDs="" />
+<REFERENCE  ID="1136" Name="karte_ibfk_2" Comments="" SOURCE="1011" DESTINATION="1002" FKIDS="1100=1035\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1103" AutoColumnIDs="" />
+<REFERENCE  ID="1137" Name="karte_ibfk_3" Comments="" SOURCE="1011" DESTINATION="1002" FKIDS="1100=1036\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1103" AutoColumnIDs="" />
+<REFERENCE  ID="1138" Name="karte_ibfk_4" Comments="" SOURCE="1004" DESTINATION="1002" FKIDS="1053=1039\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1057" AutoColumnIDs="" />
+<REFERENCE  ID="1139" Name="karte_ibfk_5" Comments="" SOURCE="1015" DESTINATION="1002" FKIDS="1121=1034\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1126" AutoColumnIDs="" />
+<REFERENCE  ID="1140" Name="korisnici_ibfk_1" Comments="" SOURCE="1013" DESTINATION="1003" FKIDS="1112=1047\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1114" AutoColumnIDs="" />
+<REFERENCE  ID="1141" Name="kupcikarti_ibfk_1" Comments="" SOURCE="1014" DESTINATION="1004" FKIDS="1116=1055\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1119" AutoColumnIDs="" />
+<REFERENCE  ID="1142" Name="linijecijene_ibfk_1" Comments="" SOURCE="1005" DESTINATION="1006" FKIDS="1059=1064\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1061" AutoColumnIDs="" />
+<REFERENCE  ID="1143" Name="linijecijene_ibfk_2" Comments="" SOURCE="1011" DESTINATION="1006" FKIDS="1100=1065\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1103" AutoColumnIDs="" />
+<REFERENCE  ID="1144" Name="linijecijene_ibfk_3" Comments="" SOURCE="1011" DESTINATION="1006" FKIDS="1100=1066\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1103" AutoColumnIDs="" />
+<REFERENCE  ID="1145" Name="linijerasporedvoznji_ibfk_1" Comments="" SOURCE="1005" DESTINATION="1007" FKIDS="1059=1073\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1061" AutoColumnIDs="" />
+<REFERENCE  ID="1146" Name="linijerasporedvoznji_ibfk_2" Comments="" SOURCE="1010" DESTINATION="1007" FKIDS="1094=1074\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1099" AutoColumnIDs="" />
+<REFERENCE  ID="1147" Name="linijevoznje_ibfk_2" Comments="" SOURCE="1015" DESTINATION="1008" FKIDS="1121=1081\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1126" AutoColumnIDs="" />
+<REFERENCE  ID="1148" Name="linijevoznje_ibfk_3" Comments="" SOURCE="1005" DESTINATION="1008" FKIDS="1059=1080\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1061" AutoColumnIDs="" />
+<REFERENCE  ID="1149" Name="poruke_ibfk_1" Comments="" SOURCE="1003" DESTINATION="1009" FKIDS="1045=1087\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1050" AutoColumnIDs="" />
+<REFERENCE  ID="1150" Name="poruke_ibfk_2" Comments="" SOURCE="1003" DESTINATION="1009" FKIDS="1045=1088\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1050" AutoColumnIDs="" />
+<REFERENCE  ID="1151" Name="staniceuliniji_ibfk_1" Comments="" SOURCE="1005" DESTINATION="1012" FKIDS="1059=1105\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1061" AutoColumnIDs="" />
+<REFERENCE  ID="1152" Name="staniceuliniji_ibfk_2" Comments="" SOURCE="1011" DESTINATION="1012" FKIDS="1100=1106\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1103" AutoColumnIDs="" />
+<REFERENCE  ID="1153" Name="voznje_ibfk_1" Comments="" SOURCE="1000" DESTINATION="1015" FKIDS="1017=1122\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1025" AutoColumnIDs="" />
+<REFERENCE  ID="1154" Name="zakupiautobusa_ibfk_1" Comments="" SOURCE="1000" DESTINATION="1016" FKIDS="1017=1130\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="0" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1025" AutoColumnIDs="" />
 </REFERENCES>
 <NOTES>
 </NOTES>
