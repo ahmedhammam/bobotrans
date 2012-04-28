@@ -136,7 +136,6 @@ namespace DAL
 
                     c = new MySqlCommand("COMMIT;", con);
                     c.ExecuteNonQuery();
-                    Console.WriteLine("AAAA");
                 }
                 catch (Exception e)
                 {
