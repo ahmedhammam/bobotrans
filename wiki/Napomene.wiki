@@ -38,3 +38,4 @@ Amer
 
  * == SuceljeRedaVoznje ==
  vratiPolazneVoznjeStanice i vratiDolazneVoznjeStanice vracaju kao tip novu klasu VoznjaUStanici
+vratiSlobodnaMjestaUAutobusu je preslo u vratiZauzetaMjestaUAutobusu
