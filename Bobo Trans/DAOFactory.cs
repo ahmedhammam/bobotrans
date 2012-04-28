@@ -69,15 +69,15 @@ namespace DAL
                 return new KarteDAO();
             }*/
 
-           /* public KupacKarteDAO getKupacKarteDAO()
+           public KupacKarteDAO getKupacKarteDAO()
             {
                 return new KupacKarteDAO();
-            }*/
+            }
 
-            /*public KupacKarteSPopustomDAO getKupacKarteSPopustomDAO()
+            public KupacKarteSPopustomDAO getKupacKarteSPopustomDAO()
             {
                 return new KupacKarteSPopustomDAO();
-            }*/
+            }
         }
     }
 }
