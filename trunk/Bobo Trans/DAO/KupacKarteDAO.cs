@@ -18,207 +18,165 @@ namespace DAL
 
             public long create(KupacKarte entity)
             {
+                c = new MySqlCommand("START TRANSACTION;", con);
+                long idKupca;
                 try
                 {
-
-                    c = new MySqlCommand(String.Format("INSERT INTO KupciKarti VALUES ('','{0}','{1}');"
-                        , entity.Ime, TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)
-                        , con);
+                    c = new MySqlCommand(String.Format("INSERT INTO kupcikarti VALUES ('','{0}','{1}');"
+                         , entity.Ime, TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)
+                         , con);
                     c.ExecuteNonQuery();
-                    long idKupca;
-                    idKupca= c.LastInsertedId;
+                    idKupca = c.LastInsertedId;
 
-                    for (int i = 0; i<entity.Sjedista.Count;i++)
+                    for (int i = 0; i < entity.Sjedista.Count; i++)
                     {
-                        c = new MySqlCommand(String.Format("INSERT INTO Karte VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}');"
-                            ,entity.Voznja.SifraVoznje,entity.PocetnaStanica.SifraStanice,entity.KrajnjaStanica.SifraStanice,entity.Sjedista[i],entity.Cijene[i] ,entity.SifraKupca)
-                            , con);
+                        c = new MySqlCommand(String.Format("INSERT INTO kupcikarti VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}');"
+                         , entity.Voznja.SifraVoznje, entity.PocetnaStanica.SifraStanice, entity.KrajnjaStanica.SifraStanice, entity.Sjedista[i], entity.Cijene[i].ToString().Replace(',', '.'), idKupca)
+                         , con);
+                        c.ExecuteNonQuery();
                     }
-
-
-
 
                     return idKupca;
                 }
                 catch (Exception e)
                 {
+                    c = new MySqlCommand("ROLLBACK;", con);
+                    c.ExecuteNonQuery();
                     throw e;
                 }
             }
 
             public KupacKarte read(KupacKarte entity)
             {
-                try
+                int id;
+                c = new MySqlCommand(string.Format("SELECT * FROM kupcikarti WHERE imeIPrezime='{0}' AND tipKupca='{1}'",entity.Ime,TipoviPodataka.TipoviKupaca.BEZ_POPUSTA),con);
+                MySqlDataReader r = c.ExecuteReader();
+                if (r.Read())
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM KupciKarti WHERE imeIPrezime='{0}' AND tipKupca='{1}';", entity.Ime,TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
-
-                    MySqlDataReader r = c.ExecuteReader();
-
-                    if (r.Read())
-                    {
-                        c = new MySqlCommand(String.Format("SELECT * FROM Karte WHERE idKupca='{0}'",r.GetInt32("id")), con);
-                        MySqlDataReader r2 = c.ExecuteReader();
-                        List<int>sjed = new List<int>();
-                        List<double>cij = new List<double>();
-                        int voznjaId = -1;
-                        while (r2.Read())
-                        {
-                            sjed.Add(r2.GetInt32("idSjedista"));
-                            cij.Add(r2.GetInt32("cijena"));
-                            voznjaId=r2.GetInt32("idVoznje");
-                        }
-                        KupacKarte KupacKarte = new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")),(DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij);
-                        r2.Close();
-                        r.Close();
-                        return KupacKarte;
-                    }
-                    else throw
-                     new Exception("nije nadjen nijedan element");
-
+                    id = r.GetInt32("id");
                 }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                else throw new Exception("nije nadjen nijedan element");
+                return getById(id);
             }
 
             public KupacKarte update(KupacKarte entity)
             {
-                try
-                {
-                    c = new MySqlCommand(String.Format("DELETE FROM Karte WHERE idKupca='{0}';", entity.SifraKupca), con);
-                    c.ExecuteNonQuery();
-
-                    c = new MySqlCommand(String.Format("UPDATE KupciKarti SET imeIPrezime='{0}', tipKupca='{1}' WHERE id='{2}';", entity.Ime, TipoviPodataka.TipoviKupaca.BEZ_POPUSTA, entity.SifraKupca), con);
-                    c.ExecuteNonQuery();
-
-                    for (int i = 0; i < entity.Sjedista.Count; i++)
-                    {
-                        c = new MySqlCommand(String.Format("INSERT INTO Karte VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}');"
-                            , entity.Voznja.SifraVoznje, entity.PocetnaStanica.SifraStanice, entity.KrajnjaStanica.SifraStanice, entity.Sjedista[i], entity.Cijene[i], entity.SifraKupca)
-                            , con);
-                    }
-
-                    return entity;
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                delete(entity);
+                entity.SifraKupca = create(entity);
+                return entity;
             }
 
             public void delete(KupacKarte entity)
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("DELETE FROM Karte WHERE idKupca ='{0}';", entity.SifraKupca), con);
+                    c = new MySqlCommand("START TRANSACTION;", con);
                     c.ExecuteNonQuery();
 
-                    c = new MySqlCommand(String.Format("DELETE FROM KupciKarti WHERE id ='{0}';", entity.SifraKupca), con);
+                    c = new MySqlCommand(string.Format("DELETE FROM karte WHERE idKupca='{0}'", entity.SifraKupca), con);
+                    c.ExecuteNonQuery();
+
+                    c = new MySqlCommand(string.Format("DELETE FROM kupcikarte WHERE id='{0}' AND tipKupca='{1}'", entity.SifraKupca,TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
+                    c.ExecuteNonQuery();
+
+                    c = new MySqlCommand("COMMIT;", con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
                 {
+                    c = new MySqlCommand("ROLLBACK;", con);
+                    c.ExecuteNonQuery();
                     throw e;
                 }
             }
 
             public KupacKarte getById(long id)
             {
+                long sifra = id;
+                string ime;
+                Stanica pocetnaStanica;
+                Stanica krajnjaStanica;
+                int pocetnaStanicaId = 0;
+                int krajnjaStanicaId = 0;
+                Voznja voznja;
+                int voznjaId = 0;
+                List<int> sjedista = new List<int>();
+                List<double> cijene = new List<double>();
+
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM KupciKarti WHERE id='{0}';", id), con);
-                    MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
-                    {
-                        c = new MySqlCommand(String.Format("SELECT * FROM Karte WHERE idKupca='{0}'",id), con);
-                        MySqlDataReader r2 = c.ExecuteReader();
-                        List<int> sjed = new List<int>();
-                        List<double> cij = new List<double>();
-                        int voznjaId = -1;
-                        while (r2.Read())
-                        {
-                            sjed.Add(r2.GetInt32("idSjedista"));
-                            cij.Add(r2.GetInt32("cijena"));
-                            voznjaId = r2.GetInt32("idVoznje");
-                        }
-                        KupacKarte KupacKarte = new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij);
-                        r2.Close();
-                        r.Close();
-                        return KupacKarte;
-                    }
-                    else throw
-                        new Exception("nije nadjen nijedan element");
+                    c = new MySqlCommand("START TRANSACTION;", con);
+                    c.ExecuteNonQuery();
+                    ime = ocitajIme(id);
+
+                    ocitajKarte(sjedista, cijene, out pocetnaStanicaId, out krajnjaStanicaId, out voznjaId);
+
+                    pocetnaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(pocetnaStanicaId);
+                    krajnjaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(krajnjaStanicaId);
+                    voznja = DAL.Instanca.getDAO.getVoznjaDAO().getById(voznjaId);
+
+                    c = new MySqlCommand("COMMIT;", con);
+                    c.ExecuteNonQuery();
                 }
                 catch (Exception e)
                 {
+                    c = new MySqlCommand("ROLLBACK;", con);
+                    c.ExecuteNonQuery();
                     throw e;
                 }
+
+                return new KupacKarte(ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene);
+            }
+
+            private void ocitajKarte(List<int> sjedista, List<double> cijene, out int pocetnaStanicaId, out int krajnjaStanicaId, out int voznjaId)
+            {
+                pocetnaStanicaId = 0;
+                krajnjaStanicaId = 0;
+                voznjaId = 0;
+                c = new MySqlCommand("SELECT * FROM karte WHERE idKupca='{0}';");
+                MySqlDataReader r = c.ExecuteReader();
+
+                while (r.Read())
+                {
+                    pocetnaStanicaId = r.GetInt32("idPocetneStanice");
+                    krajnjaStanicaId = r.GetInt32("idKrajnjeStanice");
+                    voznjaId = r.GetInt32("idVoznje");
+                    sjedista.Add(r.GetInt32("idSjedista"));
+                    cijene.Add(r.GetDouble("cijena"));
+                }
+            }
+
+            private string ocitajIme(long id)
+            {
+                string ime;
+                c = new MySqlCommand(string.Format("SELECT * FROM kupcikarti WHERE id='{0}' AND tipKupca='{1}';", id,TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
+                MySqlDataReader r = c.ExecuteReader();
+                if (r.Read())
+                {
+                    ime = r.GetString("imeIPrezime");
+                }
+                else throw new Exception("nije nadjen nijedan element");
+                return ime;
             }
 
             public List<KupacKarte> GetAll()
             {
-                try
-                {
-                    c = new MySqlCommand(String.Format("SELECT * FROM KupciKarti WHERE tipKupca='{0}';",TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
-                    MySqlDataReader r = c.ExecuteReader();
-                    List<KupacKarte> KupacKartei = new List<KupacKarte>();
-                    while (r.Read())
-                    {
-                        c = new MySqlCommand(String.Format("SELECT * FROM Karte WHERE idKupca='{0}'",r.GetInt32("id")), con);
-                        MySqlDataReader r2 = c.ExecuteReader();
-                        List<int> sjed = new List<int>();
-                        List<double> cij = new List<double>();
-                        int voznjaId = -1;
-                        while (r2.Read())
-                        {
-                            sjed.Add(r2.GetInt32("idSjedista"));
-                            cij.Add(r2.GetInt32("cijena"));
-                            voznjaId = r2.GetInt32("idVoznje");
-                        }
-                        KupacKartei.Add(new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij));
-                        r2.Close();
-                    }
-                    r.Close();
-                    return KupacKartei;
+                List<KupacKarte> kupci = new List<KupacKarte>();
+                c = new MySqlCommand(string.Format("SELECT id FROM kupcikarti WHERE tipKupca=='{0}'",TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
+                MySqlDataReader r = c.ExecuteReader();
+                List<long> sifre = new List<long>();
+                while (r.Read())
+                    sifre.Add(r.GetInt32("id"));
+                r.Close();
 
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                foreach (long sifra in sifre)
+                    kupci.Add(getById(sifra));
+                return kupci;
             }
 
             public List<KupacKarte> getByExample(string name, string values)
             {
-                try
-                {
-                    c = new MySqlCommand(String.Format("SELECT * FROM KupciKarti WHERE {0}='{1}' AND tipKupca='{2}';", name, values, TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
-                    MySqlDataReader r = c.ExecuteReader();
-                    List<KupacKarte> KupacKartei = new List<KupacKarte>();
-                    while (r.Read())
-                    {
-                        c = new MySqlCommand(String.Format("SELECT * FROM Karte WHERE idKupca='{0}'", r.GetInt32("id")), con);
-                        MySqlDataReader r2 = c.ExecuteReader();
-                        List<int> sjed = new List<int>();
-                        List<double> cij = new List<double>();
-                        int voznjaId = -1;
-                        while (r2.Read())
-                        {
-                            sjed.Add(r2.GetInt32("idSjedista"));
-                            cij.Add(r2.GetInt32("cijena"));
-                            voznjaId = r2.GetInt32("idVoznje");
-                        }
-                        KupacKartei.Add(new KupacKarte(r.GetInt32("id"), r.GetString("imeIPrezime"), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idPocetneStanice")), (DAL.Instanca.getDAO.getStaniceDAO()).getById(r.GetInt32("idKrajnjeStanice")), (DAL.Instanca.getDAO.getVoznjaDAO()).getById(voznjaId), sjed, cij));
-                        r2.Close();
-                    }
-                    r.Close();
-                    return KupacKartei;
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                throw new Exception("get by Example se ne moze implementirati za kupce karti");
             }
         }
     }
