@@ -8,13 +8,13 @@ namespace DAL.Entiteti
     public class RasporedVoznje
     {
         private long sifraRasporedaVoznji;
-        private string danUSedmici;
+        private int danUSedmici;
         private DateTime vrijeme;
         private long potrebanBrojSjedista;
 
 
         #region GetteriSetteri
-        public string DanUSedmici
+        public int DanUSedmici
         {
             get { return danUSedmici; }
             set { danUSedmici = value; }
@@ -37,14 +37,14 @@ namespace DAL.Entiteti
         } 
         #endregion
 
-        public RasporedVoznje(string dUS,DateTime v, long pBS)
+        public RasporedVoznje(int dUS,DateTime v, long pBS)
         {
-            DanUSedmici = dUS;
+            danUSedmici = dUS;
             vrijeme = v;
             potrebanBrojSjedista = pBS;
         }
 
-        public RasporedVoznje(long sRV,string dUS, DateTime v, long pBS)
+        public RasporedVoznje(long sRV,int dUS, DateTime v, long pBS)
         {
             danUSedmici = dUS;
             sifraRasporedaVoznji = sRV;

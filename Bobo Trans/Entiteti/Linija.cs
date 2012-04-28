@@ -70,6 +70,7 @@ namespace DAL.Entiteti
 
 
 
+        #region konstruktori
         public Linija(long sifra, string naziv, List<Stanica> stan, List<int> tDoDolaska, List<int> tDoPolaska, List<List<double>> c, List<Voznja> v, List<RasporedVoznje> rV)
         {
             sifraLinije = sifra;
@@ -92,6 +93,8 @@ namespace DAL.Entiteti
             voznje = v;
             rasporediVoznje = rV;
         }
+        
+        #endregion
 
         public void dodajVoznju(long sifraVoznje, DateTime vrijemePolaska, Autobus autobus)
         {
@@ -110,7 +113,14 @@ namespace DAL.Entiteti
             }
         }
 
+        public int sadrziStanicu(Stanica stanica)
+        {
+            for (int i = 0; i < stanice.Count; i++)
+                if (stanice[i].SifraStanice == stanica.SifraStanice)
+                    return i;
 
+            return -1;
+        }
 
     }
 }

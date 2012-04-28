@@ -17,7 +17,6 @@ namespace DesktopAplikacija
         DAL.DAL d = DAL.DAL.Instanca;
         public Login()
         {
-            
            
                 InitializeComponent();
                 
@@ -26,18 +25,18 @@ namespace DesktopAplikacija
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Validiraj())
-            {
-               
+                label1.Text = "";
                 DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
                 
                 try
                 {
                     //dok se naprave forme koje ce se otvarati stavila sam da mi ispisuje na toolStrioStatusLabel//
-                    
+                    label1.Text = "prije";
                     DAL.Entiteti.Korisnik k = kd.getByUsernameAndPassword(t_nazivKorisnika.Text, t_sifraKorisnika.Text);
-                    LoginPodaci lg = new LoginPodaci(k.ImeIPrezime, k.Password);
-                    
+                    //LoginPodaci lg = new LoginPodaci(k.ImeIPrezime, k.Password);
+
+                    label1.Text += " poslije";
+
                     if(k.Tip==DAL.TipoviPodataka.TipoviKorisnika.MENAGER)
                         toolStripStatusLabel1.Text = "logovani ste kao menager";
                     if(k.Tip==DAL.TipoviPodataka.TipoviKorisnika.RADNIK_ZA_SALTEROM)
@@ -48,11 +47,7 @@ namespace DesktopAplikacija
                 }
                 catch (Exception e1)
                 {toolStripStatusLabel1.Text=e1.Message;}  
-                       
-            }    
-            else
-                toolStripStatusLabel1.Text="Unesite podatke";
-
+   
             }
 
         

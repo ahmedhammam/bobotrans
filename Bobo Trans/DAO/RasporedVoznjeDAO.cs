@@ -43,7 +43,7 @@ namespace DAL
 
                     if (r.Read())
                     {
-                        RasporedVoznje rv = new RasporedVoznje(r.GetInt32("id"), r.GetString("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"));
+                        RasporedVoznje rv = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"));
                         r.Close();
                         return rv;
                     }
@@ -93,7 +93,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        RasporedVoznje a = new RasporedVoznje(r.GetInt32("id"), r.GetString("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"));
+                        RasporedVoznje a = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"));
                         r.Close();
                         return a;
                     }
@@ -114,7 +114,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<RasporedVoznje> rv = new List<RasporedVoznje>();
                     while (r.Read())
-                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetString("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista")));
+                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista")));
                     r.Close();
                     return rv;
 
@@ -133,7 +133,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<RasporedVoznje> rv = new List<RasporedVoznje>();
                     while (r.Read())
-                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetString("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista")));
+                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista")));
                     r.Close();
                     return rv;
                 }

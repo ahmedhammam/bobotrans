@@ -307,6 +307,7 @@ namespace DAL
             {
                 throw new Exception("get by Example se ne moze implementirati za linije");
             }
+
         }
     }
 }
