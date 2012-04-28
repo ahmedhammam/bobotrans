@@ -32,7 +32,7 @@ namespace DesktopAplikacija.Serviser
             dataGridView1.Rows.Clear();
             d.kreirajKonekciju();
             DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
-            KolekcijaAutobusa a = new KolekcijaAutobusa();
+            KolekcijaAutobusa a = KolekcijaAutobusa.Instanca;
             List<DAL.Entiteti.Autobus> autobusi = new List<DAL.Entiteti.Autobus>();
             if (comboBox1.Text=="DatumIstekaRegistracije")
             {

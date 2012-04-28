@@ -171,6 +171,25 @@ namespace DAL
                     throw e;
                 }
             }
+
+            public List<int> dajZauzetaSjedista(Voznja entity)
+            {
+                try
+                {
+                    c = new MySqlCommand(string.Format("SELECT idSjedista FROM karte WHERE idVoznje='{0}';",entity.SifraVoznje),con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    List<int> zauzetaSjedista = new List<int>();
+                    while (r.Read())
+                        zauzetaSjedista.Add(r.GetInt32("idSjedista"));
+
+                    return zauzetaSjedista;
+                        
+                }
+                catch(Exception e)
+                {
+                    throw e;
+                }
+            }
         }
     }
 }

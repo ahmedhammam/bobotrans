@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DesktopAplikacija.Serviser.Eniteti
 {
-   public class KolekcijaAutobusa
+    public class KolekcijaAutobusa
     {
        private  DAL.DAL d = DAL.DAL.Instanca;
        private  DAL.DAL.AutobusDAO ad;
