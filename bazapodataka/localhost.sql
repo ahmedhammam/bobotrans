@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.10.1
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 28, 2012 at 07:33 PM
+-- Generation Time: Apr 28, 2012 at 09:32 PM
 -- Server version: 5.5.20
--- PHP Version: 5.3.10
+-- PHP Version: 5.3.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -122,7 +122,6 @@ CREATE TABLE IF NOT EXISTS `kupcikarti` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `imeIPrezime` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `tipKupca` int(11) NOT NULL,
-  `dodatniPodaci` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `tipKupca` (`tipKupca`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
@@ -138,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `linije` (
   `naziv` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `naziv` (`naziv`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `linije`
