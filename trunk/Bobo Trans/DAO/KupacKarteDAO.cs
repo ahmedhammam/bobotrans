@@ -125,7 +125,7 @@ namespace DAL
                     throw e;
                 }
 
-                return new KupacKarte(id, ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene);
+                return new KupacKarte((int)id, ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene);
             }
 
             private void ocitajKarte(List<int> sjedista, List<double> cijene, out int pocetnaStanicaId, out int krajnjaStanicaId, out int voznjaId)
