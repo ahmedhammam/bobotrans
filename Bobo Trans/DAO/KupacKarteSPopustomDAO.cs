@@ -130,7 +130,7 @@ namespace DAL
                     throw e;
                 }
 
-                return new KupacSaPopustom(id,ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene,popust,"",tip);
+                return new KupacSaPopustom((int)id, ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene, popust, "", tip);
             }
 
             private double ocitajPopust(TipoviPodataka.TipoviKupaca tip)
