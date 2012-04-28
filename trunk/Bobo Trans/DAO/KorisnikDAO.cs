@@ -161,8 +161,10 @@ namespace DAL
                         r.Close();
                         return korisnik;
                     }
-                    else throw
-                     new Exception("Nepostojeci korisnik!");
+                    else 
+                    {
+                        throw new Exception("Nepostojeci korisnik!");
+                    }
                 }
                 catch (Exception e)
                 {

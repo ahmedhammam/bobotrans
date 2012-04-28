@@ -61,7 +61,6 @@
     <Compile Include="DAO\StaniceDAO.cs" />
     <Compile Include="DAO\VoznjaDAO.cs" />
     <Compile Include="DAO\ZakupacAutobusaDAO.cs" />
-    <Compile Include="Eniteti\KolekcijaAutobusa.cs" />
     <Compile Include="Entiteti\Autobus.cs" />
     <Compile Include="Entiteti\Korisnik.cs" />
     <Compile Include="Entiteti\RasporedVoznje.cs" />
