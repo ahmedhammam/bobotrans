@@ -23,14 +23,14 @@ namespace DAL
                 try
                 {
                     c = new MySqlCommand(String.Format("INSERT INTO kupcikarti VALUES ('','{0}','{1}');"
-                         , entity.Ime, TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)
+                         , entity.Ime, (int)(TipoviPodataka.TipoviKupaca.BEZ_POPUSTA))
                          , con);
                     c.ExecuteNonQuery();
                     idKupca = c.LastInsertedId;
 
                     for (int i = 0; i < entity.Sjedista.Count; i++)
                     {
-                        c = new MySqlCommand(String.Format("INSERT INTO kupcikarti VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}');"
+                        c = new MySqlCommand(String.Format("INSERT INTO karte VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}');"
                          , entity.Voznja.SifraVoznje, entity.PocetnaStanica.SifraStanice, entity.KrajnjaStanica.SifraStanice, entity.Sjedista[i], entity.Cijene[i].ToString().Replace(',', '.'), idKupca)
                          , con);
                         c.ExecuteNonQuery();
@@ -49,13 +49,18 @@ namespace DAL
             public KupacKarte read(KupacKarte entity)
             {
                 int id;
-                c = new MySqlCommand(string.Format("SELECT * FROM kupcikarti WHERE imeIPrezime='{0}' AND tipKupca='{1}'",entity.Ime,TipoviPodataka.TipoviKupaca.BEZ_POPUSTA),con);
+                c = new MySqlCommand(string.Format("SELECT * FROM kupcikarti WHERE imeIPrezime='{0}' AND tipKupca='{1}'",entity.Ime,(int)(TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)),con);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
                     id = r.GetInt32("id");
+                    r.Close();
                 }
-                else throw new Exception("nije nadjen nijedan element");
+                else
+                {
+                    r.Close();
+                    throw new Exception("nije nadjen nijedan element");
+                }
                 return getById(id);
             }
 
@@ -76,7 +81,7 @@ namespace DAL
                     c = new MySqlCommand(string.Format("DELETE FROM karte WHERE idKupca='{0}'", entity.SifraKupca), con);
                     c.ExecuteNonQuery();
 
-                    c = new MySqlCommand(string.Format("DELETE FROM kupcikarte WHERE id='{0}' AND tipKupca='{1}'", entity.SifraKupca,TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
+                    c = new MySqlCommand(string.Format("DELETE FROM kupcikarti WHERE id='{0}' AND tipKupca='{1}'", entity.SifraKupca, (int)(TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)), con);
                     c.ExecuteNonQuery();
 
                     c = new MySqlCommand("COMMIT;", con);
@@ -108,9 +113,7 @@ namespace DAL
                     c = new MySqlCommand("START TRANSACTION;", con);
                     c.ExecuteNonQuery();
                     ime = ocitajIme(id);
-
-                    ocitajKarte(sjedista, cijene, out pocetnaStanicaId, out krajnjaStanicaId, out voznjaId);
-
+                    ocitajKarte(id, ref pocetnaStanicaId, ref krajnjaStanicaId, ref voznjaId, sjedista, cijene);
                     pocetnaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(pocetnaStanicaId);
                     krajnjaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(krajnjaStanicaId);
                     voznja = DAL.Instanca.getDAO.getVoznjaDAO().getById(voznjaId);
@@ -128,14 +131,13 @@ namespace DAL
                 return new KupacKarte((int)id, ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene);
             }
 
-            private void ocitajKarte(List<int> sjedista, List<double> cijene, out int pocetnaStanicaId, out int krajnjaStanicaId, out int voznjaId)
+            private void ocitajKarte(long id, ref int pocetnaStanicaId, ref int krajnjaStanicaId, ref int voznjaId, List<int> sjedista, List<double> cijene)
             {
                 pocetnaStanicaId = 0;
                 krajnjaStanicaId = 0;
                 voznjaId = 0;
-                c = new MySqlCommand("SELECT * FROM karte WHERE idKupca='{0}';");
+                c = new MySqlCommand(string.Format("SELECT * FROM karte WHERE idKupca='{0}';", id), con);
                 MySqlDataReader r = c.ExecuteReader();
-
                 while (r.Read())
                 {
                     pocetnaStanicaId = r.GetInt32("idPocetneStanice");
@@ -144,25 +146,32 @@ namespace DAL
                     sjedista.Add(r.GetInt32("idSjedista"));
                     cijene.Add(r.GetDouble("cijena"));
                 }
+
+                r.Close();
             }
 
             private string ocitajIme(long id)
             {
                 string ime;
-                c = new MySqlCommand(string.Format("SELECT * FROM kupcikarti WHERE id='{0}' AND tipKupca='{1}';", id,TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
+                c = new MySqlCommand(string.Format("SELECT * FROM kupcikarti WHERE id='{0}' AND tipKupca='{1}';", id, (int)(TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)), con);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
                     ime = r.GetString("imeIPrezime");
+                    r.Close();
                 }
-                else throw new Exception("nije nadjen nijedan element");
+                else
+                {
+                    r.Close();
+                    throw new Exception("nije nadjen nijedan element");
+                }
                 return ime;
             }
 
             public List<KupacKarte> GetAll()
             {
                 List<KupacKarte> kupci = new List<KupacKarte>();
-                c = new MySqlCommand(string.Format("SELECT id FROM kupcikarti WHERE tipKupca=='{0}'",TipoviPodataka.TipoviKupaca.BEZ_POPUSTA), con);
+                c = new MySqlCommand(string.Format("SELECT id FROM kupcikarti WHERE tipKupca='{0}'", (int)(TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)), con);
                 MySqlDataReader r = c.ExecuteReader();
                 List<long> sifre = new List<long>();
                 while (r.Read())
