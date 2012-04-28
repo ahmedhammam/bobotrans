@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 28, 2012 at 09:32 PM
+-- Generation Time: Apr 28, 2012 at 10:26 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.9
 
@@ -76,14 +76,40 @@ CREATE TABLE IF NOT EXISTS `karte` (
   `idPocetneStanice` int(11) NOT NULL,
   `idKrajnjeStanice` int(11) NOT NULL,
   `idSjedista` int(11) NOT NULL,
-  `cijena` decimal(10,0) NOT NULL,
+  `cijena` decimal(10,2) NOT NULL,
   `idKupca` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idVoznje` (`idVoznje`),
   KEY `idPocetneStanice` (`idPocetneStanice`),
   KEY `idKrajnjeStanice` (`idKrajnjeStanice`),
   KEY `idKupca` (`idKupca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=51 ;
+
+--
+-- Dumping data for table `karte`
+--
+
+INSERT INTO `karte` (`id`, `idVoznje`, `idPocetneStanice`, `idKrajnjeStanice`, `idSjedista`, `cijena`, `idKupca`) VALUES
+(26, 37, 1, 2, 30, '10.00', 11),
+(27, 37, 1, 2, 40, '20.00', 11),
+(28, 37, 1, 2, 50, '30.00', 11),
+(29, 37, 1, 2, 60, '40.00', 11),
+(30, 37, 1, 2, 70, '50.00', 11),
+(31, 37, 1, 2, 30, '11.00', 12),
+(32, 37, 1, 2, 40, '12.00', 12),
+(33, 37, 1, 2, 50, '13.00', 12),
+(34, 37, 1, 2, 60, '14.00', 12),
+(35, 37, 1, 2, 70, '15.00', 12),
+(36, 38, 5, 9, 30, '11.00', 13),
+(37, 38, 5, 9, 40, '12.00', 13),
+(38, 38, 5, 9, 50, '13.00', 13),
+(39, 38, 5, 9, 60, '14.00', 13),
+(40, 38, 5, 9, 70, '15.00', 13),
+(46, 38, 5, 9, 31, '11.20', 15),
+(47, 38, 5, 9, 41, '12.20', 15),
+(48, 38, 5, 9, 51, '13.20', 15),
+(49, 38, 5, 9, 61, '14.20', 15),
+(50, 38, 5, 9, 71, '15.20', 15);
 
 -- --------------------------------------------------------
 
@@ -124,7 +150,17 @@ CREATE TABLE IF NOT EXISTS `kupcikarti` (
   `tipKupca` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `tipKupca` (`tipKupca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `kupcikarti`
+--
+
+INSERT INTO `kupcikarti` (`id`, `imeIPrezime`, `tipKupca`) VALUES
+(11, 'Amer Mesan', 1),
+(12, 'Marina Mili', 3),
+(13, 'Dzenisa BLA', 2),
+(15, 'Dzenisa BLAdsad', 2);
 
 -- --------------------------------------------------------
 
