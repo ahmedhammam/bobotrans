@@ -103,7 +103,7 @@
 
 - id (primary, int, autoincrement) 
 
-- danUSedmici (string)
+- danUSedmici (int)
 
 - sati(int)
 
