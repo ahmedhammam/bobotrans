@@ -37,4 +37,4 @@ Amer
 Amer
 
  * == SuceljeRedaVoznje ==
- vratiPolazneVoznjeStanice i vratiDolazneVoznjeStanice promijeniti da vracaju RasporedVoznje
+ vratiPolazneVoznjeStanice i vratiDolazneVoznjeStanice vracaju kao tip novu klasu VoznjaUStanici
