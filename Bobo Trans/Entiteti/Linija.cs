@@ -96,6 +96,22 @@ namespace DAL.Entiteti
         
         #endregion
 
+
+        public double vratiCijenu(Stanica s1, Stanica s2)
+        {
+            int i1 = 0, i2 = 0;
+            while (stanice[i1].SifraStanice != s1.SifraStanice && i1 < stanice.Count) i1++;
+            while (stanice[i2].SifraStanice != s2.SifraStanice && i2 < stanice.Count) i2++;
+
+            if (i1 == stanice.Count || i2 == stanice.Count)
+                throw new Exception("Jedna od stanica ne postoji u liniji");
+            if (i1 > i2)
+                throw new Exception("Linija ide u suprotnom smijeru od zadanih stanica");
+
+            return cijene[i1][i2];
+
+        }
+
         public void dodajVoznju(long sifraVoznje, DateTime vrijemePolaska, Autobus autobus)
         {
             voznje.Add(new Voznja(sifraVoznje, vrijemePolaska, autobus));

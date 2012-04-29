@@ -46,7 +46,7 @@ namespace DAL
 
             private void unesiCijene(ref Linija entity, long idLinije)
             {
-                if (entity.Cijene.Count != entity.Stanice.Count-1) throw new Exception("Nedovoljno unesenih cijena!");
+                if (entity.Cijene.Count != entity.Stanice.Count-1) throw new Exception("Nedovoljno unesenih cijena! Broj stanica je "+entity.Stanice.Count.ToString()+", a broj lista cijena "+entity.Cijene.Count.ToString());
                 for (int i = 0; i < entity.Cijene.Count; i++)
                 {
                     for (int j = 0; j < entity.Cijene[i].Count; j++)
