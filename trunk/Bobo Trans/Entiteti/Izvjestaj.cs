@@ -11,6 +11,14 @@ namespace DAL.Entiteti
         private string tekst;
         private long sifraIzvjestaja;
         private long sifraKreatora;
+        private long sifraAutobusa;
+
+        public long SifraAutobusa
+        {
+            get { return sifraAutobusa; }
+            set { sifraAutobusa = value; }
+        }
+
 
         public long SifraKreatora
         {
@@ -36,19 +44,21 @@ namespace DAL.Entiteti
             set { sifraIzvjestaja = value; }
         }
 
-        public Izvjestaj(DateTime dat, string t,long sK)
+        public Izvjestaj(DateTime dat, string t,long sK,long sA)
         {
             datumServisa = dat;
             tekst = t;
             sifraKreatora = sK;
+            sifraAutobusa = sA;
         }
 
-        public Izvjestaj(long sI,DateTime dat, string t,long sK)
+        public Izvjestaj(long sI,DateTime dat, string t,long sK,long sA)
         {
             sifraIzvjestaja = sI;
             datumServisa = dat;
             tekst = t;
             sifraKreatora = sK;
+            sifraAutobusa = sA;
         }
 
 
