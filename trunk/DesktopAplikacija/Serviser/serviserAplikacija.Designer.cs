@@ -35,25 +35,23 @@
             this.IstekRegistracije = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajIzvještajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiIzvještajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izmijeniPodatkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiPorukeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izađiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.Izađi = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -75,7 +73,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(507, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.UseWaitCursor = true;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // sifra
             // 
@@ -92,47 +89,37 @@
             // 
             // IstekRegistracije
             // 
-            this.IstekRegistracije.HeaderText = "IstekRegistracije";
+            this.IstekRegistracije.HeaderText = "Istek registracije";
             this.IstekRegistracije.Name = "IstekRegistracije";
             this.IstekRegistracije.ReadOnly = true;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "BrojSjedista";
+            this.Column1.HeaderText = "Broj sjedista";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "DatumServisa";
+            this.Column2.HeaderText = "Datum servisa";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(355, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ispisi";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "IzlistajAutobusePo:";
+            this.label1.Text = "Izlistaj autobuse po:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "DatumServisa",
-            "DatumIstekaRegistracije"});
+            "Datum servisa",
+            "Datum isteka registracije"});
             this.comboBox1.Location = new System.Drawing.Point(132, 59);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -153,7 +140,6 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kreirajIzvještajToolStripMenuItem,
             this.prikažiIzvještajToolStripMenuItem,
-            this.izmijeniPodatkeToolStripMenuItem,
             this.prikažiPorukeToolStripMenuItem,
             this.izađiToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -164,38 +150,29 @@
             // 
             this.kreirajIzvještajToolStripMenuItem.Name = "kreirajIzvještajToolStripMenuItem";
             this.kreirajIzvještajToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.kreirajIzvještajToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.kreirajIzvještajToolStripMenuItem.Text = "KreirajIzvještaj ";
+            this.kreirajIzvještajToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.kreirajIzvještajToolStripMenuItem.Text = "Kreiraj izvještaj ";
             this.kreirajIzvještajToolStripMenuItem.Click += new System.EventHandler(this.kreirajIzvještajToolStripMenuItem_Click);
             // 
             // prikažiIzvještajToolStripMenuItem
             // 
             this.prikažiIzvještajToolStripMenuItem.Name = "prikažiIzvještajToolStripMenuItem";
             this.prikažiIzvještajToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.prikažiIzvještajToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.prikažiIzvještajToolStripMenuItem.Text = "PrikažiIzvještaj ";
+            this.prikažiIzvještajToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.prikažiIzvještajToolStripMenuItem.Text = "Prikaži izvještaj ";
             this.prikažiIzvještajToolStripMenuItem.Click += new System.EventHandler(this.prikažiIzvještajToolStripMenuItem_Click);
-            // 
-            // izmijeniPodatkeToolStripMenuItem
-            // 
-            this.izmijeniPodatkeToolStripMenuItem.Name = "izmijeniPodatkeToolStripMenuItem";
-            this.izmijeniPodatkeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.izmijeniPodatkeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.izmijeniPodatkeToolStripMenuItem.Text = "IzmijeniPodatke ";
-            this.izmijeniPodatkeToolStripMenuItem.Click += new System.EventHandler(this.izmijeniPodatkeToolStripMenuItem_Click);
             // 
             // prikažiPorukeToolStripMenuItem
             // 
             this.prikažiPorukeToolStripMenuItem.Name = "prikažiPorukeToolStripMenuItem";
             this.prikažiPorukeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.prikažiPorukeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.prikažiPorukeToolStripMenuItem.Text = "PrikažiPoruke";
-            this.prikažiPorukeToolStripMenuItem.Click += new System.EventHandler(this.prikažiPorukeToolStripMenuItem_Click_1);
+            this.prikažiPorukeToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.prikažiPorukeToolStripMenuItem.Text = "Prikaži poruke";
             // 
             // izađiToolStripMenuItem
             // 
             this.izađiToolStripMenuItem.Name = "izađiToolStripMenuItem";
-            this.izađiToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.izađiToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.izađiToolStripMenuItem.Text = "Izađi";
             this.izađiToolStripMenuItem.Click += new System.EventHandler(this.izađiToolStripMenuItem_Click);
             // 
@@ -204,7 +181,6 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripLabel1,
             this.toolStripComboBox1,
@@ -222,7 +198,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "KreirajIzvještaj";
+            this.toolStripButton1.Text = "Kreiraj izvještaj";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
@@ -232,18 +208,8 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "PrikažiIzvještaj";
+            this.toolStripButton2.Text = "Prikaži izvještaj";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "IzmijeniPodatke";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -252,14 +218,14 @@
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "PrikažiPoruke";
+            this.toolStripButton4.Text = "Prikaži poruke";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "PrikažiAutobus";
+            this.toolStripLabel1.Size = new System.Drawing.Size(90, 22);
+            this.toolStripLabel1.Text = "Prikaži autobus:";
             // 
             // toolStripComboBox1
             // 
@@ -274,6 +240,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "Traži";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click_1);
             // 
             // Izađi
             // 
@@ -285,16 +252,26 @@
             this.Izađi.UseVisualStyleBackColor = true;
             this.Izađi.Click += new System.EventHandler(this.Izađi_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(358, 249);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Ispiši";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // serviserAplikacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 284);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Izađi);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "serviserAplikacija";
@@ -313,29 +290,27 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sifra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tablice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IstekRegistracije;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kreirajIzvještajToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prikažiIzvještajToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izmijeniPodatkeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prikažiPorukeToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.Button Izađi;
         private System.Windows.Forms.ToolStripMenuItem izađiToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sifra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tablice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IstekRegistracije;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

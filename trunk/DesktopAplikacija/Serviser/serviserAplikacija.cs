@@ -7,81 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DesktopAplikacija.Serviser.Entiteti;
-using DesktopAplikacija.Poruke;
+
 namespace DesktopAplikacija.Serviser
 {
     public partial class serviserAplikacija : Form
     {
-       
-                DAL.DAL d = DAL.DAL.Instanca;
- 
-               
-       
+        DAL.DAL d = DAL.DAL.Instanca;
+        string s;
+        int pamti;
+        KolekcijaAutobusa a = KolekcijaAutobusa.Instanca;
         public serviserAplikacija()
         {
             InitializeComponent();
         }
-
-        private void serviserAplikacija_Load(object sender, EventArgs e)
+        public serviserAplikacija(string sifra)
         {
-
+            InitializeComponent();
+            s = sifra;
+            pamti = 0;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
-            d.kreirajKonekciju();
-            DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
-            KolekcijaAutobusa a = KolekcijaAutobusa.Instanca;
-            List<DAL.Entiteti.Autobus> autobusi = new List<DAL.Entiteti.Autobus>();
-            if (comboBox1.Text=="DatumIstekaRegistracije")
-            {
-                autobusi = a.dajPoIsteku();
-                foreach (DAL.Entiteti.Autobus au in autobusi)
-                {
-                    dataGridView1.Rows.Add(au.SifraAutobusa, au.RegistracijskeTablice, au.IstekRegistracije, au.BrojSjedista, au.DatumServisa);
-                }
-            }
-            else if (comboBox1.Text=="DatumServisa")
-            {
-                autobusi = a.dajPoDatumu();
-                foreach (DAL.Entiteti.Autobus au in autobusi)
-                {
-                    dataGridView1.Rows.Add(au.SifraAutobusa, au.RegistracijskeTablice, au.IstekRegistracije, au.BrojSjedista, au.DatumServisa);
-                }
-            }
-         
-           d.terminirajKonekciju();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
+   
         private void izađiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            serviserAplikacija:Close();
+        serviserAplikacija: Close();
         }
 
         private void Izađi_Click(object sender, EventArgs e)
@@ -91,7 +39,7 @@ namespace DesktopAplikacija.Serviser
 
         private void kreirajIzvještajToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KreirajIzvjestaj k = new KreirajIzvjestaj();
+            KreirajIzvjestaj k = new KreirajIzvjestaj(s);
             k.Show();
         }
 
@@ -99,12 +47,6 @@ namespace DesktopAplikacija.Serviser
         {
             PrikaziIzvjestaj p = new PrikaziIzvjestaj();
             p.Show();
-        }
-
-        private void izmijeniPodatkeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            IzmijeniPodatke i=new IzmijeniPodatke();
-            i.Show();
         }
 
         private void prikažiPorukeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,7 +57,7 @@ namespace DesktopAplikacija.Serviser
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            KreirajIzvjestaj k = new KreirajIzvjestaj();
+            KreirajIzvjestaj k = new KreirajIzvjestaj(s);
             k.Show();
         }
 
@@ -125,11 +67,6 @@ namespace DesktopAplikacija.Serviser
             p.Show();
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            IzmijeniPodatke i = new IzmijeniPodatke();
-            i.Show();
-        }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
@@ -137,9 +74,66 @@ namespace DesktopAplikacija.Serviser
             p.Show();
         }
 
-        private void prikažiPorukeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void serviserAplikacija_Load(object sender, EventArgs e)
         {
-            
+            d.kreirajKonekciju();
+            // DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
+           
+            List<DAL.Entiteti.Autobus> autobusi = new List<DAL.Entiteti.Autobus>();
+            autobusi = a.dajPoDatumu();
+            foreach (DAL.Entiteti.Autobus au in autobusi)
+                toolStripComboBox1.Items.Add(au.SifraAutobusa);
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            if (toolStripComboBox1.Text != "")
+            {
+                int sifra = Convert.ToInt32(toolStripComboBox1.Text);
+                IzmijeniPodatke i = new IzmijeniPodatke(sifra);
+                i.Show();
+            }
+        }
+
+        private void toolStripButton5_Click_1(object sender, EventArgs e)
+        {
+            DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
+            List<DAL.Entiteti.Autobus> autobusi = new List<DAL.Entiteti.Autobus>();
+            autobusi = a.dajPoDatumu();
+            foreach(DAL.Entiteti.Autobus au in autobusi){
+                if (Convert.ToInt32(au.SifraAutobusa )== Convert.ToInt32(toolStripComboBox1.Text)) { pamti = Convert.ToInt32(toolStripComboBox1.Text); break; }
+                
+            }
+            IzmijeniPodatke i = new IzmijeniPodatke(pamti);
+            i.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+
+             DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
+
+            List<DAL.Entiteti.Autobus> autobusi = new List<DAL.Entiteti.Autobus>();
+            if (comboBox1.Text == "Datum isteka registracije")
+            {
+                autobusi = a.dajPoIsteku();
+                foreach (DAL.Entiteti.Autobus au in autobusi)
+                {
+                    dataGridView1.Rows.Add(au.SifraAutobusa, au.RegistracijskeTablice, au.IstekRegistracije, au.BrojSjedista, au.DatumServisa);
+                }
+            }
+            else if (comboBox1.Text == "Datum servisa")
+            {
+                autobusi = a.dajPoDatumu();
+                foreach (DAL.Entiteti.Autobus au in autobusi)
+                {
+                    dataGridView1.Rows.Add(au.SifraAutobusa, au.RegistracijskeTablice, au.IstekRegistracije, au.BrojSjedista, au.DatumServisa);
+                }
+            }
+
+            d.terminirajKonekciju();
         }
     }
+
 }
