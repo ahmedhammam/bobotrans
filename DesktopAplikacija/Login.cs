@@ -6,11 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using DesktopAplikacija.Serviser;
-using DesktopAplikacija.Serviser.Entiteti;
-using DesktopAplikacija.Poruke;
+
 
 using DAL;
+using DesktopAplikacija.Serviser;
 
 namespace DesktopAplikacija
 {
@@ -42,9 +41,10 @@ namespace DesktopAplikacija
                         toolStripStatusLabel1.Text = "logovani ste kao radnik";
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                     {
-                        aplikacijaPoruke ap = new aplikacijaPoruke(k);
-                        ap.Show();
+                        serviserAplikacija s = new serviserAplikacija(k.Password);
+                        s.Show();
                     }
+
                 }
                 catch (Exception e1)
                 { toolStripStatusLabel1.Text = e1.Message; }
