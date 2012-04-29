@@ -136,6 +136,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Serviser\IzmijeniPodatke.resx">
+      <DependentUpon>IzmijeniPodatke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serviser\KreirajIzvjestaj.resx">
+      <DependentUpon>KreirajIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serviser\PrikaziIzvjestaj.resx">
+      <DependentUpon>PrikaziIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serviser\PrikaziPoruke.resx">
+      <DependentUpon>PrikaziPoruke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Serviser\serviserAplikacija.resx">
       <DependentUpon>serviserAplikacija.cs</DependentUpon>
     </EmbeddedResource>
