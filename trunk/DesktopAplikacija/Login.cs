@@ -42,7 +42,7 @@ namespace DesktopAplikacija
                         toolStripStatusLabel1.Text = "logovani ste kao radnik";
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                     {
-                        aplikacijaPoruke ap = new aplikacijaPoruke();
+                        aplikacijaPoruke ap = new aplikacijaPoruke(k);
                         ap.Show();
                     }
                 }

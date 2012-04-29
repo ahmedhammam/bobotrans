@@ -139,8 +139,7 @@ namespace DesktopAplikacija.Serviser
 
         private void prikažiPorukeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            aplikacijaPoruke ap = new aplikacijaPoruke();
-            ap.Show();
+            
         }
     }
 }

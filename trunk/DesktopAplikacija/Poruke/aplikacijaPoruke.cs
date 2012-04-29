@@ -17,14 +17,32 @@ namespace DesktopAplikacija.Poruke
         DAL.DAL.PorukeDAO pd = new DAL.DAL.PorukeDAO();
         List<DAL.Entiteti.Poruka> primljene;
         List<DAL.Entiteti.Poruka> poslane;
-        public aplikacijaPoruke()
+        public aplikacijaPoruke(DAL.Entiteti.Korisnik k)
         {
-            primljene = new List<DAL.Entiteti.Poruka>();
-            primljene = pd.getByExample("idPrimaoca", Convert.ToString(3));
-
-            poslane = new List<DAL.Entiteti.Poruka>();
+            
             
             InitializeComponent();
+            primljene = new List<DAL.Entiteti.Poruka>();
+            primljene = pd.getByExample("idPrimaoca", Convert.ToString(k.SifraKorisnika));
+
+            poslane = new List<DAL.Entiteti.Poruka>();
+            poslane = pd.getByExample("id.Posiljaoca", Convert.ToString(k.SifraKorisnika));
+
+            foreach (DAL.Entiteti.Poruka p in primljene)
+            {
+                System.Windows.Forms.Label l = new System.Windows.Forms.Label();
+                l.AutoSize = true;
+                l.Name = "label1";
+
+                l.TabIndex = 0;
+                l.Text = p.Posiljaoc;
+                this.panel1.Controls.Add(l);
+                MessageBox.Show("ima poruka");
+
+
+            }
+            
+
         }
 
         private void aplikacijaPoruke_Load(object sender, EventArgs e)
