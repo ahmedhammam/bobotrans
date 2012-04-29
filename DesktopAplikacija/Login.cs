@@ -41,7 +41,7 @@ namespace DesktopAplikacija
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.RADNIK_ZA_SALTEROM)
                         toolStripStatusLabel1.Text = "logovani ste kao radnik";
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
-                       aplikacijaPoruke ap=new aplikacijaPoruke();
+                        toolStripStatusLabel1.Text = "logovani ste kao radnik";
 
                 }
                 catch (Exception e1)
