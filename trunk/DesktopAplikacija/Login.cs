@@ -25,30 +25,28 @@ namespace DesktopAplikacija
 
         private void button1_Click(object sender, EventArgs e)
         {
-                label1.Text = "";
-                DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
-                
+            if (Validiraj())
+            {
                 try
                 {
+                    DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
                     //dok se naprave forme koje ce se otvarati stavila sam da mi ispisuje na toolStrioStatusLabel//
-                    label1.Text = "prije";
                     DAL.Entiteti.Korisnik k = kd.getByUsernameAndPassword(t_nazivKorisnika.Text, t_sifraKorisnika.Text);
-                    //LoginPodaci lg = new LoginPodaci(k.ImeIPrezime, k.Password);
+                    DesktopAplikacija.Entiteti.LoginPodaci lg = new DesktopAplikacija.Entiteti.LoginPodaci(k.ImeIPrezime, k.Password);
 
-                    label1.Text += " poslije";
-
-                    if(k.Tip==DAL.TipoviPodataka.TipoviKorisnika.MENAGER)
+                    if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.MENAGER)
                         toolStripStatusLabel1.Text = "logovani ste kao menager";
-                    if(k.Tip==DAL.TipoviPodataka.TipoviKorisnika.RADNIK_ZA_SALTEROM)
+                    if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.RADNIK_ZA_SALTEROM)
                         toolStripStatusLabel1.Text = "logovani ste kao radnik";
-                    if(k.Tip==DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
+                    if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                         toolStripStatusLabel1.Text = "logovani ste kao serviser";
 
                 }
                 catch (Exception e1)
-                {toolStripStatusLabel1.Text=e1.Message;}  
-   
+                { toolStripStatusLabel1.Text = e1.Message; }
             }
+   
+        }
 
         
 
