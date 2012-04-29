@@ -176,31 +176,31 @@ namespace BoboTransporter.Mapa
                     //stavljamo trotoare
                     #region StavljanjeTrotoara
                     Trotoar a;
-                    if (jeCesta(tipDesno) || jeCesta(tipGore) || jeCesta(tipGoreDesno))
+                    if (jeCestaIliCilj(tipDesno) || jeCestaIliCilj(tipGore) || jeCestaIliCilj(tipGoreDesno))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f - 150f / 8, 150f / 8);
                         slicice.Add(a);
                     }
-                    if (jeCesta(tipLijevo) || jeCesta(tipGore) || jeCesta(tipGoreLijevo))
+                    if (jeCestaIliCilj(tipLijevo) || jeCestaIliCilj(tipGore) || jeCestaIliCilj(tipGoreLijevo))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f / 8, 150f / 8);
                         slicice.Add(a);
                     }
-                    if (jeCesta(tipDesno) || jeCesta(tipDole) || jeCesta(tipDoleDesno))
+                    if (jeCestaIliCilj(tipDesno) || jeCestaIliCilj(tipDole) || jeCestaIliCilj(tipDoleDesno))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f - 150f / 8, 150f - 150f / 8);
                         slicice.Add(a);
                     }
-                    if (jeCesta(tipLijevo) || jeCesta(tipDole) || jeCesta(tipDoleLijevo))
+                    if (jeCestaIliCilj(tipLijevo) || jeCestaIliCilj(tipDole) || jeCestaIliCilj(tipDoleLijevo))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f / 8, 150f - 150f / 8);
                         slicice.Add(a);
                     }
-                    if (jeCesta(tipGore))
+                    if (jeCestaIliCilj(tipGore))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f / 8 + 150f / 4, 150f / 8);
@@ -209,7 +209,7 @@ namespace BoboTransporter.Mapa
                         a.Pozicija = new Vector2(150f / 8 + 300f / 4, 150f / 8);
                         slicice.Add(a);
                     }
-                    if (jeCesta(tipDole))
+                    if (jeCestaIliCilj(tipDole))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f / 8 + 150f / 4, 150f - 150f / 8);
@@ -218,7 +218,7 @@ namespace BoboTransporter.Mapa
                         a.Pozicija = new Vector2(150f / 8 + 300f / 4, 150f - 150f / 8);
                         slicice.Add(a);
                     }
-                    if (jeCesta(tipLijevo))
+                    if (jeCestaIliCilj(tipLijevo))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f / 8, 150f / 8 + 150f / 4);
@@ -227,7 +227,7 @@ namespace BoboTransporter.Mapa
                         a.Pozicija = new Vector2(150f / 8, 150f / 8 + 300f / 4);
                         slicice.Add(a);
                     }
-                    if (jeCesta(tipDesno))
+                    if (jeCestaIliCilj(tipDesno))
                     {
                         a = new Trotoar();
                         a.Pozicija = new Vector2(150f - 150f / 8, 150f / 8 + 150f / 4);
@@ -269,6 +269,11 @@ namespace BoboTransporter.Mapa
                 tip2 == TipRegije.SKRETANJE ||
                 tip2 == TipRegije.ZATVORENA_CESTA);
             return blaa;
+        }
+
+        private static bool jeCestaIliCilj(TipRegije tip2)
+        {
+            return (jeCesta(tip2) || tip2==TipRegije.CILJ);
         }
 
         public void LoadContent(ContentManager theContentManager)

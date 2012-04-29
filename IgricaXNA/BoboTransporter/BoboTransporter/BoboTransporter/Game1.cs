@@ -98,7 +98,7 @@ namespace BoboTransporter
             // TODO: Add your drawing code here
 
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);  //manji layerDepth je nizi objekat
-            igra.Draw(spriteBatch, new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2));
+            igra.Draw(gameTime,spriteBatch, new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2));
             spriteBatch.End();
 
             base.Draw(gameTime);

@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\asfaltTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:37.4804633+02:00</Time>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\asfaltTekstura.xnb</Output>
+      <Time>2012-04-28T13:29:53.894121+02:00</Time>
     </Item>
     <Item>
       <Source>l1.png</Source>
@@ -16,62 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijeCestaTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:37.4694627+02:00</Time>
-    </Item>
-    <Item>
-      <Source>l3.png</Source>
-      <Name>linijaSkretanjeCestaTekstura</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaSkretanjeCestaTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:37.4764631+02:00</Time>
-    </Item>
-    <Item>
-      <Source>r2.png</Source>
-      <Name>radoviNaCestiTekstura</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\radoviNaCestiTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:37.5024645+02:00</Time>
-    </Item>
-    <Item>
-      <Source>s1.png</Source>
-      <Name>snijegTekstura</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:37.5074648+02:00</Time>
-    </Item>
-    <Item>
-      <Source>t3.png</Source>
-      <Name>trotoarTekstura</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\trotoarTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:38.156502+02:00</Time>
-    </Item>
-    <Item>
-      <Source>z1.png</Source>
-      <Name>zemljaTekstura</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\zemljaTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:38.7755374+02:00</Time>
-    </Item>
-    <Item>
-      <Source>c1.png</Source>
-      <Name>ciljTekstura</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:37.510465+02:00</Time>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijeCestaTekstura.xnb</Output>
+      <Time>2012-04-29T09:53:11.8704289+02:00</Time>
     </Item>
     <Item>
       <Source>l2.png</Source>
@@ -79,8 +25,71 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaStopCestaTekstura.xnb</Output>
-      <Time>2012-04-29T15:59:37.4734629+02:00</Time>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaStopCestaTekstura.xnb</Output>
+      <Time>2012-04-29T13:39:33.4750999+02:00</Time>
+    </Item>
+    <Item>
+      <Source>l3.png</Source>
+      <Name>linijaSkretanjeCestaTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaSkretanjeCestaTekstura.xnb</Output>
+      <Time>2012-04-29T10:31:40.3164385+02:00</Time>
+    </Item>
+    <Item>
+      <Source>r2.png</Source>
+      <Name>radoviNaCestiTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\radoviNaCestiTekstura.xnb</Output>
+      <Time>2012-04-29T10:50:58.6484837+02:00</Time>
+    </Item>
+    <Item>
+      <Source>t3.png</Source>
+      <Name>trotoarTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\trotoarTekstura.xnb</Output>
+      <Time>2012-04-29T11:29:58.5769107+02:00</Time>
+    </Item>
+    <Item>
+      <Source>z1.png</Source>
+      <Name>zemljaTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\zemljaTekstura.xnb</Output>
+      <Time>2012-04-29T11:32:52.5825838+02:00</Time>
+    </Item>
+    <Item>
+      <Source>c1.png</Source>
+      <Name>ciljTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb</Output>
+      <Time>2012-04-29T11:58:17.4289731+02:00</Time>
+    </Item>
+    <Item>
+      <Source>s1.png</Source>
+      <Name>snijegTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb</Output>
+      <Time>2012-04-29T11:19:42.475612+02:00</Time>
+    </Item>
+    <Item>
+      <Source>busSlika.png</Source>
+      <Name>autobusTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\autobusTekstura.xnb</Output>
+      <Time>2012-04-29T16:37:18.5064076+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -88,10 +97,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\</RootDirectory>
+      <LoggerRootDirectory>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -120,7 +129,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-04-29T15:44:46.9505279+02:00</Value>
+        <Value>2012-04-27T17:44:22.3664053+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

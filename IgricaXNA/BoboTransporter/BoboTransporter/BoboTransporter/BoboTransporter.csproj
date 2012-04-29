@@ -122,6 +122,7 @@
     <Compile Include="Grafika\Podloge\Trotoar.cs" />
     <Compile Include="Grafika\Podloge\Zemlja.cs" />
     <Compile Include="Grafika\Slicica.cs" />
+    <Compile Include="Grafika\Vozila\MojBus.cs" />
     <Compile Include="IgraPokrenuta.cs" />
     <Compile Include="Mapa\Mapa.cs" />
     <Compile Include="Mapa\Regija.cs" />
