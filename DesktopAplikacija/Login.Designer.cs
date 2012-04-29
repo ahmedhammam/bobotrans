@@ -52,7 +52,6 @@
             this.l_nazivKorisnika.Size = new System.Drawing.Size(82, 13);
             this.l_nazivKorisnika.TabIndex = 0;
             this.l_nazivKorisnika.Text = "Naziv korisnika:";
-            this.l_nazivKorisnika.Click += new System.EventHandler(this.label1_Click);
             // 
             // l_sifra
             // 
