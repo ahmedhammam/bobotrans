@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 29, 2012 at 02:40 PM
+-- Generation Time: Apr 29, 2012 at 10:55 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -263,7 +263,15 @@ CREATE TABLE IF NOT EXISTS `poruke` (
   PRIMARY KEY (`id`),
   KEY `idPosiljaoca` (`idPosiljaoca`),
   KEY `idPrimaoca` (`idPrimaoca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `poruke`
+--
+
+INSERT INTO `poruke` (`id`, `idPosiljaoca`, `idPrimaoca`, `vrijemeSlanja`, `tekst`) VALUES
+(2, 3, 5, '2012-04-02', 'lorem ipsum sid dolorem amet'),
+(3, 1, 5, '2012-04-17', 'the quick brown fox jumps over the lazy dog');
 
 -- --------------------------------------------------------
 
