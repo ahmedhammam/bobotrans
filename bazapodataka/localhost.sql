@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 29, 2012 at 10:55 PM
+-- Generation Time: Apr 29, 2012 at 11:09 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -61,8 +61,10 @@ CREATE TABLE IF NOT EXISTS `izvjestaji` (
   `datum` date NOT NULL,
   `tekst` text COLLATE utf8_slovenian_ci NOT NULL,
   `idKreatora` int(11) NOT NULL,
+  `idAutobusa` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `idKreatora` (`idKreatora`)
+  KEY `idKreatora` (`idKreatora`),
+  KEY `idAutobusa` (`idAutobusa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -461,6 +463,7 @@ CREATE TABLE IF NOT EXISTS `zakupiautobusa` (
 -- Constraints for table `izvjestaji`
 --
 ALTER TABLE `izvjestaji`
+  ADD CONSTRAINT `izvjestaji_ibfk_2` FOREIGN KEY (`idAutobusa`) REFERENCES `autobusi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `izvjestaji_ibfk_1` FOREIGN KEY (`idKreatora`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
