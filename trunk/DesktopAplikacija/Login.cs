@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using DesktopAplikacija.Serviser;
+using DesktopAplikacija.Serviser.Entiteti;
+using DesktopAplikacija.Poruke;
 
 using DAL;
 
@@ -39,7 +41,7 @@ namespace DesktopAplikacija
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.RADNIK_ZA_SALTEROM)
                         toolStripStatusLabel1.Text = "logovani ste kao radnik";
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
-                        toolStripStatusLabel1.Text = "logovani ste kao serviser";
+                       aplikacijaPoruke ap=new aplikacijaPoruke();
 
                 }
                 catch (Exception e1)

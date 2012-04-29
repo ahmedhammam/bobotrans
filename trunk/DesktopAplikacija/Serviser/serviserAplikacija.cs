@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DesktopAplikacija.Serviser.Entiteti;
-
+using DesktopAplikacija.Poruke;
 namespace DesktopAplikacija.Serviser
 {
     public partial class serviserAplikacija : Form
@@ -135,6 +135,12 @@ namespace DesktopAplikacija.Serviser
         {
             PrikaziPoruke p = new PrikaziPoruke();
             p.Show();
+        }
+
+        private void prikažiPorukeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            aplikacijaPoruke ap = new aplikacijaPoruke();
+            ap.Show();
         }
     }
 }
