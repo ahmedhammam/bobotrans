@@ -1,0 +1,15 @@
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\BoboTransporter.exe
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\BoboTransporter.pdb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\BoboTransporter.exe
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\BoboTransporter.pdb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\asfaltTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijeCestaTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaStopCestaTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaSkretanjeCestaTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\radoviNaCestiTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\trotoarTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\zemljaTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb
