@@ -21,8 +21,8 @@ namespace DAL
                 try
                 {
 
-                    c = new MySqlCommand(String.Format("INSERT INTO izvjestaji VALUES ('','{0}','{1}','{2}');"
-                        , entity.DatumServisa.ToString("yyyy-MM-dd"), entity.Tekst, entity.SifraKreatora)
+                    c = new MySqlCommand(String.Format("INSERT INTO izvjestaji VALUES ('','{0}','{1}','{2}','{3}');"
+                        , entity.DatumServisa.ToString("yyyy-MM-dd"), entity.Tekst, entity.SifraKreatora,entity.SifraAutobusa)
                         , con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
@@ -37,13 +37,14 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM izvjestaji WHERE datum='{0}' AND tekst='{1}' AND idKreatora='{2}'", entity.DatumServisa.ToString("yyyy-MM-dd"), entity.Tekst, entity.SifraKreatora), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM izvjestaji WHERE datum='{0}' AND tekst='{1}' AND idKreatora='{2}' AND idAutobusa='{3}'",
+                        entity.DatumServisa.ToString("yyyy-MM-dd"), entity.Tekst, entity.SifraKreatora,entity.SifraAutobusa), con);
 
                     MySqlDataReader r = c.ExecuteReader();
 
                     if (r.Read())
                     {
-                        Izvjestaj izvjestaj = new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"));
+                        Izvjestaj izvjestaj = new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"),r.GetInt32("idAutobusa"));
                         r.Close();
                         return izvjestaj;
                     }
@@ -61,7 +62,8 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE izvjestaji SET datum='{0}', tekst='{1}', idKreatora='{2}' WHERE id='{3}';", entity.DatumServisa.ToString("yyyy-MM-dd"), entity.Tekst, entity.SifraKreatora, entity.SifraIzvjestaja), con);
+                    c = new MySqlCommand(String.Format("UPDATE izvjestaji SET datum='{0}', tekst='{1}', idKreatora='{2}', idAutobusa='{3}' WHERE id='{4}';", 
+                        entity.DatumServisa.ToString("yyyy-MM-dd"), entity.Tekst, entity.SifraKreatora,entity.SifraAutobusa, entity.SifraIzvjestaja), con);
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -92,7 +94,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Izvjestaj a = new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"));
+                        Izvjestaj a = new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"), r.GetInt32("idAutobusa"));
                         r.Close();
                         return a;
                     }
@@ -113,7 +115,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Izvjestaj> izvjestaji = new List<Izvjestaj>();
                     while (r.Read())
-                        izvjestaji.Add(new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora")));
+                        izvjestaji.Add(new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"), r.GetInt32("idAutobusa")));
 
                     r.Close();
                     return izvjestaji;
@@ -133,7 +135,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Izvjestaj> izvjestaji = new List<Izvjestaj>();
                     while (r.Read())
-                        izvjestaji.Add(new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora")));
+                        izvjestaji.Add(new Izvjestaj(r.GetInt32("id"), r.GetDateTime("datum"), r.GetString("tekst"), r.GetInt32("idKreatora"), r.GetInt32("idAutobusa")));
                     r.Close();
                     return izvjestaji;
                 }
