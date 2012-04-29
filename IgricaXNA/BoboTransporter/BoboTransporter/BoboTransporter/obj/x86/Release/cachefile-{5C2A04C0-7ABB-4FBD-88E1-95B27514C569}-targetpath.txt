@@ -7,3 +7,4 @@ Content\snijegTekstura.xnb
 Content\trotoarTekstura.xnb
 Content\zemljaTekstura.xnb
 Content\ciljTekstura.xnb
+Content\autobusTekstura.xnb

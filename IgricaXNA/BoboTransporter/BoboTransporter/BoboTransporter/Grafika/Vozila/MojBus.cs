@@ -45,7 +45,6 @@ namespace BoboTransporter.Grafika.Vozila
 
         public void ubrzavaj(GameTime gameTime)
         {
-            Console.WriteLine("{0}  {1}",brzina*3600/5,ubrzanje()*3600/5);
             brzina += ubrzanje() * gameTime.ElapsedGameTime.Milliseconds;
         }
 

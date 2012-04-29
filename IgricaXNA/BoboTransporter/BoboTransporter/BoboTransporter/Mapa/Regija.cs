@@ -33,14 +33,68 @@ namespace BoboTransporter.Mapa
         }
 
         private TipRegije tip;
+
+        public TipRegije Tip
+        {
+            get { return tip; }
+            set { tip = value; }
+        }
         private TipRegije tipGore;
+
+        public TipRegije TipGore
+        {
+            get { return tipGore; }
+            set { tipGore = value; }
+        }
         private TipRegije tipDole;
+
+        public TipRegije TipDole
+        {
+            get { return tipDole; }
+            set { tipDole = value; }
+        }
         private TipRegije tipDesno;
+
+        public TipRegije TipDesno
+        {
+            get { return tipDesno; }
+            set { tipDesno = value; }
+        }
         private TipRegije tipLijevo;
+
+        public TipRegije TipLijevo
+        {
+            get { return tipLijevo; }
+            set { tipLijevo = value; }
+        }
         private TipRegije tipGoreDesno;
+
+        public TipRegije TipGoreDesno
+        {
+            get { return tipGoreDesno; }
+            set { tipGoreDesno = value; }
+        }
         private TipRegije tipGoreLijevo;
+
+        public TipRegije TipGoreLijevo
+        {
+            get { return tipGoreLijevo; }
+            set { tipGoreLijevo = value; }
+        }
         private TipRegije tipDoleDesno;
+
+        public TipRegije TipDoleDesno
+        {
+            get { return tipDoleDesno; }
+            set { tipDoleDesno = value; }
+        }
         private TipRegije tipDoleLijevo;
+
+        public TipRegije TipDoleLijevo
+        {
+            get { return tipDoleLijevo; }
+            set { tipDoleLijevo = value; }
+        }
 
         public Regija(int pozX, int pozY, TipRegije tip_, TipRegije tipGore_, TipRegije tipDole_, TipRegije tipLijevo_, TipRegije tipDesno_
                                                         , TipRegije tipGoreDesno_, TipRegije tipGoreLijevo_, TipRegije tipDoleDesno_, TipRegije tipDoleLijevo_)
@@ -259,7 +313,7 @@ namespace BoboTransporter.Mapa
 
         }
 
-        private static bool jeCesta(TipRegije tip2)
+        public static bool jeCesta(TipRegije tip2)
         {
             bool blaa;
             blaa = (tip2 == TipRegije.CESTADeadEnd ||
@@ -271,7 +325,18 @@ namespace BoboTransporter.Mapa
             return blaa;
         }
 
-        private static bool jeCestaIliCilj(TipRegije tip2)
+        public static bool jeProhodnaCesta(TipRegije tip2)
+        {
+            bool blaa;
+            blaa = (tip2 == TipRegije.CESTADeadEnd ||
+                tip2 == TipRegije.CESTAhorizontalna ||
+                tip2 == TipRegije.CESTAvertikalna ||
+                tip2 == TipRegije.RASKRSNICA ||
+                tip2 == TipRegije.SKRETANJE);
+            return blaa;
+        }
+
+        public static bool jeCestaIliCilj(TipRegije tip2)
         {
             return (jeCesta(tip2) || tip2==TipRegije.CILJ);
         }

@@ -10,9 +10,30 @@ namespace BoboTransporter.Mapa
 {
     class Mapa
     {
-        private int sirina, visina;
+        private int sirina;
+
+        public int Sirina
+        {
+            get { return sirina; }
+            set { sirina = value; }
+        }
+
+        private int visina;
+
+        public int Visina
+        {
+            get { return visina; }
+            set { visina = value; }
+        }
+
         private GenerisanjeLabirinta.Labirint lab;
         private Regija[,] blok;
+
+        internal Regija[,] Blok
+        {
+            get { return blok; }
+            set { blok = value; }
+        }
         public Mapa(int velX, int velY,bool snijeg)
         {
             TipRegije okolina;

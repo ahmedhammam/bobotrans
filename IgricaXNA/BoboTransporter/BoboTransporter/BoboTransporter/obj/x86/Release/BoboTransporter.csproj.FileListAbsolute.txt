@@ -13,3 +13,4 @@ D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Releas
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Release\BoboTransporter.exe
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Release\BoboTransporter.pdb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Release\Content\autobusTekstura.xnb

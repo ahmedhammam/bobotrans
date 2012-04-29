@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Release\Content\linijaStopCestaTekstura.xnb</Output>
-      <Time>2012-04-29T10:22:48.1743286+02:00</Time>
+      <Time>2012-04-29T13:39:33.4750999+02:00</Time>
     </Item>
     <Item>
       <Source>l3.png</Source>
@@ -81,6 +81,15 @@
       <Options>None</Options>
       <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Release\Content\ciljTekstura.xnb</Output>
       <Time>2012-04-29T11:58:17.4289731+02:00</Time>
+    </Item>
+    <Item>
+      <Source>busSlika.png</Source>
+      <Name>autobusTekstura</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Release\Content\autobusTekstura.xnb</Output>
+      <Time>2012-04-29T16:37:18.5064076+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
