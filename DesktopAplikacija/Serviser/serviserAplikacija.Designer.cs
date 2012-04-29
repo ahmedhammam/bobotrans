@@ -51,9 +51,9 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.Izađi = new System.Windows.Forms.Button();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -190,6 +190,7 @@
             this.prikažiPorukeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
             this.prikažiPorukeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.prikažiPorukeToolStripMenuItem.Text = "PrikažiPoruke";
+            this.prikažiPorukeToolStripMenuItem.Click += new System.EventHandler(this.prikažiPorukeToolStripMenuItem_Click_1);
             // 
             // izađiToolStripMenuItem
             // 
@@ -260,6 +261,11 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "PrikažiAutobus";
             // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            // 
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -278,11 +284,6 @@
             this.Izađi.Text = "Izađi";
             this.Izađi.UseVisualStyleBackColor = true;
             this.Izađi.Click += new System.EventHandler(this.Izađi_Click);
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
             // 
             // serviserAplikacija
             // 

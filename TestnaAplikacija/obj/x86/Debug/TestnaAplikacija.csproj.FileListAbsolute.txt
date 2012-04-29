@@ -21,3 +21,5 @@ C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOAD\trunk\T
 C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOAD\trunk\TestnaAplikacija\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\DesktopAplikacija.exe
 C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\DesktopAplikacija.pdb
+C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOAD\trunk\TestnaAplikacija\bin\Debug\DesktopAplikacija.exe
+C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOAD\trunk\TestnaAplikacija\bin\Debug\DesktopAplikacija.pdb
