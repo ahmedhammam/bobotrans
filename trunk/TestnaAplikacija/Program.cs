@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using DAL.Entiteti;
+using DesktopAplikacija;
 
 namespace TestnaAplikacija
 {
@@ -15,6 +16,7 @@ namespace TestnaAplikacija
             try
             {
 
+
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
                 DAL.DAL.StanicaDAO sd= d.getDAO.getStaniceDAO();
@@ -22,32 +24,47 @@ namespace TestnaAplikacija
                 DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
 
                     List<Stanica> stanice = new List<Stanica>();
-                    stanice.Add(sd.getById(5));
+                    stanice.Add(sd.getById(14));
+                    stanice.Add(sd.getById(13));
+
+                    List<List<double>> cijene = new List<List<double>>();
+                    cijene.Add(new List<double>());
+                    cijene[0] = new List<double>() { 5 };
+
+
+                    List<int> trajanjeDoDolaska = new List<int>() { 0, 30 };
+                    List<int> trajanjeDoPolaska = new List<int>() { 0, 30 };
+
+                    List<Voznja> voznje = new List<Voznja>() { new Voznja(new DateTime(2012, 5,10, 11, 10, 0), ad.getById(5)), new Voznja(new DateTime(2012, 5, 7, 17, 30, 0), ad.getById(5)) };
+                    List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() { new RasporedVoznje(3, new DateTime(1, 1, 1, 11, 10, 0), 25), new RasporedVoznje(7, new DateTime(1, 1, 1, 17, 30, 0), 25) };
+                    Linija l = new Linija("Banja Luka - Doboj", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);
+
+                    /*stanice.Add(sd.getById(5));
                     stanice.Add(sd.getById(10));
                     stanice.Add(sd.getById(11));
                     stanice.Add(sd.getById(13));
                     stanice.Add(sd.getById(12));
-                    stanice.Add(sd.getById(9));
+                    stanice.Add(sd.getById(9));*/
 
-                    List<List<double>> cijene = new List<List<double>>();
+                    /*List<List<double>> cijene = new List<List<double>>();
                     cijene.Add(new List<double>()); cijene.Add(new List<double>()); cijene.Add(new List<double>()); cijene.Add(new List<double>()); cijene.Add(new List<double>());
                     cijene[0] = new List<double>() { 2,5,10,13,15};
                     cijene[1] = new List<double>() { 3.5, 8.5, 11.5, 13.5 };
                     cijene[2] = new List<double>() { 5.5,9,11};
                     cijene[3] = new List<double>() { 4,5.5};
-                    cijene[4] = new List<double>() { 2.5};
+                    cijene[4] = new List<double>() { 2.5};*/
                 
 
-                    List<int> trajanjeDoDolaska = new List<int>() {0,30,60,80,110,130 };
-                    List<int> trajanjeDoPolaska = new List<int>() {0, 35, 65, 90, 120, 130 };
+                    /*List<int> trajanjeDoDolaska = new List<int>() {0,30,60,80,110,130 };
+                    List<int> trajanjeDoPolaska = new List<int>() {0, 35, 65, 90, 120, 130 };*/
 
-                    List<Voznja> voznje = new List<Voznja>() { new Voznja(new DateTime(2012, 5, 5,10,0,0), ad.getById(1)), new Voznja(new DateTime(2012,5,7,15,30,0),ad.getById(4)) };
-                    List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() {new RasporedVoznje(1,new DateTime(1,1,1,10,0,0),50),new RasporedVoznje(5,new DateTime(1,1,1,15,30,0),50)};
+                    /*List<Voznja> voznje = new List<Voznja>() { new Voznja(new DateTime(2012, 5, 5,10,0,0), ad.getById(1)), new Voznja(new DateTime(2012,5,7,15,30,0),ad.getById(4)) };
+                    List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() {new RasporedVoznje(1,new DateTime(1,1,1,10,0,0),50),new RasporedVoznje(5,new DateTime(1,1,1,15,30,0),50)};*/
 
-                    Linija l = new Linija("Kakanj - Tuzla", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);
+                    /*Linija l = new Linija("Kakanj - Tuzla", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);*/
                     l.SifraLinije = ld.create(l);
                     Console.WriteLine(l.SifraLinije);
-
+                
                /* List<Linija> linije = ld.GetAll();
 
                 Linija nova = linije[0];

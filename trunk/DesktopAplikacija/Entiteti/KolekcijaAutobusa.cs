@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DesktopAplikacija.Serviser.Eniteti
+namespace DesktopAplikacija.Serviser.Entiteti
 {
-   public class KolekcijaAutobusa
+    class KolekcijaAutobusa
     {
        private  DAL.DAL d = DAL.DAL.Instanca;
-      private  DAL.DAL.AutobusDAO ad;
-        List<DAL.Entiteti.Autobus> autobusi;
+       private  DAL.DAL.AutobusDAO ad;
+       List<DAL.Entiteti.Autobus> autobusi;
+       private static KolekcijaAutobusa instanca=null;
+
+       public static KolekcijaAutobusa Instanca
+       {
+           get { return (instanca==null)? new KolekcijaAutobusa() : instanca;}
+       }
        
-        public KolekcijaAutobusa(){
+        private KolekcijaAutobusa(){
            ad= d.getDAO.getAutobusDAO();
                 autobusi = ad.GetAll();
         }
 
+        
         public List<DAL.Entiteti.Autobus>  dajPoDatumu()
         {
             List<DAL.Entiteti.Autobus> nova = new List<DAL.Entiteti.Autobus>();
