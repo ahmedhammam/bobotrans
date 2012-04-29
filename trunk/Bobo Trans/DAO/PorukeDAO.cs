@@ -135,7 +135,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT p.id,p.vrijemeSlanja,p.tekst, posiljaoc.username AS usernamePosiljaoca, primaoc.username AS usernamePrimaoca FROM (SELECT * FROM poruke WHERE '{0}'='{1}') AS p LEFT JOIN korisnici as posiljaoc ON posiljaoc.id =  p.idPosiljaoca LEFT JOIN korisnici as primaoc ON primaoc.id= p.idPrimaoca;",name,values), con);
+                    c = new MySqlCommand(String.Format("SELECT p.id,p.vrijemeSlanja,p.tekst, posiljaoc.username AS usernamePosiljaoca, primaoc.username AS usernamePrimaoca FROM (SELECT * FROM poruke WHERE {0}='{1}') AS p LEFT JOIN korisnici as posiljaoc ON posiljaoc.id =  p.idPosiljaoca LEFT JOIN korisnici as primaoc ON primaoc.id= p.idPrimaoca;",name,values), con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Poruka> poruke = new List<Poruka>();
                     while (r.Read())
