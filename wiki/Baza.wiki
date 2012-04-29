@@ -97,6 +97,7 @@
 - tekst (Text)
 
 - idKreatora (int) - foreign key na korisnici.id: on update i delete - cascade
+- idAutobusa (int) - foreign key na autobusi.id: on update i delete - cascade
 
 
 ===RasporedVoznji:===
