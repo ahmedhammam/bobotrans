@@ -14,45 +14,30 @@ namespace DesktopAplikacija.Serviser
 {
     public partial class IzmijeniPodatke : Form
     {
-        int s;
+        long sifra;
         DAL.DAL d = DAL.DAL.Instanca;
-        List<DAL.Entiteti.Autobus> autobusi;
-        KolekcijaAutobusa a;
-        public IzmijeniPodatke(int sifra)
+        KolekcijaAutobusa ka = KolekcijaAutobusa.Instanca;
+        DAL.Entiteti.Autobus odabraniAutobus;
+
+        public IzmijeniPodatke(long s)
         {
+            sifra = s;
             InitializeComponent();
-            try
-            {
-                a = KolekcijaAutobusa.Instanca;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-            s = sifra;
+            odabraniAutobus = ka.dajPoSifri(sifra);
         }
 
         private void IzmijeniPodatke_Load(object sender, EventArgs e)
         {
             try
             {
-                d.kreirajKonekciju();
-                autobusi = a.dajPoDatumu();
-                foreach (DAL.Entiteti.Autobus au in autobusi)
-                {
-                    if (au.SifraAutobusa == s)
-                    {
-                        textBox1.Text = Convert.ToString(au.SifraAutobusa);
-                        textBox2.Text = au.RegistracijskeTablice;
-                        numericUpDown1.Value = au.BrojSjedista;
-                        textBox3.Text = Convert.ToString(Convert.ToInt32(au.ImaToalet));
-                        textBox4.Text = Convert.ToString(Convert.ToInt32(au.ImaKlimu));
-                        textBox5.Text = Convert.ToString(Convert.ToInt32(au.Slobodan));
-                        dateTimePicker1.Value = au.IstekRegistracije;
-                        dateTimePicker2.Value = au.DatumServisa;
-                    }
-                }
+                textBox1.Text = Convert.ToString(odabraniAutobus.SifraAutobusa);
+                textBox2.Text = odabraniAutobus.RegistracijskeTablice;
+                numericUpDown1.Value = odabraniAutobus.BrojSjedista;
+                textBox3.Text = Convert.ToString(Convert.ToInt32(odabraniAutobus.ImaToalet));
+                textBox4.Text = Convert.ToString(Convert.ToInt32(odabraniAutobus.ImaKlimu));
+                textBox5.Text = Convert.ToString(Convert.ToInt32(odabraniAutobus.Slobodan));
+                dateTimePicker1.Value = odabraniAutobus.IstekRegistracije;
+                dateTimePicker2.Value = odabraniAutobus.DatumServisa;
             }
             catch (Exception ex)
             {
@@ -70,27 +55,23 @@ namespace DesktopAplikacija.Serviser
             try
             {
                 d.kreirajKonekciju();
-                DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
-                autobusi = a.dajPoDatumu();
 
-                foreach (DAL.Entiteti.Autobus au in autobusi)
+                DAL.DAL.AutobusDAO ad = d.getDAO.getAutobusDAO();
+
+                odabraniAutobus.RegistracijskeTablice = textBox2.Text;
+                odabraniAutobus.IstekRegistracije = dateTimePicker1.Value;
+                odabraniAutobus.DatumServisa = dateTimePicker2.Value;
+                DialogResult dres;
+                dres = MessageBox.Show("Jeste li sigurni da želite promijeniti podatke?", "provjera", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dres == System.Windows.Forms.DialogResult.Yes)
                 {
-                    if (au.SifraAutobusa == s)
-                    {
-                        au.RegistracijskeTablice = textBox2.Text;
-                        au.IstekRegistracije = dateTimePicker1.Value;
-                        au.DatumServisa = dateTimePicker2.Value;
-                        ad.update(au);
-                        DialogResult dres;
-                        dres = MessageBox.Show("Jeste li sigurni da želite promijeniti podatke?", "provjera", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (dres == System.Windows.Forms.DialogResult.Yes)
-                            MessageBox.Show("Podaci su promijenjeni!");
-                        break;
-                    }
+                    ad.update(odabraniAutobus);
                 }
+                d.terminirajKonekciju();
             }
             catch (Exception ex)
             {
+                d.terminirajKonekciju();
                 MessageBox.Show(ex.Message);
             }
         }

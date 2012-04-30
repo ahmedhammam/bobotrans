@@ -19,7 +19,17 @@ namespace TestnaAplikacija
 
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
-                DAL.DAL.StanicaDAO sd= d.getDAO.getStaniceDAO();
+                
+               // DAL.DAL.PorukeDAO pd = d.getDAO.getPorukeDAO();
+                /*
+                List<Poruka> p = pd.getByExample("idPrimaoca",string.Format("5"));
+
+                foreach (Poruka pp in p)
+                {
+                    Console.WriteLine(pp.Tekst);
+                }*/
+
+               /* DAL.DAL.StanicaDAO sd= d.getDAO.getStaniceDAO();
                 DAL.DAL.AutobusDAO ad = d.getDAO.getAutobusDAO();
                 DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
 
@@ -38,7 +48,7 @@ namespace TestnaAplikacija
                     List<Voznja> voznje = new List<Voznja>() { new Voznja(new DateTime(2012, 5,10, 11, 10, 0), ad.getById(5)), new Voznja(new DateTime(2012, 5, 7, 17, 30, 0), ad.getById(5)) };
                     List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() { new RasporedVoznje(3, new DateTime(1, 1, 1, 11, 10, 0), 25), new RasporedVoznje(7, new DateTime(1, 1, 1, 17, 30, 0), 25) };
                     Linija l = new Linija("Banja Luka - Doboj", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);
-
+                */
                     /*stanice.Add(sd.getById(5));
                     stanice.Add(sd.getById(10));
                     stanice.Add(sd.getById(11));
@@ -62,8 +72,8 @@ namespace TestnaAplikacija
                     List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() {new RasporedVoznje(1,new DateTime(1,1,1,10,0,0),50),new RasporedVoznje(5,new DateTime(1,1,1,15,30,0),50)};*/
 
                     /*Linija l = new Linija("Kakanj - Tuzla", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);*/
-                    l.SifraLinije = ld.create(l);
-                    Console.WriteLine(l.SifraLinije);
+                   /* l.SifraLinije = ld.create(l);
+                    Console.WriteLine(l.SifraLinije);*/
                 
                /* List<Linija> linije = ld.GetAll();
 

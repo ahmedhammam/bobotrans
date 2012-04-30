@@ -13,33 +13,13 @@ namespace DesktopAplikacija.Serviser
     public partial class KreirajIzvjestaj : Form
     {
         DAL.DAL d = DAL.DAL.Instanca;
-        string sifra;
-        long pamti;
-        long pamti1;
-        KolekcijaAutobusa a = KolekcijaAutobusa.Instanca;
-        List<DAL.Entiteti.Korisnik> korisnici;
-        DAL.DAL.KorisnikDAO kor;
-        List<DAL.Entiteti.Autobus> autobusi;
-        public KreirajIzvjestaj(string s)
+        DAL.Entiteti.Korisnik logovaniKorisnik;
+        KolekcijaAutobusa ka = KolekcijaAutobusa.Instanca;
+
+        public KreirajIzvjestaj(DAL.Entiteti.Korisnik k)
         {
             InitializeComponent();
-            pamti = 0;
-            pamti1 = 0;
-            sifra = s;
-            try
-            {
-                kor = new DAL.DAL.KorisnikDAO();
-                kor = d.getDAO.getKorisnikDAO();
-                korisnici = new List<DAL.Entiteti.Korisnik>();
-                korisnici = kor.GetAll();
-                autobusi = new List<DAL.Entiteti.Autobus>();
-                autobusi = a.dajPoDatumu();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
+            logovaniKorisnik = k;
         }
 
         private void KreirajIzvjestaj_Load(object sender, EventArgs e)
@@ -49,8 +29,7 @@ namespace DesktopAplikacija.Serviser
             try
             {
                 d.kreirajKonekciju();
-                // DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
-                foreach (DAL.Entiteti.Autobus au in autobusi)
+                foreach (DAL.Entiteti.Autobus au in ka.Autobusi)
                     comboBox1.Items.Add(au.SifraAutobusa);
             }
             catch (Exception ex)
@@ -70,15 +49,6 @@ namespace DesktopAplikacija.Serviser
             {
                 d.kreirajKonekciju();
                 DAL.DAL.IzvjestajDAO iz = new DAL.DAL.IzvjestajDAO();
-                foreach (DAL.Entiteti.Korisnik k in korisnici)
-                {
-
-                    if (k.Password == sifra)
-                    {
-                        pamti = k.SifraKorisnika;
-                        break;
-                    }
-                }
 
                 DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
                 if (comboBox1.Text == "")
@@ -87,18 +57,20 @@ namespace DesktopAplikacija.Serviser
                 }
                 else
                 {
-                    foreach (DAL.Entiteti.Autobus au in autobusi)
-                    {
-                        if (Convert.ToInt32(au.SifraAutobusa) == Convert.ToInt32(comboBox1.Text)) { pamti1 = au.SifraAutobusa; break; }
+                    long odabraniAutobus = Convert.ToInt32(comboBox1.Text);
 
-                    }
-                    DAL.Entiteti.Izvjestaj i = new DAL.Entiteti.Izvjestaj(dateTimePicker1.Value, richTextBox1.Text, pamti, pamti1);
-                    DAL.DAL.IzvjestajDAO id1 = new DAL.DAL.IzvjestajDAO();
-                    i.SifraKreatora = id1.create(i);
+                    DAL.Entiteti.Autobus au = ka.dajPoSifri(odabraniAutobus);
+                    if (au == null)
+                        throw new Exception("Ne postoji autobus sa unesenom sifrom!");
+                    
+                    DAL.Entiteti.Izvjestaj i = new DAL.Entiteti.Izvjestaj(dateTimePicker1.Value, richTextBox1.Text,logovaniKorisnik.SifraKorisnika, au.SifraAutobusa);
+                    DAL.DAL.IzvjestajDAO id1 = d.getDAO.getIzvjestajDAO();
                     DialogResult dres;
                     dres = MessageBox.Show("Jeste li sigurni da želite pohraniti izvještaj?", "provjera", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dres == System.Windows.Forms.DialogResult.Yes)
-                        MessageBox.Show("Izvještaj je pohranjen!");
+                    {
+                        i.SifraIzvjestaja = id1.create(i);
+                    }
                 }
             }
             catch (Exception ex)

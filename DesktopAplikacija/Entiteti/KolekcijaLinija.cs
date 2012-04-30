@@ -23,11 +23,11 @@ namespace DesktopAplikacija.Entiteti
 
         private KolekcijaLinija()
         {
-            DAL.DAL d = DAL.DAL.Instanca;
-            d.kreirajKonekciju();
-            DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
-            linije = ld.GetAll();
-            d.terminirajKonekciju();
+                DAL.DAL d = DAL.DAL.Instanca;
+                d.kreirajKonekciju();
+                DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
+                linije = ld.GetAll();
+                d.terminirajKonekciju();
         }
     }
 }

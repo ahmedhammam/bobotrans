@@ -13,32 +13,27 @@ namespace DesktopAplikacija.Poruke
 {
     public partial class aplikacijaPoruke : Form
     {
-        DAL.DAL d = DAL.DAL.Instanca;
-        DAL.DAL.PorukeDAO pd = new DAL.DAL.PorukeDAO();
-        List<DAL.Entiteti.Poruka> primljene;
-        List<DAL.Entiteti.Poruka> poslane;
+        private DAL.DAL d = DAL.DAL.Instanca;
+        private DAL.DAL.PorukeDAO pd;
+        private List<DAL.Entiteti.Poruka> primljene;
+        private List<DAL.Entiteti.Poruka> poslane;
         public aplikacijaPoruke(DAL.Entiteti.Korisnik k)
         {
-            
-            
+            d.kreirajKonekciju();
+            pd = d.getDAO.getPorukeDAO();
+
             InitializeComponent();
-            primljene = new List<DAL.Entiteti.Poruka>();
-            primljene = pd.getByExample("idPrimaoca", Convert.ToString(k.SifraKorisnika));
-
-            poslane = new List<DAL.Entiteti.Poruka>();
-            poslane = pd.getByExample("id.Posiljaoca", Convert.ToString(k.SifraKorisnika));
-
+            primljene = pd.getByExample("idPrimaoca", Convert.ToString(k.SifraKorisnika.ToString()));
+            poslane = pd.getByExample("idPosiljaoca", Convert.ToString(k.SifraKorisnika.ToString()));
+            int x = 0, y = 0;
             foreach (DAL.Entiteti.Poruka p in primljene)
             {
                 System.Windows.Forms.Label l = new System.Windows.Forms.Label();
                 l.AutoSize = true;
-                l.Name = "label1";
-
+                l.Location = new Point(10 + x, 10 + y);
                 l.TabIndex = 0;
                 l.Text = p.Posiljaoc;
                 this.panel1.Controls.Add(l);
-                MessageBox.Show("ima poruka");
-
 
             }
             
@@ -47,7 +42,6 @@ namespace DesktopAplikacija.Poruke
 
         private void aplikacijaPoruke_Load(object sender, EventArgs e)
         {
-            d.kreirajKonekciju();
         }
 
         private void b_Izadi_Click(object sender, EventArgs e)
