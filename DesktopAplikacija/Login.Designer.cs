@@ -140,7 +140,12 @@
             this.Controls.Add(this.b_izadi);
             this.Controls.Add(this.b_ok);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(409, 260);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(409, 260);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bobo Trans";
             this.Load += new System.EventHandler(this.Login_Load);
             this.groupBox1.ResumeLayout(false);
