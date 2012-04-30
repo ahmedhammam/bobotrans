@@ -52,6 +52,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(166, 20);
             this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.Value = new System.DateTime(2012, 4, 26, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -122,6 +123,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "KreirajIzvjestaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kreiranje izvještaja";
             this.Load += new System.EventHandler(this.KreirajIzvjestaj_Load);
             this.ResumeLayout(false);

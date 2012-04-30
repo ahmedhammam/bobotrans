@@ -14,39 +14,82 @@ namespace DesktopAplikacija.Serviser
     {
         DAL.DAL d = DAL.DAL.Instanca;
         KolekcijaAutobusa a = KolekcijaAutobusa.Instanca;
+        List<DAL.Entiteti.Autobus> autobusi;
+        DAL.DAL.IzvjestajDAO iz;
+        List<DAL.Entiteti.Izvjestaj> izvjestaji ;
         public PrikaziIzvjestaj()
         {
             InitializeComponent();
+            try
+            {
+                autobusi = new List<DAL.Entiteti.Autobus>();
+                autobusi = a.dajPoDatumu();
+                iz = new DAL.DAL.IzvjestajDAO();
+                izvjestaji = new List<DAL.Entiteti.Izvjestaj>();
+                iz = d.getDAO.getIzvjestajDAO();
+                izvjestaji = iz.GetAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
         }
 
         private void PrikaziIzvjestaj_Load(object sender, EventArgs e)
         {
+            try { 
             d.kreirajKonekciju();
             // DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
-
-            List<DAL.Entiteti.Autobus> autobusi = new List<DAL.Entiteti.Autobus>();
-            autobusi = a.dajPoDatumu();
             foreach (DAL.Entiteti.Autobus au in autobusi)
                 comboBox1.Items.Add(au.SifraAutobusa);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            int brojac = 0;
-             DAL.DAL.IzvjestajDAO iz = new DAL.DAL.IzvjestajDAO();
-             List<DAL.Entiteti.Izvjestaj> izvjestaji = new List<DAL.Entiteti.Izvjestaj>();
-             iz = d.getDAO.getIzvjestajDAO();
-             izvjestaji = iz.GetAll();
-             foreach (DAL.Entiteti.Izvjestaj i in izvjestaji)
+            listBox1.Items.Clear();
+             int brojac = 0;
+             if (comboBox1.Text == "")
              {
-                 if (Convert.ToInt32(i.SifraAutobusa) == Convert.ToInt32(comboBox1.Text))
-                 {
-                     dataGridView1.Rows.Add(i.DatumServisa, i.Tekst);
-                 }
-                 else brojac++;
+                 MessageBox.Show("Niste selektovali autobus!");
              }
-             if (brojac == izvjestaji.Count) MessageBox.Show("Nema izvještaja za traženi autobus!");
+             else
+             {
+                 List<DAL.Entiteti.Izvjestaj> nova=new List<DAL.Entiteti.Izvjestaj>();
+                 foreach (DAL.Entiteti.Izvjestaj iz in izvjestaji)
+                 {
+                     if (Convert.ToInt32(iz.SifraAutobusa) == Convert.ToInt32(comboBox1.Text)) nova.Add(iz);
+                 }
+                 for (int i = 0; i < nova.Count; i++)
+                 {
+                     for (int j = i + 1; j < nova.Count; j++)
+                     {
+                         if (nova[j].DatumServisa < nova[i].DatumServisa)
+                         {
+                             DAL.Entiteti.Izvjestaj novi = nova[i];
+                             nova[i] = nova[j];
+                             nova[j] = novi;
+
+                         }
+                     }
+                 }
+                 DateTime dt;
+                 foreach (DAL.Entiteti.Izvjestaj i in nova)
+                 {
+                     if (Convert.ToInt32(i.SifraAutobusa) == Convert.ToInt32(comboBox1.Text))
+                     {
+                         dt = i.DatumServisa;
+                        listBox1.Items.Add(i);
+                     }
+                     else brojac++;
+                 }
+                 if (brojac == izvjestaji.Count) MessageBox.Show("Nema izvještaja za traženi autobus!");
+             }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,5 +97,13 @@ namespace DesktopAplikacija.Serviser
             this.Close();
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DAL.Entiteti.Izvjestaj i = new DAL.Entiteti.Izvjestaj();
+            i = (DAL.Entiteti.Izvjestaj)listBox1.SelectedItem;
+            tekstIzvjestaja t = new tekstIzvjestaja(Convert.ToString(i.Tekst));
+            t.Show();
+
+        }
     }
 }

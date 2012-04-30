@@ -61,7 +61,14 @@ namespace DAL.Entiteti
             sifraAutobusa = sA;
         }
 
-
-
+        public Izvjestaj()
+        {
+            // TODO: Complete member initialization
+        }
+       public override string ToString()
+       {
+           string novi = datumServisa.ToString("yyyy, dd.MMMM");     
+           return novi + "                    " + sifraKreatora;
+        }
     }
 }

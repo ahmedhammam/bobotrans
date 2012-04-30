@@ -248,6 +248,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "IzmijeniPodatke";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izmjena podataka";
             this.Load += new System.EventHandler(this.IzmijeniPodatke_Load);
             this.groupBox1.ResumeLayout(false);

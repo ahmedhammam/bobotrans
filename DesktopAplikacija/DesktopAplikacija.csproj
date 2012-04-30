@@ -105,17 +105,17 @@
     <Compile Include="Serviser\PrikaziIzvjestaj.Designer.cs">
       <DependentUpon>PrikaziIzvjestaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="Serviser\PrikaziPoruke.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Serviser\PrikaziPoruke.Designer.cs">
-      <DependentUpon>PrikaziPoruke.cs</DependentUpon>
-    </Compile>
     <Compile Include="Serviser\serviserAplikacija.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Serviser\serviserAplikacija.Designer.cs">
       <DependentUpon>serviserAplikacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serviser\tekstIzvjestaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serviser\tekstIzvjestaja.Designer.cs">
+      <DependentUpon>tekstIzvjestaja.cs</DependentUpon>
     </Compile>
     <Compile Include="SuceljeRedaVoznje.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -145,12 +145,12 @@
     <EmbeddedResource Include="Serviser\PrikaziIzvjestaj.resx">
       <DependentUpon>PrikaziIzvjestaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Serviser\PrikaziPoruke.resx">
-      <DependentUpon>PrikaziPoruke.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Serviser\serviserAplikacija.resx">
       <DependentUpon>serviserAplikacija.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serviser\tekstIzvjestaja.resx">
+      <DependentUpon>tekstIzvjestaja.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
