@@ -29,3 +29,8 @@ C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\D
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.PrikaziIzvjestaj.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Poruke.aplikacijaPoruke.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.tekstIzvjestaja.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Poruke.aplikacijaPoruke.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.IzmijeniPodatke.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.KreirajIzvjestaj.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.PrikaziIzvjestaj.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.tekstIzvjestaja.resources

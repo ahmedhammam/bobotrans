@@ -13,16 +13,16 @@ namespace DesktopAplikacija.Serviser
     public partial class serviserAplikacija : Form
     {
         DAL.DAL d = DAL.DAL.Instanca;
-        string s;
-        int pamti;
+        DAL.Entiteti.Korisnik logovaniKorisnik;
         KolekcijaAutobusa a = KolekcijaAutobusa.Instanca;
         List<DAL.Entiteti.Autobus> autobusi;
+        Login login;
+
         public serviserAplikacija()
         {
             InitializeComponent();
             try
             {
-                autobusi = new List<DAL.Entiteti.Autobus>();
                 autobusi = a.dajPoDatumu();
             }
             catch (Exception ex)
@@ -31,14 +31,14 @@ namespace DesktopAplikacija.Serviser
                 return;
             }
         }
-        public serviserAplikacija(string sifra)
+        public serviserAplikacija(DAL.Entiteti.Korisnik k, Login l)
         {
+            login = l;
+            l.Visible = false;
             InitializeComponent();
-            s = sifra;
-            pamti = 0;
+            logovaniKorisnik = k;
             try
             {
-                autobusi = new List<DAL.Entiteti.Autobus>();
                 autobusi = a.dajPoDatumu();
             }
             catch (Exception ex)
@@ -50,7 +50,7 @@ namespace DesktopAplikacija.Serviser
 
         private void izađiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        serviserAplikacija: Close();
+                this.Close();
         }
 
         private void Izađi_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace DesktopAplikacija.Serviser
 
         private void kreirajIzvještajToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KreirajIzvjestaj k = new KreirajIzvjestaj(s);
+            KreirajIzvjestaj k = new KreirajIzvjestaj(logovaniKorisnik);
             k.Show();
         }
 
@@ -72,7 +72,7 @@ namespace DesktopAplikacija.Serviser
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            KreirajIzvjestaj k = new KreirajIzvjestaj(s);
+            KreirajIzvjestaj k = new KreirajIzvjestaj(logovaniKorisnik);
             k.Show();
         }
 
@@ -110,7 +110,7 @@ namespace DesktopAplikacija.Serviser
         {
             try
             {
-                DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
+                DAL.DAL.AutobusDAO ad = d.getDAO.getAutobusDAO();
                 foreach (DAL.Entiteti.Autobus au in autobusi)
                 {
                     if (toolStripComboBox1.Text == "")
@@ -119,6 +119,7 @@ namespace DesktopAplikacija.Serviser
                     }
                     else if (Convert.ToInt32(au.SifraAutobusa) == Convert.ToInt32(toolStripComboBox1.Text))
                     {
+                        long pamti;
                         pamti = Convert.ToInt32(toolStripComboBox1.Text);
 
                         IzmijeniPodatke i = new IzmijeniPodatke(pamti);
@@ -164,6 +165,11 @@ namespace DesktopAplikacija.Serviser
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void serviserAplikacija_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            login.Visible = true;
         }
     }
 

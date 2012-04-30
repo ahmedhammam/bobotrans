@@ -12,6 +12,12 @@ namespace DesktopAplikacija.Serviser.Entiteti
        List<DAL.Entiteti.Autobus> autobusi;
        private static KolekcijaAutobusa instanca=null;
 
+       public List<DAL.Entiteti.Autobus> Autobusi
+       {
+           get { return autobusi; }
+           set { autobusi = value; }
+       }
+
        public static KolekcijaAutobusa Instanca
        {
            get { return (instanca==null)? new KolekcijaAutobusa() : instanca;}
@@ -22,7 +28,14 @@ namespace DesktopAplikacija.Serviser.Entiteti
                 autobusi = ad.GetAll();
         }
 
-        
+        public DAL.Entiteti.Autobus dajPoSifri(long sifra)
+        {
+            foreach (DAL.Entiteti.Autobus au in autobusi)
+                if (au.SifraAutobusa == sifra)
+                    return au;
+            return null;
+        }
+
         public List<DAL.Entiteti.Autobus>  dajPoDatumu()
         {
             List<DAL.Entiteti.Autobus> nova = new List<DAL.Entiteti.Autobus>();

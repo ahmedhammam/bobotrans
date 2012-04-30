@@ -18,9 +18,7 @@ namespace DesktopAplikacija
         DAL.DAL d = DAL.DAL.Instanca;
         public Login()
         {
-           
                 InitializeComponent();
-                
         }
 
 
@@ -42,8 +40,7 @@ namespace DesktopAplikacija
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                     {
                         
-                        serviserAplikacija s = new serviserAplikacija(k.Password);
-                        
+                        serviserAplikacija s = new serviserAplikacija(k,this);
                         s.Show();
                        
                     }
