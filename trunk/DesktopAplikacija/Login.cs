@@ -41,15 +41,19 @@ namespace DesktopAplikacija
                         toolStripStatusLabel1.Text = "logovani ste kao radnik";
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                     {
+                        
                         serviserAplikacija s = new serviserAplikacija(k.Password);
+                        
                         s.Show();
+                       
                     }
+
 
                 }
                 catch (Exception e1)
                 { toolStripStatusLabel1.Text = e1.Message; }
             }
-   
+            
         }
 
         
