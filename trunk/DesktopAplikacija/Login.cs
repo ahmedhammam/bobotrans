@@ -40,7 +40,7 @@ namespace DesktopAplikacija
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                     {
                         
-                        serviserAplikacija s = new serviserAplikacija(k,this);
+                        ServiserAplikacija s = new ServiserAplikacija(k,this);
                         s.Show();
                        
                     }

@@ -10,7 +10,7 @@ using DesktopAplikacija.Serviser.Entiteti;
 
 namespace DesktopAplikacija.Serviser
 {
-    public partial class serviserAplikacija : Form
+    public partial class ServiserAplikacija : Form
     {
         DAL.DAL d = DAL.DAL.Instanca;
         DAL.Entiteti.Korisnik logovaniKorisnik;
@@ -18,7 +18,7 @@ namespace DesktopAplikacija.Serviser
         List<DAL.Entiteti.Autobus> autobusi;
         Login login;
 
-        public serviserAplikacija()
+        public ServiserAplikacija()
         {
             InitializeComponent();
             try
@@ -31,7 +31,7 @@ namespace DesktopAplikacija.Serviser
                 return;
             }
         }
-        public serviserAplikacija(DAL.Entiteti.Korisnik k, Login l)
+        public ServiserAplikacija(DAL.Entiteti.Korisnik k, Login l)
         {
             login = l;
             l.Visible = false;
@@ -46,6 +46,7 @@ namespace DesktopAplikacija.Serviser
                 MessageBox.Show(ex.Message);
                 return;
             }
+
         }
 
         private void izađiToolStripMenuItem_Click(object sender, EventArgs e)

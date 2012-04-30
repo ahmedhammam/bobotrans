@@ -14,3 +14,19 @@ D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\autobusTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\asfaltTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijeCestaTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaSkretanjeCestaTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\radoviNaCestiTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\trotoarTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\zemljaTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaStopCestaTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\autobusTekstura.xnb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\BoboTransporter.exe
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\BoboTransporter.pdb
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\BoboTransporter.exe
+C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\BoboTransporter.pdb
