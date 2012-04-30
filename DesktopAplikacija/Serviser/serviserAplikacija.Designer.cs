@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(serviserAplikacija));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IstekRegistracije = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
@@ -52,6 +47,11 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.Izađi = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IstekRegistracije = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -70,40 +70,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(507, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(515, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.UseWaitCursor = true;
-            // 
-            // sifra
-            // 
-            this.sifra.HeaderText = "Id";
-            this.sifra.Name = "sifra";
-            this.sifra.ReadOnly = true;
-            this.sifra.Width = 65;
-            // 
-            // tablice
-            // 
-            this.tablice.HeaderText = "Tablice";
-            this.tablice.Name = "tablice";
-            this.tablice.ReadOnly = true;
-            // 
-            // IstekRegistracije
-            // 
-            this.IstekRegistracije.HeaderText = "Istek registracije";
-            this.IstekRegistracije.Name = "IstekRegistracije";
-            this.IstekRegistracije.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Broj sjedista";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Datum servisa";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // label1
             // 
@@ -262,6 +231,38 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // sifra
+            // 
+            this.sifra.HeaderText = "Id";
+            this.sifra.Name = "sifra";
+            this.sifra.ReadOnly = true;
+            this.sifra.Width = 65;
+            // 
+            // tablice
+            // 
+            this.tablice.HeaderText = "Tablice";
+            this.tablice.Name = "tablice";
+            this.tablice.ReadOnly = true;
+            // 
+            // IstekRegistracije
+            // 
+            this.IstekRegistracije.HeaderText = "Istek registracije";
+            this.IstekRegistracije.Name = "IstekRegistracije";
+            this.IstekRegistracije.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Broj sjedista";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Datum servisa";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 107;
+            // 
             // serviserAplikacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,7 +276,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "serviserAplikacija";
-            this.Text = "Bobo Trans";
+            this.Text = "Bobo Trans - Serviser";
             this.Load += new System.EventHandler(this.serviserAplikacija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip2.ResumeLayout(false);

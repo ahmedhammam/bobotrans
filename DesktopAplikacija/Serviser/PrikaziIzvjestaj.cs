@@ -49,5 +49,10 @@ namespace DesktopAplikacija.Serviser
              if (brojac == izvjestaji.Count) MessageBox.Show("Nema izvještaja za traženi autobus!");
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
