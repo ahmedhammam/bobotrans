@@ -20,7 +20,7 @@ namespace TestnaAplikacija
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("127.0.0.1", "bobotrans", "root", "");
                 
-               // DAL.DAL.PorukeDAO pd = d.getDAO.getPorukeDAO();
+                DAL.DAL.PorukeDAO pd = d.getDAO.getPorukeDAO();
                 /*
                 List<Poruka> p = pd.getByExample("idPrimaoca",string.Format("5"));
 

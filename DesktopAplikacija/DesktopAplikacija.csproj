@@ -72,6 +72,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informisanje.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +106,11 @@
     <Compile Include="Serviser\PrikaziIzvjestaj.Designer.cs">
       <DependentUpon>PrikaziIzvjestaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="Serviser\serviserAplikacija.cs">
+    <Compile Include="Serviser\ServiserAplikacija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Serviser\serviserAplikacija.Designer.cs">
-      <DependentUpon>serviserAplikacija.cs</DependentUpon>
+    <Compile Include="Serviser\ServiserAplikacija.Designer.cs">
+      <DependentUpon>ServiserAplikacija.cs</DependentUpon>
     </Compile>
     <Compile Include="Serviser\tekstIzvjestaja.cs">
       <SubType>Form</SubType>
@@ -117,7 +118,6 @@
     <Compile Include="Serviser\tekstIzvjestaja.Designer.cs">
       <DependentUpon>tekstIzvjestaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="SuceljeRedaVoznje.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,8 +145,8 @@
     <EmbeddedResource Include="Serviser\PrikaziIzvjestaj.resx">
       <DependentUpon>PrikaziIzvjestaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Serviser\serviserAplikacija.resx">
-      <DependentUpon>serviserAplikacija.cs</DependentUpon>
+    <EmbeddedResource Include="Serviser\ServiserAplikacija.resx">
+      <DependentUpon>ServiserAplikacija.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Serviser\tekstIzvjestaja.resx">

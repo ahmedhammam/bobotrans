@@ -1,6 +1,6 @@
 ﻿namespace DesktopAplikacija.Serviser
 {
-    partial class serviserAplikacija
+    partial class ServiserAplikacija
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(serviserAplikacija));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiserAplikacija));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tablice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,13 +66,13 @@
             this.IstekRegistracije,
             this.Column1,
             this.Column2});
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView1.Location = new System.Drawing.Point(17, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(515, 150);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.UseWaitCursor = true;
             // 
             // sifra
             // 
@@ -246,7 +246,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // serviserAplikacija
+            // ServiserAplikacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +260,7 @@
             this.Controls.Add(this.menuStrip2);
             this.MaximumSize = new System.Drawing.Size(560, 999999);
             this.MinimumSize = new System.Drawing.Size(560, 322);
-            this.Name = "serviserAplikacija";
+            this.Name = "ServiserAplikacija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bobo Trans - Serviser";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.serviserAplikacija_FormClosing);
