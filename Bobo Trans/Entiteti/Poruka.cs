@@ -63,5 +63,30 @@ namespace DAL.Entiteti
             primalac = prim;
             vrijemeSlanja = vS;
         }
+
+        public string ImeIDatumPrimljenih()
+        {
+            return posiljaoc+"          "+Convert.ToString(vrijemeSlanja);
+        }
+
+
+        public string ImeIDatumPoslanih()
+        {
+            return primalac + "        " + Convert.ToString(vrijemeSlanja);
+        }
+
+        public long PorukeSifree()
+        {
+            return sifraPoruke;
+        }
+        public  string ToString() 
+        {
+            return posiljaoc + "     " + Convert.ToString(vrijemeSlanja);
+    }
+        
+
+
+
+
     }
 }
