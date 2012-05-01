@@ -18,6 +18,7 @@ namespace DesktopAplikacija
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Informisanje.InformisanjeLinije());
             Application.Run(new Login());
         }
     }
