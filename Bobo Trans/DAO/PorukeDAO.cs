@@ -24,7 +24,7 @@ namespace DAL
                     Korisnik primalac = (DAL.instanca.getDAO.getKorisnikDAO()).getByExample("username", entity.Primalac)[0];
 
                     c = new MySqlCommand(String.Format("INSERT INTO poruke VALUES ('','{0}','{1}','{2}','{3}');"
-                        , posiljaoc.SifraKorisnika, primalac.SifraKorisnika,entity.VrijemeSlanja,entity.VrijemeSlanja)
+                        , posiljaoc.SifraKorisnika, primalac.SifraKorisnika,entity.VrijemeSlanja.ToString("yyyy-MM-dd HH:mm"),entity.Tekst)
                         , con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
