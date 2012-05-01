@@ -72,7 +72,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informisanje.cs" />
+    <Compile Include="Informisanje\InformisanjeLinije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informisanje\InformisanjeLinije.Designer.cs">
+      <DependentUpon>InformisanjeLinije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informisanje\InformisanjeKomande.cs" />
+    <Compile Include="Informisanje\InformisanjeVoznje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informisanje\InformisanjeVoznje.Designer.cs">
+      <DependentUpon>InformisanjeVoznje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informisanje\InformisanjeLinije.resx">
+      <DependentUpon>InformisanjeLinije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informisanje\InformisanjeVoznje.resx">
+      <DependentUpon>InformisanjeVoznje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
