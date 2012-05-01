@@ -31,6 +31,13 @@ namespace DAL.Entiteti
                 tip = t;
                 password = pass;
             }
+    public     string ToString() 
+        { return imeIPrezime;
+    }
+
+
+
+    
 
             #region GetteriSetteri
             public string ImeIPrezime

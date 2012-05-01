@@ -18,3 +18,8 @@ D:\OOAD\SVN\trunk\Bobo Trans\bin\Debug\Bobo Trans.pdb
 D:\OOAD\SVN\trunk\Bobo Trans\obj\Debug\ResolveAssemblyReference.cache
 D:\OOAD\SVN\trunk\Bobo Trans\obj\Debug\Bobo Trans.dll
 D:\OOAD\SVN\trunk\Bobo Trans\obj\Debug\Bobo Trans.pdb
+C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOADprojekat\OOAD\trunk\Bobo Trans\bin\Debug\Bobo Trans.dll
+C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOADprojekat\OOAD\trunk\Bobo Trans\bin\Debug\Bobo Trans.pdb
+C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOADprojekat\OOAD\trunk\Bobo Trans\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOADprojekat\OOAD\trunk\Bobo Trans\obj\Debug\Bobo Trans.dll
+C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOADprojekat\OOAD\trunk\Bobo Trans\obj\Debug\Bobo Trans.pdb
