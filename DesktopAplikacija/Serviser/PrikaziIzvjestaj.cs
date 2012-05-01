@@ -13,17 +13,14 @@ namespace DesktopAplikacija.Serviser
     public partial class PrikaziIzvjestaj : Form
     {
         DAL.DAL d = DAL.DAL.Instanca;
-        KolekcijaAutobusa a = KolekcijaAutobusa.Instanca;
-        List<DAL.Entiteti.Autobus> autobusi;
+        KolekcijaAutobusa ak = KolekcijaAutobusa.Instanca;
         DAL.DAL.IzvjestajDAO iz;
         List<DAL.Entiteti.Izvjestaj> izvjestaji ;
         public PrikaziIzvjestaj()
         {
             InitializeComponent();
-            try
+           try
             {
-                autobusi = new List<DAL.Entiteti.Autobus>();
-                autobusi = a.dajPoDatumu();
                 iz = new DAL.DAL.IzvjestajDAO();
                 izvjestaji = new List<DAL.Entiteti.Izvjestaj>();
                 iz = d.getDAO.getIzvjestajDAO();
@@ -40,8 +37,7 @@ namespace DesktopAplikacija.Serviser
         {
             try { 
             d.kreirajKonekciju();
-            // DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
-            foreach (DAL.Entiteti.Autobus au in autobusi)
+            foreach (DAL.Entiteti.Autobus au in ak.Autobusi)
                 comboBox1.Items.Add(au.SifraAutobusa);
             }
             catch (Exception ex)
