@@ -13,37 +13,31 @@ namespace DesktopAplikacija.Poruke
 {
     public partial class NovaPoruka : Form
     {
-        DAL.DAL d;
-        DAL.DAL.KorisnikDAO kd;
+        DAL.DAL d = DAL.DAL.Instanca;
         DAL.Entiteti.Korisnik ks;
         List<DAL.Entiteti.Korisnik> svi;
-        List<DAL.Entiteti.Korisnik> salterasi;
-        List<DAL.Entiteti.Korisnik> menadzeri;
-        List<DAL.Entiteti.Korisnik> serviseri;
+        List<DAL.Entiteti.Korisnik> salterasi = new List<DAL.Entiteti.Korisnik>();
+        List<DAL.Entiteti.Korisnik> menadzeri = new List<DAL.Entiteti.Korisnik>();
+        List<DAL.Entiteti.Korisnik> serviseri = new List<DAL.Entiteti.Korisnik>();
         
 
         
-        public NovaPoruka(DAL.Entiteti.Korisnik k)
+        public NovaPoruka(DAL.Entiteti.Korisnik k,List<DAL.Entiteti.Korisnik> kor)
         {
-            try
-            {
-                d = DAL.DAL.Instanca;
-                d.kreirajKonekciju();
-                kd = d.getDAO.getKorisnikDAO();
-                svi = kd.GetAll();
-                salterasi = kd.getByExample("tip",Convert.ToString(1));
-                menadzeri = kd.getByExample("tip", Convert.ToString(2));
-                serviseri = kd.getByExample("tip", Convert.ToString(3));
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
-            InitializeComponent();
+            svi = kor;
             ks = k;
             
-            
+            foreach (DAL.Entiteti.Korisnik korisnik in svi)
+            {
+                if (korisnik.Tip == DAL.TipoviPodataka.TipoviKorisnika.MENAGER)
+                    menadzeri.Add(korisnik);
+                else if (korisnik.Tip == DAL.TipoviPodataka.TipoviKorisnika.RADNIK_ZA_SALTEROM)
+                    salterasi.Add(korisnik);
+                else if (korisnik.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
+                    serviseri.Add(korisnik);
+            }
+            InitializeComponent();
+            comboBox1.DisplayMember = "imeIPrezime";
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,31 +45,22 @@ namespace DesktopAplikacija.Poruke
             comboBox1.Text = "";
             if (comboBox2.Text == "Svi")
             {
-                comboBox1.Items.Clear();
-                foreach (DAL.Entiteti.Korisnik k in svi)
-                    comboBox1.Items.Add(k.ToString());
+                comboBox1.DataSource = svi;
             }
             if (comboBox2.Text == "Radnik za šalterom")
             {
-                comboBox1.Items.Clear();
-                foreach (DAL.Entiteti.Korisnik k in salterasi)
-                    comboBox1.Items.Add(k.ToString());
+                comboBox1.DataSource = salterasi;
             }
             if (comboBox2.Text == "Menadžer")
             {
-                comboBox1.Items.Clear();
-                foreach (DAL.Entiteti.Korisnik k in menadzeri)
-                    comboBox1.Items.Add(k.ToString());
+                comboBox1.DataSource = menadzeri;
+
             }
             if (comboBox2.Text == "Serviser")
             {
-                comboBox1.Items.Clear();
-                foreach (DAL.Entiteti.Korisnik k in serviseri)
-                    comboBox1.Items.Add(k.ToString());
+                comboBox1.DataSource = serviseri;
             }
                 
-
-
         }
 
         
@@ -84,22 +69,10 @@ namespace DesktopAplikacija.Poruke
             d.terminirajKonekciju();
             Close();
         }
-
-        private void comboBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_Leave(object sender, EventArgs e)
-        {
-           
-            
-        }
-
         private void NovaPoruka_Load(object sender, EventArgs e)
         {
             foreach (DAL.Entiteti.Korisnik k in svi)
-                comboBox1.Items.Add(k.ToString());
+                comboBox1.DataSource = svi;
         }
 
         private void b_posalji_Click(object sender, EventArgs e)
@@ -108,34 +81,25 @@ namespace DesktopAplikacija.Poruke
                 MessageBox.Show("Izaberite primaoca");
             else if (richTextBox1.Text == "")
                 MessageBox.Show("Unesite poruku");
-            /* else
+             else
              {
-                 DAL.Entiteti.Korisnik prima;
-                 foreach (DAL.Entiteti.Korisnik k in svi)
+                 try
                  {
-                     if (k.ImeIPrezime == comboBox1.Text)
-                     {
-                          prima = k;
-                          try
-                          {
-                             
-                              DAL.Entiteti.Poruka poslati = new DAL.Entiteti.Poruka(richTextBox1.Text, ks.Username, prima.Username, DateTime.Now);
-                              DAL.DAL.PorukeDAO pd = d.getDAO.getPorukeDAO();
+                     DAL.Entiteti.Korisnik prima = comboBox1.SelectedItem as DAL.Entiteti.Korisnik;
+                     DAL.Entiteti.Poruka poslati = new DAL.Entiteti.Poruka(richTextBox1.Text, ks.Username, prima.Username, DateTime.Now);
+                     DAL.DAL.PorukeDAO kd = d.getDAO.getPorukeDAO();
 
-                              poslati.SifraPoruke = pd.create(poslati);
-                          }
-                          catch (Exception ex)
-                          {
-                              MessageBox.Show(ex.Message);
-                          }
-                        
-                         break;
-                     }
-                     }
+                     poslati.SifraPoruke = kd.create(poslati);
+                     MessageBox.Show("Poruka je poslana");
+                     richTextBox1.Text = "";
+                 }
+                 catch (Exception ee)
+                 {
+                     MessageBox.Show(ee.Message);
+                 }
+               
                 
-
-                
-             }*/
+             }
         }
     }
 }

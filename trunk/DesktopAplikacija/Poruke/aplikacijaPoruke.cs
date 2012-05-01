@@ -21,6 +21,7 @@ namespace DesktopAplikacija.Poruke
         private List<DAL.Entiteti.Poruka> poslane;
         private List<DAL.Entiteti.Korisnik> korisnici;
         private DAL.Entiteti.Korisnik logovani;
+
         public aplikacijaPoruke(DAL.Entiteti.Korisnik k)
         {
             try
@@ -37,8 +38,8 @@ namespace DesktopAplikacija.Poruke
 
             try
             {
-                primljene = pd.getByExample("idPrimaoca", Convert.ToString(k.SifraKorisnika.ToString()));
-                poslane = pd.getByExample("idPosiljaoca", Convert.ToString(k.SifraKorisnika.ToString()));
+                primljene = pd.getByExample("idPrimaoca", k.SifraKorisnika.ToString());
+                poslane = pd.getByExample("idPosiljaoca", k.SifraKorisnika.ToString());
                 korisnici = kd.GetAll();
                 logovani = k;
             }
@@ -46,7 +47,7 @@ namespace DesktopAplikacija.Poruke
             {
                 MessageBox.Show(e.Message);
             }
-            int x = 0, y = 0,i=0;
+            int x = 0, y = 0, i=0;
             
             foreach (DAL.Entiteti.Poruka p in primljene)
             {
@@ -57,9 +58,6 @@ namespace DesktopAplikacija.Poruke
                 l.Tag = i++;
                 l.Text = p.ImeIDatumPrimljenih();
                 this.panel1.Controls.Add(l);
-                
-                
-                
                 y = y + 20;
             }
             
@@ -81,7 +79,6 @@ namespace DesktopAplikacija.Poruke
         private void button1_Click(object sender, EventArgs e)
         {
             
-         
            int a;
             foreach (CheckBox o in panel1.Controls)
             {
@@ -99,7 +96,7 @@ namespace DesktopAplikacija.Poruke
                 }
             }
             
-}
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {int a;
@@ -107,8 +104,6 @@ namespace DesktopAplikacija.Poruke
         int brojac = 0;
         foreach (CheckBox o in panel1.Controls)
         {
-           
-            
             if (o.Checked)
             {
                 
@@ -290,7 +285,7 @@ namespace DesktopAplikacija.Poruke
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            NovaPoruka np = new NovaPoruka(logovani);
+            NovaPoruka np = new NovaPoruka(logovani,korisnici);
             np.Show();
         }
         
