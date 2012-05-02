@@ -84,7 +84,7 @@
 
 - idPrimaoca (int) - foreign key na korisnici.id: on update i delete - cascade
 
-- vrijemeSlanja (Date)
+- vrijemeSlanja (DateTime)
 
 
 
