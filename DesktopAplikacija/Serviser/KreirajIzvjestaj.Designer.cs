@@ -90,7 +90,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Spremi";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+         //   this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -108,6 +108,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // KreirajIzvjestaj
             // 

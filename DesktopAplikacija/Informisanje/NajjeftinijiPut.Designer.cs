@@ -175,7 +175,7 @@
             this.MaximumSize = new System.Drawing.Size(331, 440);
             this.MinimumSize = new System.Drawing.Size(331, 440);
             this.Name = "NajjeftinijiPut";
-            this.Text = "NajjeftinijiPut";
+            this.Text = "Najjeftiniji put";
             this.gbOdabir.ResumeLayout(false);
             this.gbOdabir.PerformLayout();
             this.ResumeLayout(false);

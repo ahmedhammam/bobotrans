@@ -133,9 +133,32 @@ namespace DesktopAplikacija.Serviser
                 MessageBox.Show(ex.Message);
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void serviserAplikacija_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            login.Visible = true;
+        }
+
+        private void informisanjeOLinijamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informisanje.InformisanjeLinije il = new Informisanje.InformisanjeLinije();
+            il.Show();
+        }
+
+        private void izvodIzRedaVožnjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informisanje.IzvodIzRedaVoznje irv = new Informisanje.IzvodIzRedaVoznje();
+            irv.Show();
+        }
+
+        private void nalaženjeNajjeftinijegPutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informisanje.NajjeftinijiPut np = new Informisanje.NajjeftinijiPut();
+            np.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
             dataGridView1.Rows.Clear();
             try
             {
@@ -165,30 +188,6 @@ namespace DesktopAplikacija.Serviser
             {
                 MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void serviserAplikacija_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            login.Visible = true;
-        }
-
-        private void informisanjeOLinijamaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Informisanje.InformisanjeLinije il = new Informisanje.InformisanjeLinije();
-            il.Show();
-        }
-
-        private void izvodIzRedaVožnjeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Informisanje.IzvodIzRedaVoznje irv = new Informisanje.IzvodIzRedaVoznje();
-            irv.Show();
-        }
-
-        private void nalaženjeNajjeftinijegPutaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Informisanje.NajjeftinijiPut np = new Informisanje.NajjeftinijiPut();
-            np.Show();
         }
     }
 

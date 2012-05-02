@@ -43,13 +43,12 @@ namespace DesktopAplikacija.Serviser
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 d.kreirajKonekciju();
                 DAL.DAL.IzvjestajDAO iz = new DAL.DAL.IzvjestajDAO();
-
                 DAL.DAL.AutobusDAO ad = new DAL.DAL.AutobusDAO();
                 if (comboBox1.Text == "")
                 {
@@ -58,12 +57,10 @@ namespace DesktopAplikacija.Serviser
                 else
                 {
                     long odabraniAutobus = Convert.ToInt32(comboBox1.Text);
-
                     DAL.Entiteti.Autobus au = ka.dajPoSifri(odabraniAutobus);
                     if (au == null)
                         throw new Exception("Ne postoji autobus sa unesenom sifrom!");
-                    
-                    DAL.Entiteti.Izvjestaj i = new DAL.Entiteti.Izvjestaj(dateTimePicker1.Value, richTextBox1.Text,logovaniKorisnik.SifraKorisnika, au.SifraAutobusa);
+                    DAL.Entiteti.Izvjestaj i = new DAL.Entiteti.Izvjestaj(dateTimePicker1.Value, richTextBox1.Text, logovaniKorisnik.SifraKorisnika, au.SifraAutobusa);
                     DAL.DAL.IzvjestajDAO id1 = d.getDAO.getIzvjestajDAO();
                     DialogResult dres;
                     dres = MessageBox.Show("Jeste li sigurni da želite pohraniti izvještaj?", "provjera", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -77,6 +74,7 @@ namespace DesktopAplikacija.Serviser
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
     }
 }

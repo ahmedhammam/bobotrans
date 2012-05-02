@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.gbLinija = new System.Windows.Forms.GroupBox();
-            this.lblSifraLinije = new System.Windows.Forms.Label();
             this.lblBrojStanica = new System.Windows.Forms.Label();
+            this.lblSifraLinije = new System.Windows.Forms.Label();
             this.dgvCijene = new System.Windows.Forms.DataGridView();
             this.btnIzadji = new System.Windows.Forms.Button();
             this.gbLinija.SuspendLayout();
@@ -48,15 +48,6 @@
             this.gbLinija.TabStop = false;
             this.gbLinija.Text = "Linija";
             // 
-            // lblSifraLinije
-            // 
-            this.lblSifraLinije.AutoSize = true;
-            this.lblSifraLinije.Location = new System.Drawing.Point(6, 16);
-            this.lblSifraLinije.Name = "lblSifraLinije";
-            this.lblSifraLinije.Size = new System.Drawing.Size(57, 13);
-            this.lblSifraLinije.TabIndex = 0;
-            this.lblSifraLinije.Text = "Sifra linije: ";
-            // 
             // lblBrojStanica
             // 
             this.lblBrojStanica.AutoSize = true;
@@ -65,6 +56,15 @@
             this.lblBrojStanica.Size = new System.Drawing.Size(68, 13);
             this.lblBrojStanica.TabIndex = 1;
             this.lblBrojStanica.Text = "Broj stanica: ";
+            // 
+            // lblSifraLinije
+            // 
+            this.lblSifraLinije.AutoSize = true;
+            this.lblSifraLinije.Location = new System.Drawing.Point(6, 16);
+            this.lblSifraLinije.Name = "lblSifraLinije";
+            this.lblSifraLinije.Size = new System.Drawing.Size(57, 13);
+            this.lblSifraLinije.TabIndex = 0;
+            this.lblSifraLinije.Text = "Sifra linije: ";
             // 
             // dgvCijene
             // 
@@ -104,7 +104,7 @@
             this.MaximumSize = new System.Drawing.Size(99999, 999999);
             this.MinimumSize = new System.Drawing.Size(200, 200);
             this.Name = "CijeneNaLiniji";
-            this.Text = "CijeneNaLiniji";
+            this.Text = "Cijene na liniji";
             this.gbLinija.ResumeLayout(false);
             this.gbLinija.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).EndInit();
