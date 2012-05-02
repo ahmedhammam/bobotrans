@@ -78,6 +78,11 @@ namespace DAL
             {
                 return new KupacKarteSPopustomDAO();
             }
+
+            public VoznjaDAO getVoznjaDao()
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

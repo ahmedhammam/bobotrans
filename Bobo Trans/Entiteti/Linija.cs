@@ -137,6 +137,10 @@ namespace DAL.Entiteti
 
             return -1;
         }
-
+        public override string ToString()
+        {
+            string naziv = NazivLinije;
+            return " "+naziv;
+        }
     }
 }

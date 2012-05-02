@@ -59,6 +59,11 @@ namespace DesktopAplikacija.Informisanje
             cnl.Show();
         }
 
+        private void InformisanjeLinije_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

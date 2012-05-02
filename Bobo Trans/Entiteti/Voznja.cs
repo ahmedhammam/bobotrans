@@ -41,5 +41,10 @@ namespace DAL.Entiteti
             vrijemePolaska = vrijeme;
             autobus = a;
         }
+        public override string ToString()
+        {
+            
+            return sifraVoznje+ "                                      "+vrijemePolaska+"                     "+autobus.SifraAutobusa;
+        }
     }
 }

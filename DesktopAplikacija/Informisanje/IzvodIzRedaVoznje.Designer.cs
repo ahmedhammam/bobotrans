@@ -31,10 +31,10 @@
             this.lblOdabirStanice = new System.Windows.Forms.Label();
             this.cbStanice = new System.Windows.Forms.ComboBox();
             this.dgvIzvodIzRedaVoznje = new System.Windows.Forms.DataGridView();
-            this.btnIzadji = new System.Windows.Forms.Button();
             this.colLinija = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVrijemeDolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVrijemePolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnIzadji = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIzvodIzRedaVoznje)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,17 +74,6 @@
             this.dgvIzvodIzRedaVoznje.Size = new System.Drawing.Size(267, 133);
             this.dgvIzvodIzRedaVoznje.TabIndex = 2;
             // 
-            // btnIzadji
-            // 
-            this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnIzadji.Location = new System.Drawing.Point(208, 176);
-            this.btnIzadji.Name = "btnIzadji";
-            this.btnIzadji.Size = new System.Drawing.Size(75, 23);
-            this.btnIzadji.TabIndex = 3;
-            this.btnIzadji.Text = "Izađi";
-            this.btnIzadji.UseVisualStyleBackColor = true;
-            this.btnIzadji.Click += new System.EventHandler(this.btnIzadji_Click);
-            // 
             // colLinija
             // 
             this.colLinija.HeaderText = "Linija";
@@ -105,6 +94,17 @@
             this.colVrijemePolaska.ReadOnly = true;
             this.colVrijemePolaska.Width = 62;
             // 
+            // btnIzadji
+            // 
+            this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnIzadji.Location = new System.Drawing.Point(208, 176);
+            this.btnIzadji.Name = "btnIzadji";
+            this.btnIzadji.Size = new System.Drawing.Size(75, 23);
+            this.btnIzadji.TabIndex = 3;
+            this.btnIzadji.Text = "Izađi";
+            this.btnIzadji.UseVisualStyleBackColor = true;
+            this.btnIzadji.Click += new System.EventHandler(this.btnIzadji_Click);
+            // 
             // IzvodIzRedaVoznje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,6 +117,7 @@
             this.MaximumSize = new System.Drawing.Size(311, 99999);
             this.MinimumSize = new System.Drawing.Size(311, 250);
             this.Name = "IzvodIzRedaVoznje";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izvod iz reda vožnje";
             ((System.ComponentModel.ISupportInitialize)(this.dgvIzvodIzRedaVoznje)).EndInit();
             this.ResumeLayout(false);

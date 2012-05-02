@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using DAL;
 using DesktopAplikacija.Serviser;
+using DesktopAplikacija.RadnikZaSalterom;
 
 namespace DesktopAplikacija
 {
@@ -36,7 +37,10 @@ namespace DesktopAplikacija
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.MENAGER)
                         toolStripStatusLabel1.Text = "logovani ste kao menager";
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.RADNIK_ZA_SALTEROM)
-                        toolStripStatusLabel1.Text = "logovani ste kao radnik";
+                    {
+                        aplikacijaSalter a=new aplikacijaSalter();
+                        a.Show();
+                    }
                     if (k.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                     {
                         
