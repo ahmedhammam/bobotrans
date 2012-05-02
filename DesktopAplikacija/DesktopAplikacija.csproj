@@ -72,6 +72,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informisanje\CijeneNaLiniji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informisanje\CijeneNaLiniji.Designer.cs">
+      <DependentUpon>CijeneNaLiniji.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informisanje\InformisanjeLinije.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,18 @@
     </Compile>
     <Compile Include="Informisanje\InformisanjeVoznje.Designer.cs">
       <DependentUpon>InformisanjeVoznje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informisanje\IzvodIzRedaVoznje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informisanje\IzvodIzRedaVoznje.Designer.cs">
+      <DependentUpon>IzvodIzRedaVoznje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informisanje\NajjeftinijiPut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informisanje\NajjeftinijiPut.Designer.cs">
+      <DependentUpon>NajjeftinijiPut.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -139,11 +157,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informisanje\CijeneNaLiniji.resx">
+      <DependentUpon>CijeneNaLiniji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informisanje\InformisanjeLinije.resx">
       <DependentUpon>InformisanjeLinije.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informisanje\InformisanjeVoznje.resx">
       <DependentUpon>InformisanjeVoznje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informisanje\IzvodIzRedaVoznje.resx">
+      <DependentUpon>IzvodIzRedaVoznje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informisanje\NajjeftinijiPut.resx">
+      <DependentUpon>NajjeftinijiPut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

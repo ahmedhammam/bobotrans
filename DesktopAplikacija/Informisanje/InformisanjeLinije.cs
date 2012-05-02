@@ -53,6 +53,12 @@ namespace DesktopAplikacija.Informisanje
             iv.Show();
         }
 
+        private void btnPrikaziCijene_Click(object sender, EventArgs e)
+        {
+            CijeneNaLiniji cnl = new CijeneNaLiniji(selektiranaLinija);
+            cnl.Show();
+        }
+
 
     }
 }

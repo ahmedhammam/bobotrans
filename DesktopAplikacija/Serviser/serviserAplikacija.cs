@@ -33,8 +33,6 @@ namespace DesktopAplikacija.Serviser
         }
         public ServiserAplikacija(DAL.Entiteti.Korisnik k, Login l)
         {
-            Poruke.aplikacijaPoruke ap = new Poruke.aplikacijaPoruke(k);
-            ap.Show();
             login = l;
             l.Visible = false;
             InitializeComponent();
@@ -173,6 +171,24 @@ namespace DesktopAplikacija.Serviser
         private void serviserAplikacija_FormClosing(object sender, FormClosingEventArgs e)
         {
             login.Visible = true;
+        }
+
+        private void informisanjeOLinijamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informisanje.InformisanjeLinije il = new Informisanje.InformisanjeLinije();
+            il.Show();
+        }
+
+        private void izvodIzRedaVožnjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informisanje.IzvodIzRedaVoznje irv = new Informisanje.IzvodIzRedaVoznje();
+            irv.Show();
+        }
+
+        private void nalaženjeNajjeftinijegPutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informisanje.NajjeftinijiPut np = new Informisanje.NajjeftinijiPut();
+            np.Show();
         }
     }
 

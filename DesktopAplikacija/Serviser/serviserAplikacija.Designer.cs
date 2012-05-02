@@ -50,6 +50,10 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.Izađi = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.informisanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informisanjeOLinijamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izvodIzRedaVožnjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nalaženjeNajjeftinijegPutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -129,7 +133,8 @@
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.informisanjeToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(544, 24);
@@ -246,6 +251,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // informisanjeToolStripMenuItem
+            // 
+            this.informisanjeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informisanjeOLinijamaToolStripMenuItem,
+            this.izvodIzRedaVožnjeToolStripMenuItem,
+            this.nalaženjeNajjeftinijegPutaToolStripMenuItem});
+            this.informisanjeToolStripMenuItem.Name = "informisanjeToolStripMenuItem";
+            this.informisanjeToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.informisanjeToolStripMenuItem.Text = "Informisanje";
+            // 
+            // informisanjeOLinijamaToolStripMenuItem
+            // 
+            this.informisanjeOLinijamaToolStripMenuItem.Name = "informisanjeOLinijamaToolStripMenuItem";
+            this.informisanjeOLinijamaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.informisanjeOLinijamaToolStripMenuItem.Text = "Informisanje o linijama";
+            this.informisanjeOLinijamaToolStripMenuItem.Click += new System.EventHandler(this.informisanjeOLinijamaToolStripMenuItem_Click);
+            // 
+            // izvodIzRedaVožnjeToolStripMenuItem
+            // 
+            this.izvodIzRedaVožnjeToolStripMenuItem.Name = "izvodIzRedaVožnjeToolStripMenuItem";
+            this.izvodIzRedaVožnjeToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.izvodIzRedaVožnjeToolStripMenuItem.Text = "Izvod iz reda vožnje";
+            this.izvodIzRedaVožnjeToolStripMenuItem.Click += new System.EventHandler(this.izvodIzRedaVožnjeToolStripMenuItem_Click);
+            // 
+            // nalaženjeNajjeftinijegPutaToolStripMenuItem
+            // 
+            this.nalaženjeNajjeftinijegPutaToolStripMenuItem.Name = "nalaženjeNajjeftinijegPutaToolStripMenuItem";
+            this.nalaženjeNajjeftinijegPutaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.nalaženjeNajjeftinijegPutaToolStripMenuItem.Text = "Nalaženje najjeftinijeg puta";
+            this.nalaženjeNajjeftinijegPutaToolStripMenuItem.Click += new System.EventHandler(this.nalaženjeNajjeftinijegPutaToolStripMenuItem_Click);
+            // 
             // ServiserAplikacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +334,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IstekRegistracije;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.ToolStripMenuItem informisanjeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informisanjeOLinijamaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izvodIzRedaVožnjeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nalaženjeNajjeftinijegPutaToolStripMenuItem;
     }
 }

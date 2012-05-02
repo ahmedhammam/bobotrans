@@ -34,9 +34,9 @@ namespace TestnaAplikacija
                 DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
 
                     List<Stanica> stanice = new List<Stanica>();
-                    stanice.Add(sd.getById(14));
                     stanice.Add(sd.getById(13));
-
+                    stanice.Add(sd.getById(14));
+                    
                     List<List<double>> cijene = new List<List<double>>();
                     cijene.Add(new List<double>());
                     cijene[0] = new List<double>() { 5 };
@@ -45,10 +45,44 @@ namespace TestnaAplikacija
                     List<int> trajanjeDoDolaska = new List<int>() { 0, 30 };
                     List<int> trajanjeDoPolaska = new List<int>() { 0, 30 };
 
-                    List<Voznja> voznje = new List<Voznja>() { new Voznja(new DateTime(2012, 5,10, 11, 10, 0), ad.getById(5)), new Voznja(new DateTime(2012, 5, 7, 17, 30, 0), ad.getById(5)) };
-                    List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() { new RasporedVoznje(3, new DateTime(1, 1, 1, 11, 10, 0), 25), new RasporedVoznje(7, new DateTime(1, 1, 1, 17, 30, 0), 25) };
-                    Linija l = new Linija("Banja Luka - Doboj", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);
+                    List<Voznja> voznje = new List<Voznja>() { new Voznja(new DateTime(2012, 5,10, 11, 50, 0), ad.getById(5)), new Voznja(new DateTime(2012, 5, 7, 18, 10, 0), ad.getById(5)) };
+                    List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() { new RasporedVoznje(3, new DateTime(1, 1, 1, 11, 50, 0), 25), new RasporedVoznje(7, new DateTime(1, 1, 1, 18, 10, 0), 25) };
+                    Linija l = new Linija("Doboj - Banja Luka", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);
+                    l.SifraLinije = ld.create(l);
+                    Console.WriteLine(l.SifraLinije);
                 */
+                /*DAL.DAL.StanicaDAO sd= d.getDAO.getStaniceDAO();
+               DAL.DAL.AutobusDAO ad = d.getDAO.getAutobusDAO();
+               DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
+
+                   List<Stanica> stanice = new List<Stanica>();
+                   stanice.Add(sd.getById(15));
+                   stanice.Add(sd.getById(2));
+                   stanice.Add(sd.getById(1));
+                   stanice.Add(sd.getById(3));
+                   stanice.Add(sd.getById(4));
+                   stanice.Add(sd.getById(5));
+
+                   List<List<double>> cijene = new List<List<double>>();
+                   cijene.Add(new List<double>()); cijene.Add(new List<double>()); cijene.Add(new List<double>()); cijene.Add(new List<double>()); cijene.Add(new List<double>());
+                   cijene[0] = new List<double>() { 1,3,4,5,6 };
+                   cijene[1] = new List<double>() { 2.5, 3.5, 4.5, 5.5 };
+                   cijene[2] = new List<double>() { 1.5, 2.5, 3.4};
+                   cijene[3] = new List<double>() { 1.5, 2.6};
+                   cijene[4] = new List<double>() { 1 };
+
+
+                   List<int> trajanjeDoDolaska = new List<int>() { 0, 15, 30, 40, 60, 70 };
+                   List<int> trajanjeDoPolaska = new List<int>() { 0, 16, 31, 41, 61, 70 };
+
+                   List<Voznja> voznje = new List<Voznja>() { new Voznja(new DateTime(2012, 5, 10, 17, 43, 0), ad.getById(5)), new Voznja(new DateTime(2012, 5, 13, 15, 40, 0), ad.getById(1)),
+                       new Voznja(new DateTime(2012, 5, 16, 10, 20, 0), ad.getById(1))};
+                   List<RasporedVoznje> rasporedi = new List<RasporedVoznje>() { new RasporedVoznje(6, new DateTime(1, 1, 1, 17, 43, 0), 25), new RasporedVoznje(4, new DateTime(1, 1, 1, 15, 40, 0), 25),
+                       new RasporedVoznje(2, new DateTime(1, 1, 1, 10, 20, 0), 25)};
+                   Linija l = new Linija("Sarajevo - Kakanj", stanice, trajanjeDoDolaska, trajanjeDoPolaska, cijene, voznje, rasporedi);
+                   l.SifraLinije = ld.create(l);
+                   Console.WriteLine(l.SifraLinije);
+               */
                     /*stanice.Add(sd.getById(5));
                     stanice.Add(sd.getById(10));
                     stanice.Add(sd.getById(11));
