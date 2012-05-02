@@ -8,12 +8,12 @@ namespace DesktopAplikacija.Informisanje
 {
     class InformisanjeKomande
     {
-        private Entiteti.KolekcijaLinija kolekcijaLinija = Entiteti.KolekcijaLinija.Instanca;
-        private DesktopAplikacija.Entiteti.KolekcijaStanica ks = DesktopAplikacija.Entiteti.KolekcijaStanica.Instanca;
-        private DesktopAplikacija.Entiteti.KolekcijaLinija kl = DesktopAplikacija.Entiteti.KolekcijaLinija.Instanca;
+        private static Entiteti.KolekcijaLinija kolekcijaLinija = Entiteti.KolekcijaLinija.Instanca;
+        private static DesktopAplikacija.Entiteti.KolekcijaStanica ks = DesktopAplikacija.Entiteti.KolekcijaStanica.Instanca;
+        private static DesktopAplikacija.Entiteti.KolekcijaLinija kl = DesktopAplikacija.Entiteti.KolekcijaLinija.Instanca;
 
 
-        public List<Entiteti.VoznjaNaStanici> vratiPolazneVoznjeStanice(DAL.Entiteti.Stanica stanica)
+        public static List<Entiteti.VoznjaNaStanici> vratiPolazneVoznjeStanice(DAL.Entiteti.Stanica stanica)
         {
             int indeks, minute, sati;
             List<Entiteti.VoznjaNaStanici> voznjeNaStanici = new List<Entiteti.VoznjaNaStanici>();
@@ -46,7 +46,7 @@ namespace DesktopAplikacija.Informisanje
 
             return voznjeNaStanici;
         }
-        public List<Entiteti.VoznjaNaStanici> vratiDolazneVoznjeStanice(DAL.Entiteti.Stanica stanica)
+        public static List<Entiteti.VoznjaNaStanici> vratiDolazneVoznjeStanice(DAL.Entiteti.Stanica stanica)
         {
             int indeks, minute, sati;
             List<Entiteti.VoznjaNaStanici> voznjeNaStanici = new List<Entiteti.VoznjaNaStanici>();
@@ -102,7 +102,7 @@ namespace DesktopAplikacija.Informisanje
             }
         };
 
-        List<int> vratiZauzetaMjestaUAutobusu(DAL.Entiteti.Voznja trazenaVoznja)
+        public static List<int> vratiZauzetaMjestaUAutobusu(DAL.Entiteti.Voznja trazenaVoznja)
         {
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju();
@@ -112,7 +112,7 @@ namespace DesktopAplikacija.Informisanje
             return zauzetaMjesta;
         }
 
-        public Entiteti.Put vratiNajjeftinijiPut(DAL.Entiteti.Stanica pocetnaStanica, DAL.Entiteti.Stanica krajnjaStanica)
+        public static Entiteti.Put vratiNajjeftinijiPut(DAL.Entiteti.Stanica pocetnaStanica, DAL.Entiteti.Stanica krajnjaStanica)
         {
             long velicina = ks.dajMaksimalnuSifru();
             velicina++;
@@ -128,7 +128,7 @@ namespace DesktopAplikacija.Informisanje
         }
 
 
-        private DesktopAplikacija.Entiteti.Put dijkstra(List<edge>[] v, DAL.Entiteti.Stanica pocetak, DAL.Entiteti.Stanica kraj, long velicina)
+        private static DesktopAplikacija.Entiteti.Put dijkstra(List<edge>[] v, DAL.Entiteti.Stanica pocetak, DAL.Entiteti.Stanica kraj, long velicina)
         {
             string s = string.Format("");
             bool[] visited = new bool[velicina];
@@ -167,8 +167,10 @@ namespace DesktopAplikacija.Informisanje
                 }
             }
 
-            if(dd[kraj.SifraStanice].c == -1)
-                throw new Exception("Ne postoji put medju odabranim stanicama!");
+            if (dd[kraj.SifraStanice].c == -1)
+            {
+                return new Entiteti.Put(-1, "Ne postoji put izmedju trazenih stanica!");
+            }
 
             long tmp2 = kraj.SifraStanice;
             List<long> put = new List<long>();
@@ -178,19 +180,26 @@ namespace DesktopAplikacija.Informisanje
                 put.Add(dd[tmp2].v);
                 tmp2 = dd[tmp2].v;
             }
-
+            double tmpCijena;
             DAL.Entiteti.Stanica stanica1,stanica2;
             for(int i=put.Count-1;i>0;i--)
             {
+                tmpCijena = 0;
                 stanica1 = ks.getById(put[i]);
                 stanica2 = ks.getById(put[i - 1]);
-                s += stanica1.Naziv + ", " + stanica1.Mjesto + " - " + stanica2.Naziv + ", " + stanica2.Mjesto + "\n";
+                foreach(edge ee in v[put[i]])
+                    if (ee.v == put[i - 1])
+                    {
+                        tmpCijena = ee.c;
+                        break;
+                    }
+                s += stanica1.Naziv + ", " + stanica1.Mjesto + " - " + stanica2.Naziv + ", " + stanica2.Mjesto +": "+tmpCijena.ToString()+ "KM\n";
             }
 
             return new Entiteti.Put(dd[kraj.SifraStanice].c, s);
         }
 
-        private List<edge>[] napraviGraf(ref List<edge>[] v, long velicina)
+        private static List<edge>[] napraviGraf(ref List<edge>[] v, long velicina)
         {
             foreach (DAL.Entiteti.Linija l in kl.Linije)
             {

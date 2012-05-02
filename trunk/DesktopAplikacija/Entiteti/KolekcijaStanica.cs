@@ -16,6 +16,12 @@ namespace DesktopAplikacija.Entiteti
         }
 
 
+        public List<DAL.Entiteti.Stanica> Stanice
+        {
+            get { return stanice; }
+            set { stanice = value; }
+        }
+
         private KolekcijaStanica()
         {
             DAL.DAL d = DAL.DAL.Instanca;

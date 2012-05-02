@@ -39,14 +39,15 @@
             this.colDolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBrojStanica = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsBtnPrikaziVoznje = new System.Windows.Forms.ToolStripButton();
             this.btnIzadji = new System.Windows.Forms.Button();
             this.lblSifraLinije = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tsBtnPrikaziVoznje = new System.Windows.Forms.ToolStripButton();
+            this.btnPrikaziCijene = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanice)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPrikazi
@@ -143,25 +144,6 @@
             this.lblBrojStanica.TabIndex = 5;
             this.lblBrojStanica.Text = "Broj stanica:";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsBtnPrikaziVoznje});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(430, 25);
-            this.toolStrip1.TabIndex = 7;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tsBtnPrikaziVoznje
-            // 
-            this.tsBtnPrikaziVoznje.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsBtnPrikaziVoznje.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnPrikaziVoznje.Image")));
-            this.tsBtnPrikaziVoznje.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtnPrikaziVoznje.Name = "tsBtnPrikaziVoznje";
-            this.tsBtnPrikaziVoznje.Size = new System.Drawing.Size(23, 22);
-            this.tsBtnPrikaziVoznje.Click += new System.EventHandler(this.tsBtnPrikaziVoznje_Click);
-            // 
             // btnIzadji
             // 
             this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -194,6 +176,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Linija";
             // 
+            // tsBtnPrikaziVoznje
+            // 
+            this.tsBtnPrikaziVoznje.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBtnPrikaziVoznje.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnPrikaziVoznje.Image")));
+            this.tsBtnPrikaziVoznje.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnPrikaziVoznje.Name = "tsBtnPrikaziVoznje";
+            this.tsBtnPrikaziVoznje.Size = new System.Drawing.Size(23, 22);
+            this.tsBtnPrikaziVoznje.ToolTipText = "Prikazi raspored voznji selektirane linije";
+            this.tsBtnPrikaziVoznje.Click += new System.EventHandler(this.tsBtnPrikaziVoznje_Click);
+            // 
+            // btnPrikaziCijene
+            // 
+            this.btnPrikaziCijene.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnPrikaziCijene.Image = ((System.Drawing.Image)(resources.GetObject("btnPrikaziCijene.Image")));
+            this.btnPrikaziCijene.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrikaziCijene.Name = "btnPrikaziCijene";
+            this.btnPrikaziCijene.Size = new System.Drawing.Size(23, 22);
+            this.btnPrikaziCijene.Text = "toolStripButton1";
+            this.btnPrikaziCijene.ToolTipText = "Prikazi cijene između svih stanica odabrane linije";
+            this.btnPrikaziCijene.Click += new System.EventHandler(this.btnPrikaziCijene_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsBtnPrikaziVoznje,
+            this.btnPrikaziCijene});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(430, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
             // InformisanjeLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,10 +226,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informisanje";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanice)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,10 +247,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMjesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDolazak;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPolazak;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tsBtnPrikaziVoznje;
         private System.Windows.Forms.Button btnIzadji;
         private System.Windows.Forms.Label lblSifraLinije;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripButton tsBtnPrikaziVoznje;
+        private System.Windows.Forms.ToolStripButton btnPrikaziCijene;
+        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }

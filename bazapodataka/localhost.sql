@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 29, 2012 at 11:09 PM
+-- Generation Time: May 02, 2012 at 02:06 AM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS `autobusi` (
 --
 
 INSERT INTO `autobusi` (`id`, `registracijskeTablice`, `istekRegistracije`, `brojSjedista`, `datumServisa`, `toalet`, `slobodan`, `klima`) VALUES
-(1, '123-K-456', '2012-05-05', 50, '2012-04-04', 1, 0, 1),
-(4, '234-K-317', '2012-10-07', 40, '2012-04-20', 0, 0, 0),
+(1, '123-K-455', '2012-05-05', 50, '2012-04-04', 1, 0, 1),
+(4, '234-K-319', '2012-10-07', 40, '2012-04-20', 0, 0, 0),
 (5, '324-A-322', '2013-04-17', 30, '2012-04-11', 0, 0, 1);
 
 -- --------------------------------------------------------
@@ -65,7 +65,17 @@ CREATE TABLE IF NOT EXISTS `izvjestaji` (
   PRIMARY KEY (`id`),
   KEY `idKreatora` (`idKreatora`),
   KEY `idAutobusa` (`idAutobusa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `izvjestaji`
+--
+
+INSERT INTO `izvjestaji` (`id`, `datum`, `tekst`, `idKreatora`, `idAutobusa`) VALUES
+(1, '2012-04-26', 'lorem ipsum sid dolorem amet', 5, 4),
+(2, '2012-04-30', 'lorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\nlorem ipsum sid dolorem amet\n', 5, 1),
+(3, '2012-04-30', 'ijoijoijo', 5, 4),
+(4, '2012-04-30', 'the quick brown fox', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -140,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `linije` (
   `naziv` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `naziv` (`naziv`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `linije`
@@ -148,8 +158,10 @@ CREATE TABLE IF NOT EXISTS `linije` (
 
 INSERT INTO `linije` (`id`, `naziv`) VALUES
 (28, 'Banja Luka - Doboj'),
+(31, 'Doboj - Banja Luka'),
 (27, 'Doboj - Tuzla'),
-(24, 'Kakanj - Tuzla');
+(24, 'Kakanj - Tuzla'),
+(29, 'Sarajevo - Kakanj');
 
 -- --------------------------------------------------------
 
@@ -167,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `linijecijene` (
   KEY `idLinije` (`idLinije`),
   KEY `idPrveStanice` (`idPrveStanice`),
   KEY `idDrugeStanice` (`idDrugeStanice`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=135 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=151 ;
 
 --
 -- Dumping data for table `linijecijene`
@@ -192,7 +204,23 @@ INSERT INTO `linijecijene` (`id`, `idLinije`, `idPrveStanice`, `idDrugeStanice`,
 (131, 27, 13, 12, '2.0'),
 (132, 27, 13, 9, '3.0'),
 (133, 27, 12, 9, '1.5'),
-(134, 28, 14, 13, '5.0');
+(134, 28, 14, 13, '5.0'),
+(135, 29, 15, 2, '1.0'),
+(136, 29, 15, 1, '3.0'),
+(137, 29, 15, 3, '4.0'),
+(138, 29, 15, 4, '5.0'),
+(139, 29, 15, 5, '6.0'),
+(140, 29, 2, 1, '2.5'),
+(141, 29, 2, 3, '3.5'),
+(142, 29, 2, 4, '4.5'),
+(143, 29, 2, 5, '5.5'),
+(144, 29, 1, 3, '1.5'),
+(145, 29, 1, 4, '2.5'),
+(146, 29, 1, 5, '3.4'),
+(147, 29, 3, 4, '1.5'),
+(148, 29, 3, 5, '2.6'),
+(149, 29, 4, 5, '1.0'),
+(150, 31, 13, 14, '5.0');
 
 -- --------------------------------------------------------
 
@@ -208,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `linijerasporedvoznji` (
   UNIQUE KEY `idRasporedaVoznje_2` (`idRasporedaVoznje`),
   KEY `idLinije` (`idLinije`),
   KEY `idRasporedaVoznje` (`idRasporedaVoznje`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `linijerasporedvoznji`
@@ -220,7 +248,12 @@ INSERT INTO `linijerasporedvoznji` (`id`, `idLinije`, `idRasporedaVoznje`) VALUE
 (21, 27, 27),
 (22, 27, 28),
 (23, 28, 29),
-(24, 28, 30);
+(24, 28, 30),
+(25, 29, 31),
+(26, 29, 32),
+(27, 29, 33),
+(28, 31, 34),
+(29, 31, 35);
 
 -- --------------------------------------------------------
 
@@ -236,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `linijevoznje` (
   UNIQUE KEY `idVoznje_2` (`idVoznje`),
   KEY `idLinije` (`idLinije`),
   KEY `idVoznje` (`idVoznje`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=46 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=51 ;
 
 --
 -- Dumping data for table `linijevoznje`
@@ -248,7 +281,12 @@ INSERT INTO `linijevoznje` (`id`, `idLinije`, `idVoznje`) VALUES
 (42, 27, 43),
 (43, 27, 44),
 (44, 28, 45),
-(45, 28, 46);
+(45, 28, 46),
+(46, 29, 47),
+(47, 29, 48),
+(48, 29, 49),
+(49, 31, 50),
+(50, 31, 51);
 
 -- --------------------------------------------------------
 
@@ -260,20 +298,21 @@ CREATE TABLE IF NOT EXISTS `poruke` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `idPosiljaoca` int(11) NOT NULL,
   `idPrimaoca` int(11) NOT NULL,
-  `vrijemeSlanja` date NOT NULL,
+  `vrijemeSlanja` datetime NOT NULL,
   `tekst` text COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idPosiljaoca` (`idPosiljaoca`),
   KEY `idPrimaoca` (`idPrimaoca`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `poruke`
 --
 
 INSERT INTO `poruke` (`id`, `idPosiljaoca`, `idPrimaoca`, `vrijemeSlanja`, `tekst`) VALUES
-(2, 3, 5, '2012-04-02', 'lorem ipsum sid dolorem amet'),
-(3, 1, 5, '2012-04-17', 'the quick brown fox jumps over the lazy dog');
+(2, 3, 5, '2012-04-02 00:00:00', 'lorem ipsum sid dolorem amet'),
+(3, 1, 5, '2012-04-17 00:00:00', 'the quick brown fox jumps over the lazy dog'),
+(6, 5, 8, '2012-05-02 00:07:00', 'oijiojoijoi');
 
 -- --------------------------------------------------------
 
@@ -288,7 +327,7 @@ CREATE TABLE IF NOT EXISTS `rasporedvoznji` (
   `minute` int(11) NOT NULL,
   `potrebanBrojSjedista` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=36 ;
 
 --
 -- Dumping data for table `rasporedvoznji`
@@ -300,7 +339,12 @@ INSERT INTO `rasporedvoznji` (`id`, `danUSedmici`, `sati`, `minute`, `potrebanBr
 (27, '2', 12, 10, 25),
 (28, '5', 18, 30, 25),
 (29, '3', 11, 10, 25),
-(30, '7', 17, 30, 25);
+(30, '7', 17, 30, 25),
+(31, '6', 17, 43, 25),
+(32, '4', 15, 40, 25),
+(33, '2', 10, 20, 25),
+(34, '3', 11, 50, 25),
+(35, '7', 18, 10, 25);
 
 -- --------------------------------------------------------
 
@@ -313,7 +357,7 @@ CREATE TABLE IF NOT EXISTS `stanice` (
   `naziv` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `mjesto` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `stanice`
@@ -330,7 +374,8 @@ INSERT INTO `stanice` (`id`, `naziv`, `mjesto`) VALUES
 (11, 'Banovic', 'Banovici'),
 (12, 'Lukavac', 'Lukavac'),
 (13, 'Doboj', 'Doboj'),
-(14, 'Glavna Stanica', 'Banja Luka');
+(14, 'Glavna Stanica', 'Banja Luka'),
+(15, 'Glavna stanica', 'Sarajevo');
 
 -- --------------------------------------------------------
 
@@ -347,7 +392,7 @@ CREATE TABLE IF NOT EXISTS `staniceuliniji` (
   PRIMARY KEY (`id`),
   KEY `idLinije` (`idLinije`),
   KEY `idStanice` (`idStanice`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=128 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=136 ;
 
 --
 -- Dumping data for table `staniceuliniji`
@@ -364,7 +409,15 @@ INSERT INTO `staniceuliniji` (`id`, `idLinije`, `idStanice`, `trajanjeDoDolaska`
 (124, 27, 12, 30, 35),
 (125, 27, 9, 50, 50),
 (126, 28, 14, 0, 0),
-(127, 28, 13, 30, 30);
+(127, 28, 13, 30, 30),
+(128, 29, 15, 0, 0),
+(129, 29, 2, 15, 16),
+(130, 29, 1, 30, 31),
+(131, 29, 3, 40, 41),
+(132, 29, 4, 60, 61),
+(133, 29, 5, 70, 70),
+(134, 31, 13, 0, 0),
+(135, 31, 14, 30, 30);
 
 -- --------------------------------------------------------
 
@@ -425,7 +478,7 @@ CREATE TABLE IF NOT EXISTS `voznje` (
   `minute` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idAutobusa` (`idAutobusa`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=47 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=52 ;
 
 --
 -- Dumping data for table `voznje`
@@ -437,7 +490,12 @@ INSERT INTO `voznje` (`id`, `idAutobusa`, `vrijemePolaska`, `sati`, `minute`) VA
 (43, 5, '2012-06-10', 12, 10),
 (44, 5, '2012-05-07', 18, 30),
 (45, 5, '2012-05-10', 11, 10),
-(46, 5, '2012-05-07', 17, 30);
+(46, 5, '2012-05-07', 17, 30),
+(47, 5, '2012-05-10', 17, 43),
+(48, 1, '2012-05-13', 15, 40),
+(49, 1, '2012-05-16', 10, 20),
+(50, 5, '2012-05-10', 11, 50),
+(51, 5, '2012-05-07', 18, 10);
 
 -- --------------------------------------------------------
 
@@ -463,8 +521,8 @@ CREATE TABLE IF NOT EXISTS `zakupiautobusa` (
 -- Constraints for table `izvjestaji`
 --
 ALTER TABLE `izvjestaji`
-  ADD CONSTRAINT `izvjestaji_ibfk_2` FOREIGN KEY (`idAutobusa`) REFERENCES `autobusi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `izvjestaji_ibfk_1` FOREIGN KEY (`idKreatora`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `izvjestaji_ibfk_1` FOREIGN KEY (`idKreatora`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `izvjestaji_ibfk_2` FOREIGN KEY (`idAutobusa`) REFERENCES `autobusi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `karte`
