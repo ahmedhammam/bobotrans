@@ -34,10 +34,6 @@
             this.cbLinije = new System.Windows.Forms.ComboBox();
             this.lblNazivLinije = new System.Windows.Forms.Label();
             this.dgvStanice = new System.Windows.Forms.DataGridView();
-            this.colNaziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMjesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBrojStanica = new System.Windows.Forms.Label();
             this.btnIzadji = new System.Windows.Forms.Button();
             this.lblSifraLinije = new System.Windows.Forms.Label();
@@ -45,6 +41,10 @@
             this.tsBtnPrikaziVoznje = new System.Windows.Forms.ToolStripButton();
             this.btnPrikaziCijene = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.colNaziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMjesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanice)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -108,32 +108,6 @@
             this.dgvStanice.ReadOnly = true;
             this.dgvStanice.Size = new System.Drawing.Size(406, 246);
             this.dgvStanice.TabIndex = 4;
-            // 
-            // colNaziv
-            // 
-            this.colNaziv.HeaderText = "Naziv stanice";
-            this.colNaziv.Name = "colNaziv";
-            this.colNaziv.ReadOnly = true;
-            // 
-            // colMjesto
-            // 
-            this.colMjesto.HeaderText = "Mjesto";
-            this.colMjesto.Name = "colMjesto";
-            this.colMjesto.ReadOnly = true;
-            // 
-            // colDolazak
-            // 
-            this.colDolazak.HeaderText = "Minuta do dolaska";
-            this.colDolazak.Name = "colDolazak";
-            this.colDolazak.ReadOnly = true;
-            this.colDolazak.Width = 80;
-            // 
-            // colPolazak
-            // 
-            this.colPolazak.HeaderText = "Minuta do polaska";
-            this.colPolazak.Name = "colPolazak";
-            this.colPolazak.ReadOnly = true;
-            this.colPolazak.Width = 80;
             // 
             // lblBrojStanica
             // 
@@ -208,6 +182,32 @@
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // colNaziv
+            // 
+            this.colNaziv.HeaderText = "Naziv stanice";
+            this.colNaziv.Name = "colNaziv";
+            this.colNaziv.ReadOnly = true;
+            // 
+            // colMjesto
+            // 
+            this.colMjesto.HeaderText = "Mjesto";
+            this.colMjesto.Name = "colMjesto";
+            this.colMjesto.ReadOnly = true;
+            // 
+            // colDolazak
+            // 
+            this.colDolazak.HeaderText = "Minuta do dolaska";
+            this.colDolazak.Name = "colDolazak";
+            this.colDolazak.ReadOnly = true;
+            this.colDolazak.Width = 80;
+            // 
+            // colPolazak
+            // 
+            this.colPolazak.HeaderText = "Minuta do polaska";
+            this.colPolazak.Name = "colPolazak";
+            this.colPolazak.ReadOnly = true;
+            this.colPolazak.Width = 82;
+            // 
             // InformisanjeLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,7 +224,7 @@
             this.MinimumSize = new System.Drawing.Size(446, 327);
             this.Name = "InformisanjeLinije";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Informisanje";
+            this.Text = "Informisanje o liniji";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanice)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -243,15 +243,15 @@
         private System.Windows.Forms.Label lblNazivLinije;
         private System.Windows.Forms.DataGridView dgvStanice;
         private System.Windows.Forms.Label lblBrojStanica;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNaziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMjesto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDolazak;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPolazak;
         private System.Windows.Forms.Button btnIzadji;
         private System.Windows.Forms.Label lblSifraLinije;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolStripButton tsBtnPrikaziVoznje;
         private System.Windows.Forms.ToolStripButton btnPrikaziCijene;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNaziv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMjesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDolazak;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPolazak;
     }
 }

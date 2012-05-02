@@ -46,48 +46,6 @@ namespace DesktopAplikacija.Serviser
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-             int brojac = 0;
-             if (comboBox1.Text == "")
-             {
-                 MessageBox.Show("Niste selektovali autobus!");
-             }
-             else
-             {
-                 List<DAL.Entiteti.Izvjestaj> nova=new List<DAL.Entiteti.Izvjestaj>();
-                 foreach (DAL.Entiteti.Izvjestaj iz in izvjestaji)
-                 {
-                     if (Convert.ToInt32(iz.SifraAutobusa) == Convert.ToInt32(comboBox1.Text)) nova.Add(iz);
-                 }
-                 for (int i = 0; i < nova.Count; i++)
-                 {
-                     for (int j = i + 1; j < nova.Count; j++)
-                     {
-                         if (nova[j].DatumServisa < nova[i].DatumServisa)
-                         {
-                             DAL.Entiteti.Izvjestaj novi = nova[i];
-                             nova[i] = nova[j];
-                             nova[j] = novi;
-
-                         }
-                     }
-                 }
-                 DateTime dt;
-                 foreach (DAL.Entiteti.Izvjestaj i in nova)
-                 {
-                     if (Convert.ToInt32(i.SifraAutobusa) == Convert.ToInt32(comboBox1.Text))
-                     {
-                         dt = i.DatumServisa;
-                        listBox1.Items.Add(i);
-                     }
-                     else brojac++;
-                 }
-                 if (brojac == izvjestaji.Count) MessageBox.Show("Nema izvještaja za traženi autobus!");
-             }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -100,6 +58,49 @@ namespace DesktopAplikacija.Serviser
             tekstIzvjestaja t = new tekstIzvjestaja(Convert.ToString(i.Tekst));
             t.Show();
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            listBox1.Items.Clear();
+            int brojac = 0;
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Niste selektovali autobus!");
+            }
+            else
+            {
+                List<DAL.Entiteti.Izvjestaj> nova = new List<DAL.Entiteti.Izvjestaj>();
+                foreach (DAL.Entiteti.Izvjestaj iz in izvjestaji)
+                {
+                    if (Convert.ToInt32(iz.SifraAutobusa) == Convert.ToInt32(comboBox1.Text)) nova.Add(iz);
+                }
+                for (int i = 0; i < nova.Count; i++)
+                {
+                    for (int j = i + 1; j < nova.Count; j++)
+                    {
+                        if (nova[j].DatumServisa < nova[i].DatumServisa)
+                        {
+                            DAL.Entiteti.Izvjestaj novi = nova[i];
+                            nova[i] = nova[j];
+                            nova[j] = novi;
+
+                        }
+                    }
+                }
+                DateTime dt;
+                foreach (DAL.Entiteti.Izvjestaj i in nova)
+                {
+                    if (Convert.ToInt32(i.SifraAutobusa) == Convert.ToInt32(comboBox1.Text))
+                    {
+                        dt = i.DatumServisa;
+                        listBox1.Items.Add(i);
+                    }
+                    else brojac++;
+                }
+                if (brojac == izvjestaji.Count) MessageBox.Show("Nema izvještaja za traženi autobus!");
+            }
         }
     }
 }
