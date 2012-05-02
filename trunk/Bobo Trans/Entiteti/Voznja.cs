@@ -43,8 +43,11 @@ namespace DAL.Entiteti
         }
         public override string ToString()
         {
+            if(vrijemePolaska.Day>9&&vrijemePolaska.Month<9) return sifraVoznje+ "                                      "+vrijemePolaska+"                     "+autobus.SifraAutobusa;
             
-            return sifraVoznje+ "                                      "+vrijemePolaska+"                     "+autobus.SifraAutobusa;
+            else if(vrijemePolaska.Month > 9&&vrijemePolaska.Day<9)return sifraVoznje+ "                                      "+vrijemePolaska+"                     "+autobus.SifraAutobusa;
+            else if (vrijemePolaska.Day > 9 && vrijemePolaska.Month > 9) return sifraVoznje + "                                      " + vrijemePolaska + "                   " + autobus.SifraAutobusa;
+            else return sifraVoznje + "                                      " + vrijemePolaska + "                       " + autobus.SifraAutobusa;
         }
     }
 }
