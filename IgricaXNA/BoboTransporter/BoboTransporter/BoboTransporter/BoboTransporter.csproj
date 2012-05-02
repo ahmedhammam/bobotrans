@@ -112,6 +112,11 @@
   <ItemGroup>
     <Compile Include="EngineTools\InputHandler.cs" />
     <Compile Include="GenerisanjeLabirinta\Labirint.cs" />
+    <Compile Include="Grafika\Brzinomjer.cs" />
+    <Compile Include="Grafika\BrzinomjerDijelovi\Pozadina.cs" />
+    <Compile Include="Grafika\BrzinomjerDijelovi\Strelica.cs" />
+    <Compile Include="Grafika\Drvo.cs" />
+    <Compile Include="Grafika\Kamen.cs" />
     <Compile Include="Grafika\Podloge\Asfalt.cs" />
     <Compile Include="Grafika\Podloge\Cilj.cs" />
     <Compile Include="Grafika\Podloge\LinijaStopNaCesti.cs" />
@@ -124,8 +129,10 @@
     <Compile Include="Grafika\Slicica.cs" />
     <Compile Include="Grafika\Vozila\Auto.cs" />
     <Compile Include="Grafika\Vozila\MojBus.cs" />
+    <Compile Include="Grafika\Vozila\Pjeshak.cs" />
     <Compile Include="IgraPokrenuta.cs" />
     <Compile Include="Mapa\KontrolerAuta.cs" />
+    <Compile Include="Mapa\KontrolerPjeshaka.cs" />
     <Compile Include="Mapa\Mapa.cs" />
     <Compile Include="Mapa\Regija.cs" />
     <Compile Include="Mapa\TipRegije.cs" />

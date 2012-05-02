@@ -89,6 +89,7 @@ namespace BoboTransporter.Grafika
             velicina = 1f;
             okvir = new Rectangle(0, 0, 400, 400);
             sredina = new Vector2(200, 200);
+
             boja = Color.White;
             vertikalnaPozicija = 0;
         }

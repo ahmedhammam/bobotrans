@@ -21,6 +21,7 @@ namespace BoboTransporter
         SpriteBatch spriteBatch;
 
         IgraPokrenuta igra;
+        //Texture2D bijelo;
 
         public Game1()
         {
@@ -57,6 +58,7 @@ namespace BoboTransporter
             
             // TODO: use this.Content to load your game content here
             igra.LoadContent(this.Content);
+            //bijelo = this.Content.Load<Texture2D>("bijeloTekstura");
         }
 
         /// <summary>
@@ -97,11 +99,24 @@ namespace BoboTransporter
 
             // TODO: Add your drawing code here
 
-            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);  //manji layerDepth je nizi objekat
-            igra.Draw(gameTime,spriteBatch, new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2));
-            spriteBatch.End();
+            igra.Draw(gameTime, spriteBatch, new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2));
 
-            base.Draw(gameTime);
+            /*
+            //SUNSET
+            boja = Color.FromNonPremultiplied(255, 235, 153, 255);
+            //DAWN
+            boja = Color.FromNonPremultiplied(255, 235, 153, 255);
+            //NIGHT
+            boja = Color.FromNonPremultiplied(27, 27, 27, 255);
+            //DAY
+            boja = Color.FromNonPremultiplied(235, 235, 235, 255);
+             *
+            */
+            /*spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
+            Color boja = Color.Red;
+            spriteBatch.Draw(bijelo,new Rectangle(0,0,graphics.PreferredBackBufferWidth,graphics.PreferredBackBufferHeight),boja);
+            spriteBatch.End();
+            base.Draw(gameTime);*/
         }
     }
 }

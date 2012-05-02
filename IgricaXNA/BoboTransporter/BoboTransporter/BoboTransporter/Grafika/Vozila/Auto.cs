@@ -10,18 +10,34 @@ namespace BoboTransporter.Grafika.Vozila
 {
     class Auto:Slicica
     {
-        static private string teksturaIme = "autobusTekstura";
-        Vector2 pozicijaCelije;
+        static private string teksturaIme = "Auto\\auto{0}Tekstura";
+        int pozicijaCelijeX;
 
-        public Vector2 PozicijaCelije
+        public int PozicijaCelijeX
         {
-            get { return pozicijaCelije; }
-            set { pozicijaCelije = value; }
+            get { return pozicijaCelijeX; }
+            set { pozicijaCelijeX = value; }
         }
+        int pozicijaCelijeY;
+
+        public int PozicijaCelijeY
+        {
+            get { return pozicijaCelijeY; }
+            set { pozicijaCelijeY = value; }
+        }
+
         int vrijemeOdbrojano;
         int kretanje;
         int rotacijaX;
+        int brojTeksture;
         bool cekam;
+        bool pomjerljiv;
+
+        public bool Pomjerljiv
+        {
+            get { return pomjerljiv; }
+            set { pomjerljiv = value; }
+        }
 
         public bool Cekam
         {
@@ -29,19 +45,22 @@ namespace BoboTransporter.Grafika.Vozila
             set { cekam = value; }
         }
 
-        public Auto(int pX,int pY, int RotacijaX) : base()
+        public Auto(int pX,int pY, int RotacijaX, int brTek) : base()
         {
-            pozicijaCelije = new Vector2(pX, pY);
+            pozicijaCelijeX = pX;
+            pozicijaCelijeY = pY;
             Pozicija = new Vector2(pX*37.5f+618.75f, pY*37.5f+618.75f);
             Rotacija = 0f;
-            VertikalnaPozicija = 0.3f;
-            Velicina = .1f;
+            VertikalnaPozicija = 0.37f;
+            Velicina = .10f;
             kretanje = 0;
             cekam = false;
             vrijemeOdbrojano = 0;
             rotacijaX = RotacijaX;
             Okvir = new Rectangle(0, 0, 300, 300);
             Sredina = new Vector2(150, 150);
+            pomjerljiv = true;
+            brojTeksture = brTek;
         }
 
         /*
@@ -59,7 +78,7 @@ namespace BoboTransporter.Grafika.Vozila
 
         public void postaviKretanje(int kret_)
         {
-            if (cekam)
+            if (cekam && pomjerljiv)
             {
                 vrijemeOdbrojano = 0;
                 kretanje = kret_;
@@ -69,7 +88,7 @@ namespace BoboTransporter.Grafika.Vozila
 
         public override void LoadContent(ContentManager theContentManager)
         {
-            LoadContent(theContentManager, teksturaIme);
+            LoadContent(theContentManager, String.Format(teksturaIme,brojTeksture));
         }
 
         public void Update(GameTime gameTime)
@@ -82,18 +101,18 @@ namespace BoboTransporter.Grafika.Vozila
                 {
                     Rotacija = rotacijaX * (float)Math.PI / 2;
                     Pozicija = new Vector2(
-                        pozicijaCelije.X * 37.5f + 618.75f - ((float)Math.Sin(Rotacija) * (500 - vrijemeOdbrojano) * 37.5f / 1000)
+                        pozicijaCelijeX * 37.5f + 618.75f - ((float)Math.Sin(Rotacija) * (500 - vrijemeOdbrojano) * 37.5f / 1000)
                         ,
-                        pozicijaCelije.Y * 37.5f + 618.75f + ((float)Math.Cos(Rotacija) * (500 - vrijemeOdbrojano) * 37.5f / 1000)
+                        pozicijaCelijeY * 37.5f + 618.75f + ((float)Math.Cos(Rotacija) * (500 - vrijemeOdbrojano) * 37.5f / 1000)
                         );
                 }
                 else if (kretanje == 1)
                 {
                     float Rotacija2 = rotacijaX * (float)Math.PI / 2;
                     Rotacija = Rotacija2 + (float)Math.PI * vrijemeOdbrojano / 2000;
-                    Pozicija = new Vector2(pozicijaCelije.X * 37.5f + 618.75f - ((float)Math.Cos(Rotacija) * 18.75f)
+                    Pozicija = new Vector2(pozicijaCelijeX * 37.5f + 618.75f - ((float)Math.Cos(Rotacija) * 18.75f)
                         ,
-                        pozicijaCelije.Y * 37.5f + 618.75f - ((float)Math.Sin(Rotacija) * 18.75f)
+                        pozicijaCelijeY * 37.5f + 618.75f - ((float)Math.Sin(Rotacija) * 18.75f)
                         );
                     switch (rotacijaX)
                     {
@@ -116,9 +135,9 @@ namespace BoboTransporter.Grafika.Vozila
                 {
                     float Rotacija2 = rotacijaX * (float)Math.PI / 2;
                     Rotacija = Rotacija2 - (float)Math.PI * vrijemeOdbrojano / 2000;
-                    Pozicija = new Vector2(pozicijaCelije.X * 37.5f + 618.75f + ((float)Math.Cos(Rotacija) * 18.75f)
+                    Pozicija = new Vector2(pozicijaCelijeX * 37.5f + 618.75f + ((float)Math.Cos(Rotacija) * 18.75f)
                         ,
-                        pozicijaCelije.Y * 37.5f + 618.75f + ((float)Math.Sin(Rotacija) * 18.75f)
+                        pozicijaCelijeY * 37.5f + 618.75f + ((float)Math.Sin(Rotacija) * 18.75f)
                         );
                     switch (rotacijaX)
                     {
@@ -204,7 +223,8 @@ namespace BoboTransporter.Grafika.Vozila
                     rotacijaX += kretanje;
                     while (rotacijaX > 3) rotacijaX -= 4;
                     while (rotacijaX < 0) rotacijaX += 4;
-                    pozicijaCelije += new Vector2(pX, pY);
+                    pozicijaCelijeX += pX;
+                    pozicijaCelijeY += pY;
                 }
             }
         }

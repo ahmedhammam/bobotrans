@@ -12,14 +12,19 @@ namespace BoboTransporter.Grafika.Vozila
     {
         static private string teksturaIme = "autobusTekstura";
         float brzina;
+
+        public float Brzina
+        {
+            get { return brzina; }
+        }
         float maxBrzina, minBrzina;
         int tockoviPozicija;
         public MojBus(int pozX, int pozY)
         {
             Pozicija = new Vector2(300f * pozX + 825f, 300f * pozY + 825f);
             Rotacija = 0f;
-            VertikalnaPozicija = 0.3f;
-            Velicina = .2f;
+            VertikalnaPozicija = 0.4f;
+            Velicina = .25f;
             Okvir = new Rectangle(0, 0, 300, 300);
             Sredina = new Vector2(150, 150);
             brzina = 0;

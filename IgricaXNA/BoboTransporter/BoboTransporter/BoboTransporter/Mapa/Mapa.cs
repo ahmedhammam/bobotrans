@@ -150,7 +150,7 @@ namespace BoboTransporter.Mapa
                     }
                 } 
             #endregion
-
+            Random rand = new Random();
             for (int i=0;i<sirina;i++)
                 for (int j = 0; j < visina; j++)
                 {
@@ -164,7 +164,7 @@ namespace BoboTransporter.Mapa
                         tipoviRegija[i, j],
                         tipoviRegija[i + 2, j + 2],
                         tipoviRegija[i, j + 2]);
-                    blok[i, j].generishi();
+                    blok[i, j].generishi(rand.Next());
                 }
         }
 

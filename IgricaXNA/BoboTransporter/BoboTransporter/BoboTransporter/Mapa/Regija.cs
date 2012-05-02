@@ -113,7 +113,7 @@ namespace BoboTransporter.Mapa
             slicice = new List<Slicica>();
         }
 
-        public void generishi()
+        public void generishi(int randSeed)
         {
             if (tip == TipRegije.CILJ)
             {
@@ -291,16 +291,41 @@ namespace BoboTransporter.Mapa
                         slicice.Add(a);
                     }
                     #endregion
-                    //stavljamo travu
+
+
                     if (tip == TipRegije.ZEMLJA)
                     {
                         Zemlja b;
                         b = new Zemlja();
                         b.Pozicija = new Vector2(75f, 75f);
                         slicice.Add(b);
+                        Random rand = new Random(randSeed);
+                        if (rand.Next() % 3 != 0)
+                        {
+                            //posadi drvo
+                            Drvo c;
+                            c = new Drvo();
+                            c.Pozicija = new Vector2((float)(rand.NextDouble() * 75 + 37.5), (float)(rand.NextDouble() * 75 + 37.5));
+                            c.Velicina *= (float)(rand.NextDouble() * 0.8 + 0.8);
+                            c.Rotacija = (float)(rand.NextDouble() * Math.PI * 2);
+                            slicice.Add(c);
+                        }
+                        if (rand.Next() % 3 != 0)
+                        {
+                            //dodaj kamenje
+                            int brKamenja = rand.Next() % 3 + 1;
+                            Kamen k;
+                            for (int i = 0; i < brKamenja; i++)
+                            {
+                                k = new Kamen(rand.Next()%6+1);
+                                k.Pozicija = new Vector2((float)(rand.NextDouble() * 50 + 50), (float)(rand.NextDouble() * 50 + 50));
+                                k.Velicina *= (float)(rand.NextDouble() * 0.5 + 0.5);
+                                k.Rotacija = (float)(rand.NextDouble() * Math.PI * 2);
+                                slicice.Add(k);
+                            }
+                        }
+                        
                     }
-
-                    //stavljamo ostatak terena
                     if (tip == TipRegije.SNIJEG)
                     {
                         Snijeg b;
@@ -339,6 +364,11 @@ namespace BoboTransporter.Mapa
         public static bool jeCestaIliCilj(TipRegije tip2)
         {
             return (jeCesta(tip2) || tip2==TipRegije.CILJ);
+        }
+
+        public static bool jeProhodnaCestaIliCilj(TipRegije tip2)
+        {
+            return (jeProhodnaCesta(tip2) || tip2 == TipRegije.CILJ);
         }
 
         public void LoadContent(ContentManager theContentManager)

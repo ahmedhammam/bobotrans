@@ -29,6 +29,24 @@ namespace BoboTransporter.Mapa
                 {
                     postaviPolja(mapa.Blok[i,j],(i-4)*4,(j-4)*4);
                 }
+            /*for (int i = 0; i < (mapa.Sirina - 8) * 4; i++)
+                polje[i, 0] = polje[i, (mapa.Visina - 8) * 4 - 1] = 1;
+            for (int i = 0; i < (mapa.Visina - 8) * 4; i++)
+                polje[0,i] = polje[(mapa.Sirina - 8) * 4 - 1,i] = 1;*/
+            
+            /*for (int j = 0; j < (mapa.Visina - 8) * 4; j++)
+            {
+                if (j % 4 == 0) Console.WriteLine();
+
+                for (int i = 0; i < (mapa.Sirina - 8) * 4; i++)
+                {
+                    if (i % 4 == 0) Console.Write(' ');
+                    if (polje[i, j] == 0) Console.Write('-');
+                    else if (polje[i, j] == 1) Console.Write('R');
+                    else if (polje[i, j] == -1) Console.Write('L');
+                }
+                Console.WriteLine();
+            }*/
         }
 
         private void postaviPolja(Regija regija, int pX, int pY)
