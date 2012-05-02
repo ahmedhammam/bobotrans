@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DesktopAplikacija.Serviser;
 using DesktopAplikacija.Poruke;
+using DesktopAplikacija.RadnikZaSalterom;
 
 namespace DesktopAplikacija
 {
@@ -18,7 +19,7 @@ namespace DesktopAplikacija
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new aplikacijaSalter());
         }
     }
 }

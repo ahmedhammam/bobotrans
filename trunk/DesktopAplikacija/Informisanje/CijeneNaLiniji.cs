@@ -48,5 +48,16 @@ namespace DesktopAplikacija.Informisanje
         {
             Close();
         }
+
+        private void CijeneNaLiniji_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InformisanjeVoznje iv = new InformisanjeVoznje(odabranaLinija);
+            iv.Show();
+        }
     }
 }

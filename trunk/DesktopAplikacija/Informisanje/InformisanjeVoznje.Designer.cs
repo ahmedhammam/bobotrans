@@ -30,14 +30,14 @@
         {
             this.lblSifraLinije = new System.Windows.Forms.Label();
             this.dgvVremena = new System.Windows.Forms.DataGridView();
+            this.colVrijemeDolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVrijemePolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbLinija = new System.Windows.Forms.GroupBox();
             this.lblBrojVoznji = new System.Windows.Forms.Label();
             this.cbVoznje = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrikazi = new System.Windows.Forms.Button();
             this.btnIzadji = new System.Windows.Forms.Button();
-            this.colVrijemeDolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colVrijemePolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVremena)).BeginInit();
             this.gbLinija.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,20 @@
             this.dgvVremena.Size = new System.Drawing.Size(322, 166);
             this.dgvVremena.TabIndex = 2;
             // 
+            // colVrijemeDolaska
+            // 
+            this.colVrijemeDolaska.HeaderText = "Vrijeme dolaska";
+            this.colVrijemeDolaska.Name = "colVrijemeDolaska";
+            this.colVrijemeDolaska.ReadOnly = true;
+            this.colVrijemeDolaska.Width = 69;
+            // 
+            // colVrijemePolaska
+            // 
+            this.colVrijemePolaska.HeaderText = "Vrijeme polaska";
+            this.colVrijemePolaska.Name = "colVrijemePolaska";
+            this.colVrijemePolaska.ReadOnly = true;
+            this.colVrijemePolaska.Width = 69;
+            // 
             // gbLinija
             // 
             this.gbLinija.Controls.Add(this.lblBrojVoznji);
@@ -96,6 +110,7 @@
             this.cbVoznje.Name = "cbVoznje";
             this.cbVoznje.Size = new System.Drawing.Size(148, 21);
             this.cbVoznje.TabIndex = 4;
+            this.cbVoznje.SelectedIndexChanged += new System.EventHandler(this.cbVoznje_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -128,20 +143,6 @@
             this.btnIzadji.UseVisualStyleBackColor = true;
             this.btnIzadji.Click += new System.EventHandler(this.btnIzadji_Click);
             // 
-            // colVrijemeDolaska
-            // 
-            this.colVrijemeDolaska.HeaderText = "Vrijeme dolaska";
-            this.colVrijemeDolaska.Name = "colVrijemeDolaska";
-            this.colVrijemeDolaska.ReadOnly = true;
-            this.colVrijemeDolaska.Width = 69;
-            // 
-            // colVrijemePolaska
-            // 
-            this.colVrijemePolaska.HeaderText = "Vrijeme polaska";
-            this.colVrijemePolaska.Name = "colVrijemePolaska";
-            this.colVrijemePolaska.ReadOnly = true;
-            this.colVrijemePolaska.Width = 69;
-            // 
             // InformisanjeVoznje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +159,7 @@
             this.Name = "InformisanjeVoznje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informisanje o vožnji";
+            this.Load += new System.EventHandler(this.InformisanjeVoznje_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVremena)).EndInit();
             this.gbLinija.ResumeLayout(false);
             this.gbLinija.PerformLayout();

@@ -65,3 +65,5 @@ C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\D
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Informisanje.IzvodIzRedaVoznje.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Informisanje.NajjeftinijiPut.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Poruke.NovaPoruka.resources
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.aplikacijaSalter.resources
+C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.PodaciOAutobusu.resources

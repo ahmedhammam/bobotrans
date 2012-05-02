@@ -124,6 +124,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadnikZaSalterom\aplikacijaSalter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadnikZaSalterom\aplikacijaSalter.Designer.cs">
+      <DependentUpon>aplikacijaSalter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadnikZaSalterom\Eniteti.cs" />
+    <Compile Include="RadnikZaSalterom\Linije.cs" />
+    <Compile Include="RadnikZaSalterom\PodaciOAutobusu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadnikZaSalterom\PodaciOAutobusu.Designer.cs">
+      <DependentUpon>PodaciOAutobusu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Serviser\IzmijeniPodatke.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +204,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RadnikZaSalterom\aplikacijaSalter.resx">
+      <DependentUpon>aplikacijaSalter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikZaSalterom\PodaciOAutobusu.resx">
+      <DependentUpon>PodaciOAutobusu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Serviser\IzmijeniPodatke.resx">
       <DependentUpon>IzmijeniPodatke.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,7 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menadzer\" />
-    <Folder Include="RadnikZaSalterom\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">

@@ -59,5 +59,15 @@ namespace DesktopAplikacija.Informisanje
             rezMinute %= 60;
         }
 
+        private void cbVoznje_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InformisanjeVoznje_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
