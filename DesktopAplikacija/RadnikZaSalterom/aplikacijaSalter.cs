@@ -22,7 +22,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
             InitializeComponent();
             try
             {
-                DAL.DAL.VoznjaDAO vd = d.getDAO.getVoznjaDao();
+                d.kreirajKonekciju();
+                vd = d.getDAO.getVoznjaDAO();
                 voznje = vd.GetAll();
 
             }
@@ -74,20 +75,25 @@ namespace DesktopAplikacija.RadnikZaSalterom
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "")
+            int brojac = 0;
+            foreach (DAL.Entiteti.Linija al in kl.Linije)
             {
-                MessageBox.Show("Niste selektovali liniju!"); return;
+                if (al.NazivLinije != comboBox1.Text) brojac++;
+            }
+            if (comboBox1.Text=="")
+            {
+                MessageBox.Show("Niste selektovali liniju!");
+            }
+            else if (brojac == kl.Linije.Count)
+            {
+                MessageBox.Show("Upisana linija ne postoji !"); return;
             }
             else if(comboBox1.Text!="")
             {
-               
                     DAL.Entiteti.Linija odabranaLinija = (DAL.Entiteti.Linija)comboBox1.SelectedItem;
                     CijeneNaLiniji cl = new CijeneNaLiniji(odabranaLinija);
                     cl.Show();
-                
-              
             }
-
         }
         private void informisanjeOLinijiToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -140,7 +140,7 @@ namespace DAL.Entiteti
         public override string ToString()
         {
             string naziv = NazivLinije;
-            return " "+naziv;
+            return naziv;
         }
     }
 }
