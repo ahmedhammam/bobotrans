@@ -87,6 +87,7 @@
             this.novaPorukaToolStripMenuItem.Name = "novaPorukaToolStripMenuItem";
             this.novaPorukaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.novaPorukaToolStripMenuItem.Text = "Nova Poruka";
+            this.novaPorukaToolStripMenuItem.Click += new System.EventHandler(this.novaPorukaToolStripMenuItem_Click);
             // 
             // izađiToolStripMenuItem
             // 
@@ -107,6 +108,7 @@
             this.izadiToolStripMenuItem.Name = "izadiToolStripMenuItem";
             this.izadiToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.izadiToolStripMenuItem.Text = "Izadi";
+            this.izadiToolStripMenuItem.Click += new System.EventHandler(this.izadiToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
