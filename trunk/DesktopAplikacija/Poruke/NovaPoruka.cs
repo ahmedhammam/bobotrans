@@ -15,7 +15,7 @@ namespace DesktopAplikacija.Poruke
     {
         DAL.DAL d = DAL.DAL.Instanca;
         DAL.Entiteti.Korisnik ks;
-        List<DAL.Entiteti.Korisnik> svi;
+        List<DAL.Entiteti.Korisnik> svi=new List<DAL.Entiteti.Korisnik>();
         List<DAL.Entiteti.Korisnik> salterasi = new List<DAL.Entiteti.Korisnik>();
         List<DAL.Entiteti.Korisnik> menadzeri = new List<DAL.Entiteti.Korisnik>();
         List<DAL.Entiteti.Korisnik> serviseri = new List<DAL.Entiteti.Korisnik>();
@@ -24,7 +24,8 @@ namespace DesktopAplikacija.Poruke
         
         public NovaPoruka(DAL.Entiteti.Korisnik k,List<DAL.Entiteti.Korisnik> kor)
         {
-            svi = kor;
+            foreach (DAL.Entiteti.Korisnik p in svi)
+                comboBox1.DataSource = svi;
             ks = k;
             
             foreach (DAL.Entiteti.Korisnik korisnik in svi)
@@ -71,8 +72,7 @@ namespace DesktopAplikacija.Poruke
         }
         private void NovaPoruka_Load(object sender, EventArgs e)
         {
-            foreach (DAL.Entiteti.Korisnik k in svi)
-                comboBox1.DataSource = svi;
+            
         }
 
         private void b_posalji_Click(object sender, EventArgs e)

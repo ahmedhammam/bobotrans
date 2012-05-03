@@ -19,7 +19,7 @@ namespace DesktopAplikacija
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new aplikacijaSalter());
+            Application.Run(new Login());
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DesktopAplikacija.Serviser.Entiteti;
+using DesktopAplikacija.Poruke;
 
 namespace DesktopAplikacija.Serviser
 {
@@ -188,6 +189,18 @@ namespace DesktopAplikacija.Serviser
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            aplikacijaPoruke ap = new aplikacijaPoruke(logovaniKorisnik);
+            ap.Show();
+        }
+
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
+            aplikacijaPoruke a = new aplikacijaPoruke(logovaniKorisnik);
+            a.Show();
         }
     }
 
