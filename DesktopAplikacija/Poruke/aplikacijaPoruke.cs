@@ -21,6 +21,9 @@ namespace DesktopAplikacija.Poruke
         private List<DAL.Entiteti.Poruka> poslane;
         private List<DAL.Entiteti.Korisnik> korisnici;
         private DAL.Entiteti.Korisnik logovani;
+      
+        bool inbox = true;
+        
 
         public aplikacijaPoruke(DAL.Entiteti.Korisnik k)
         {
@@ -41,7 +44,10 @@ namespace DesktopAplikacija.Poruke
                 primljene = pd.getByExample("idPrimaoca", k.SifraKorisnika.ToString());
                 poslane = pd.getByExample("idPosiljaoca", k.SifraKorisnika.ToString());
                 korisnici = kd.GetAll();
+                
                 logovani = k;
+                foreach (DAL.Entiteti.Korisnik p in korisnici)
+                    toolStripComboBox1.Items.Add(p.ImeIPrezime);
             }
             catch (Exception e)
             {
@@ -66,12 +72,15 @@ namespace DesktopAplikacija.Poruke
 
         private void aplikacijaPoruke_Load(object sender, EventArgs e)
         {
-            foreach (DAL.Entiteti.Korisnik k in korisnici)
-                toolStripComboBox1.Items.Add(k.ImeIPrezime);
+            
         }
 
         private void b_Izadi_Click(object sender, EventArgs e)
         {
+        
+        
+
+
             d.terminirajKonekciju();
             Close();
         }
@@ -108,12 +117,16 @@ namespace DesktopAplikacija.Poruke
             {
                 
                 a = (int)o.Tag;
+                
+
+             
                 MessageBox.Show(Convert.ToString(a));
                 if (pom)
                 {
                     if (a > brojac)
                         a--;
                 }
+                pd.delete(primljene[a]);
                 primljene.RemoveAt(a);
                 MessageBox.Show(Convert.ToString(primljene.Count));
                 foreach (DAL.Entiteti.Poruka p in primljene)
@@ -156,6 +169,7 @@ namespace DesktopAplikacija.Poruke
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            inbox = false;
             panel1.Controls.Clear();
             if (richTextBox1.Enabled)
             {
@@ -206,19 +220,32 @@ namespace DesktopAplikacija.Poruke
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            foreach (CheckBox c in panel1.Controls)
-             {
-                 //cekiratii sve
+            inbox = true;
+            int x = 0, y = 0, i = 0;
+            panel1.Controls.Clear();
+
+            foreach (DAL.Entiteti.Poruka p in primljene)
+            {
+                System.Windows.Forms.CheckBox l = new System.Windows.Forms.CheckBox();
+                l.AutoSize = true;
+                l.Location = new Point(10 + x, 10 + y);
+                l.TabIndex = 0;
+                l.Tag = i++;
+                l.Text = p.ImeIDatumPrimljenih();
+                this.panel1.Controls.Add(l);
+                y = y + 20;
             }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            inbox = true;
+            
             if (toolStripComboBox1.Text == "")
                 MessageBox.Show("Izaberite radnika");
             else
             {
+                panel1.Controls.Clear();
                 int x = 0, y = 0, i = 0;
                 foreach(DAL.Entiteti.Poruka p in primljene)
                 {
@@ -249,7 +276,7 @@ namespace DesktopAplikacija.Poruke
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            
+            inbox = false;
             if (toolStripComboBox1.Text == "")
                 MessageBox.Show("Izaberite radnika");
             else
@@ -287,6 +314,52 @@ namespace DesktopAplikacija.Poruke
         {
             NovaPoruka np = new NovaPoruka(logovani,korisnici);
             np.Show();
+        }
+
+        private void izađiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            primljene.Clear();
+            if (inbox)
+                panel1.Controls.Clear();
+            
+            
+
+        }
+
+        private void izbrisiPoslaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            poslane.Clear();
+            if(!inbox)
+            panel1.Controls.Clear();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            
+            
+                DialogResult dres;
+                dres = MessageBox.Show("Jeste li sigurni da želite izbrisati sve poruke ?", "provjera", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dres == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (inbox)
+                    {
+                        primljene.Clear();
+
+                        panel1.Controls.Clear();
+                    }
+                    else
+                    {
+                        poslane.Clear();
+
+                        panel1.Controls.Clear();
+                    }
+
+                }
+
+            
+            
+
+
         }
         
             
