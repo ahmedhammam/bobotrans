@@ -25,7 +25,7 @@ namespace DesktopAplikacija.Poruke
         public NovaPoruka(DAL.Entiteti.Korisnik k,List<DAL.Entiteti.Korisnik> kor)
         {
             foreach (DAL.Entiteti.Korisnik p in svi)
-                comboBox1.DataSource = svi;
+                comboBox1.Items.Add(p);
             ks = k;
             
             foreach (DAL.Entiteti.Korisnik korisnik in svi)

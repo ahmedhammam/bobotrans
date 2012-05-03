@@ -318,9 +318,23 @@ namespace DesktopAplikacija.Poruke
 
         private void izađiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            primljene.Clear();
-            if (inbox)
-                panel1.Controls.Clear();
+            DialogResult dres;
+            dres = MessageBox.Show("Jeste li sigurni da želite izbrisati sve poruke ?", "provjera", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dres == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (inbox)
+                    panel1.Controls.Clear();
+                
+                    primljene.Clear();
+
+                    
+                    foreach (DAL.Entiteti.Poruka p in primljene)
+                        pd.delete(p);
+                
+                
+
+            }
+
             
             
 
@@ -328,9 +342,26 @@ namespace DesktopAplikacija.Poruke
 
         private void izbrisiPoslaneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            poslane.Clear();
-            if(!inbox)
-            panel1.Controls.Clear();
+            DialogResult dres;
+            dres = MessageBox.Show("Jeste li sigurni da želite izbrisati sve poruke ?", "provjera", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dres == System.Windows.Forms.DialogResult.Yes)
+            {
+                
+                
+                
+                
+                    poslane.Clear();
+
+                if(!inbox)
+                    panel1.Controls.Clear();
+                    foreach (DAL.Entiteti.Poruka p in poslane)
+                        pd.delete(p);
+                
+
+            }
+
+            
+            
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
@@ -346,12 +377,17 @@ namespace DesktopAplikacija.Poruke
                         primljene.Clear();
 
                         panel1.Controls.Clear();
+                        foreach (DAL.Entiteti.Poruka p in primljene)
+                            pd.delete(p);
                     }
                     else
                     {
                         poslane.Clear();
+                       
 
                         panel1.Controls.Clear();
+                        foreach (DAL.Entiteti.Poruka p in poslane)
+                            pd.delete(p);
                     }
 
                 }
@@ -360,6 +396,18 @@ namespace DesktopAplikacija.Poruke
             
 
 
+        }
+
+        private void novaPorukaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NovaPoruka np = new NovaPoruka(logovani, korisnici);
+            np.Show();
+        }
+
+        private void izadiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            d.terminirajKonekciju();
+            Close();
         }
         
             
