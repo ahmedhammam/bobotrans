@@ -34,8 +34,6 @@ namespace DesktopAplikacija.Serviser
         }
         public ServiserAplikacija(DAL.Entiteti.Korisnik k, Login l)
         {
-            Poruke.aplikacijaPoruke ap = new aplikacijaPoruke(k);
-            ap.Show();
             login = l;
             l.Visible = false;
             InitializeComponent();
