@@ -104,25 +104,32 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Location = new System.Drawing.Point(3, 118);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(309, 132);
+            this.groupBox2.Size = new System.Drawing.Size(559, 240);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Poruka";
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(0, 19);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(303, 107);
+            this.richTextBox1.Size = new System.Drawing.Size(553, 215);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // b_posalji
             // 
-            this.b_posalji.Location = new System.Drawing.Point(159, 257);
+            this.b_posalji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_posalji.Location = new System.Drawing.Point(409, 365);
             this.b_posalji.Name = "b_posalji";
             this.b_posalji.Size = new System.Drawing.Size(75, 23);
             this.b_posalji.TabIndex = 2;
@@ -132,7 +139,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(237, 257);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(487, 365);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -144,11 +152,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 292);
+            this.ClientSize = new System.Drawing.Size(574, 400);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.b_posalji);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(9999, 9999);
+            this.MinimumSize = new System.Drawing.Size(340, 330);
             this.Name = "NovaPoruka";
             this.Text = "Nova poruka";
             this.groupBox1.ResumeLayout(false);

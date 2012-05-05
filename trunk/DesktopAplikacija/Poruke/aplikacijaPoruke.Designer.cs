@@ -226,6 +226,8 @@
             // rtbTekst
             // 
             this.rtbTekst.AcceptsTab = true;
+            this.rtbTekst.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.rtbTekst.Location = new System.Drawing.Point(18, 266);
             this.rtbTekst.Name = "rtbTekst";
             this.rtbTekst.Size = new System.Drawing.Size(426, 155);
@@ -296,6 +298,8 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(478, 900000);
+            this.MinimumSize = new System.Drawing.Size(478, 500);
             this.Name = "aplikacijaPoruke";
             this.Text = "aplikacijaPoruke";
             this.menuStrip1.ResumeLayout(false);
