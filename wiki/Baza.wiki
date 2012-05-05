@@ -157,6 +157,7 @@
 
 - idKupca (int): foreignKey na KupciKarti.id: on update:CASCADE, on DELETE: RESTRICT
 
+- vrijemeIDatumKupovine (DateTime)
 
 ===ZakupiAutobusa:===
 
