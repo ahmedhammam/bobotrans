@@ -75,18 +75,5 @@ namespace DAL.Entiteti
             return primalac + "        " + Convert.ToString(vrijemeSlanja);
         }
 
-        public long PorukeSifree()
-        {
-            return sifraPoruke;
-        }
-        public  string ToString() 
-        {
-            return posiljaoc + "     " + Convert.ToString(vrijemeSlanja);
-    }
-        
-
-
-
-
     }
 }

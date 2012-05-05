@@ -31,33 +31,32 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaPorukaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izađiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izbrisiPoslaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izadiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.primljeneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.poslaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbNova = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbPoslane = new System.Windows.Forms.ToolStripButton();
+            this.tsbPrimljene = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.tscbKorisnici = new System.Windows.Forms.ToolStripComboBox();
+            this.tsbPretragaPoImenu = new System.Windows.Forms.ToolStripButton();
+            this.tsbPretragaPoslanih = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tsbIzbrisi = new System.Windows.Forms.ToolStripButton();
+            this.rtbTekst = new System.Windows.Forms.RichTextBox();
             this.b_Izadi = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lvPoruke = new System.Windows.Forms.ListView();
+            this.colKorisnik = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colVrijeme = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTekst = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gbPoruke = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbPoruke.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -67,7 +66,7 @@
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(359, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(462, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,8 +74,6 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novaPorukaToolStripMenuItem,
-            this.izađiToolStripMenuItem,
-            this.izbrisiPoslaneToolStripMenuItem,
             this.izadiToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -89,25 +86,12 @@
             this.novaPorukaToolStripMenuItem.Text = "Nova Poruka";
             this.novaPorukaToolStripMenuItem.Click += new System.EventHandler(this.novaPorukaToolStripMenuItem_Click);
             // 
-            // izađiToolStripMenuItem
-            // 
-            this.izađiToolStripMenuItem.Name = "izađiToolStripMenuItem";
-            this.izađiToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.izađiToolStripMenuItem.Text = "Izbrisi primljene";
-            this.izađiToolStripMenuItem.Click += new System.EventHandler(this.izađiToolStripMenuItem_Click);
-            // 
-            // izbrisiPoslaneToolStripMenuItem
-            // 
-            this.izbrisiPoslaneToolStripMenuItem.Name = "izbrisiPoslaneToolStripMenuItem";
-            this.izbrisiPoslaneToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.izbrisiPoslaneToolStripMenuItem.Text = "Izbrisi poslane";
-            this.izbrisiPoslaneToolStripMenuItem.Click += new System.EventHandler(this.izbrisiPoslaneToolStripMenuItem_Click);
-            // 
             // izadiToolStripMenuItem
             // 
             this.izadiToolStripMenuItem.Name = "izadiToolStripMenuItem";
             this.izadiToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.izadiToolStripMenuItem.Text = "Izadi";
+            this.izadiToolStripMenuItem.Text = "Izađi";
+            this.izadiToolStripMenuItem.Click += new System.EventHandler(this.izadiToolStripMenuItem_Click);
             this.izadiToolStripMenuItem.Click += new System.EventHandler(this.izadiToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
@@ -118,75 +102,75 @@
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // primljeneToolStripMenuItem
             // 
             this.primljeneToolStripMenuItem.Name = "primljeneToolStripMenuItem";
             this.primljeneToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.primljeneToolStripMenuItem.Text = "Primljene";
-            this.primljeneToolStripMenuItem.Click += new System.EventHandler(this.primljeneToolStripMenuItem_Click);
+            this.primljeneToolStripMenuItem.Click += new System.EventHandler(this.primljeneToolStripMenuItem_Click_1);
             // 
             // poslaneToolStripMenuItem
             // 
             this.poslaneToolStripMenuItem.Name = "poslaneToolStripMenuItem";
             this.poslaneToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.poslaneToolStripMenuItem.Text = "Poslane";
+            this.poslaneToolStripMenuItem.Click += new System.EventHandler(this.poslaneToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.tsbNova,
             this.toolStripSeparator1,
-            this.toolStripButton2,
-            this.toolStripButton3,
+            this.tsbPoslane,
+            this.tsbPrimljene,
             this.toolStripSeparator2,
             this.toolStripLabel1,
-            this.toolStripComboBox1,
-            this.toolStripButton4,
-            this.toolStripButton5,
+            this.tscbKorisnici,
+            this.tsbPretragaPoImenu,
+            this.tsbPretragaPoslanih,
             this.toolStripSeparator3,
-            this.toolStripButton6});
+            this.tsbIzbrisi});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(359, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(462, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbNova
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::DesktopAplikacija.Properties.Resources.email_new;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Nova poruka";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.tsbNova.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNova.Image = global::DesktopAplikacija.Properties.Resources.email_new;
+            this.tsbNova.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNova.Name = "tsbNova";
+            this.tsbNova.Size = new System.Drawing.Size(23, 22);
+            this.tsbNova.Text = "Nova poruka";
+            this.tsbNova.Click += new System.EventHandler(this.tsbNova_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton2
+            // tsbPoslane
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::DesktopAplikacija.Properties.Resources.stock_outbox;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "Pročitaj poslane";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.tsbPoslane.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPoslane.Image = global::DesktopAplikacija.Properties.Resources.stock_outbox;
+            this.tsbPoslane.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPoslane.Name = "tsbPoslane";
+            this.tsbPoslane.Size = new System.Drawing.Size(23, 22);
+            this.tsbPoslane.Text = "Poslane poruke";
+            this.tsbPoslane.Click += new System.EventHandler(this.tsbPoslane_Click);
             // 
-            // toolStripButton3
+            // tsbPrimljene
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::DesktopAplikacija.Properties.Resources.stock_inbox;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "Procitaj primljene";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.tsbPrimljene.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPrimljene.Image = global::DesktopAplikacija.Properties.Resources.stock_inbox;
+            this.tsbPrimljene.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPrimljene.Name = "tsbPrimljene";
+            this.tsbPrimljene.Size = new System.Drawing.Size(23, 22);
+            this.tsbPrimljene.Text = "Primljene poruke";
+            this.tsbPrimljene.Click += new System.EventHandler(this.tsbPrimljene_Click);
             // 
             // toolStripSeparator2
             // 
@@ -199,67 +183,60 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel1.Text = "Traži";
             // 
-            // toolStripComboBox1
+            // tscbKorisnici
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
-            this.toolStripComboBox1.Sorted = true;
+            this.tscbKorisnici.Name = "tscbKorisnici";
+            this.tscbKorisnici.Size = new System.Drawing.Size(121, 25);
+            this.tscbKorisnici.Sorted = true;
             // 
-            // toolStripButton4
+            // tsbPretragaPoImenu
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::DesktopAplikacija.Properties.Resources.outbox;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "Primljene po imenu";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.tsbPretragaPoImenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPretragaPoImenu.Image = global::DesktopAplikacija.Properties.Resources.outbox;
+            this.tsbPretragaPoImenu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPretragaPoImenu.Name = "tsbPretragaPoImenu";
+            this.tsbPretragaPoImenu.Size = new System.Drawing.Size(23, 22);
+            this.tsbPretragaPoImenu.Text = "Pretrazi primljene po imenu";
+            this.tsbPretragaPoImenu.Click += new System.EventHandler(this.tsbPretragaPoImenu_Click);
             // 
-            // toolStripButton5
+            // tsbPretragaPoslanih
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = global::DesktopAplikacija.Properties.Resources.stock_mail_receive;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "Poslane po imenu";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.tsbPretragaPoslanih.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPretragaPoslanih.Image = global::DesktopAplikacija.Properties.Resources.stock_mail_receive;
+            this.tsbPretragaPoslanih.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPretragaPoslanih.Name = "tsbPretragaPoslanih";
+            this.tsbPretragaPoslanih.Size = new System.Drawing.Size(23, 22);
+            this.tsbPretragaPoslanih.Text = "Pretrazi poslane po imenu";
+            this.tsbPretragaPoslanih.Click += new System.EventHandler(this.tsbPretragaPoslanih_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton6
+            // tsbIzbrisi
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = global::DesktopAplikacija.Properties.Resources.mail_delete;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "Izbrisi sve";
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            this.tsbIzbrisi.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbIzbrisi.Image = global::DesktopAplikacija.Properties.Resources.mail_delete;
+            this.tsbIzbrisi.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbIzbrisi.Name = "tsbIzbrisi";
+            this.tsbIzbrisi.Size = new System.Drawing.Size(23, 22);
+            this.tsbIzbrisi.Text = "Izbrisi oznaceno";
+            this.tsbIzbrisi.Click += new System.EventHandler(this.tsbIzbrisi_Click);
             // 
-            // panel1
+            // rtbTekst
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(6, 16);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 121);
-            this.panel1.TabIndex = 2;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(8, 211);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(339, 100);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.rtbTekst.AcceptsTab = true;
+            this.rtbTekst.Location = new System.Drawing.Point(18, 266);
+            this.rtbTekst.Name = "rtbTekst";
+            this.rtbTekst.Size = new System.Drawing.Size(426, 155);
+            this.rtbTekst.TabIndex = 3;
+            this.rtbTekst.Text = "";
             // 
             // b_Izadi
             // 
-            this.b_Izadi.Location = new System.Drawing.Point(264, 317);
+            this.b_Izadi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_Izadi.Location = new System.Drawing.Point(378, 427);
             this.b_Izadi.Name = "b_Izadi";
             this.b_Izadi.Size = new System.Drawing.Size(75, 23);
             this.b_Izadi.TabIndex = 4;
@@ -267,57 +244,66 @@
             this.b_Izadi.UseVisualStyleBackColor = true;
             this.b_Izadi.Click += new System.EventHandler(this.b_Izadi_Click);
             // 
-            // button1
+            // lvPoruke
             // 
-            this.button1.Location = new System.Drawing.Point(264, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Čitaj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lvPoruke.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.lvPoruke.CheckBoxes = true;
+            this.lvPoruke.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colKorisnik,
+            this.colVrijeme,
+            this.colTekst});
+            this.lvPoruke.Location = new System.Drawing.Point(6, 19);
+            this.lvPoruke.Name = "lvPoruke";
+            this.lvPoruke.Size = new System.Drawing.Size(426, 162);
+            this.lvPoruke.TabIndex = 9;
+            this.lvPoruke.UseCompatibleStateImageBehavior = false;
+            this.lvPoruke.View = System.Windows.Forms.View.Details;
+            this.lvPoruke.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listView_ColumnWidthChanging);
+            this.lvPoruke.SelectedIndexChanged += new System.EventHandler(this.lvPoruke_SelectedIndexChanged);
             // 
-            // button2
+            // colKorisnik
             // 
-            this.button2.Location = new System.Drawing.Point(264, 132);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Izbriši";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.colKorisnik.Text = "Korisnik";
+            this.colKorisnik.Width = 159;
             // 
-            // groupBox1
+            // colVrijeme
             // 
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 59);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(247, 146);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Poruke>";
+            this.colVrijeme.Text = "Vrijeme slanja";
+            this.colVrijeme.Width = 87;
+            // 
+            // colTekst
+            // 
+            this.colTekst.Text = "Tekst";
+            this.colTekst.Width = 176;
+            // 
+            // gbPoruke
+            // 
+            this.gbPoruke.Controls.Add(this.lvPoruke);
+            this.gbPoruke.Location = new System.Drawing.Point(12, 67);
+            this.gbPoruke.Name = "gbPoruke";
+            this.gbPoruke.Size = new System.Drawing.Size(441, 193);
+            this.gbPoruke.TabIndex = 10;
+            this.gbPoruke.TabStop = false;
+            this.gbPoruke.Text = "groupBox1";
             // 
             // aplikacijaPoruke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 352);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(462, 462);
+            this.Controls.Add(this.gbPoruke);
             this.Controls.Add(this.b_Izadi);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbTekst);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "aplikacijaPoruke";
             this.Text = "aplikacijaPoruke";
-            this.Load += new System.EventHandler(this.aplikacijaPoruke_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gbPoruke.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,30 +313,29 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbNova;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsbPoslane;
+        private System.Windows.Forms.ToolStripButton tsbPrimljene;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ToolStripComboBox tscbKorisnici;
+        private System.Windows.Forms.ToolStripButton tsbPretragaPoImenu;
+        private System.Windows.Forms.RichTextBox rtbTekst;
         private System.Windows.Forms.Button b_Izadi;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novaPorukaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izađiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem primljeneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem poslaneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ToolStripMenuItem izbrisiPoslaneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tsbPretragaPoslanih;
         private System.Windows.Forms.ToolStripMenuItem izadiToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton tsbIzbrisi;
+        private System.Windows.Forms.ListView lvPoruke;
+        private System.Windows.Forms.ColumnHeader colKorisnik;
+        private System.Windows.Forms.ColumnHeader colVrijeme;
+        private System.Windows.Forms.ColumnHeader colTekst;
+        private System.Windows.Forms.GroupBox gbPoruke;
     }
 }
