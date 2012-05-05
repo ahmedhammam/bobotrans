@@ -30,8 +30,8 @@ namespace DAL
 
                     for (int i = 0; i < entity.Sjedista.Count; i++)
                     {
-                        c = new MySqlCommand(String.Format("INSERT INTO karte VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}');"
-                         , entity.Voznja.SifraVoznje, entity.PocetnaStanica.SifraStanice, entity.KrajnjaStanica.SifraStanice, entity.Sjedista[i], entity.Cijene[i].ToString().Replace(',','.'), idKupca)
+                        c = new MySqlCommand(String.Format("INSERT INTO karte VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}','{6}');"
+                         , entity.Voznja.SifraVoznje, entity.PocetnaStanica.SifraStanice, entity.KrajnjaStanica.SifraStanice, entity.Sjedista[i], entity.Cijene[i].ToString().Replace(',', '.'), idKupca, entity.DatumIVrijemeKupovine.ToString("yyyy-MM-dd HH:mm"))
                          , con);
                         c.ExecuteNonQuery();
                     }
@@ -109,6 +109,7 @@ namespace DAL
                 int voznjaId=0;
                 List<int> sjedista = new List<int>();
                 List<double> cijene = new List<double>();
+                DateTime datumIVrijemeKupovine;
 
                 try
                 {
@@ -119,7 +120,7 @@ namespace DAL
 
                     popust = ocitajPopust(tip);
 
-                    ocitajKarte(id, ref pocetnaStanicaId, ref krajnjaStanicaId, ref voznjaId, sjedista, cijene);
+                    ocitajKarte(id, ref pocetnaStanicaId, ref krajnjaStanicaId, ref voznjaId, sjedista, cijene, out datumIVrijemeKupovine);
 
                     pocetnaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(pocetnaStanicaId);
                     krajnjaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(krajnjaStanicaId);
@@ -135,14 +136,15 @@ namespace DAL
                     throw e;
                 }
 
-                return new KupacSaPopustom((int)id, ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene, popust, "", tip);
+                return new KupacSaPopustom((int)id, ime, pocetnaStanica, krajnjaStanica, voznja, sjedista, cijene, datumIVrijemeKupovine, popust, "", tip);
             }
 
-            private void ocitajKarte(long id, ref int pocetnaStanicaId, ref int krajnjaStanicaId, ref int voznjaId, List<int> sjedista, List<double> cijene)
+            private void ocitajKarte(long id, ref int pocetnaStanicaId, ref int krajnjaStanicaId, ref int voznjaId, List<int> sjedista, List<double> cijene, out DateTime datumIVrijemeKupovine)
             {
                 pocetnaStanicaId = 0;
                 krajnjaStanicaId = 0;
                 voznjaId = 0;
+                datumIVrijemeKupovine = new DateTime(2000, 1, 1, 12, 0, 0);
                 c = new MySqlCommand(string.Format("SELECT * FROM karte WHERE idKupca='{0}';", id), con);
                 MySqlDataReader r = c.ExecuteReader();
                 while (r.Read())
@@ -152,6 +154,7 @@ namespace DAL
                     voznjaId = r.GetInt32("idVoznje");
                     sjedista.Add(r.GetInt32("idSjedista"));
                     cijene.Add(r.GetDouble("cijena"));
+                    datumIVrijemeKupovine = r.GetDateTime("datumIVrijemeKupovine");
                 }
 
                 r.Close();
