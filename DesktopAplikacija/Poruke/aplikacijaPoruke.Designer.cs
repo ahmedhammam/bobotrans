@@ -82,16 +82,15 @@
             // novaPorukaToolStripMenuItem
             // 
             this.novaPorukaToolStripMenuItem.Name = "novaPorukaToolStripMenuItem";
-            this.novaPorukaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.novaPorukaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.novaPorukaToolStripMenuItem.Text = "Nova Poruka";
             this.novaPorukaToolStripMenuItem.Click += new System.EventHandler(this.novaPorukaToolStripMenuItem_Click);
             // 
             // izadiToolStripMenuItem
             // 
             this.izadiToolStripMenuItem.Name = "izadiToolStripMenuItem";
-            this.izadiToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.izadiToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.izadiToolStripMenuItem.Text = "Izađi";
-            this.izadiToolStripMenuItem.Click += new System.EventHandler(this.izadiToolStripMenuItem_Click);
             this.izadiToolStripMenuItem.Click += new System.EventHandler(this.izadiToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
@@ -264,12 +263,12 @@
             // colKorisnik
             // 
             this.colKorisnik.Text = "Korisnik";
-            this.colKorisnik.Width = 159;
+            this.colKorisnik.Width = 143;
             // 
             // colVrijeme
             // 
             this.colVrijeme.Text = "Vrijeme slanja";
-            this.colVrijeme.Width = 87;
+            this.colVrijeme.Width = 103;
             // 
             // colTekst
             // 
