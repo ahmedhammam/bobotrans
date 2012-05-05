@@ -17,6 +17,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
         KolekcijaLinija kl = KolekcijaLinija.Instanca;
         DAL.DAL.VoznjaDAO vd;
         List<DAL.Entiteti.Voznja> voznje;
+
         public aplikacijaSalter()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                 d.kreirajKonekciju();
                 vd = d.getDAO.getVoznjaDAO();
                 voznje = vd.GetAll();
-
+                d.terminirajKonekciju();
             }
             catch (Exception ex)
             {

@@ -19,7 +19,18 @@ namespace DesktopAplikacija
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            //Application.Run(new Login());
+            try
+            {
+                DAL.DAL.Instanca.kreirajKonekciju();
+                Application.Run(new aplikacijaPoruke(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
+                DAL.DAL.Instanca.terminirajKonekciju();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
+
     }
 }

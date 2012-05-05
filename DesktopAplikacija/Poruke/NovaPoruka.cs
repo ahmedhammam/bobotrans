@@ -13,22 +13,24 @@ namespace DesktopAplikacija.Poruke
 {
     public partial class NovaPoruka : Form
     {
-        DAL.DAL d = DAL.DAL.Instanca;
-        DAL.Entiteti.Korisnik ks;
-        List<DAL.Entiteti.Korisnik> svi=new List<DAL.Entiteti.Korisnik>();
-        List<DAL.Entiteti.Korisnik> salterasi = new List<DAL.Entiteti.Korisnik>();
-        List<DAL.Entiteti.Korisnik> menadzeri = new List<DAL.Entiteti.Korisnik>();
-        List<DAL.Entiteti.Korisnik> serviseri = new List<DAL.Entiteti.Korisnik>();
+        private DAL.DAL d = DAL.DAL.Instanca;
+        private DAL.Entiteti.Korisnik logovaniKorisnik;
+        private List<DAL.Entiteti.Korisnik> salterasi = new List<DAL.Entiteti.Korisnik>();
+        private List<DAL.Entiteti.Korisnik> menadzeri = new List<DAL.Entiteti.Korisnik>();
+        private List<DAL.Entiteti.Korisnik> serviseri = new List<DAL.Entiteti.Korisnik>();
+        private DesktopAplikacija.Poruke.aplikacijaPoruke pozvanOd;
+        private Entiteti.KolekcijaKorisnika kk = Entiteti.KolekcijaKorisnika.Instanca;
         
-
         
-        public NovaPoruka(DAL.Entiteti.Korisnik k,List<DAL.Entiteti.Korisnik> kor)
+        public NovaPoruka(DAL.Entiteti.Korisnik k,DesktopAplikacija.Poruke.aplikacijaPoruke ap)
         {
-            foreach (DAL.Entiteti.Korisnik p in svi)
-                comboBox1.Items.Add(p);
-            ks = k;
+            pozvanOd = ap;
+            InitializeComponent();
+            foreach (DAL.Entiteti.Korisnik p in kk.Korisnici)
+                comboBox1.DataSource = kk.Korisnici;
+            logovaniKorisnik = k;
             
-            foreach (DAL.Entiteti.Korisnik korisnik in svi)
+            foreach (DAL.Entiteti.Korisnik korisnik in kk.Korisnici)
             {
                 if (korisnik.Tip == DAL.TipoviPodataka.TipoviKorisnika.MENAGER)
                     menadzeri.Add(korisnik);
@@ -37,7 +39,6 @@ namespace DesktopAplikacija.Poruke
                 else if (korisnik.Tip == DAL.TipoviPodataka.TipoviKorisnika.SERVISER)
                     serviseri.Add(korisnik);
             }
-            InitializeComponent();
             comboBox1.DisplayMember = "imeIPrezime";
         }
 
@@ -46,7 +47,7 @@ namespace DesktopAplikacija.Poruke
             comboBox1.Text = "";
             if (comboBox2.Text == "Svi")
             {
-                comboBox1.DataSource = svi;
+                comboBox1.DataSource = kk.Korisnici;
             }
             if (comboBox2.Text == "Radnik za šalterom")
             {
@@ -67,12 +68,7 @@ namespace DesktopAplikacija.Poruke
         
         private void button2_Click(object sender, EventArgs e)
         {
-            d.terminirajKonekciju();
             Close();
-        }
-        private void NovaPoruka_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void b_posalji_Click(object sender, EventArgs e)
@@ -85,11 +81,13 @@ namespace DesktopAplikacija.Poruke
              {
                  try
                  {
+                     d.kreirajKonekciju();
                      DAL.Entiteti.Korisnik prima = comboBox1.SelectedItem as DAL.Entiteti.Korisnik;
-                     DAL.Entiteti.Poruka poslati = new DAL.Entiteti.Poruka(richTextBox1.Text, ks.Username, prima.Username, DateTime.Now);
+                     DAL.Entiteti.Poruka poslati = new DAL.Entiteti.Poruka(richTextBox1.Text, logovaniKorisnik.Username, prima.Username, DateTime.Now);
                      DAL.DAL.PorukeDAO kd = d.getDAO.getPorukeDAO();
 
                      poslati.SifraPoruke = kd.create(poslati);
+                     pozvanOd.poslanaPoruka(poslati);
                      MessageBox.Show("Poruka je poslana");
                      richTextBox1.Text = "";
                  }

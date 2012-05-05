@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entiteti\KolekcijaAutobusa.cs" />
+    <Compile Include="Entiteti\KolekcijaKorisnika.cs" />
     <Compile Include="Entiteti\KolekcijaLinija.cs" />
     <Compile Include="Entiteti\KolekcijaStanica.cs" />
     <Compile Include="Entiteti\Put.cs" />
