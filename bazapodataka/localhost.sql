@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.10.1
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 02, 2012 at 02:06 AM
+-- Generation Time: May 05, 2012 at 01:23 PM
 -- Server version: 5.5.20
--- PHP Version: 5.3.10
+-- PHP Version: 5.3.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -91,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `karte` (
   `idSjedista` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
   `idKupca` int(11) NOT NULL,
+  `datumIVrijemeKupovine` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idVoznje` (`idVoznje`),
   KEY `idPocetneStanice` (`idPocetneStanice`),
