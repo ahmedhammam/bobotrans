@@ -13,6 +13,13 @@ namespace DAL.Entiteti
         protected Stanica pocetnaStanica;
         protected Stanica krajnjaStanica;
         protected Voznja voznja;
+        protected DateTime datumIVrijemeKupovine;
+
+        public DateTime DatumIVrijemeKupovine
+        {
+            get { return datumIVrijemeKupovine; }
+            set { datumIVrijemeKupovine = value; }
+        }
 
         public Stanica PocetnaStanica
         {
@@ -48,7 +55,7 @@ namespace DAL.Entiteti
         }
 
 
-        public KupacKarte(int sK, string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c)
+        public KupacKarte(int sK, string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c, DateTime dIVK)
             : base(sK, i)
         {
             pocetnaStanica = pS;
@@ -56,9 +63,10 @@ namespace DAL.Entiteti
             voznja = v;
             sjedista = s;
             cijene = c;
+            datumIVrijemeKupovine = dIVK;
         }
 
-        public KupacKarte(string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c)
+        public KupacKarte(string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c, DateTime dIVK)
             : base(i)
         {
             pocetnaStanica = pS;
@@ -66,6 +74,7 @@ namespace DAL.Entiteti
             voznja = v;
             sjedista = s;
             cijene = c;
+            datumIVrijemeKupovine = dIVK;
         }
 
         public double proracunajCijenu()

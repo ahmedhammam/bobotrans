@@ -38,16 +38,16 @@ namespace DAL.Entiteti
             return base.proracunajCijenu() * (1 - popust);
         }
 
-        public KupacSaPopustom(int sK, string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c, double p, string pod, TipoviKupaca tK)
-            : base(sK, i, pS, kS, v, s, c)
+        public KupacSaPopustom(int sK, string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c, DateTime dIVK, double p, string pod, TipoviKupaca tK)
+            : base(sK, i, pS, kS, v, s, c, dIVK)
         {
             popust = p;
             podaci = pod;
             tipKupca = tK;
         }
 
-        public KupacSaPopustom(string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c, double p, string pod, TipoviKupaca tK)
-            : base(i, pS, kS, v, s, c)
+        public KupacSaPopustom(string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c, DateTime dIVK, double p, string pod, TipoviKupaca tK)
+            : base(i, pS, kS, v, s, c, dIVK)
         {
             popust = p;
             podaci = pod;
