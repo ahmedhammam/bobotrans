@@ -76,33 +76,9 @@ C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOADprojekat
 C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOADprojekat\OOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.PodaciOAutobusu.resources
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.aplikacijaSalter.resources
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.PodaciOAutobusu.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.exe
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.pdb
-D:\OOAD\SVN\trunk\DesktopAplikacija\bin\Debug\DesktopAplikacija.exe
-D:\OOAD\SVN\trunk\DesktopAplikacija\bin\Debug\DesktopAplikacija.pdb
-D:\OOAD\SVN\trunk\DesktopAplikacija\bin\Debug\Bobo Trans.dll
-D:\OOAD\SVN\trunk\DesktopAplikacija\bin\Debug\Bobo Trans.pdb
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Form1.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Informisanje.CijeneNaLiniji.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Informisanje.InformisanjeLinije.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Informisanje.InformisanjeVoznje.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Informisanje.IzvodIzRedaVoznje.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Informisanje.NajjeftinijiPut.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Login.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Poruke.aplikacijaPoruke.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Poruke.NovaPoruka.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Properties.Resources.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.aplikacijaSalter.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.PodaciOAutobusu.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.IzmijeniPodatke.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.KreirajIzvjestaj.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.PrikaziIzvjestaj.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.ServiserAplikacija.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.tekstIzvjestaja.resources
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\GenerateResource.read.1.tlog
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\GenerateResource.write.1.tlog
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\RadnikZaSalterom\UserControl1.baml
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\RadnikZaSalterom\UserControl1.g.cs
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija_MarkupCompile.cache
-D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.g.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.AplikacijaMenadzer.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.PregledAutobusa.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeAutobusa.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.DodajNoviAutobus.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.IznajmljivanjeAutobusa.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.NoviZakupAutobusa.resources

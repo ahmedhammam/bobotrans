@@ -21,7 +21,6 @@ namespace DesktopAplikacija.Poruke
         private List<DAL.Entiteti.Poruka> poslane;
         private Entiteti.KolekcijaKorisnika kk = Entiteti.KolekcijaKorisnika.Instanca;
         private DAL.Entiteti.Korisnik logovani;
-        private Dictionary<CheckBox, DAL.Entiteti.Poruka> mapa =  new Dictionary<CheckBox,DAL.Entiteti.Poruka>();
         private enum Prikazuje
         {
             poslane = 1,
@@ -67,12 +66,6 @@ namespace DesktopAplikacija.Poruke
             e.Cancel = true;
             e.NewWidth = (sender as ListView).Columns[e.ColumnIndex].Width;
         }
-
-        private void checkBox_click(object sender, EventArgs e)
-        {
-            rtbTekst.Text = mapa[sender as CheckBox].Tekst;
-        }
-
 
         private void b_Izadi_Click(object sender, EventArgs e)
         {

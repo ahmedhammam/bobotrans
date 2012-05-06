@@ -15,9 +15,11 @@ namespace DAL
         public class AutobusDAO:IDaoCrud<Autobus>
         {
             protected MySqlCommand c;
+            DAL d = DAL.Instanca;
 
             public long create(Autobus entity)
             {
+                d.kreirajKonekciju();
                 try
                 {
 
@@ -35,6 +37,7 @@ namespace DAL
 
             public Autobus read(Autobus entity)
             {
+                d.kreirajKonekciju();
                 try
                 {
                     c = new MySqlCommand("SELECT * FROM autobusi WHERE registracijskeTablice='" + entity.RegistracijskeTablice + "' AND istekRegistracije='"
@@ -63,6 +66,7 @@ namespace DAL
 
             public Autobus update(Autobus entity)
             {
+                d.kreirajKonekciju();
                 try
                 {
                     c = new MySqlCommand("UPDATE autobusi SET registracijskeTablice='" + entity.RegistracijskeTablice + "', istekRegistracije='" + entity.IstekRegistracije.ToString("yyyy-MM-dd") + "', brojSjedista = '"
@@ -80,6 +84,7 @@ namespace DAL
 
             public void delete(Autobus entity)
             {
+                d.kreirajKonekciju();
                 try
                 {
                     c = new MySqlCommand("DELETE FROM autobusi WHERE id ='"+entity.SifraAutobusa+"';", con);
@@ -93,6 +98,7 @@ namespace DAL
 
             public Autobus getById(long id)
             {
+                d.kreirajKonekciju();
                 try
                 {
                     c = new MySqlCommand("SELECT * FROM autobusi WHERE id='" + id + "';", con);
@@ -115,6 +121,7 @@ namespace DAL
 
             public List<Autobus> GetAll()
             {
+                d.kreirajKonekciju();
                 try
                 {
                     c = new MySqlCommand("SELECT * FROM autobusi;", con);
@@ -135,6 +142,7 @@ namespace DAL
 
             public List<Autobus> getByExample(string name, string values)
             {
+                d.kreirajKonekciju();
                 try
                 {
                     c = new MySqlCommand("SELECT * FROM autobusi WHERE "+name+"='"+values+"';", con);

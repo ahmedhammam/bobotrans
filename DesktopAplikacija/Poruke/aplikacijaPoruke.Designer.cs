@@ -253,6 +253,7 @@
             this.colKorisnik,
             this.colVrijeme,
             this.colTekst});
+            this.lvPoruke.FullRowSelect = true;
             this.lvPoruke.Location = new System.Drawing.Point(6, 19);
             this.lvPoruke.Name = "lvPoruke";
             this.lvPoruke.Size = new System.Drawing.Size(426, 162);
