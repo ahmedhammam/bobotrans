@@ -33,5 +33,10 @@ namespace DesktopAplikacija
                //DesktopAplikacija.Entiteti.Put p= srv.vratiNajjeftinijiPut(s1, s2);
                //bla.Text = p.OpisPuta + "\n" + p.Cijena;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
