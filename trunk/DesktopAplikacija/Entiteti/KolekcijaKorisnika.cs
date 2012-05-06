@@ -30,6 +30,14 @@ namespace DesktopAplikacija.Entiteti
             d.terminirajKonekciju();
         }
 
+        public string getNameById(long sifra)
+        {
+            foreach (DAL.Entiteti.Korisnik k in korisnici)
+                if (k.SifraKorisnika == sifra)
+                    return k.ImeIPrezime;
+            return "";
+        }
+
         public string getNameByUsername(string username)
         {
             foreach (DAL.Entiteti.Korisnik k in korisnici)

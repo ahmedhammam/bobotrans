@@ -21,7 +21,7 @@ namespace DAL
                 try
                 {
 
-                    c = new MySqlCommand(String.Format("INSERT INTO ZakupiAutobusa VALUES ('','{0}','{1}','{2}','{3}','{4}','{5}');"
+                    c = new MySqlCommand(String.Format("INSERT INTO zakupiautobusa VALUES ('','{0}','{1}','{2}','{3}','{4}');"
                         , entity.Ime, entity.Autobus.SifraAutobusa, entity.Cijena 
                         , entity.PocetakZakupa.ToString("yyyy-MM-dd"), entity.KrajZakupa.ToString("yyyy-MM-dd"))
                         , con);
@@ -83,7 +83,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("DELETE FROM ZakupciAutobusa WHERE id ='{0}';", entity.SifraKupca), con);
+                    c = new MySqlCommand(String.Format("DELETE FROM zakupiautobusa WHERE id ='{0}';", entity.SifraKupca), con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -96,16 +96,29 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM ZakupciAutobusa WHERE id='{0}';", id), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM zakupiautobusa WHERE id='{0}';", id), con);
                     MySqlDataReader r = c.ExecuteReader();
+                    long sifra;
+                    string imeZakupca;
+                    DateTime pocetak,kraj;
+                    double cijena;
+                    long idAutobusa;
                     if (r.Read())
                     {
-                        ZakupacAutobusa a = new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"), (DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa")));
+                        sifra = r.GetInt32("id");
+                        imeZakupca = r.GetString("imeZakupca");
+                        pocetak = r.GetDateTime("pocetakZakupa"); kraj = r.GetDateTime("krajZakupa");
+                        cijena = r.GetDouble("cijena");
+                        idAutobusa = r.GetInt32("idAutobusa");
                         r.Close();
-                        return a;
                     }
                     else throw
                         new Exception("nije nadjen nijedan element");
+
+                    Autobus a = (DAL.Instanca.getDAO.getAutobusDAO()).getById(idAutobusa);
+
+                    return new ZakupacAutobusa(sifra,imeZakupca, pocetak, kraj, cijena,a);
+                    
                 }
                 catch (Exception e)
                 {
@@ -117,13 +130,31 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM ZakupciAutobusa;"), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM zakupiautobusa;"), con);
                     MySqlDataReader r = c.ExecuteReader();
-                    List<ZakupacAutobusa> ZakupacAutobusai = new List<ZakupacAutobusa>();
+                    List<ZakupacAutobusa> zakupacAutobusa = new List<ZakupacAutobusa>();
+                    List<long> sifre = new List<long>(), sifreAutobusa = new List<long>();
+                    List<DateTime> pocetak = new List<DateTime>(), kraj = new List<DateTime>();
+                    List<string> imena = new List<string>();
+                    List<double> cijene = new List<double>();
+                    List<Autobus> autobusi = new List<Autobus>();
+
                     while (r.Read())
-                        ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"), (DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa"))));
-                    r.Close();
-                    return ZakupacAutobusai;
+                    {
+                        sifre.Add(r.GetInt32("id"));
+                        imena.Add(r.GetString("imeZakupca"));
+                        pocetak.Add(r.GetDateTime("pocetakZakupa"));
+                        kraj.Add(r.GetDateTime("krajZakupa"));
+                        cijene.Add(r.GetDouble("cijena"));
+                        sifreAutobusa.Add(r.GetInt32("idAutobusa"));
+                    }   
+                     r.Close();
+
+                     for (int i = 0; i < sifre.Count; i++ )
+                     {
+                         zakupacAutobusa.Add(new ZakupacAutobusa(sifre[i],imena[i],pocetak[i],kraj[i],cijene[i],Instanca.getDAO.getAutobusDAO().getById(sifreAutobusa[i])));
+                     }
+                    return zakupacAutobusa;
 
                 }
                 catch (Exception e)
@@ -136,13 +167,31 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("SELECT * FROM ZakupciAutobusa WHERE {0}='{1}';", name, values), con);
+                    c = new MySqlCommand(String.Format("SELECT * FROM zakupiautobusa WHERE {0}='{1}';", name, values), con);
                     MySqlDataReader r = c.ExecuteReader();
-                    List<ZakupacAutobusa> ZakupacAutobusai = new List<ZakupacAutobusa>();
+                    List<ZakupacAutobusa> zakupacAutobusa = new List<ZakupacAutobusa>();
+                    List<long> sifre = new List<long>(), sifreAutobusa = new List<long>();
+                    List<DateTime> pocetak = new List<DateTime>(), kraj = new List<DateTime>();
+                    List<string> imena = new List<string>();
+                    List<double> cijene = new List<double>();
+                    List<Autobus> autobusi = new List<Autobus>();
+
                     while (r.Read())
-                        ZakupacAutobusai.Add(new ZakupacAutobusa(r.GetInt32("id"), r.GetString("imeZakupca"), r.GetDateTime("pocetakZakupa"), r.GetDateTime("krajZakupa"), r.GetDouble("cijena"),(DAL.Instanca.getDAO.getAutobusDAO()).getById(r.GetInt32("idAutobusa"))));
+                    {
+                        sifre.Add(r.GetInt32("id"));
+                        imena.Add(r.GetString("imeZakupca"));
+                        pocetak.Add(r.GetDateTime("pocetakZakupa"));
+                        kraj.Add(r.GetDateTime("krajZakupa"));
+                        cijene.Add(r.GetDouble("cijena"));
+                        sifreAutobusa.Add(r.GetInt32("idAutobusa"));
+                    }
                     r.Close();
-                    return ZakupacAutobusai;
+
+                    for (int i = 0; i < sifre.Count; i++)
+                    {
+                        zakupacAutobusa.Add(new ZakupacAutobusa(sifre[i], imena[i], pocetak[i], kraj[i], cijene[i], Instanca.getDAO.getAutobusDAO().getById(sifreAutobusa[i])));
+                    }
+                    return zakupacAutobusa;
                 }
                 catch (Exception e)
                 {

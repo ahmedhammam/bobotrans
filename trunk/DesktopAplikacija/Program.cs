@@ -19,17 +19,17 @@ namespace DesktopAplikacija
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
-            try
-            {
+            //Application.Run(new DesktopAplikacija.Menadzer.AplikacijaMenadzer());
+           // try
+           // {
                 DAL.DAL.Instanca.kreirajKonekciju();
-                Application.Run(new aplikacijaPoruke(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
+                Application.Run(new Menadzer.AplikacijaMenadzer(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
                 DAL.DAL.Instanca.terminirajKonekciju();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+          //  }
+           // catch (Exception e)
+           // {
+           //     MessageBox.Show(e.Message);
+          //  }
         }
 
     }

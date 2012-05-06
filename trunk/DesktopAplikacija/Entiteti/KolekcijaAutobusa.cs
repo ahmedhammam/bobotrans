@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DesktopAplikacija.Serviser.Entiteti
+namespace DesktopAplikacija.Entiteti
 {
     class KolekcijaAutobusa
     {

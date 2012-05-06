@@ -36,7 +36,7 @@ namespace DAL.Entiteti
             set { autobus = value; }
         }
 
-        public ZakupacAutobusa(int sK, string i, DateTime pZ, DateTime kZ, double c, Autobus a)
+        public ZakupacAutobusa(long sK, string i, DateTime pZ, DateTime kZ, double c, Autobus a)
             : base(sK, i)
         {
             pocetakZakupa = pZ;
