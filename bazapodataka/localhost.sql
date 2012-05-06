@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.9
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 05, 2012 at 01:23 PM
+-- Generation Time: May 06, 2012 at 01:41 AM
 -- Server version: 5.5.20
--- PHP Version: 5.3.9
+-- PHP Version: 5.3.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -39,16 +39,18 @@ CREATE TABLE IF NOT EXISTS `autobusi` (
   `klima` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `registracijskeTablice` (`registracijskeTablice`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `autobusi`
 --
 
 INSERT INTO `autobusi` (`id`, `registracijskeTablice`, `istekRegistracije`, `brojSjedista`, `datumServisa`, `toalet`, `slobodan`, `klima`) VALUES
-(1, '123-K-455', '2012-05-05', 50, '2012-04-04', 1, 0, 1),
+(1, '123-K-123', '2012-05-05', 50, '2012-05-03', 1, 0, 1),
 (4, '234-K-319', '2012-10-07', 40, '2012-04-20', 0, 0, 0),
-(5, '324-A-322', '2013-04-17', 30, '2012-04-11', 0, 0, 1);
+(5, '324-A-322', '2013-04-17', 30, '2012-04-11', 0, 0, 1),
+(13, '159-M-753', '2013-05-05', 60, '2012-05-05', 0, 1, 1),
+(14, '871-N-869', '2013-07-10', 40, '2012-05-06', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -91,7 +93,6 @@ CREATE TABLE IF NOT EXISTS `karte` (
   `idSjedista` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
   `idKupca` int(11) NOT NULL,
-  `datumIVrijemeKupovine` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idVoznje` (`idVoznje`),
   KEY `idPocetneStanice` (`idPocetneStanice`),
@@ -304,7 +305,7 @@ CREATE TABLE IF NOT EXISTS `poruke` (
   PRIMARY KEY (`id`),
   KEY `idPosiljaoca` (`idPosiljaoca`),
   KEY `idPrimaoca` (`idPrimaoca`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `poruke`
@@ -313,7 +314,10 @@ CREATE TABLE IF NOT EXISTS `poruke` (
 INSERT INTO `poruke` (`id`, `idPosiljaoca`, `idPrimaoca`, `vrijemeSlanja`, `tekst`) VALUES
 (2, 3, 5, '2012-04-02 00:00:00', 'lorem ipsum sid dolorem amet'),
 (3, 1, 5, '2012-04-17 00:00:00', 'the quick brown fox jumps over the lazy dog'),
-(6, 5, 8, '2012-05-02 00:07:00', 'oijiojoijoi');
+(7, 8, 3, '2012-05-04 18:43:00', 'Hello =)'),
+(8, 8, 5, '2012-05-04 18:47:00', 'Popravi onaj autobus!'),
+(15, 5, 1, '2012-05-05 01:56:00', 'Cao macko ja bih te cacko\n'),
+(17, 5, 3, '2012-05-05 02:00:00', 'Cao macko ja bih te cacko\n');
 
 -- --------------------------------------------------------
 
@@ -505,14 +509,24 @@ INSERT INTO `voznje` (`id`, `idAutobusa`, `vrijemePolaska`, `sati`, `minute`) VA
 --
 
 CREATE TABLE IF NOT EXISTS `zakupiautobusa` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `imeZakupca` varchar(255) COLLATE utf8_slovenian_ci NOT NULL,
   `idAutobusa` int(11) NOT NULL,
   `cijena` decimal(10,0) NOT NULL,
   `pocetakZakupa` date NOT NULL,
   `krajZakupa` date NOT NULL,
+  PRIMARY KEY (`id`),
   KEY `idAutobusa` (`idAutobusa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `zakupiautobusa`
+--
+
+INSERT INTO `zakupiautobusa` (`id`, `imeZakupca`, `idAutobusa`, `cijena`, `pocetakZakupa`, `krajZakupa`) VALUES
+(2, 'ETF Sarajevo', 13, '2000', '2012-05-01', '2012-05-15'),
+(3, 'Druga gimnazija Sarajevo', 13, '5000', '2012-04-01', '2012-04-07'),
+(4, 'htfdyt', 14, '5000', '2012-05-22', '2012-05-29');
 
 --
 -- Constraints for dumped tables
