@@ -112,8 +112,6 @@
 
 - potrebanBrojSjedista (int)
 
-- sifraAutobusa
-
 ===LinijeRasporedVoznji===
 
 - id (primary, int, autoincrement)
