@@ -36,6 +36,8 @@ namespace BoboTransporter.Mapa
         }
         public Mapa(int velX, int velY,bool snijeg)
         {
+            Grafika.Drvo.resetujBrojacDrveca();
+            Grafika.Kamen.resetujBrojacKamenja();
             TipRegije okolina;
             if (snijeg) okolina = TipRegije.SNIJEG;
             else okolina = TipRegije.ZEMLJA;
@@ -187,8 +189,8 @@ namespace BoboTransporter.Mapa
 
         public void Draw(SpriteBatch theSpriteBatch, Vector2 cameraPosition, Vector2 sredinaEkrana, float zumiranje, int minX,int maxX, int minY, int maxY)
         {
-            for (int i=minX;i<=maxX;i++)
-            for (int j=minY;j<=maxY;j++)
+            for (int i = Math.Max(minX, 0); i < Math.Min(maxX, sirina); i++)
+                for (int j = Math.Max(minY, 0); j < Math.Min(maxY, visina); j++)
             {
                 blok[i,j].Draw(theSpriteBatch, cameraPosition, sredinaEkrana, zumiranje);
             }

@@ -14,19 +14,56 @@ D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\autobusTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\asfaltTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijeCestaTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaSkretanjeCestaTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\radoviNaCestiTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\trotoarTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\zemljaTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaStopCestaTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\autobusTekstura.xnb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\BoboTransporter.exe
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\BoboTransporter.pdb
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\BoboTransporter.exe
-C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\obj\x86\Debug\BoboTransporter.pdb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\drvoTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak1Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak2Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak3Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak4Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak5Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak6Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak7Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak8Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen1Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen2Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen3Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen4Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen5Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen6Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\bijeloTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto2Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto3Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto4Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto5Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto6Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto7Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto8Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto9Tekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Speedo\pozadinaTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Speedo\strelicaTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\mapaCelijaTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\mapaAutobusTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\brojeviTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\tackeTekstura.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\brzinomjerDugmeOff.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\brzinomjerDugmeOn.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\daDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\igrajDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\izadjiDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\mapaDugmeOff.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\mapaDugmeOn.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\nasumicnoDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\neDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\opcijeDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\satDugmeOff.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\satDugmeOn.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\snijegDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\travaDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\pomocDugme.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeMala.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeSrednja.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeVelika.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\pozadinaInace.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Kraj.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pauza.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pobjeda.xnb
+D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pomoc.xnb

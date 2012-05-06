@@ -14,7 +14,9 @@ namespace BoboTransporter.Grafika.Podloge
         public Snijeg()
             : base()
         {
-            Velicina = 0.51f;
+            Velicina = 0.5f;
+            Okvir = new Rectangle(50, 50, 300, 300);
+            Sredina = new Vector2(150, 150);
             VertikalnaPozicija = 0.005f;
         }
 

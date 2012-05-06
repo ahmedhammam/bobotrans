@@ -12,12 +12,19 @@ namespace BoboTransporter.Grafika
     {
         static private string tekstura = "Kamen\\kamen{0}Tekstura";
         int brojTeksture;
+        static int brojacKamenja = 0;
         public Kamen(int brTek)
             : base()
         {
             Velicina = 0.06f;
-            VertikalnaPozicija = 0.21f;
+            brojacKamenja++;
+            VertikalnaPozicija = 0.21f+brojacKamenja/100000f;
             brojTeksture = brTek;
+        }
+
+        public static void resetujBrojacKamenja()
+        {
+            brojacKamenja = 0;
         }
 
         public override void LoadContent(ContentManager theContentManager)

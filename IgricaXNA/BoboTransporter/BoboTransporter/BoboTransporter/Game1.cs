@@ -19,8 +19,11 @@ namespace BoboTransporter
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        Mapa.Mapa mapa;
+        public StanjeIgre stanje;
         IgraPokrenuta igra;
+        IgraMenu meni;
+        public bool loadaj;
         //Texture2D bijelo;
 
         public Game1()
@@ -30,6 +33,8 @@ namespace BoboTransporter
             graphics.PreferredBackBufferHeight = 768;
             graphics.PreferredBackBufferWidth = 1024;
             Content.RootDirectory = "Content";
+            Opcije.gamePointer = this;
+            loadaj = false;
         }
 
         /// <summary>
@@ -41,8 +46,10 @@ namespace BoboTransporter
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
-            igra = new IgraPokrenuta(5, 5, false);
+            //igra = new IgraPokrenuta(10, 10, false);
+            meni = new IgraMenu();
+            stanje = StanjeIgre.GLAVNI_MENI;
+            //stanje = StanjeIgre.U_IGRI;
 
             base.Initialize();
         }
@@ -57,8 +64,9 @@ namespace BoboTransporter
             spriteBatch = new SpriteBatch(GraphicsDevice);
             
             // TODO: use this.Content to load your game content here
-            igra.LoadContent(this.Content);
-            //bijelo = this.Content.Load<Texture2D>("bijeloTekstura");
+            //igra.LoadContent(this.Content);
+            Opcije.pozadinaOsnovno = this.Content.Load<Texture2D>("pozadinaInace");
+            meni.LoadContent(this.Content);
         }
 
         /// <summary>
@@ -81,11 +89,20 @@ namespace BoboTransporter
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            if (EngineTools.InputHandler.Exit)
-                this.Exit();
-
             // TODO: Add your update logic here
-            igra.Update(gameTime);
+            if (stanje == StanjeIgre.IZADJI)
+            {
+                this.Exit();
+            }
+
+            if (stanje == StanjeIgre.U_IGRI)
+            {
+                igra.Update(gameTime, GraphicsDevice,spriteBatch);
+            }
+            else
+            {
+                meni.Update(gameTime);
+            }
             base.Update(gameTime);
         }
 
@@ -98,9 +115,14 @@ namespace BoboTransporter
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
-            igra.Draw(gameTime, spriteBatch, new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2));
-
+            if (stanje == StanjeIgre.U_IGRI)
+            {
+                igra.Draw(gameTime, spriteBatch, new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2));
+            }
+            else
+            {
+                meni.Draw(gameTime, spriteBatch, new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2));
+            }
             /*
             //SUNSET
             boja = Color.FromNonPremultiplied(255, 235, 153, 255);
@@ -117,6 +139,34 @@ namespace BoboTransporter
             spriteBatch.Draw(bijelo,new Rectangle(0,0,graphics.PreferredBackBufferWidth,graphics.PreferredBackBufferHeight),boja);
             spriteBatch.End();
             base.Draw(gameTime);*/
+        }
+
+        public void pokreniIgru(GameTime gameTime)
+        {
+            bool snijeg = false;
+            int dimenzija;
+            dimenzija = Opcije.dimenzijaMape;
+            if (Opcije.snijegNaMapi == 0)
+            {
+                //randomiziraj
+                Random rand = new Random();
+                snijeg = (rand.Next()%2==0);
+            }
+            else if (Opcije.snijegNaMapi == 1)
+            {
+                //nema snijega
+                snijeg = false;
+            }
+            else if (Opcije.snijegNaMapi == 2)
+            {
+                //ima snijega
+                snijeg = true;
+            }
+
+            igra = new IgraPokrenuta(dimenzija, dimenzija, snijeg);
+            igra.LoadContent(this.Content);
+            igra.Update(gameTime,GraphicsDevice,spriteBatch);
+
         }
     }
 }

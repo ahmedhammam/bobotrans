@@ -6,12 +6,19 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using BoboTransporter.EngineTools;
+using BoboTransporter.Mapa;
 
 namespace BoboTransporter
 {
     class IgraPokrenuta
     {
         private Mapa.Mapa mapa;
+
+        internal Mapa.Mapa Mapa
+        {
+            get { return mapa; }
+            set { mapa = value; }
+        }
         private Mapa.KontrolerAuta kontrolerAuta;
         private Mapa.KontrolerPjeshaka kontrolerPjeshaka;
         BoboTransporter.Grafika.Vozila.MojBus mojBus;
@@ -20,19 +27,25 @@ namespace BoboTransporter
         float zumiranje;
         Vector2 pozicijaKamere;
         Grafika.Brzinomjer brzinomjer;
+        Grafika.Minimapa minimapa;
+        Grafika.VrijemeBrojac vrijemeBrojac;
+        bool pauziraj;
 
         public IgraPokrenuta(int sirina, int visina, bool snijeg)
         {
             mapa = new Mapa.Mapa(sirina, visina, snijeg);
-
+            pauziraj = false;
             brzinomjer = new Grafika.Brzinomjer();
+            minimapa = new Grafika.Minimapa();
+            vrijemeBrojac = new Grafika.VrijemeBrojac();
+            vrijemeBrojac.resetujBrojac();
 
             kontrolerAuta = new Mapa.KontrolerAuta(mapa);
             kontrolerPjeshaka = new Mapa.KontrolerPjeshaka(mapa);
 
             pozicijaKamere = new Vector2(0, 0);
             zumiranje = 3f;
-            mojBus = new Grafika.Vozila.MojBus(sirina/2,visina/2);
+            mojBus = new Grafika.Vozila.MojBus(sirina / 2, visina / 2);
 
             //smjesti auta
             auta = new List<BoboTransporter.Grafika.Vozila.Auto>();
@@ -40,24 +53,24 @@ namespace BoboTransporter
             Random rand = new Random();
             foreach (BoboTransporter.Mapa.Regija regija in mapa.Blok)
             {
-                
 
-                if (regija.Tip == Mapa.TipRegije.CESTAhorizontalna)
+
+                if (regija.Tip == TipRegije.CESTAhorizontalna)
                 {
                     auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 15, regija.PozYUMapi * 4 - 16, 3, rand.Next() % 8 + 2));
                     auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 14, regija.PozYUMapi * 4 - 13, 1, rand.Next() % 8 + 2));
                 }
-                else if (regija.Tip == Mapa.TipRegije.CESTAvertikalna)
+                else if (regija.Tip == TipRegije.CESTAvertikalna)
                 {
                     auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 16, regija.PozYUMapi * 4 - 15, 2, rand.Next() % 8 + 2));
                     auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 13, regija.PozYUMapi * 4 - 14, 0, rand.Next() % 8 + 2));
                 }
 
-                
 
-                if (!Mapa.Regija.jeCestaIliCilj(regija.Tip))
+
+                if (!Regija.jeCestaIliCilj(regija.Tip))
                 {
-                    if (Mapa.Regija.jeCestaIliCilj(regija.TipGore))
+                    if (Regija.jeCestaIliCilj(regija.TipGore))
                     {
                         if (rand.Next() % 3 == 0)
                         {
@@ -66,7 +79,7 @@ namespace BoboTransporter
                         }
 
                     }
-                    if (Mapa.Regija.jeCestaIliCilj(regija.TipDole))
+                    if (Regija.jeCestaIliCilj(regija.TipDole))
                     {
                         if (rand.Next() % 3 == 0)
                         {
@@ -74,7 +87,7 @@ namespace BoboTransporter
                             pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 4, regija.PozYUMapi * 8 - 32 + 6, 3, rand.Next() % 8 + 1));
                         }
                     }
-                    if (Mapa.Regija.jeCestaIliCilj(regija.TipLijevo))
+                    if (Regija.jeCestaIliCilj(regija.TipLijevo))
                     {
                         if (rand.Next() % 3 == 0)
                         {
@@ -82,7 +95,7 @@ namespace BoboTransporter
                             pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 1, regija.PozYUMapi * 8 - 32 + 5, 0, rand.Next() % 8 + 1));
                         }
                     }
-                    if (Mapa.Regija.jeCestaIliCilj(regija.TipDesno))
+                    if (Regija.jeCestaIliCilj(regija.TipDesno))
                     {
                         if (rand.Next() % 3 == 0)
                         {
@@ -95,11 +108,91 @@ namespace BoboTransporter
 
         }
 
+        public IgraPokrenuta(int sirina, int visina, bool snijeg, Mapa.Mapa mapa_)
+        {
+            mapa = mapa_;
+
+            brzinomjer = new Grafika.Brzinomjer();
+            minimapa = new Grafika.Minimapa();
+            vrijemeBrojac = new Grafika.VrijemeBrojac();
+            vrijemeBrojac.resetujBrojac();
+
+            kontrolerAuta = new Mapa.KontrolerAuta(mapa);
+            kontrolerPjeshaka = new Mapa.KontrolerPjeshaka(mapa);
+
+            pozicijaKamere = new Vector2(0, 0);
+            zumiranje = 3f;
+            mojBus = new Grafika.Vozila.MojBus(sirina / 2, visina / 2);
+
+            //smjesti auta
+            auta = new List<BoboTransporter.Grafika.Vozila.Auto>();
+            pjeshaci = new List<Grafika.Vozila.Pjeshak>();
+            Random rand = new Random();
+            foreach (BoboTransporter.Mapa.Regija regija in mapa.Blok)
+            {
+
+
+                if (regija.Tip == TipRegije.CESTAhorizontalna)
+                {
+                    auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 15, regija.PozYUMapi * 4 - 16, 3, rand.Next() % 8 + 2));
+                    auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 14, regija.PozYUMapi * 4 - 13, 1, rand.Next() % 8 + 2));
+                }
+                else if (regija.Tip == TipRegije.CESTAvertikalna)
+                {
+                    auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 16, regija.PozYUMapi * 4 - 15, 2, rand.Next() % 8 + 2));
+                    auta.Add(new Grafika.Vozila.Auto(regija.PozXUMapi * 4 - 13, regija.PozYUMapi * 4 - 14, 0, rand.Next() % 8 + 2));
+                }
+
+
+
+                if (!Regija.jeCestaIliCilj(regija.Tip))
+                {
+                    if (Regija.jeCestaIliCilj(regija.TipGore))
+                    {
+                        if (rand.Next() % 3 == 0)
+                        {
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 3, regija.PozYUMapi * 8 - 32, 3, rand.Next() % 8 + 1));
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 5, regija.PozYUMapi * 8 - 32 + 1, 1, rand.Next() % 8 + 1));
+                        }
+
+                    }
+                    if (Regija.jeCestaIliCilj(regija.TipDole))
+                    {
+                        if (rand.Next() % 3 == 0)
+                        {
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 4, regija.PozYUMapi * 8 - 32 + 7, 1, rand.Next() % 8 + 1));
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 4, regija.PozYUMapi * 8 - 32 + 6, 3, rand.Next() % 8 + 1));
+                        }
+                    }
+                    if (Regija.jeCestaIliCilj(regija.TipLijevo))
+                    {
+                        if (rand.Next() % 3 == 0)
+                        {
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32, regija.PozYUMapi * 8 - 32 + 3, 2, rand.Next() % 8 + 1));
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 1, regija.PozYUMapi * 8 - 32 + 5, 0, rand.Next() % 8 + 1));
+                        }
+                    }
+                    if (Regija.jeCestaIliCilj(regija.TipDesno))
+                    {
+                        if (rand.Next() % 3 == 0)
+                        {
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 7, regija.PozYUMapi * 8 - 32 + 4, 0, rand.Next() % 8 + 1));
+                            pjeshaci.Add(new Grafika.Vozila.Pjeshak(regija.PozXUMapi * 8 - 32 + 6, regija.PozYUMapi * 8 - 32 + 4, 2, rand.Next() % 8 + 1));
+                        }
+                    }
+                }
+            }
+
+        }
+
+
         public virtual void LoadContent(ContentManager theContentManager)
         {
             mapa.LoadContent(theContentManager);
             mojBus.LoadContent(theContentManager);
             brzinomjer.LoadContent(theContentManager);
+            minimapa.LoadContent(theContentManager);
+            vrijemeBrojac.LoadContent(theContentManager);
             foreach (BoboTransporter.Grafika.Vozila.Auto auto in auta)
             {
                 auto.LoadContent(theContentManager);
@@ -110,8 +203,10 @@ namespace BoboTransporter
             }
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, GraphicsDevice graphicsDevice, SpriteBatch theSpriteBatch)
         {
+            vrijemeBrojac.Update(gameTime);
+
             UpdateKontrola(gameTime);
             foreach (BoboTransporter.Grafika.Vozila.Auto auto in auta)
             {
@@ -143,25 +238,56 @@ namespace BoboTransporter
             zumiranje = dajZoom(mojBus.Brzina);
             //provjera da li se sudario sa trotoarom
             Console.WriteLine();
+            if (sudarSaCiljem())
+            {
+                Opcije.gamePointer.stanje = StanjeIgre.WIN_MENI;
+                Opcije.gamePointer.loadaj = true;
+                uzimanjeScreenshotaZaPozadinu(gameTime, graphicsDevice, theSpriteBatch);
+            }
             if (sudarSaTrotoarom())
             {
-                
-                Console.WriteLine("TROTOAR");
+
+                Opcije.gamePointer.stanje = StanjeIgre.LOSE_MENI;
+                Opcije.gamePointer.loadaj = true;
+                uzimanjeScreenshotaZaPozadinu(gameTime, graphicsDevice, theSpriteBatch);
             }
             foreach (Grafika.Vozila.Pjeshak pjeshak in pjeshaci)
             {
                 if (sudarSaPjeshakom(pjeshak))
                 {
-                    Console.WriteLine("PJESHAK");
+                    Opcije.gamePointer.stanje = StanjeIgre.LOSE_MENI;
+                    Opcije.gamePointer.loadaj = true;
+                    uzimanjeScreenshotaZaPozadinu(gameTime, graphicsDevice, theSpriteBatch);
                 }
             }
             foreach (Grafika.Vozila.Auto auto in auta)
             {
                 if (sudarSaAutom(auto))
                 {
-                    Console.WriteLine("AUTO");
+                    Opcije.gamePointer.stanje = StanjeIgre.LOSE_MENI;
+                    Opcije.gamePointer.loadaj = true;
+                    uzimanjeScreenshotaZaPozadinu(gameTime, graphicsDevice, theSpriteBatch);
                 }
             }
+            if (pauziraj)
+            {
+                pauziraj = false;
+                Opcije.gamePointer.stanje = StanjeIgre.PAUZA_MENI;
+                Opcije.gamePointer.loadaj = true;
+                uzimanjeScreenshotaZaPozadinu(gameTime, graphicsDevice, theSpriteBatch);
+            }
+        }
+
+        private void uzimanjeScreenshotaZaPozadinu(GameTime gameTime, GraphicsDevice graphicsDevice, SpriteBatch theSpriteBatch)
+        {
+            RenderTarget2D renderTarget = new RenderTarget2D(graphicsDevice, graphicsDevice.Viewport.Width, graphicsDevice.Viewport.Height);
+            graphicsDevice.SetRenderTarget(renderTarget);
+            Draw(gameTime, theSpriteBatch, new Vector2(graphicsDevice.Viewport.Width / 2, graphicsDevice.Viewport.Height / 2));
+            graphicsDevice.SetRenderTarget(null);
+            int[] podaci = new int[graphicsDevice.Viewport.Width * graphicsDevice.Viewport.Height];
+            renderTarget.GetData<int>(podaci);
+            Opcije.pozadina = new Texture2D(graphicsDevice, graphicsDevice.Viewport.Width, graphicsDevice.Viewport.Height);
+            Opcije.pozadina.SetData<int>(podaci);
         }
 
         private float dajZoom(float brzinaBusa)
@@ -172,29 +298,33 @@ namespace BoboTransporter
         private void UpdateKontrola(GameTime gameTime)
         {
             InputHandler.Update(gameTime);
-            if (!InputHandler.Up && !InputHandler.Down)
+            if (!InputHandler.Naprijed && !InputHandler.Nazad)
             {
                 mojBus.pustenGasMijenjajBrzinu(gameTime);
             }
-            if (InputHandler.Up && !InputHandler.Down)
+            if (InputHandler.Naprijed && !InputHandler.Nazad)
             {
                 mojBus.ubrzavaj(gameTime);
             }
-            if (InputHandler.Down && !InputHandler.Up)
+            if (InputHandler.Nazad && !InputHandler.Naprijed)
             {
                 mojBus.usporavaj(gameTime);
             }
-            if (!InputHandler.Left && !InputHandler.Right)
+            if (!InputHandler.Lijevo && !InputHandler.Desno)
             {
                 mojBus.neSkreci(gameTime);
             }
-            if (InputHandler.Left && !InputHandler.Right)
+            if (InputHandler.Lijevo && !InputHandler.Desno)
             {
                 mojBus.skreciLijevo(gameTime);
             }
-            if (InputHandler.Right && !InputHandler.Left)
+            if (InputHandler.Desno && !InputHandler.Lijevo)
             {
                 mojBus.skreciDesno(gameTime);
+            }
+            if (InputHandler.Exit)
+            {
+                pauziraj = true;
             }
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch theSpriteBatch, Vector2 sredinaEkrana)
@@ -215,15 +345,21 @@ namespace BoboTransporter
             //postavi kameru na tacno mjesto
             pozicijaKamere = mojBus.smjestiKameru();
 
-
-            mapa.Draw(theSpriteBatch,pozicijaKamere, sredinaEkrana, zumiranje);
+            //odredimo polje u kojem je kamera
+            int kameraX = (int)(pozicijaKamere.X / 150f);
+            int kameraY = (int)(pozicijaKamere.Y / 150f);
+            mapa.Draw(theSpriteBatch,pozicijaKamere, sredinaEkrana, zumiranje,kameraX-5,kameraX+6,kameraY-4,kameraY+5);
             mojBus.Draw(theSpriteBatch, pozicijaKamere, sredinaEkrana, zumiranje);
             foreach (BoboTransporter.Grafika.Vozila.Auto auto in auta)
             {
+                float daljina = Vector2.Distance(auto.Pozicija,mojBus.Pozicija);
+                if (daljina<1500f)
                 auto.Draw(theSpriteBatch, pozicijaKamere, sredinaEkrana, zumiranje);
             }
             foreach (BoboTransporter.Grafika.Vozila.Pjeshak pjeshak in pjeshaci)
             {
+                float daljina = Vector2.Distance(pjeshak.Pozicija, mojBus.Pozicija);
+                if (daljina < 1500f)
                 pjeshak.Draw(theSpriteBatch, pozicijaKamere, sredinaEkrana, zumiranje);
             }
         }
@@ -231,7 +367,9 @@ namespace BoboTransporter
         public virtual void DrawHUD(GameTime gameTime, SpriteBatch theSpriteBatch, Vector2 sredinaEkrana)
         {
 
-            brzinomjer.Draw(theSpriteBatch, sredinaEkrana, mojBus.Brzina);
+            if (Opcije.brzinomjerUkljucen) brzinomjer.Draw(theSpriteBatch, sredinaEkrana, mojBus.Brzina);
+            if (Opcije.mapaUkljucena) minimapa.Draw(theSpriteBatch, sredinaEkrana, mapa,mojBus.Pozicija);
+            if (Opcije.vrijemeUkljuceno) vrijemeBrojac.Draw(theSpriteBatch, sredinaEkrana);
 
         }
 
@@ -248,6 +386,21 @@ namespace BoboTransporter
             if (tackaNaTrotoaru(mojBus.Pozicija.X + dimenzija * 0.7f, mojBus.Pozicija.Y - dimenzija * 0.7f)) return true;
             if (tackaNaTrotoaru(mojBus.Pozicija.X - dimenzija * 0.7f, mojBus.Pozicija.Y - dimenzija * 0.7f)) return true;
             return false;
+        }
+
+        private bool sudarSaCiljem()
+        {
+            float dimenzija = 10f;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X, mojBus.Pozicija.Y)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X + dimenzija, mojBus.Pozicija.Y)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X - dimenzija, mojBus.Pozicija.Y)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X, mojBus.Pozicija.Y + dimenzija)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X, mojBus.Pozicija.Y - dimenzija)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X + dimenzija * 0.7f, mojBus.Pozicija.Y + dimenzija * 0.7f)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X - dimenzija * 0.7f, mojBus.Pozicija.Y + dimenzija * 0.7f)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X + dimenzija * 0.7f, mojBus.Pozicija.Y - dimenzija * 0.7f)) return false;
+            if (nijeTackaNaCilju(mojBus.Pozicija.X - dimenzija * 0.7f, mojBus.Pozicija.Y - dimenzija * 0.7f)) return false;
+            return true;
         }
 
         private bool sudarSaPjeshakom(Grafika.Vozila.Pjeshak pjeshak)
@@ -343,175 +496,6 @@ namespace BoboTransporter
 
         }
 
-        /*private bool provjeriSudarKutija(Vector2 poz1, float rot1, float sir1, float vis1, Vector2 poz2, float rot2, float sir2, float vis2)
-        {
-            /* u listi:
-             * 1. - koef uz X
-             * 2. - koef uz Y
-             * 3. - desna strana jednakosti
-             * 4. - x1
-             * 5. - y1
-             * 6. - x2
-             * 7. - y2
-             *
-            float a,b,c1,c2;
-            List<float> trenutna;
-            List<List<float>> linije1 = new List<List<float>>();
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Sin(rot1));
-            trenutna.Add(b = (float)-Math.Cos(rot1));
-            c1 = (float)(poz1.X + Math.Sin(rot1) * vis1 / 2);
-            c2 = (float)(poz1.Y - Math.Cos(rot1) * vis1 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Cos(rot1) * sir1 / 2);
-            trenutna.Add(c2 - (float)Math.Sin(rot1) * sir1 / 2);
-            trenutna.Add(c1 + (float)Math.Cos(rot1) * sir1 / 2);
-            trenutna.Add(c2 + (float)Math.Sin(rot1) * sir1 / 2);
-            trenutna.Add(1);
-            linije1.Add(trenutna);
-
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Sin(rot1));
-            trenutna.Add(b = (float)-Math.Cos(rot1));
-            c1 = (float)(poz1.X - Math.Sin(rot1) * vis1 / 2);
-            c2 = (float)(poz1.Y + Math.Cos(rot1) * vis1 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Cos(rot1) * sir1 / 2);
-            trenutna.Add(c2 - (float)Math.Sin(rot1) * sir1 / 2);
-            trenutna.Add(c1 + (float)Math.Cos(rot1) * sir1 / 2);
-            trenutna.Add(c2 + (float)Math.Sin(rot1) * sir1 / 2);
-            trenutna.Add(2);
-            linije1.Add(trenutna);
-
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Cos(rot1));
-            trenutna.Add(b = (float)Math.Sin(rot1));
-            c1 = (float)(poz1.X + Math.Cos(rot1) * sir1 / 2);
-            c2 = (float)(poz1.Y + Math.Sin(rot1) * sir1 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Sin(rot1) * vis1 / 2);
-            trenutna.Add(c2 + (float)Math.Cos(rot1) * vis1 / 2);
-            trenutna.Add(c1 + (float)Math.Sin(rot1) * vis1 / 2);
-            trenutna.Add(c2 - (float)Math.Cos(rot1) * vis1 / 2);
-            trenutna.Add(3);
-            linije1.Add(trenutna);
-
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Cos(rot1));
-            trenutna.Add(b = (float)Math.Sin(rot1));
-            c1 = (float)(poz1.X - Math.Cos(rot1) * sir1 / 2);
-            c2 = (float)(poz1.Y - Math.Sin(rot1) * sir1 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Sin(rot1) * vis1 / 2);
-            trenutna.Add(c2 + (float)Math.Cos(rot1) * vis1 / 2);
-            trenutna.Add(c1 + (float)Math.Sin(rot1) * vis1 / 2);
-            trenutna.Add(c2 - (float)Math.Cos(rot1) * vis1 / 2);
-            trenutna.Add(4);
-            linije1.Add(trenutna);
-
-
-            List<List<float>> linije2 = new List<List<float>>();
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Sin(rot2));
-            trenutna.Add(b = (float)-Math.Cos(rot2));
-            c1 = (float)(poz2.X + Math.Sin(rot2) * vis2 / 2);
-            c2 = (float)(poz2.Y - Math.Cos(rot2) * vis2 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Cos(rot2) * sir2 / 2);
-            trenutna.Add(c2 - (float)Math.Sin(rot2) * sir2 / 2);
-            trenutna.Add(c1 + (float)Math.Cos(rot2) * sir2 / 2);
-            trenutna.Add(c2 + (float)Math.Sin(rot2) * sir2 / 2);
-            trenutna.Add(1);
-            linije2.Add(trenutna);
-
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Sin(rot2));
-            trenutna.Add(b = (float)-Math.Cos(rot2));
-            c1 = (float)(poz2.X - Math.Sin(rot2) * vis2 / 2);
-            c2 = (float)(poz2.Y + Math.Cos(rot2) * vis2 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Cos(rot2) * sir2 / 2);
-            trenutna.Add(c2 - (float)Math.Sin(rot2) * sir2 / 2);
-            trenutna.Add(c1 + (float)Math.Cos(rot2) * sir2 / 2);
-            trenutna.Add(c2 + (float)Math.Sin(rot2) * sir2 / 2);
-            trenutna.Add(2);
-            linije2.Add(trenutna);
-
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Cos(rot2));
-            trenutna.Add(b = (float)Math.Sin(rot2));
-            c1 = (float)(poz2.X + Math.Cos(rot2) * sir2 / 2);
-            c2 = (float)(poz2.Y + Math.Sin(rot2) * sir2 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Sin(rot2) * vis2 / 2);
-            trenutna.Add(c2 + (float)Math.Cos(rot2) * vis2 / 2);
-            trenutna.Add(c1 + (float)Math.Sin(rot2) * vis2 / 2);
-            trenutna.Add(c2 - (float)Math.Cos(rot2) * vis2 / 2);
-            trenutna.Add(3);
-            linije2.Add(trenutna);
-
-            trenutna = new List<float>();
-            trenutna.Add(a = (float)Math.Cos(rot2));
-            trenutna.Add(b = (float)Math.Sin(rot2));
-            c1 = (float)(poz2.X - Math.Cos(rot2) * sir2 / 2);
-            c2 = (float)(poz2.Y - Math.Sin(rot2) * sir2 / 2);
-            trenutna.Add(c1 * a + c2 * b);
-            trenutna.Add(c1 - (float)Math.Sin(rot2) * vis2 / 2);
-            trenutna.Add(c2 + (float)Math.Cos(rot2) * vis2 / 2);
-            trenutna.Add(c1 + (float)Math.Sin(rot2) * vis2 / 2);
-            trenutna.Add(c2 - (float)Math.Cos(rot2) * vis2 / 2);
-            trenutna.Add(4);
-            linije2.Add(trenutna);
-
-            foreach (List<float> linija1 in linije1)
-            {
-                foreach (List<float> linija2 in linije2)
-                {
-                    if (sePresjecaju(linija1,linija2))
-                    {
-                        Console.WriteLine("{0} {1}",linija1[7], linija2[7]);
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-
-
-
-            return false;
-        }
-
-        private static bool sePresjecaju(List<float> linija1, List<float> linija2)
-        {
-            /* u listi:
-             * 1. - koef uz X
-             * 2. - koef uz Y
-             * 3. - desna strana jednakosti
-             * 4. - x1
-             * 5. - y1
-             * 6. - x2
-             * 7. - y2
-             *
-            
-            float dx, dy, dd;
-            dd = linija1[0] * linija2[1] - linija1[1] * linija2[0];
-            if (dd < 0.0001f) return false;
-            dx = linija1[2] * linija2[1] - linija1[1] * linija2[2];
-            dy = linija1[0] * linija2[2] - linija1[2] * linija2[0];
-            dx /= dd;
-            dy /= dd;
-            if (
-                suprotne(linija1[3], dx, linija1[5]) &&
-                suprotne(linija2[3], dx, linija2[5]) &&
-                suprotne(linija1[4], dy, linija1[6]) &&
-                suprotne(linija2[4], dy, linija2[6])
-                )
-                return true;
-            
-            return false;
-        }*/
-
         private static bool suprotne(float t1, float ts, float t2)
         {
             if ((t1 - ts < 0.0001f) && (ts - t2 < 0.0001f)) return true;
@@ -521,7 +505,12 @@ namespace BoboTransporter
 
         private bool tackaNaTrotoaru(float posX, float posY)
         {
-            return (!Mapa.Regija.jeProhodnaCestaIliCilj(mapa.Blok[(int)(posX) / 150, (int)(posY) / 150].Tip));
+            return (!Regija.jeProhodnaCestaIliCilj(mapa.Blok[(int)(posX) / 150, (int)(posY) / 150].Tip));
+        }
+
+        private bool nijeTackaNaCilju(float posX, float posY)
+        {
+            return (mapa.Blok[(int)(posX) / 150, (int)(posY) / 150].Tip!=TipRegije.CILJ);
         }
 
     }

@@ -5,7 +5,7 @@
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BoboTransporter</RootNamespace>
     <AssemblyName>BoboTransporter</AssemblyName>
@@ -117,6 +117,7 @@
     <Compile Include="Grafika\BrzinomjerDijelovi\Strelica.cs" />
     <Compile Include="Grafika\Drvo.cs" />
     <Compile Include="Grafika\Kamen.cs" />
+    <Compile Include="Grafika\Minimapa.cs" />
     <Compile Include="Grafika\Podloge\Asfalt.cs" />
     <Compile Include="Grafika\Podloge\Cilj.cs" />
     <Compile Include="Grafika\Podloge\LinijaStopNaCesti.cs" />
@@ -130,15 +131,49 @@
     <Compile Include="Grafika\Vozila\Auto.cs" />
     <Compile Include="Grafika\Vozila\MojBus.cs" />
     <Compile Include="Grafika\Vozila\Pjeshak.cs" />
+    <Compile Include="Grafika\VrijemeBrojac.cs" />
+    <Compile Include="IgraMenu.cs" />
     <Compile Include="IgraPokrenuta.cs" />
     <Compile Include="Mapa\KontrolerAuta.cs" />
     <Compile Include="Mapa\KontrolerPjeshaka.cs" />
     <Compile Include="Mapa\Mapa.cs" />
     <Compile Include="Mapa\Regija.cs" />
     <Compile Include="Mapa\TipRegije.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\BrzinomjerUpaljenost.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\NastaviIgru.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\PokreniIgru.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\VelicinaIzbor.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\IgraIzbor.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\VrijemeUpaljenost.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\MapaUpaljenost.cs" />
+    <Compile Include="MeniDugmad\Poruka.cs" />
+    <Compile Include="MeniDugmad\Poruke\Kraj.cs" />
+    <Compile Include="MeniDugmad\Poruke\Pauza.cs" />
+    <Compile Include="MeniDugmad\Poruke\Pobjeda.cs" />
+    <Compile Include="MeniDugmad\Poruke\Pomoc.cs" />
+    <Compile Include="MeniDugmad\VisestrukoDugme.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\QuitToMain.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\Help.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\Options.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\Quit.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\Play.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\QuitNo.cs" />
+    <Compile Include="MeniDugmad\Dugmadi\QuitYes.cs" />
+    <Compile Include="MeniDugmad\MenuItem.cs" />
+    <Compile Include="MeniDugmad\ObicnoDugme.cs" />
+    <Compile Include="Meniji\PomocMeni.cs" />
+    <Compile Include="Meniji\PauzaMeni.cs" />
+    <Compile Include="Meniji\LoseMeni.cs" />
+    <Compile Include="Meniji\WinMeni.cs" />
+    <Compile Include="Meniji\IgrajMeni.cs" />
+    <Compile Include="Meniji\OpcijeMeni.cs" />
+    <Compile Include="Meniji\GlavniMeni.cs" />
+    <Compile Include="Meniji\IzlazMeni.cs" />
+    <Compile Include="Opcije.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="StanjeIgre.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
