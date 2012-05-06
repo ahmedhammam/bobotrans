@@ -126,5 +126,20 @@ namespace DesktopAplikacija.RadnikZaSalterom
             irv.Show();
         }
 
+        private void rezervacijaSjedištaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // ovdje pozivas onu formu sto si pravio u WPF i kad klikne na ono sjediste nek se otvori forma na kojoj ce unijeti podatke
+            // onoga ko rezervise i to spremiti u bazu-napravljena je "podaciORezervaciji" i isto tako na klikom na zauzeta sjedise
+            //nek se otvori forma gdje ce se prikazati ko je rezervisao kartu i omoguciti otkazivanje
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            //ovdje pozivas onu formu sto si radio u WPF i kad klikne na ono sjediste nek se otvori forma na kojoj se mogu unijeti
+            //podaci onoga ko rezervise kartu i to spasiti u bazu-napravljena je "podaciORezervaciji" i isto tako klikom na zauzeta sjedista
+            // nek se otvori forma gdje ce se prikazati ko je rezervisao kartu i omoguciti otkazivanje
+        }
+        // i jos moramo omoguciti obracunavanje popusta, ali to nismo skontali kako cemo
+
     }
 }
