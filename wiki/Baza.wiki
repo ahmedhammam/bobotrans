@@ -20,6 +20,7 @@
  # TipoviKupacaKarte
  # LinijeCijene
  # StaniceULiniji
+ # RasporedVoznjeAutobus
 
 
 ===Linije:===
@@ -216,3 +217,11 @@
 - trajanjeDoDolaska (int)
 
 - trajanjeDoPolaska (int)
+
+===RasporedVoznjeAutobus===
+
+- id (primary, int, autoincrement)
+
+- idRasporedaVoznje - foreign key na RasporedVoznji.id: on UPDATE i DELETE - restrict
+
+- idAutobusa - foreign key na Autobusi.id: on UPDATE i DELETE - restrict
