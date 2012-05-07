@@ -20,8 +20,8 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("INSERT INTO rasporedvoznji VALUES ('','{0}','{1}','{2}','{3}');"
-                        , entity.DanUSedmici, entity.Vrijeme.Hour,entity.Vrijeme.Minute, entity.PotrebanBrojSjedista)
+                    c = new MySqlCommand(String.Format("INSERT INTO rasporedvoznji VALUES ('','{0}','{1}','{2}','{3}','{4}');"
+                        , entity.DanUSedmici, entity.Vrijeme.Hour,entity.Vrijeme.Minute, entity.PotrebanBrojSjedista,entity.SifraAutobusa)
                         , con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
@@ -43,7 +43,8 @@ namespace DAL
 
                     if (r.Read())
                     {
-                        RasporedVoznje rv = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"));
+                        RasporedVoznje rv = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), 
+                            r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"),r.GetInt32("idAutobusa"));
                         r.Close();
                         return rv;
                     }
@@ -61,8 +62,8 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE rasporedvoznji SET danUSedmici='{0}', sati='{1}', minute='{2}', potrebanBrojSjedista='{3}' WHERE id='{4}';", 
-                        entity.DanUSedmici,entity.Vrijeme.Hour,entity.Vrijeme.Minute,entity.PotrebanBrojSjedista,entity.SifraRasporedaVoznji), con);
+                    c = new MySqlCommand(String.Format("UPDATE rasporedvoznji SET danUSedmici='{0}', sati='{1}', minute='{2}', potrebanBrojSjedista='{3}', idAutobusa='{4}' WHERE id='{5}';", 
+                        entity.DanUSedmici,entity.Vrijeme.Hour,entity.Vrijeme.Minute,entity.PotrebanBrojSjedista,entity.SifraAutobusa,entity.SifraRasporedaVoznji), con);
                     c.ExecuteNonQuery();
                     return entity;
                 }
@@ -93,7 +94,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        RasporedVoznje a = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"));
+                        RasporedVoznje a = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"),r.GetInt32("idAutobusa"));
                         r.Close();
                         return a;
                     }
@@ -114,7 +115,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<RasporedVoznje> rv = new List<RasporedVoznje>();
                     while (r.Read())
-                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista")));
+                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"), r.GetInt32("idAutobusa")));
                     r.Close();
                     return rv;
 
@@ -133,7 +134,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<RasporedVoznje> rv = new List<RasporedVoznje>();
                     while (r.Read())
-                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista")));
+                        rv.Add(new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"), r.GetInt32("idAutobusa")));
                     r.Close();
                     return rv;
                 }

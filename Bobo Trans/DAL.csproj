@@ -57,7 +57,6 @@
     <Compile Include="DAO\KupacKarteSPopustomDAO.cs" />
     <Compile Include="DAO\LinijaDAO.cs" />
     <Compile Include="DAO\PorukeDAO.cs" />
-    <Compile Include="DAO\RasporedVoznjeAutobusDAO.cs" />
     <Compile Include="DAO\RasporedVoznjeDAO.cs" />
     <Compile Include="DAO\StaniceDAO.cs" />
     <Compile Include="DAO\VoznjaDAO.cs" />
@@ -65,7 +64,6 @@
     <Compile Include="Entiteti\Autobus.cs" />
     <Compile Include="Entiteti\Korisnik.cs" />
     <Compile Include="Entiteti\RasporedVoznje.cs" />
-    <Compile Include="Entiteti\RasporedVoznjeAutobus.cs" />
     <Compile Include="Entiteti\TipPopusta.cs" />
     <Compile Include="TipoviPodataka\TipoviKorisnika.cs" />
     <Compile Include="TipoviPodataka\TipoviKupaca.cs" />

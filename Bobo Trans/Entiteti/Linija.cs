@@ -18,7 +18,9 @@ namespace DAL.Entiteti
         private List<Voznja> voznje;
         private List<RasporedVoznje> rasporediVoznje;
 
+        
         #region GetteriSetteri
+
         public long SifraLinije
         {
             get { return sifraLinije; }

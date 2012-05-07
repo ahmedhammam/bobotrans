@@ -23,8 +23,8 @@ namespace DesktopAplikacija
             //try
             //{
                 DAL.DAL.Instanca.kreirajKonekciju();
-                Application.Run(new aplikacijaSalter());
-                //Application.Run(new RezervacijaSjedistaUBusu());
+                //Application.Run(new aplikacijaSalter());
+                Application.Run(new Menadzer.AplikacijaMenadzer(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
                 DAL.DAL.Instanca.terminirajKonekciju();
             //}
            // catch (Exception e)
