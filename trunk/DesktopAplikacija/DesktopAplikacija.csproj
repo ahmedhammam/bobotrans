@@ -190,8 +190,6 @@
     <Compile Include="RadnikZaSalterom\aplikacijaSalter.Designer.cs">
       <DependentUpon>aplikacijaSalter.cs</DependentUpon>
     </Compile>
-    <Compile Include="RadnikZaSalterom\Eniteti.cs" />
-    <Compile Include="RadnikZaSalterom\Linije.cs" />
     <Compile Include="RadnikZaSalterom\PodaciOAutobusu.cs">
       <SubType>Form</SubType>
     </Compile>

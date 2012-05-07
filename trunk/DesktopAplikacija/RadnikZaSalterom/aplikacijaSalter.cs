@@ -265,7 +265,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
                 DAL.Entiteti.Stanica prvaStanica = staniceUVoznji[comboBox2.SelectedIndex];
                 DAL.Entiteti.Stanica drugaStanica = staniceUVoznji[comboBox3.SelectedIndex];
                 DAL.Entiteti.Voznja voznja = voznje[listBox1.SelectedIndices[0]];
-                double cijena = 15;
+                DAL.Entiteti.Linija odabranaLinija = comboBox1.SelectedItem as DAL.Entiteti.Linija;
+                double cijena = odabranaLinija.vratiCijenu(prvaStanica,drugaStanica);
                 List<double> cijene = new List<double>();
                 for (int i = 0; i < odabranaMjesta.Count; i++)
                 {
