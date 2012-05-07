@@ -108,7 +108,7 @@ namespace DAL.Entiteti
             if (i1 > i2)
                 throw new Exception("Linija ide u suprotnom smijeru od zadanih stanica");
 
-            return cijene[i1][i2];
+            return cijene[i1][i2-i1-1];
 
         }
 
