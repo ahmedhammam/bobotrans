@@ -85,6 +85,9 @@ namespace DesktopAplikacija.RadnikZaSalterom
             }
 
             comboBox4.SelectedIndex = 0;
+            textBox3.Enabled = (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta != 0);
+            button4.Enabled = button5.Enabled = (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex);
+            if (odabranaMjesta.Count == 0) button5.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,6 +165,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
         {
             odabranaMjesta = new List<int>();
             textBox1.Text = "0";
+            button4.Enabled = button5.Enabled = (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex);
+            if (odabranaMjesta.Count == 0) button5.Enabled = false;
             if (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex)
             {
                 int odgovor = 0;
@@ -179,8 +184,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
                         if(kupac.Voznja.SifraVoznje==voznje[listBox1.SelectedItems[0].Index].SifraVoznje)
                         {
                             if (dajIndexStanice(kupac.PocetnaStanica) < comboBox3.SelectedIndex
-                                ||
-                                dajIndexStanice(kupac.PocetnaStanica) > comboBox2.SelectedIndex)
+                                &&
+                                dajIndexStanice(kupac.KrajnjaStanica) > comboBox2.SelectedIndex)
                             {
                                 foreach (int mjesto in kupac.Sjedista)
                                 {
@@ -195,8 +200,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
                         if (kupac.Voznja.SifraVoznje == voznje[listBox1.SelectedItems[0].Index].SifraVoznje)
                         {
                             if (dajIndexStanice(kupac.PocetnaStanica) < comboBox3.SelectedIndex
-                                ||
-                                dajIndexStanice(kupac.PocetnaStanica) > comboBox2.SelectedIndex)
+                                &&
+                                dajIndexStanice(kupac.KrajnjaStanica) > comboBox2.SelectedIndex)
                             {
                                 foreach (int mjesto in kupac.Sjedista)
                                 {
@@ -256,33 +261,57 @@ namespace DesktopAplikacija.RadnikZaSalterom
             {
                 odabranaMjesta.Add(mjesto);
             }
+            button5.Enabled = (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex);
+            if (odabranaMjesta.Count == 0) button5.Enabled = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex)
+            if (textBox2.Text == "" || (textBox3.Enabled && textBox3.Text == ""))
             {
-                DAL.Entiteti.Stanica prvaStanica = staniceUVoznji[comboBox2.SelectedIndex];
-                DAL.Entiteti.Stanica drugaStanica = staniceUVoznji[comboBox3.SelectedIndex];
-                DAL.Entiteti.Voznja voznja = voznje[listBox1.SelectedIndices[0]];
-                DAL.Entiteti.Linija odabranaLinija = comboBox1.SelectedItem as DAL.Entiteti.Linija;
-                double cijena = odabranaLinija.vratiCijenu(prvaStanica,drugaStanica);
-                List<double> cijene = new List<double>();
-                for (int i = 0; i < odabranaMjesta.Count; i++)
+                MessageBox.Show("Molimo unesite sve podatke");
+            }
+            else
+            {
+                if (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex)
                 {
-                    cijene.Add(cijena * (1 - tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta / 100.0));
-                }
-                if (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta == 0)
-                {
-                    DAL.Entiteti.KupacKarte kupac = new DAL.Entiteti.KupacKarte(textBox2.Text, prvaStanica,drugaStanica,voznja, odabranaMjesta, cijene, System.DateTime.Today);
-                    d.getDAO.getKupacKarteDAO().create(kupac);
-                }
-                else
-                {
-                    DAL.Entiteti.KupacSaPopustom kupac = new DAL.Entiteti.KupacSaPopustom(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today, tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta, textBox3.Text, (DAL.TipoviPodataka.TipoviKupaca)(tipPopusta[comboBox4.SelectedIndex].Indeks));
-                    d.getDAO.getKupacKarteSPopustomDAO().create(kupac);
+                    DAL.Entiteti.Stanica prvaStanica = staniceUVoznji[comboBox2.SelectedIndex];
+                    DAL.Entiteti.Stanica drugaStanica = staniceUVoznji[comboBox3.SelectedIndex];
+                    DAL.Entiteti.Voznja voznja = voznje[listBox1.SelectedIndices[0]];
+                    DAL.Entiteti.Linija odabranaLinija = comboBox1.SelectedItem as DAL.Entiteti.Linija;
+                    double cijena = odabranaLinija.vratiCijenu(prvaStanica, drugaStanica);
+                    List<double> cijene = new List<double>();
+                    for (int i = 0; i < odabranaMjesta.Count; i++)
+                    {
+                        cijene.Add(cijena * (1 - tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta / 100.0));
+                    }
+                    try
+                    {
+                        if (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta == 0)
+                        {
+                            DAL.Entiteti.KupacKarte kupac = new DAL.Entiteti.KupacKarte(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today);
+                            d.getDAO.getKupacKarteDAO().create(kupac);
+                            MessageBox.Show("Obavljeno");
+                        }
+                        else
+                        {
+                            DAL.Entiteti.KupacSaPopustom kupac = new DAL.Entiteti.KupacSaPopustom(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today, tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta, textBox3.Text, (DAL.TipoviPodataka.TipoviKupaca)(tipPopusta[comboBox4.SelectedIndex].Indeks));
+                            d.getDAO.getKupacKarteSPopustomDAO().create(kupac);
+                            MessageBox.Show("Obavljeno");
+                        }
+                        updateujBrojSlobodnihSjedista();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox3.Enabled = (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta != 0);
         }
     }
 }

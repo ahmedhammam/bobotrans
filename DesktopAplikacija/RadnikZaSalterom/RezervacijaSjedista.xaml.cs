@@ -64,7 +64,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
             stanjeSjedista = new int[brojSjedista];
             for (int i = 0; i < brojSjedista; i++) stanjeSjedista[i] = 0;
             sjedista = new Button[brojSjedista];
-            for (int i = 0; i < brojSjedista - 5; i++) stanjeSjedista[i] = ((sjedisteZauzece[i]) ? 1 : 0);
+            for (int i = 0; i < brojSjedista; i++) stanjeSjedista[i] = ((sjedisteZauzece[i]) ? 1 : 0);
             foreach (int mjest in odabirSjedista)
             {
                 stanjeSjedista[mjest - 1] = 2;
