@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.9
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 06, 2012 at 02:30 AM
+-- Generation Time: May 07, 2012 at 08:39 PM
 -- Server version: 5.5.20
--- PHP Version: 5.3.9
+-- PHP Version: 5.3.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -46,11 +46,11 @@ CREATE TABLE IF NOT EXISTS `autobusi` (
 --
 
 INSERT INTO `autobusi` (`id`, `registracijskeTablice`, `istekRegistracije`, `brojSjedista`, `datumServisa`, `toalet`, `slobodan`, `klima`) VALUES
-(1, '123-K-123', '2012-05-05', 50, '2012-05-03', 1, 0, 1),
-(4, '234-K-319', '2012-10-07', 40, '2012-04-20', 0, 0, 0),
-(5, '324-A-322', '2013-04-17', 30, '2012-04-11', 0, 0, 1),
-(13, '159-M-753', '2013-05-05', 60, '2012-05-05', 0, 1, 1),
-(14, '871-N-869', '2013-07-10', 40, '2012-05-06', 1, 1, 1);
+(1, '123-K-123', '2012-05-05', 49, '2012-05-03', 1, 0, 1),
+(4, '234-K-319', '2012-10-07', 39, '2012-04-20', 0, 0, 0),
+(5, '324-A-322', '2013-04-17', 69, '2012-04-11', 0, 0, 1),
+(13, '159-M-753', '2013-05-05', 61, '2012-05-05', 0, 1, 1),
+(14, '871-N-869', '2013-07-10', 45, '2012-05-06', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -323,6 +323,39 @@ INSERT INTO `poruke` (`id`, `idPosiljaoca`, `idPrimaoca`, `vrijemeSlanja`, `teks
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rasporedvoznjeautobus`
+--
+
+CREATE TABLE IF NOT EXISTS `rasporedvoznjeautobus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idRasporedaVoznje` int(11) NOT NULL,
+  `idAutobusa` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idRasporedaVoznje_2` (`idRasporedaVoznje`),
+  KEY `idRasporedaVoznje` (`idRasporedaVoznje`),
+  KEY `idAutobusa` (`idAutobusa`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `rasporedvoznjeautobus`
+--
+
+INSERT INTO `rasporedvoznjeautobus` (`id`, `idRasporedaVoznje`, `idAutobusa`) VALUES
+(1, 21, 1),
+(2, 22, 4),
+(3, 27, 5),
+(4, 28, 5),
+(5, 29, 5),
+(6, 30, 5),
+(7, 31, 5),
+(8, 32, 1),
+(9, 33, 1),
+(10, 34, 5),
+(12, 35, 5);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rasporedvoznji`
 --
 
@@ -589,6 +622,13 @@ ALTER TABLE `linijevoznje`
 ALTER TABLE `poruke`
   ADD CONSTRAINT `poruke_ibfk_1` FOREIGN KEY (`idPosiljaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `poruke_ibfk_2` FOREIGN KEY (`idPrimaoca`) REFERENCES `korisnici` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `rasporedvoznjeautobus`
+--
+ALTER TABLE `rasporedvoznjeautobus`
+  ADD CONSTRAINT `rasporedvoznjeautobus_ibfk_1` FOREIGN KEY (`idRasporedaVoznje`) REFERENCES `rasporedvoznji` (`id`),
+  ADD CONSTRAINT `rasporedvoznjeautobus_ibfk_2` FOREIGN KEY (`idAutobusa`) REFERENCES `autobusi` (`id`);
 
 --
 -- Constraints for table `staniceuliniji`
