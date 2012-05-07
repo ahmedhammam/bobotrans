@@ -16,13 +16,13 @@ namespace DesktopAplikacija.Menadzer
         private string[] dani = { "", "Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota", "Nedjelja" };
         private Linija linija;
         private PregledLinija pozvanOd;
-        private List<RasporedVoznjeAutobus> rasporedAutobus;
         private DesktopAplikacija.Entiteti.KolekcijaStanica ks = DesktopAplikacija.Entiteti.KolekcijaStanica.Instanca;
         private List<Stanica> moguceStanice = new List<Stanica>();
 
         private int trajanjeDoDolaska = 0, trajanjeDoPolaska = 0;
         private int redniBroj = 0;
         private bool dodanaStanica = false;
+        private DesktopAplikacija.Entiteti.KolekcijaLinija kl = DesktopAplikacija.Entiteti.KolekcijaLinija.Instanca;
 
         public UredjivanjeLinije(Linija l, PregledLinija pl)
         {
@@ -39,21 +39,6 @@ namespace DesktopAplikacija.Menadzer
         {
             lblSifra.Text += linija.SifraLinije.ToString();
             tbNaziv.Text = linija.NazivLinije;
-
-
-            try
-            {
-                
-                DAL.DAL d = DAL.DAL.Instanca;
-                d.kreirajKonekciju();
-                DAL.DAL.RasporedVoznjeAutobusDAO rvad = d.getDAO.getRasporedVoznjeAutobusDAO();
-                rasporedAutobus = rvad.dajRasporedeULiniji(linija.SifraLinije);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Nemogućnost učitavanja rasporeda vožnji, greška: " + e.Message);
-                Close();
-            }
 
             popuniStanice();
             popuniCijene();
@@ -132,14 +117,7 @@ namespace DesktopAplikacija.Menadzer
                 lvRasporedi.Items[i].SubItems.Add(dani[rasporedi[i].DanUSedmici]);
                 lvRasporedi.Items[i].SubItems.Add(rasporedi[i].Vrijeme.Hour.ToString()+":"+rasporedi[i].Vrijeme.Minute.ToString("00"));
                 lvRasporedi.Items[i].SubItems.Add(rasporedi[i].PotrebanBrojSjedista.ToString());
-                foreach (RasporedVoznjeAutobus rva in rasporedAutobus)
-                {
-                    if (rva.RasporedVoznje == rasporedi[i].SifraRasporedaVoznji)
-                    {
-                        lvRasporedi.Items[i].SubItems.Add(rva.Autobus.ToString());
-                        break;
-                    }
-                }
+                lvRasporedi.Items[i].SubItems.Add(rasporedi[i].SifraAutobusa.ToString());
             }
         }
 
@@ -293,8 +271,8 @@ namespace DesktopAplikacija.Menadzer
 
             linija.NazivLinije = tbNaziv.Text;
             linija.Cijene = cijene;
-            
-            
+
+            kl.updateujLiniju(linija);
 
             /*
             
@@ -311,6 +289,23 @@ namespace DesktopAplikacija.Menadzer
 
 
             Close();
+        }
+
+        private void btnBrisiStanicu_Click(object sender, EventArgs e)
+        {
+            if (lvStanice.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Niste odabrali stanicu!");
+                return;
+            }
+
+            if ((lvStanice.SelectedItems[0].Tag as Stanica).SifraStanice == linija.Stanice[0].SifraStanice)
+            {
+                MessageBox.Show("Ne možete obrisati početnu stanicu, kreirajte novu liniju!");
+                return;
+            }
+
+            MessageBox.Show((lvStanice.SelectedItems[0].Tag as Stanica).Naziv);
         }
     }
 }

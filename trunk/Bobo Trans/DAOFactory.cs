@@ -64,11 +64,6 @@ namespace DAL
                 return new LinijaDAO();
             }
 
-            public RasporedVoznjeAutobusDAO getRasporedVoznjeAutobusDAO()
-            {
-                return new RasporedVoznjeAutobusDAO();
-            }
-
            public KupacKarteDAO getKupacKarteDAO()
             {
                 return new KupacKarteDAO();

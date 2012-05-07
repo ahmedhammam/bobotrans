@@ -27,7 +27,6 @@ namespace DesktopAplikacija.Entiteti
                 d.kreirajKonekciju();
                 DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
                 linije = ld.GetAll();
-                d.terminirajKonekciju();
         }
 
         public void updateujLiniju(DAL.Entiteti.Linija l)

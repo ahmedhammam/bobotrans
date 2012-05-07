@@ -11,8 +11,16 @@ namespace DAL.Entiteti
         private int danUSedmici;
         private DateTime vrijeme;
         private long potrebanBrojSjedista;
+        private long sifraAutobusa;
+
 
         #region GetteriSetteri
+
+        public long SifraAutobusa
+        {
+            get { return sifraAutobusa; }
+            set { sifraAutobusa = value; }
+        }
 
         public int DanUSedmici
         {
@@ -37,19 +45,21 @@ namespace DAL.Entiteti
         } 
         #endregion
 
-        public RasporedVoznje(int dUS,DateTime v, long pBS)
+        public RasporedVoznje(int dUS,DateTime v, long pBS,long sA)
         {
             danUSedmici = dUS;
             vrijeme = v;
             potrebanBrojSjedista = pBS;
+            sifraAutobusa = sA;
         }
 
-        public RasporedVoznje(long sRV,int dUS, DateTime v, long pBS)
+        public RasporedVoznje(long sRV,int dUS, DateTime v, long pBS,long sA)
         {
             danUSedmici = dUS;
             sifraRasporedaVoznji = sRV;
             vrijeme = v;
             potrebanBrojSjedista = pBS;
+            sifraAutobusa = sA;
         }
 
     }

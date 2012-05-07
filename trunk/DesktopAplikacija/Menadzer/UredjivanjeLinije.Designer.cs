@@ -60,6 +60,7 @@
             this.colSifraAutobusa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnIzadji = new System.Windows.Forms.Button();
             this.btnSpasi = new System.Windows.Forms.Button();
+            this.btnBrisiStanicu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbStanice.SuspendLayout();
             this.gbDodajStanicu.SuspendLayout();
@@ -109,6 +110,7 @@
             // 
             this.gbStanice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbStanice.Controls.Add(this.btnBrisiStanicu);
             this.gbStanice.Controls.Add(this.gbDodajStanicu);
             this.gbStanice.Controls.Add(this.lvStanice);
             this.gbStanice.Location = new System.Drawing.Point(13, 92);
@@ -363,6 +365,16 @@
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
+            // btnBrisiStanicu
+            // 
+            this.btnBrisiStanicu.Location = new System.Drawing.Point(571, 186);
+            this.btnBrisiStanicu.Name = "btnBrisiStanicu";
+            this.btnBrisiStanicu.Size = new System.Drawing.Size(75, 23);
+            this.btnBrisiStanicu.TabIndex = 2;
+            this.btnBrisiStanicu.Text = "Izbrisi";
+            this.btnBrisiStanicu.UseVisualStyleBackColor = true;
+            this.btnBrisiStanicu.Click += new System.EventHandler(this.btnBrisiStanicu_Click);
+            // 
             // UredjivanjeLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,5 +437,6 @@
         private System.Windows.Forms.TextBox tbPolazak;
         private System.Windows.Forms.TextBox tbDolazak;
         private System.Windows.Forms.Button btnDodajStanicu;
+        private System.Windows.Forms.Button btnBrisiStanicu;
     }
 }
