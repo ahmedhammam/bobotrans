@@ -29,5 +29,19 @@ namespace DesktopAplikacija.Entiteti
                 linije = ld.GetAll();
                 d.terminirajKonekciju();
         }
+
+        public void updateujLiniju(DAL.Entiteti.Linija l)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            DAL.DAL.LinijaDAO ld = d.getDAO.getLinijaDAO();
+            for(int i=0;i<linije.Count;i++)
+            {
+                if(linije[i].SifraLinije==l.SifraLinije)
+                {
+                    linije[i] = ld.update(l);
+                    return;
+                }
+            }
+        }
     }
 }

@@ -119,14 +119,10 @@ D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\RadnikZaSalterom\rezervacijaSj
 D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija_MarkupCompile.cache
 D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.g.resources
 D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.RezervacijaSjedistaUBusu.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\RadnikZaSalterom\RezervacijaSjedista.baml
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\RadnikZaSalterom\RezervacijaSjedista.g.cs
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija_MarkupCompile.cache
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.g.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.NoviZakupAutobusa.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.AplikacijaMenadzer.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.DodajNoviAutobus.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.IznajmljivanjeAutobusa.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.PregledAutobusa.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeAutobusa.resources
-C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.RezervacijaSjedistaUBusu.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\RadnikZaSalterom\RezervacijaSjedista.baml
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\RadnikZaSalterom\RezervacijaSjedista.g.cs
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija_MarkupCompile.cache
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.g.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.RezervacijaSjedistaUBusu.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.PregledLinija.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeLinije.resources

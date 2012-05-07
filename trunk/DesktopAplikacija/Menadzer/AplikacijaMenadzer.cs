@@ -74,5 +74,11 @@ namespace DesktopAplikacija.Menadzer
             IznajmljivanjeAutobusa ia = new IznajmljivanjeAutobusa();
             ia.Show();
         }
+
+        private void btnLinije_Click(object sender, EventArgs e)
+        {
+            PregledLinija pl = new PregledLinija();
+            pl.Show();
+        }
     }
 }

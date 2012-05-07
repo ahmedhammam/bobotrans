@@ -158,6 +158,18 @@
     <Compile Include="Menadzer\UredjivanjeAutobusa.Designer.cs">
       <DependentUpon>UredjivanjeAutobusa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menadzer\PregledLinija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menadzer\PregledLinija.Designer.cs">
+      <DependentUpon>PregledLinija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menadzer\UredjivanjeLinije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menadzer\UredjivanjeLinije.Designer.cs">
+      <DependentUpon>UredjivanjeLinije.cs</DependentUpon>
+    </Compile>
     <Compile Include="Poruke\aplikacijaPoruke.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +281,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menadzer\UredjivanjeAutobusa.resx">
       <DependentUpon>UredjivanjeAutobusa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menadzer\PregledLinija.resx">
+      <DependentUpon>PregledLinija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menadzer\UredjivanjeLinije.resx">
+      <DependentUpon>UredjivanjeLinije.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Poruke\aplikacijaPoruke.resx">
       <DependentUpon>aplikacijaPoruke.cs</DependentUpon>
