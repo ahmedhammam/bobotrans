@@ -57,7 +57,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
             }*/
         }
 
-        public RezervacijaSjedista(int brojSjedista_, List<bool> sjedisteZauzece)
+        public RezervacijaSjedista(int brojSjedista_, List<bool> sjedisteZauzece, List<int> odabirSjedista)
         {
             this.InitializeComponent();
             brojSjedista=brojSjedista_;
@@ -65,6 +65,10 @@ namespace DesktopAplikacija.RadnikZaSalterom
             for (int i = 0; i < brojSjedista; i++) stanjeSjedista[i] = 0;
             sjedista = new Button[brojSjedista];
             for (int i = 0; i < brojSjedista - 5; i++) stanjeSjedista[i] = ((sjedisteZauzece[i]) ? 1 : 0);
+            foreach (int mjest in odabirSjedista)
+            {
+                stanjeSjedista[mjest - 1] = 2;
+            }
             for (int i = 0; i < brojSjedista - 5; i++)
             {
                 sjedista[i] = new Button();
@@ -75,7 +79,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
                 sjedista[i].VerticalAlignment = VerticalAlignment.Top;
                 sjedista[i].Click += new RoutedEventHandler(IzaberiZauzece);
                 sjedista[i].Background = Brushes.LawnGreen;
-                if (sjedisteZauzece[i]) sjedista[i].Background = Brushes.DarkRed;
+                if (stanjeSjedista[i] == 1) sjedista[i].Background = Brushes.DarkRed;
+                if (stanjeSjedista[i] == 2) sjedista[i].Background = Brushes.DarkOrange;
                 myGrid.Children.Add(sjedista[i]);
 
             }
@@ -90,7 +95,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
                 sjedista[i].VerticalAlignment = VerticalAlignment.Top;
                 sjedista[i].Click += new RoutedEventHandler(IzaberiZauzece);
                 sjedista[i].Background = Brushes.LawnGreen;
-                if (sjedisteZauzece[i]) sjedista[i].Background = Brushes.DarkRed;
+                if (stanjeSjedista[i] == 1) sjedista[i].Background = Brushes.DarkRed;
+                if (stanjeSjedista[i] == 2) sjedista[i].Background = Brushes.DarkOrange;
                 myGrid.Children.Add(sjedista[i]);
             }
         }

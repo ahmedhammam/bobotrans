@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "podaciORezervaciji";
             this.Text = "Podaci o rezervaciji karte";
+            this.Load += new System.EventHandler(this.podaciORezervaciji_Load);
             this.ResumeLayout(false);
 
         }
