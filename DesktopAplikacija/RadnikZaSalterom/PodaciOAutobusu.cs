@@ -21,7 +21,6 @@ namespace DesktopAplikacija.RadnikZaSalterom
             InitializeComponent();
             sifraAutobusa = sifra;
             odabraniAutobus = ka.dajPoSifri(sifraAutobusa);
-          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,11 +34,15 @@ namespace DesktopAplikacija.RadnikZaSalterom
                    d.kreirajKonekciju();
                     textBox1.Text = Convert.ToString(odabraniAutobus.SifraAutobusa);
                     textBox2.Text = odabraniAutobus.RegistracijskeTablice;
-                    numericUpDown1.Value = odabraniAutobus.BrojSjedista;
-                    textBox3.Text = Convert.ToString(odabraniAutobus.ImaToalet);
-                    textBox4.Text = Convert.ToString(odabraniAutobus.ImaKlimu);
-                    textBox5.Text = Convert.ToString(odabraniAutobus.Slobodan);
-           
+                    textBox7.Text = odabraniAutobus.BrojSjedista.ToString();
+                    textBox3.Text = (odabraniAutobus.ImaToalet) ? "DA" : "NE";
+                    textBox4.Text = (odabraniAutobus.ImaKlimu) ? "DA" : "NE";
+                    textBox5.Text = (odabraniAutobus.Slobodan) ? "DA" : "NE";
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

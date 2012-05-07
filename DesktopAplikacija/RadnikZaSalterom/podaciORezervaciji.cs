@@ -15,5 +15,10 @@ namespace DesktopAplikacija.RadnikZaSalterom
         {
             InitializeComponent();
         }
+
+        private void podaciORezervaciji_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
