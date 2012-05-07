@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL.Entiteti
 {
-    class TipPopusta
+    public class TipPopusta
     {
         int indeks_;
 
@@ -31,7 +31,7 @@ namespace DAL.Entiteti
           set { vrijednostPopusta = value; }
         }
 
-        public TipPopusta(int indeks, string tip_popusta, int vrijednost_popusta)
+        public TipPopusta(int indeks, string tip_popusta, double vrijednost_popusta)
         {
             indeks_ = indeks;
             tipPopusta = tip_popusta;

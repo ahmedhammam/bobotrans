@@ -66,6 +66,7 @@
     <Compile Include="Entiteti\Korisnik.cs" />
     <Compile Include="Entiteti\RasporedVoznje.cs" />
     <Compile Include="Entiteti\RasporedVoznjeAutobus.cs" />
+    <Compile Include="Entiteti\TipPopusta.cs" />
     <Compile Include="TipoviPodataka\TipoviKorisnika.cs" />
     <Compile Include="TipoviPodataka\TipoviKupaca.cs" />
     <Compile Include="Entiteti\Izvjestaj.cs" />
