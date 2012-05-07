@@ -57,13 +57,13 @@
             this.colVrijemePolaska = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSifraAutobusa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -333,6 +333,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Podaci o kupcu";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Dodatni podaci:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(126, 71);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(104, 20);
+            this.textBox3.TabIndex = 46;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(126, 44);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(104, 21);
+            this.comboBox4.TabIndex = 45;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(62, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Tip kupca:";
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(126, 18);
@@ -358,40 +393,6 @@
             this.button5.Text = "Prodaj";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 47);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Tip kupca:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(126, 44);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(104, 21);
-            this.comboBox4.TabIndex = 45;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(126, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(104, 20);
-            this.textBox3.TabIndex = 46;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 13);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Dodatni podaci:";
             // 
             // aplikacijaSalter
             // 
