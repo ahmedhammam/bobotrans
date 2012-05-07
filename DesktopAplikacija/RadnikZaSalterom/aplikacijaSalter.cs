@@ -275,10 +275,12 @@ namespace DesktopAplikacija.RadnikZaSalterom
                 if (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta == 0)
                 {
                     DAL.Entiteti.KupacKarte kupac = new DAL.Entiteti.KupacKarte(textBox2.Text, prvaStanica,drugaStanica,voznja, odabranaMjesta, cijene, System.DateTime.Today);
+                    d.getDAO.getKupacKarteDAO().create(kupac);
                 }
                 else
                 {
                     DAL.Entiteti.KupacSaPopustom kupac = new DAL.Entiteti.KupacSaPopustom(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today, tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta, textBox3.Text, (DAL.TipoviPodataka.TipoviKupaca)(tipPopusta[comboBox4.SelectedIndex].Indeks));
+                    d.getDAO.getKupacKarteSPopustomDAO().create(kupac);
                 }
             }
         }
