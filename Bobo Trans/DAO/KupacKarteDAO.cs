@@ -148,7 +148,7 @@ namespace DAL
                     voznjaId = r.GetInt32("idVoznje");
                     sjedista.Add(r.GetInt32("idSjedista"));
                     cijene.Add(r.GetDouble("cijena"));
-                    datumIVrijemeKupovine = r.GetDateTime("datumIVrijemeKupovine");
+                    datumIVrijemeKupovine = r.GetDateTime("vrijemeIDatumKupovine");
                 }
 
                 r.Close();
