@@ -117,7 +117,6 @@ namespace DAL
                     c.ExecuteNonQuery();
 
                     ocitajImeITIp(id, out ime, out tip);
-
                     popust = ocitajPopust(tip);
 
                     ocitajKarte(id, ref pocetnaStanicaId, ref krajnjaStanicaId, ref voznjaId, sjedista, cijene, out datumIVrijemeKupovine);
@@ -154,7 +153,7 @@ namespace DAL
                     voznjaId = r.GetInt32("idVoznje");
                     sjedista.Add(r.GetInt32("idSjedista"));
                     cijene.Add(r.GetDouble("cijena"));
-                    datumIVrijemeKupovine = r.GetDateTime("datumIVrijemeKupovine");
+                    datumIVrijemeKupovine = r.GetDateTime("vrijemeIDatumKupovine");
                 }
 
                 r.Close();
@@ -213,6 +212,19 @@ namespace DAL
             public List<KupacSaPopustom> getByExample(string name, string values)
             {
                 throw new Exception("get by Example se ne moze implementirati za kupce karti");
+            }
+
+            public List<TipPopusta> dajTipovePopusta()
+            {
+                List<TipPopusta> spisak = new List<TipPopusta>();
+                c = new MySqlCommand("SELECT * FROM tipoviKupacaKarte;", con);
+                MySqlDataReader r = c.ExecuteReader();
+                while (r.Read())
+                {
+                    spisak.Add(new TipPopusta(r.GetInt32("id"),r.GetString("naziv"),r.GetDouble("popust")));
+                }
+                r.Close();
+                return spisak;
             }
         }
     }
