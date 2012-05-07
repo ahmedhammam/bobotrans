@@ -12,8 +12,8 @@ namespace DAL.Entiteti
         private DateTime vrijeme;
         private long potrebanBrojSjedista;
 
-
         #region GetteriSetteri
+
         public int DanUSedmici
         {
             get { return danUSedmici; }

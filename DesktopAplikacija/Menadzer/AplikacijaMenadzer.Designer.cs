@@ -94,6 +94,7 @@
             this.btnLinije.Size = new System.Drawing.Size(213, 157);
             this.btnLinije.TabIndex = 0;
             this.btnLinije.UseVisualStyleBackColor = true;
+            this.btnLinije.Click += new System.EventHandler(this.btnLinije_Click);
             // 
             // groupBox3
             // 

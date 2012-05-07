@@ -76,7 +76,6 @@ namespace DAL
             {
                 try
                 {
-                    Console.WriteLine(entity.SifraVoznje);
                     c = new MySqlCommand(String.Format("DELETE FROM voznje WHERE id ='{0}';", entity.SifraVoznje), con);
                     c.ExecuteNonQuery();
                 }
@@ -187,6 +186,48 @@ namespace DAL
                 }
                 catch(Exception e)
                 {
+                    throw e;
+                }
+            }
+
+            private void deletePoSifriVoznje(long idVoznje)
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("DELETE FROM voznje WHERE id ='{0}';", idVoznje), con);
+                    c.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            public void deletePoSifriLinije(long idLinije)
+            {
+                try
+                {
+
+                    c = new MySqlCommand("START TRANSACTION;", con);
+                    c.ExecuteNonQuery();
+
+                    c = new MySqlCommand(string.Format("SELECT v.id FROM (SELECT * FROM linijevoznje WHERE idLinije='{0}' ) AS lv LEFT JOIN voznje as v ON v.id = lv.idVoznje;", idLinije), con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    List<long> sifre = new List<long>();
+                    while (r.Read())
+                    {
+                        sifre.Add(r.GetInt32("id"));
+                    }
+                    r.Close();
+                    foreach (int i in sifre)
+                        deletePoSifriVoznje(i);
+                    c = new MySqlCommand("COMMIT;", con);
+                    c.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    c = new MySqlCommand("ROLLBACK;", con);
+                    c.ExecuteNonQuery();
                     throw e;
                 }
             }

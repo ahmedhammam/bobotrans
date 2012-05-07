@@ -142,6 +142,49 @@ namespace DAL
                     throw e;
                 }
             }
+
+            private void deletePoSifriRasporeda(long sifraRasporeda)
+            {
+                try
+                {
+                    c = new MySqlCommand(String.Format("DELETE FROM rasporedvoznji WHERE id ='{0}';", sifraRasporeda), con);
+                    c.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
+            public void deletePoSifriLinije(long idLinije)
+            {
+                try
+                {
+
+                    c = new MySqlCommand("START TRANSACTION;", con);
+                    c.ExecuteNonQuery();
+
+                    c = new MySqlCommand(string.Format("SELECT rv.id FROM (SELECT * FROM linijerasporedvoznji WHERE idLinije = '{0}' ) AS lrv LEFT JOIN rasporedvoznji as rv ON rv.id = lrv.idRasporedaVoznje;", 
+                        idLinije), con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    List<long> sifre = new List<long>();
+                    while (r.Read())
+                    {
+                        sifre.Add(r.GetInt32("id"));
+                    }
+                    r.Close();
+                    foreach (int i in sifre)
+                        deletePoSifriRasporeda(i);
+                    c = new MySqlCommand("COMMIT;", con);
+                    c.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    c = new MySqlCommand("ROLLBACK;", con);
+                    c.ExecuteNonQuery();
+                    throw e;
+                }
+            }
         }
     }
 }

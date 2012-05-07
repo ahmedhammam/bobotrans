@@ -20,13 +20,13 @@ namespace DesktopAplikacija
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new DesktopAplikacija.Menadzer.AplikacijaMenadzer());
-           // try
-           // {
+            //try
+            //{
                 DAL.DAL.Instanca.kreirajKonekciju();
-                //Application.Run(new Menadzer.AplikacijaMenadzer(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
-                Application.Run(new RezervacijaSjedistaUBusu());
+                Application.Run(new Menadzer.AplikacijaMenadzer(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
+                //Application.Run(new RezervacijaSjedistaUBusu());
                 DAL.DAL.Instanca.terminirajKonekciju();
-          //  }
+            //}
            // catch (Exception e)
            // {
            //     MessageBox.Show(e.Message);

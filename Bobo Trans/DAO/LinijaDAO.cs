@@ -119,8 +119,10 @@ namespace DAL
                 {
                     c = new MySqlCommand("START TRANSACTION;", con);
                     c.ExecuteNonQuery();
-                    foreach (Voznja v in entity.Voznje)
-                        DAOFactory.Instanca.getVoznjaDAO().delete(v);
+
+                    DAOFactory.Instanca.getVoznjaDAO().deletePoSifriLinije(entity.SifraLinije);
+
+                    DAOFactory.Instanca.getRasporedVoznjiDAO().deletePoSifriLinije(entity.SifraLinije);
 
                     foreach (RasporedVoznje rv in entity.RasporediVoznje)
                         DAOFactory.Instanca.getRasporedVoznjiDAO().delete(rv);
