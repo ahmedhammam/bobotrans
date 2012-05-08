@@ -40,20 +40,24 @@ namespace DAL
                         entity.DanUSedmici,entity.Vrijeme.Hour,entity.Vrijeme.Minute,entity.PotrebanBrojSjedista, con));
 
                     MySqlDataReader r = c.ExecuteReader();
-
+                    
                     if (r.Read())
                     {
-                        RasporedVoznje rv = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"), 
-                            r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"),r.GetInt32("idAutobusa"));
+                        RasporedVoznje rv = new RasporedVoznje(r.GetInt32("id"), r.GetInt32("danUSedmici"), new DateTime(1, 1, 1, r.GetInt32("sati"),
+                            r.GetInt32("minute"), 0), r.GetInt32("potrebanBrojSjedista"), r.GetInt32("idAutobusa"));
                         r.Close();
                         return rv;
                     }
-                    else throw
-                     new Exception("nije nadjen nijedan element");
+                    else
+                    {
+                        r.Close();
+                        throw new Exception("nije nadjen nijedan element");
+                    }
 
                 }
                 catch (Exception e)
                 {
+                    
                     throw e;
                 }
             }
