@@ -56,6 +56,7 @@
             this.btnSpasi = new System.Windows.Forms.Button();
             this.gbRasporediVoznje = new System.Windows.Forms.GroupBox();
             this.btnPrikaziRasporede = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbStanice.SuspendLayout();
             this.gbDodajStanicu.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tbNaziv);
             this.groupBox1.Controls.Add(this.lblNaziv);
             this.groupBox1.Controls.Add(this.lblSifra);
@@ -95,7 +97,7 @@
             // lblSifra
             // 
             this.lblSifra.AutoSize = true;
-            this.lblSifra.Location = new System.Drawing.Point(7, 20);
+            this.lblSifra.Location = new System.Drawing.Point(50, 16);
             this.lblSifra.Name = "lblSifra";
             this.lblSifra.Size = new System.Drawing.Size(34, 13);
             this.lblSifra.TabIndex = 0;
@@ -337,6 +339,15 @@
             this.btnPrikaziRasporede.UseVisualStyleBackColor = true;
             this.btnPrikaziRasporede.Click += new System.EventHandler(this.btnPrikaziRasporede_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Šifra:";
+            // 
             // UredjivanjeLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,5 +407,6 @@
         private System.Windows.Forms.Button btnBrisiStanicu;
         private System.Windows.Forms.GroupBox gbRasporediVoznje;
         private System.Windows.Forms.Button btnPrikaziRasporede;
+        private System.Windows.Forms.Label label4;
     }
 }

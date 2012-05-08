@@ -127,7 +127,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entiteti\LoginPodaci.cs" />
     <Compile Include="Menadzer\AplikacijaMenadzer.cs">
       <SubType>Form</SubType>
     </Compile>

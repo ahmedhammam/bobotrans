@@ -69,7 +69,6 @@ namespace DesktopAplikacija.Poruke
 
         private void b_Izadi_Click(object sender, EventArgs e)
         {
-            d.terminirajKonekciju();
             Close();
         }
 
@@ -88,16 +87,16 @@ namespace DesktopAplikacija.Poruke
             staPrikazuje = primljene ? Prikazuje.primljene : Prikazuje.poslane;
             gbPoruke.Text = primljene ? "Primljene poruke" : "Poslane poruke";
             lvPoruke.Items.Clear();
-            for (int i = 0; i < poruke.Count; i++)
+            for (int i = poruke.Count - 1; i > -1; i--)
             {
                 if (primljene)
                     lvPoruke.Items.Add(kk.getNameByUsername(poruke[i].Posiljaoc));
                 else
                     lvPoruke.Items.Add(kk.getNameByUsername(poruke[i].Primalac));
 
-                lvPoruke.Items[i].SubItems.Add(poruke[i].VrijemeSlanja.ToString("dd.mm.yyyy hh:mm"));
-                lvPoruke.Items[i].SubItems.Add(poruke[i].Tekst);
-                lvPoruke.Items[i].Tag = poruke[i];
+                lvPoruke.Items[poruke.Count - 1-i].SubItems.Add(poruke[i].VrijemeSlanja.ToString("dd.MM.yyyy hh:mm"));
+                lvPoruke.Items[poruke.Count - 1-i].SubItems.Add(poruke[i].Tekst);
+                lvPoruke.Items[poruke.Count - 1-i].Tag = poruke[i];
             }
         }
 

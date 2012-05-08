@@ -195,12 +195,18 @@ namespace DesktopAplikacija.Serviser
         {
             aplikacijaPoruke ap = new aplikacijaPoruke(logovaniKorisnik);
             ap.Show();
-        }
+       }
 
         private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
             aplikacijaPoruke a = new aplikacijaPoruke(logovaniKorisnik);
             a.Show();
+        }
+
+        private void tsbPoruke_Click(object sender, EventArgs e)
+        {
+            DesktopAplikacija.Poruke.aplikacijaPoruke ap = new DesktopAplikacija.Poruke.aplikacijaPoruke(logovaniKorisnik);
+            ap.Show();
         }
     }
 
