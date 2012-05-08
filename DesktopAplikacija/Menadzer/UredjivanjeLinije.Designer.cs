@@ -49,24 +49,19 @@
             this.colMjesto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTrajanjeDoDolaska = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTrajanjeDoPolaska = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnBrisiStanicu = new System.Windows.Forms.Button();
             this.gbCijene = new System.Windows.Forms.GroupBox();
             this.dgvCijene = new System.Windows.Forms.DataGridView();
-            this.gbRasporedi = new System.Windows.Forms.GroupBox();
-            this.lvRasporedi = new System.Windows.Forms.ListView();
-            this.colSifraRasporeda = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colDan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colVrijemePolaska = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colSjedista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colSifraAutobusa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnIzadji = new System.Windows.Forms.Button();
             this.btnSpasi = new System.Windows.Forms.Button();
-            this.btnBrisiStanicu = new System.Windows.Forms.Button();
+            this.gbRasporediVoznje = new System.Windows.Forms.GroupBox();
+            this.btnPrikaziRasporede = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbStanice.SuspendLayout();
             this.gbDodajStanicu.SuspendLayout();
             this.gbCijene.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).BeginInit();
-            this.gbRasporedi.SuspendLayout();
+            this.gbRasporediVoznje.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,7 +71,7 @@
             this.groupBox1.Controls.Add(this.lblSifra);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(225, 72);
+            this.groupBox1.Size = new System.Drawing.Size(287, 72);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Linija";
@@ -85,7 +80,7 @@
             // 
             this.tbNaziv.Location = new System.Drawing.Point(53, 39);
             this.tbNaziv.Name = "tbNaziv";
-            this.tbNaziv.Size = new System.Drawing.Size(160, 20);
+            this.tbNaziv.Size = new System.Drawing.Size(228, 20);
             this.tbNaziv.TabIndex = 2;
             // 
             // lblNaziv
@@ -110,7 +105,6 @@
             // 
             this.gbStanice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbStanice.Controls.Add(this.btnBrisiStanicu);
             this.gbStanice.Controls.Add(this.gbDodajStanicu);
             this.gbStanice.Controls.Add(this.lvStanice);
             this.gbStanice.Location = new System.Drawing.Point(13, 92);
@@ -263,6 +257,17 @@
             this.colTrajanjeDoPolaska.Text = "Trajanje do polaska";
             this.colTrajanjeDoPolaska.Width = 112;
             // 
+            // btnBrisiStanicu
+            // 
+            this.btnBrisiStanicu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrisiStanicu.Location = new System.Drawing.Point(818, 586);
+            this.btnBrisiStanicu.Name = "btnBrisiStanicu";
+            this.btnBrisiStanicu.Size = new System.Drawing.Size(75, 23);
+            this.btnBrisiStanicu.TabIndex = 2;
+            this.btnBrisiStanicu.Text = "Izbrisi";
+            this.btnBrisiStanicu.UseVisualStyleBackColor = true;
+            this.btnBrisiStanicu.Click += new System.EventHandler(this.btnBrisiStanicu_Click);
+            // 
             // gbCijene
             // 
             this.gbCijene.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
@@ -270,10 +275,10 @@
             this.gbCijene.Controls.Add(this.dgvCijene);
             this.gbCijene.Location = new System.Drawing.Point(13, 330);
             this.gbCijene.Name = "gbCijene";
-            this.gbCijene.Size = new System.Drawing.Size(961, 235);
+            this.gbCijene.Size = new System.Drawing.Size(961, 237);
             this.gbCijene.TabIndex = 2;
             this.gbCijene.TabStop = false;
-            this.gbCijene.Text = "Cijene";
+            this.gbCijene.Text = "Cijene (Unositi zarez kao decimalno mjesto)";
             // 
             // dgvCijene
             // 
@@ -290,63 +295,10 @@
             this.dgvCijene.Size = new System.Drawing.Size(948, 204);
             this.dgvCijene.TabIndex = 0;
             // 
-            // gbRasporedi
-            // 
-            this.gbRasporedi.Controls.Add(this.lvRasporedi);
-            this.gbRasporedi.Location = new System.Drawing.Point(13, 572);
-            this.gbRasporedi.Name = "gbRasporedi";
-            this.gbRasporedi.Size = new System.Drawing.Size(735, 230);
-            this.gbRasporedi.TabIndex = 3;
-            this.gbRasporedi.TabStop = false;
-            this.gbRasporedi.Text = "Rasporedi vožnji";
-            // 
-            // lvRasporedi
-            // 
-            this.lvRasporedi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colSifraRasporeda,
-            this.colDan,
-            this.colVrijemePolaska,
-            this.colSjedista,
-            this.colSifraAutobusa});
-            this.lvRasporedi.FullRowSelect = true;
-            this.lvRasporedi.Location = new System.Drawing.Point(9, 20);
-            this.lvRasporedi.Name = "lvRasporedi";
-            this.lvRasporedi.Size = new System.Drawing.Size(436, 204);
-            this.lvRasporedi.TabIndex = 0;
-            this.lvRasporedi.UseCompatibleStateImageBehavior = false;
-            this.lvRasporedi.View = System.Windows.Forms.View.Details;
-            this.lvRasporedi.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.lvRasporedi_ColumnWidthChanging);
-            // 
-            // colSifraRasporeda
-            // 
-            this.colSifraRasporeda.Text = "Šifra";
-            // 
-            // colDan
-            // 
-            this.colDan.Text = "Dan u sedmici";
-            this.colDan.Width = 83;
-            // 
-            // colVrijemePolaska
-            // 
-            this.colVrijemePolaska.Text = "Vrijeme polaska";
-            this.colVrijemePolaska.Width = 90;
-            // 
-            // colSjedista
-            // 
-            this.colSjedista.Text = "Potreban broj sjedista";
-            this.colSjedista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colSjedista.Width = 115;
-            // 
-            // colSifraAutobusa
-            // 
-            this.colSifraAutobusa.Text = "Šifra autobusa";
-            this.colSifraAutobusa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colSifraAutobusa.Width = 82;
-            // 
             // btnIzadji
             // 
             this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIzadji.Location = new System.Drawing.Point(897, 818);
+            this.btnIzadji.Location = new System.Drawing.Point(899, 586);
             this.btnIzadji.Name = "btnIzadji";
             this.btnIzadji.Size = new System.Drawing.Size(75, 23);
             this.btnIzadji.TabIndex = 4;
@@ -357,7 +309,7 @@
             // btnSpasi
             // 
             this.btnSpasi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSpasi.Location = new System.Drawing.Point(816, 818);
+            this.btnSpasi.Location = new System.Drawing.Point(737, 586);
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 5;
@@ -365,30 +317,41 @@
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
-            // btnBrisiStanicu
+            // gbRasporediVoznje
             // 
-            this.btnBrisiStanicu.Location = new System.Drawing.Point(571, 186);
-            this.btnBrisiStanicu.Name = "btnBrisiStanicu";
-            this.btnBrisiStanicu.Size = new System.Drawing.Size(75, 23);
-            this.btnBrisiStanicu.TabIndex = 2;
-            this.btnBrisiStanicu.Text = "Izbrisi";
-            this.btnBrisiStanicu.UseVisualStyleBackColor = true;
-            this.btnBrisiStanicu.Click += new System.EventHandler(this.btnBrisiStanicu_Click);
+            this.gbRasporediVoznje.Controls.Add(this.btnPrikaziRasporede);
+            this.gbRasporediVoznje.Location = new System.Drawing.Point(342, 13);
+            this.gbRasporediVoznje.Name = "gbRasporediVoznje";
+            this.gbRasporediVoznje.Size = new System.Drawing.Size(133, 72);
+            this.gbRasporediVoznje.TabIndex = 6;
+            this.gbRasporediVoznje.TabStop = false;
+            this.gbRasporediVoznje.Text = "Rasporedi vožnje";
+            // 
+            // btnPrikaziRasporede
+            // 
+            this.btnPrikaziRasporede.Location = new System.Drawing.Point(31, 30);
+            this.btnPrikaziRasporede.Name = "btnPrikaziRasporede";
+            this.btnPrikaziRasporede.Size = new System.Drawing.Size(75, 23);
+            this.btnPrikaziRasporede.TabIndex = 0;
+            this.btnPrikaziRasporede.Text = "Prikaži";
+            this.btnPrikaziRasporede.UseVisualStyleBackColor = true;
+            this.btnPrikaziRasporede.Click += new System.EventHandler(this.btnPrikaziRasporede_Click);
             // 
             // UredjivanjeLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 859);
+            this.ClientSize = new System.Drawing.Size(984, 621);
+            this.Controls.Add(this.gbRasporediVoznje);
+            this.Controls.Add(this.btnBrisiStanicu);
             this.Controls.Add(this.btnSpasi);
             this.Controls.Add(this.btnIzadji);
-            this.Controls.Add(this.gbRasporedi);
             this.Controls.Add(this.gbCijene);
             this.Controls.Add(this.gbStanice);
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.MinimumSize = new System.Drawing.Size(600, 806);
+            this.MinimumSize = new System.Drawing.Size(600, 659);
             this.Name = "UredjivanjeLinije";
             this.Text = "UređivanjeLinije";
             this.groupBox1.ResumeLayout(false);
@@ -398,7 +361,7 @@
             this.gbDodajStanicu.PerformLayout();
             this.gbCijene.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).EndInit();
-            this.gbRasporedi.ResumeLayout(false);
+            this.gbRasporediVoznje.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -418,13 +381,6 @@
         private System.Windows.Forms.DataGridView dgvCijene;
         private System.Windows.Forms.ColumnHeader colTrajanjeDoDolaska;
         private System.Windows.Forms.ColumnHeader colTrajanjeDoPolaska;
-        private System.Windows.Forms.GroupBox gbRasporedi;
-        private System.Windows.Forms.ListView lvRasporedi;
-        private System.Windows.Forms.ColumnHeader colSifraRasporeda;
-        private System.Windows.Forms.ColumnHeader colDan;
-        private System.Windows.Forms.ColumnHeader colVrijemePolaska;
-        private System.Windows.Forms.ColumnHeader colSjedista;
-        private System.Windows.Forms.ColumnHeader colSifraAutobusa;
         private System.Windows.Forms.Button btnIzadji;
         private System.Windows.Forms.Button btnSpasi;
         private System.Windows.Forms.GroupBox gbDodajStanicu;
@@ -438,5 +394,7 @@
         private System.Windows.Forms.TextBox tbDolazak;
         private System.Windows.Forms.Button btnDodajStanicu;
         private System.Windows.Forms.Button btnBrisiStanicu;
+        private System.Windows.Forms.GroupBox gbRasporediVoznje;
+        private System.Windows.Forms.Button btnPrikaziRasporede;
     }
 }

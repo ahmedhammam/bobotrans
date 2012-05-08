@@ -13,7 +13,7 @@ namespace DesktopAplikacija.Menadzer
 {
     public partial class UredjivanjeLinije : Form
     {
-        private string[] dani = { "", "Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota", "Nedjelja" };
+        
         private Linija linija;
         private PregledLinija pozvanOd;
         private DesktopAplikacija.Entiteti.KolekcijaStanica ks = DesktopAplikacija.Entiteti.KolekcijaStanica.Instanca;
@@ -21,8 +21,9 @@ namespace DesktopAplikacija.Menadzer
 
         private int trajanjeDoDolaska = 0, trajanjeDoPolaska = 0;
         private int redniBroj = 0;
-        private bool dodanaStanica = false;
+        private bool dodanaStanica = false,obrisanaStanica = false;
         private DesktopAplikacija.Entiteti.KolekcijaLinija kl = DesktopAplikacija.Entiteti.KolekcijaLinija.Instanca;
+        private Stanica odabranaStanica;
 
         public UredjivanjeLinije(Linija l, PregledLinija pl)
         {
@@ -39,14 +40,19 @@ namespace DesktopAplikacija.Menadzer
         {
             lblSifra.Text += linija.SifraLinije.ToString();
             tbNaziv.Text = linija.NazivLinije;
+            btnDodajStanicu.Enabled = true;
+            btnBrisiStanicu.Enabled = true;
+            dodanaStanica = false;
+            obrisanaStanica = false;
 
             popuniStanice();
             popuniCijene();
-            popuniRasporedeVoznji(linija.RasporediVoznje);
+            
         }
 
         void popuniStanice()
         {
+            lvStanice.Items.Clear();
             for (int i = 0; i < linija.Stanice.Count; i++)
             {
                 lvStanice.Items.Add(linija.Stanice[i].SifraStanice.ToString());
@@ -63,7 +69,7 @@ namespace DesktopAplikacija.Menadzer
 
         void popuniComboBoxStanicama()
         {
-            
+            cbStanice.Items.Clear();
             for(int i=0; i< ks.Stanice.Count;i++)
             {
                 if (linija.sadrziStanicu(ks.Stanice[i]) < 0)
@@ -79,6 +85,7 @@ namespace DesktopAplikacija.Menadzer
 
         void popuniIndekse()
         {
+            cbRedniBroj.Items.Clear();
             for (int i = 1; i <= linija.Stanice.Count;i++ )
                 cbRedniBroj.Items.Add(i);
             cbRedniBroj.SelectedIndex = 0;
@@ -86,11 +93,14 @@ namespace DesktopAplikacija.Menadzer
 
         void popuniCijene()
         {
+            dgvCijene.Rows.Clear();
             DataGridViewCellStyle crveno = new DataGridViewCellStyle();
             crveno.BackColor = System.Drawing.Color.Red;
-
-            for (int i = 1; i < linija.Stanice.Count; i++)
-                dgvCijene.Columns.Add("col" + i.ToString(), linija.Stanice[i].Naziv);
+            if (dgvCijene.ColumnCount == 0)
+            {
+                for (int i = 1; i < linija.Stanice.Count; i++)
+                    dgvCijene.Columns.Add("col" + i.ToString(), linija.Stanice[i].Naziv);
+            }
             for (int i = 0; i < linija.Cijene.Count; i++)
             {
                 dgvCijene.Rows.Add();
@@ -109,17 +119,6 @@ namespace DesktopAplikacija.Menadzer
             }
         }
 
-        void popuniRasporedeVoznji(List<RasporedVoznje> rasporedi)
-        {
-            for (int i = 0; i < rasporedi.Count; i++)
-            {
-                lvRasporedi.Items.Add(rasporedi[i].SifraRasporedaVoznji.ToString());
-                lvRasporedi.Items[i].SubItems.Add(dani[rasporedi[i].DanUSedmici]);
-                lvRasporedi.Items[i].SubItems.Add(rasporedi[i].Vrijeme.Hour.ToString()+":"+rasporedi[i].Vrijeme.Minute.ToString("00"));
-                lvRasporedi.Items[i].SubItems.Add(rasporedi[i].PotrebanBrojSjedista.ToString());
-                lvRasporedi.Items[i].SubItems.Add(rasporedi[i].SifraAutobusa.ToString());
-            }
-        }
 
         private void lvStanice_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
@@ -168,24 +167,24 @@ namespace DesktopAplikacija.Menadzer
             dgvc.HeaderText = stanica.Naziv;
             dgvc.CellTemplate = new DataGridViewTextBoxCell();
 
-            dgvCijene.Columns.Insert(redniBroj, dgvc);
+            dgvCijene.Columns.Insert(redniBroj-1, dgvc);
 
             dgvCijene.Rows.Insert(redniBroj);
-            dgvCijene.Rows[redniBroj].HeaderCell.Value = stanica.Naziv + "-" + stanica.Mjesto;
+            dgvCijene.Rows[redniBroj].HeaderCell.Value = stanica.Naziv + ", " + stanica.Mjesto;
 
             DataGridViewCellStyle crveno = new DataGridViewCellStyle();
             crveno.BackColor = System.Drawing.Color.Red;
             
 
-            for (int i = 0; i < redniBroj; i++)
+            for (int i = 0; i < redniBroj-1; i++)
             {
                 dgvCijene.Rows[redniBroj].Cells[i] .Style = crveno;
                 dgvCijene.Rows[redniBroj].Cells[i].ReadOnly = true;
             }
-            for (int i = redniBroj + 1; i < dgvCijene.Rows.Count; i++)
+            for (int i = redniBroj; i < dgvCijene.Rows.Count; i++)
             {
-                dgvCijene.Rows[i].Cells[redniBroj].Style = crveno;
-                dgvCijene.Rows[i].Cells[redniBroj].ReadOnly = true;
+                dgvCijene.Rows[i].Cells[redniBroj-1].Style = crveno;
+                dgvCijene.Rows[i].Cells[redniBroj-1].ReadOnly = true;
             }
         }
 
@@ -202,15 +201,22 @@ namespace DesktopAplikacija.Menadzer
                 MessageBox.Show(ee.Message);
                 return;
             }
-            Stanica odabranaStanica = moguceStanice[cbStanice.SelectedIndex];
+            odabranaStanica = moguceStanice[cbStanice.SelectedIndex];
+
+            lvStanice.Items.Insert(redniBroj, odabranaStanica.SifraStanice.ToString());
+            lvStanice.Items[redniBroj].SubItems.Add(odabranaStanica.Naziv);
+            lvStanice.Items[redniBroj].SubItems.Add(odabranaStanica.Mjesto);
+            lvStanice.Items[redniBroj].SubItems.Add(trajanjeDoDolaska.ToString());
+            lvStanice.Items[redniBroj].SubItems.Add(trajanjeDoPolaska.ToString());
 
 
             updateDgvCijene(redniBroj, trajanjeDoPolaska, trajanjeDoDolaska, odabranaStanica);
             dodanaStanica = true;
             btnDodajStanicu.Enabled = false;
+            btnBrisiStanicu.Enabled = false;
         }
 
-        bool sadrziSlovo(string s)
+        private bool sadrziSlovo(string s)
         {
             foreach (char c in s)
             {
@@ -226,8 +232,11 @@ namespace DesktopAplikacija.Menadzer
             string sadrzaj;
             int brojStanica = linija.Stanice.Count;
             List<List<double>> cijene = new List<List<double>>();
-            if(dodanaStanica)
+            if (dodanaStanica)
                 brojStanica++;
+            else if (obrisanaStanica)
+                brojStanica--;
+
 
             for (int i = 0; i < brojStanica - 1; i++)
             {
@@ -269,26 +278,35 @@ namespace DesktopAplikacija.Menadzer
                 return;
             }
 
-            linija.NazivLinije = tbNaziv.Text;
-            linija.Cijene = cijene;
+            DialogResult dres =  MessageBox.Show("Da li ste sigurni da želite spasiti unesene promjene?", "Spasiti?", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
-            kl.updateujLiniju(linija);
-
-            /*
-            
-            System.IO.StreamWriter tw = new System.IO.StreamWriter("D:\\izlaz.txt");
-
-            for (int i = 0; i < cijene.Count; i++)
+            if (dres == DialogResult.Yes)
             {
-                for (int j = 0; j < cijene[i].Count; j++)
-                    tw.Write(cijene[i][j].ToString() + " ");
-                tw.WriteLine();
+                linija.NazivLinije = tbNaziv.Text;
+                linija.Cijene = cijene;
+
+
+                if (dodanaStanica)
+                {
+                    linija.Stanice.Insert(redniBroj, odabranaStanica);
+                    linija.TrajanjeDoDolaska.Insert(redniBroj, trajanjeDoDolaska);
+                    linija.TrajanjeDoPolaska.Insert(redniBroj, trajanjeDoPolaska);
+                }
+
+                try
+                {
+                    kl.updateujLiniju(linija);
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.Message);
+                    return;
+                }
+
+                MessageBox.Show("Promjene su uspješno spašene");
+                popuniKomponente();
+                
             }
-            tw.Close();
-            MessageBox.Show("zavrsio");*/
-
-
-            Close();
         }
 
         private void btnBrisiStanicu_Click(object sender, EventArgs e)
@@ -305,7 +323,46 @@ namespace DesktopAplikacija.Menadzer
                 return;
             }
 
-            MessageBox.Show((lvStanice.SelectedItems[0].Tag as Stanica).Naziv);
+            DialogResult dres = MessageBox.Show("Da li ste sigurni da želite izbrisati označenu stanicu iz linije (time brišete i sve cijene)?","Brisati?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (dres == DialogResult.Yes)
+            {
+                obrisanaStanica = true;
+                Stanica oznacenaStanica = lvStanice.SelectedItems[0].Tag as Stanica;
+                int redniBroj = linija.sadrziStanicu(oznacenaStanica);
+                lvStanice.Items.Remove(lvStanice.SelectedItems[0]);
+
+                dgvCijene.Rows.RemoveAt(redniBroj);
+                dgvCijene.Columns.RemoveAt(redniBroj - 1);
+
+
+                try
+                {
+                    linija.Cijene = validirajUneseneCijene();
+                    linija.Stanice.RemoveAt(redniBroj);
+                    linija.TrajanjeDoDolaska.RemoveAt(redniBroj);
+                    linija.TrajanjeDoPolaska.RemoveAt(redniBroj);
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.Message);
+                    return;
+                }
+
+                kl.updateujLiniju(linija);
+
+                MessageBox.Show("Stanica uspješno izbrisana!");
+                popuniKomponente();
+            }
+
+            //MessageBox.Show((lvStanice.SelectedItems[0].Tag as Stanica).Naziv);
         }
+
+        private void btnPrikaziRasporede_Click(object sender, EventArgs e)
+        {
+            UredjivanjeRasporedaVoznje urv = new UredjivanjeRasporedaVoznje(linija);
+            urv.Show();
+        }
+
     }
 }
