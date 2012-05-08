@@ -163,6 +163,7 @@ namespace DAL
                     }
                     else 
                     {
+                        r.Close();
                         throw new Exception("Nepostojeci korisnik!");
                     }
                 }

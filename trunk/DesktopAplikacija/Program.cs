@@ -24,7 +24,8 @@ namespace DesktopAplikacija
             //{
                 DAL.DAL.Instanca.kreirajKonekciju();
                 //Application.Run(new aplikacijaSalter());
-                Application.Run(new Menadzer.AplikacijaMenadzer(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
+                //Application.Run(new Menadzer.AplikacijaMenadzer(DAL.DAL.Instanca.getDAO.getKorisnikDAO().getById(5)));
+                Application.Run(new Login());
                 DAL.DAL.Instanca.terminirajKonekciju();
             //}
            // catch (Exception e)

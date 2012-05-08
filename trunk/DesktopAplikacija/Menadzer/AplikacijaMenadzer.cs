@@ -12,8 +12,12 @@ namespace DesktopAplikacija.Menadzer
     public partial class AplikacijaMenadzer : Form
     {
         private DAL.Entiteti.Korisnik logovaniKorisnik;
-        public AplikacijaMenadzer(DAL.Entiteti.Korisnik k)
+        private Login pozvanOd;
+        public AplikacijaMenadzer(DAL.Entiteti.Korisnik k,Login l)
         {
+            pozvanOd = l;
+            
+            pozvanOd.Hide();
             logovaniKorisnik = k;
             InitializeComponent();
         }
@@ -79,6 +83,11 @@ namespace DesktopAplikacija.Menadzer
         {
             PregledLinija pl = new PregledLinija();
             pl.Show();
+        }
+
+        private void AplikacijaMenadzer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            pozvanOd.Show();
         }
     }
 }

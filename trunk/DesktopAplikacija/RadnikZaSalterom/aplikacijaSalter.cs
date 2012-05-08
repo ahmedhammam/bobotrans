@@ -13,6 +13,9 @@ namespace DesktopAplikacija.RadnikZaSalterom
 {
     public partial class aplikacijaSalter : Form
     {
+        private DAL.Entiteti.Korisnik logovaniKorisnik;
+        private DesktopAplikacija.Login pozvanOd;
+
         DAL.DAL d = DAL.DAL.Instanca;
         KolekcijaLinija kl = KolekcijaLinija.Instanca;
         DAL.DAL.VoznjaDAO vd;
@@ -23,8 +26,11 @@ namespace DesktopAplikacija.RadnikZaSalterom
         List<int> odabranaMjesta;
         int velicinaBusaTrenutnog;
 
-        public aplikacijaSalter()
+        public aplikacijaSalter(DAL.Entiteti.Korisnik k, DesktopAplikacija.Login l)
         {
+            logovaniKorisnik = k;
+            pozvanOd = l;
+            l.Hide();
             InitializeComponent();
             try
             {
@@ -72,6 +78,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
         private void aplikacijaSalter_Load(object sender, EventArgs e)
         {
             d.kreirajKonekciju();
+            odabranaMjesta = new List<int>();
             foreach (DAL.Entiteti.Linija l in kl.Linije)
             {
                 comboBox1.Items.Add(l);
@@ -171,8 +178,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
             {
                 int odgovor = 0;
                 velicinaBusaTrenutnog = voznje[listBox1.SelectedItems[0].Index].Autobus.BrojSjedista;
-                try
-                {
+                //try
+                //{
                     List<DAL.Entiteti.KupacKarte> kupciKarti = new List<DAL.Entiteti.KupacKarte>();
                     List<DAL.Entiteti.KupacSaPopustom> kupciKartiSPopustom = new List<DAL.Entiteti.KupacSaPopustom>();
                     zauzetostMijestaTrenutna = new List<bool>();
@@ -211,11 +218,11 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             }
                         }
                     }
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                //}
+                //catch(Exception ex)
+                //{
+                  //  MessageBox.Show(ex.Message);
+                //}
                 textBox1.Text = (velicinaBusaTrenutnog - odgovor).ToString();
             }
         }
@@ -312,6 +319,17 @@ namespace DesktopAplikacija.RadnikZaSalterom
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox3.Enabled = (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta != 0);
+        }
+
+        private void aplikacijaSalter_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            pozvanOd.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            DesktopAplikacija.Poruke.aplikacijaPoruke ap = new DesktopAplikacija.Poruke.aplikacijaPoruke(logovaniKorisnik);
+            ap.Show();
         }
     }
 }

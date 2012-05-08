@@ -114,7 +114,6 @@
             this.btnIznajmljivanje.Name = "btnIznajmljivanje";
             this.btnIznajmljivanje.Size = new System.Drawing.Size(213, 157);
             this.btnIznajmljivanje.TabIndex = 0;
-            this.btnIznajmljivanje.Text = "button1";
             this.btnIznajmljivanje.UseVisualStyleBackColor = true;
             this.btnIznajmljivanje.Click += new System.EventHandler(this.btnIznajmljivanje_Click);
             // 
@@ -226,6 +225,7 @@
             this.Name = "AplikacijaMenadzer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AplikacijaMenadzer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AplikacijaMenadzer_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

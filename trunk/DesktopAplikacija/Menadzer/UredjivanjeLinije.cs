@@ -38,7 +38,7 @@ namespace DesktopAplikacija.Menadzer
 
         void popuniKomponente()
         {
-            lblSifra.Text += linija.SifraLinije.ToString();
+            lblSifra.Text = linija.SifraLinije.ToString();
             tbNaziv.Text = linija.NazivLinije;
             btnDodajStanicu.Enabled = true;
             btnBrisiStanicu.Enabled = true;

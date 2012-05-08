@@ -114,11 +114,15 @@ namespace DAL
                     c = new MySqlCommand("START TRANSACTION;", con);
                     c.ExecuteNonQuery();
                     ime = ocitajIme(id);
-                    
+                    System.Diagnostics.Debug.WriteLine("BOBO1");
                     ocitajKarte(id, ref pocetnaStanicaId, ref krajnjaStanicaId, ref voznjaId, sjedista, cijene, out datumIVrijemeKupovine);
+                    System.Diagnostics.Debug.WriteLine("BOBO2");
                     pocetnaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(pocetnaStanicaId);
+                    System.Diagnostics.Debug.WriteLine("BOBO3");
                     krajnjaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(krajnjaStanicaId);
+                    System.Diagnostics.Debug.WriteLine("BOBO4");
                     voznja = DAL.Instanca.getDAO.getVoznjaDAO().getById(voznjaId);
+                    System.Diagnostics.Debug.WriteLine("BOBO5");
 
                     c = new MySqlCommand("COMMIT;", con);
                     c.ExecuteNonQuery();
