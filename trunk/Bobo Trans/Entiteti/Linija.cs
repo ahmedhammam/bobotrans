@@ -17,7 +17,6 @@ namespace DAL.Entiteti
         private List<List<double>> cijene;
         private List<Voznja> voznje;
         private List<RasporedVoznje> rasporediVoznje;
-
         
         #region GetteriSetteri
 

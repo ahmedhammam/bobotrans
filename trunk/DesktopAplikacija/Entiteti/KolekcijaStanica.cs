@@ -15,6 +15,17 @@ namespace DesktopAplikacija.Entiteti
             get { return (KolekcijaStanica.instanca==null)? new KolekcijaStanica():instanca; }
         }
 
+        public int dajPolozajStanice(DAL.Entiteti.Stanica s)
+        {
+            for (int i = 0; i < stanice.Count; i++)
+            {
+                if (stanice[i].SifraStanice == s.SifraStanice)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
 
         public List<DAL.Entiteti.Stanica> Stanice
         {

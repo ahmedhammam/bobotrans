@@ -1,12 +1,12 @@
 Content\asfaltTekstura.xnb
 Content\linijeCestaTekstura.xnb
-Content\linijaStopCestaTekstura.xnb
 Content\linijaSkretanjeCestaTekstura.xnb
 Content\radoviNaCestiTekstura.xnb
 Content\snijegTekstura.xnb
 Content\trotoarTekstura.xnb
 Content\zemljaTekstura.xnb
 Content\ciljTekstura.xnb
+Content\linijaStopCestaTekstura.xnb
 Content\drvoTekstura.xnb
 Content\Pjeshak\pjeshak1Tekstura.xnb
 Content\Pjeshak\pjeshak2Tekstura.xnb
