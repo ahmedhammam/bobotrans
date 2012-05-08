@@ -47,8 +47,11 @@ namespace DAL
                         r.Close();
                         return Stanica;
                     }
-                    else throw
-                     new Exception("nije nadjen nijedan element");
+                    else
+                    {
+                        r.Close();
+                        throw new Exception("nije nadjen nijedan element");
+                    }
 
                 }
                 catch (Exception e)
