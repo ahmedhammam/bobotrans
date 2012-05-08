@@ -114,15 +114,11 @@ namespace DAL
                     c = new MySqlCommand("START TRANSACTION;", con);
                     c.ExecuteNonQuery();
                     ime = ocitajIme(id);
-                    System.Diagnostics.Debug.WriteLine("BOBO1");
+                    
                     ocitajKarte(id, ref pocetnaStanicaId, ref krajnjaStanicaId, ref voznjaId, sjedista, cijene, out datumIVrijemeKupovine);
-                    System.Diagnostics.Debug.WriteLine("BOBO2");
                     pocetnaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(pocetnaStanicaId);
-                    System.Diagnostics.Debug.WriteLine("BOBO3");
                     krajnjaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(krajnjaStanicaId);
-                    System.Diagnostics.Debug.WriteLine("BOBO4");
                     voznja = DAL.Instanca.getDAO.getVoznjaDAO().getById(voznjaId);
-                    System.Diagnostics.Debug.WriteLine("BOBO5");
 
                     c = new MySqlCommand("COMMIT;", con);
                     c.ExecuteNonQuery();
@@ -145,17 +141,23 @@ namespace DAL
                 datumIVrijemeKupovine = new DateTime(2000, 1, 1, 12, 0, 0);
                 c = new MySqlCommand(string.Format("SELECT * FROM karte WHERE idKupca='{0}';", id), con);
                 MySqlDataReader r = c.ExecuteReader();
-                while (r.Read())
+                try
                 {
-                    pocetnaStanicaId = r.GetInt32("idPocetneStanice");
-                    krajnjaStanicaId = r.GetInt32("idKrajnjeStanice");
-                    voznjaId = r.GetInt32("idVoznje");
-                    sjedista.Add(r.GetInt32("idSjedista"));
-                    cijene.Add(r.GetDouble("cijena"));
-                    datumIVrijemeKupovine = r.GetDateTime("vrijemeIDatumKupovine");
+                    while (r.Read())
+                    {
+                        pocetnaStanicaId = r.GetInt32("idPocetneStanice");
+                        krajnjaStanicaId = r.GetInt32("idKrajnjeStanice");
+                        voznjaId = r.GetInt32("idVoznje");
+                        sjedista.Add(r.GetInt32("idSjedista"));
+                        cijene.Add(r.GetDouble("cijena"));
+                        datumIVrijemeKupovine = r.GetDateTime("vrijemeIDatumKupovine");
+                    }
                 }
-
-                r.Close();
+                catch (Exception ex)
+                {
+                    r.Close();
+                    throw ex;
+                }
             }
 
             private string ocitajIme(long id)
