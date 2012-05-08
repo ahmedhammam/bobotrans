@@ -146,17 +146,23 @@ namespace DAL
                 datumIVrijemeKupovine = new DateTime(2000, 1, 1, 12, 0, 0);
                 c = new MySqlCommand(string.Format("SELECT * FROM karte WHERE idKupca='{0}';", id), con);
                 MySqlDataReader r = c.ExecuteReader();
-                while (r.Read())
+                try
                 {
-                    pocetnaStanicaId = r.GetInt32("idPocetneStanice");
-                    krajnjaStanicaId = r.GetInt32("idKrajnjeStanice");
-                    voznjaId = r.GetInt32("idVoznje");
-                    sjedista.Add(r.GetInt32("idSjedista"));
-                    cijene.Add(r.GetDouble("cijena"));
-                    datumIVrijemeKupovine = r.GetDateTime("vrijemeIDatumKupovine");
+                    while (r.Read())
+                    {
+                        pocetnaStanicaId = r.GetInt32("idPocetneStanice");
+                        krajnjaStanicaId = r.GetInt32("idKrajnjeStanice");
+                        voznjaId = r.GetInt32("idVoznje");
+                        sjedista.Add(r.GetInt32("idSjedista"));
+                        cijene.Add(r.GetDouble("cijena"));
+                        datumIVrijemeKupovine = r.GetDateTime("vrijemeIDatumKupovine");
+                    }
                 }
-
-                r.Close();
+                catch (Exception ex)
+                {
+                    r.Close();
+                    throw ex;
+                }
             }
 
             private double ocitajPopust(TipoviPodataka.TipoviKupaca tip)
