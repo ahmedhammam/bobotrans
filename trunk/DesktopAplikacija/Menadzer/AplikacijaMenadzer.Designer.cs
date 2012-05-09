@@ -140,22 +140,25 @@
             // informisanjeOLinijamaToolStripMenuItem1
             // 
             this.informisanjeOLinijamaToolStripMenuItem1.Name = "informisanjeOLinijamaToolStripMenuItem1";
-            this.informisanjeOLinijamaToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.informisanjeOLinijamaToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.informisanjeOLinijamaToolStripMenuItem1.Size = new System.Drawing.Size(235, 22);
             this.informisanjeOLinijamaToolStripMenuItem1.Text = "Informisanje o linijama";
             this.informisanjeOLinijamaToolStripMenuItem1.Click += new System.EventHandler(this.informisanjeOLinijamaToolStripMenuItem_Click);
             // 
             // izvodIzRedaVožnjeToolStripMenuItem1
             // 
             this.izvodIzRedaVožnjeToolStripMenuItem1.Name = "izvodIzRedaVožnjeToolStripMenuItem1";
-            this.izvodIzRedaVožnjeToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.izvodIzRedaVožnjeToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.izvodIzRedaVožnjeToolStripMenuItem1.Size = new System.Drawing.Size(235, 22);
             this.izvodIzRedaVožnjeToolStripMenuItem1.Text = "Izvod iz reda vožnje";
             this.izvodIzRedaVožnjeToolStripMenuItem1.Click += new System.EventHandler(this.izvodIzRedaVožnjeToolStripMenuItem_Click);
             // 
             // prikazNajjeftinijegPutaToolStripMenuItem
             // 
             this.prikazNajjeftinijegPutaToolStripMenuItem.Name = "prikazNajjeftinijegPutaToolStripMenuItem";
-            this.prikazNajjeftinijegPutaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.prikazNajjeftinijegPutaToolStripMenuItem.Text = "Prikaz najjeftinijeg puta";
+            this.prikazNajjeftinijegPutaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.prikazNajjeftinijegPutaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.prikazNajjeftinijegPutaToolStripMenuItem.Text = "Najjeftiniji put";
             this.prikazNajjeftinijegPutaToolStripMenuItem.Click += new System.EventHandler(this.nalaženjeNajjeftinijegPutaToolStripMenuItem_Click);
             // 
             // informisanjeToolStripMenuItem

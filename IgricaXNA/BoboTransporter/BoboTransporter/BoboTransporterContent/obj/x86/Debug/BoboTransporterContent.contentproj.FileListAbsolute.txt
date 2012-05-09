@@ -1,2 +1,3 @@
 D:\OOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\obj\x86\Debug\ResolveAssemblyReference.cache

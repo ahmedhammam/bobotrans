@@ -82,14 +82,15 @@
             // novaPorukaToolStripMenuItem
             // 
             this.novaPorukaToolStripMenuItem.Name = "novaPorukaToolStripMenuItem";
-            this.novaPorukaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.novaPorukaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.novaPorukaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.novaPorukaToolStripMenuItem.Text = "Nova Poruka";
             this.novaPorukaToolStripMenuItem.Click += new System.EventHandler(this.novaPorukaToolStripMenuItem_Click);
             // 
             // izadiToolStripMenuItem
             // 
             this.izadiToolStripMenuItem.Name = "izadiToolStripMenuItem";
-            this.izadiToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.izadiToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.izadiToolStripMenuItem.Text = "Izađi";
             this.izadiToolStripMenuItem.Click += new System.EventHandler(this.izadiToolStripMenuItem_Click);
             // 
@@ -99,20 +100,22 @@
             this.primljeneToolStripMenuItem,
             this.poslaneToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.viewToolStripMenuItem.Text = "Prikaz";
             // 
             // primljeneToolStripMenuItem
             // 
             this.primljeneToolStripMenuItem.Name = "primljeneToolStripMenuItem";
-            this.primljeneToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.primljeneToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.primljeneToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.primljeneToolStripMenuItem.Text = "Primljene";
             this.primljeneToolStripMenuItem.Click += new System.EventHandler(this.primljeneToolStripMenuItem_Click_1);
             // 
             // poslaneToolStripMenuItem
             // 
             this.poslaneToolStripMenuItem.Name = "poslaneToolStripMenuItem";
-            this.poslaneToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.poslaneToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.poslaneToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.poslaneToolStripMenuItem.Text = "Poslane";
             this.poslaneToolStripMenuItem.Click += new System.EventHandler(this.poslaneToolStripMenuItem_Click);
             // 
@@ -302,6 +305,7 @@
             this.MaximumSize = new System.Drawing.Size(478, 900000);
             this.MinimumSize = new System.Drawing.Size(478, 500);
             this.Name = "aplikacijaPoruke";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "aplikacijaPoruke";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

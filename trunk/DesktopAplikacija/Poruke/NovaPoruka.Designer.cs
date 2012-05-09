@@ -160,6 +160,7 @@
             this.MaximumSize = new System.Drawing.Size(9999, 9999);
             this.MinimumSize = new System.Drawing.Size(340, 330);
             this.Name = "NovaPoruka";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nova poruka";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

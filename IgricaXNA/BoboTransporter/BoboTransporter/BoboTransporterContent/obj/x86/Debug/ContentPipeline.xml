@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\asfaltTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.6862573+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\asfaltTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:34.6786174+02:00</Time>
     </Item>
     <Item>
       <Source>l1.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijeCestaTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.6402547+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijeCestaTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.9367465+02:00</Time>
     </Item>
     <Item>
       <Source>l3.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaSkretanjeCestaTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.6762568+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaSkretanjeCestaTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:37.0087506+02:00</Time>
     </Item>
     <Item>
       <Source>r2.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\radoviNaCestiTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.7072586+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\radoviNaCestiTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:39.8019104+02:00</Time>
     </Item>
     <Item>
       <Source>s1.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.7172591+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\snijegTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:39.7579079+02:00</Time>
     </Item>
     <Item>
       <Source>t3.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\trotoarTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.7582615+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\trotoarTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.5329522+02:00</Time>
     </Item>
     <Item>
       <Source>z1.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\zemljaTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.8692678+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\zemljaTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:44.4641771+02:00</Time>
     </Item>
     <Item>
       <Source>c1.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.7262596+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\ciljTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.1707027+02:00</Time>
     </Item>
     <Item>
       <Source>l2.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaStopCestaTekstura.xnb</Output>
-      <Time>2012-05-02T04:15:22.6512553+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\linijaStopCestaTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.9667482+02:00</Time>
     </Item>
     <Item>
       <Source>d1.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\drvoTekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7157894+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\drvoTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.2477071+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p1.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak1Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0617356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak1Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:35.6476728+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p2.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak2Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0617356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak2Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:35.7086763+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p3.png</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak3Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0617356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak3Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:35.7666796+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p4.png</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak4Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0773356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak4Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:35.8236828+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p5.png</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak5Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0773356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak5Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:35.8896866+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p6.png</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak6Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0773356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak6Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:35.9746915+02:00</Time>
     </Item>
     <Item>
       <Source>bus.png</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\autobusTekstura.xnb</Output>
-      <Time>2012-05-02T16:07:54.5501997+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\autobusTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:44.3631713+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p7.png</Source>
@@ -160,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak7Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0773356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak7Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.0296946+02:00</Time>
     </Item>
     <Item>
       <Source>Pjeshak\p8.png</Source>
@@ -169,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak8Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:18.0773356+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Pjeshak\pjeshak8Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.0976985+02:00</Time>
     </Item>
     <Item>
       <Source>Kamen\k0.png</Source>
@@ -178,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen1Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7469895+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen1Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.8547418+02:00</Time>
     </Item>
     <Item>
       <Source>Kamen\k1.png</Source>
@@ -187,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen2Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7469895+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen2Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.9057447+02:00</Time>
     </Item>
     <Item>
       <Source>Kamen\k2.png</Source>
@@ -196,8 +196,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen3Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7157894+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen3Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.3697141+02:00</Time>
     </Item>
     <Item>
       <Source>Kamen\k3.png</Source>
@@ -205,8 +205,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen4Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7313894+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen4Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.560725+02:00</Time>
     </Item>
     <Item>
       <Source>Kamen\k4.png</Source>
@@ -214,8 +214,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen5Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7313894+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen5Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.7777374+02:00</Time>
     </Item>
     <Item>
       <Source>Kamen\k5.png</Source>
@@ -223,8 +223,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen6Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7313894+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Kamen\kamen6Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.8107393+02:00</Time>
     </Item>
     <Item>
       <Source>bijelo.png</Source>
@@ -232,8 +232,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\bijeloTekstura.xnb</Output>
-      <Time>2012-05-02T16:07:48.7157894+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\bijeloTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:36.2247058+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto2.png</Source>
@@ -241,8 +241,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto2Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:53.9885987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto2Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.3669427+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto3.png</Source>
@@ -250,8 +250,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto3Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:54.0041987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto3Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.4639483+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto4.png</Source>
@@ -259,8 +259,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto4Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:53.9729987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto4Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:39.882915+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto5.png</Source>
@@ -268,8 +268,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto5Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:53.9729987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto5Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:39.9749203+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto6.png</Source>
@@ -277,8 +277,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto6Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:53.9729987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto6Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.0209229+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto7.png</Source>
@@ -286,8 +286,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto7Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:53.9885987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto7Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.0889268+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto8.png</Source>
@@ -295,8 +295,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto8Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:53.9885987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto8Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.1649312+02:00</Time>
     </Item>
     <Item>
       <Source>Auto\auto9.png</Source>
@@ -304,8 +304,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto9Tekstura.xnb</Output>
-      <Time>2012-05-02T16:07:53.9885987+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Auto\auto9Tekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.2829379+02:00</Time>
     </Item>
     <Item>
       <Source>Speedo\Pozadina.png</Source>
@@ -313,8 +313,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Speedo\pozadinaTekstura.xnb</Output>
-      <Time>2012-05-02T16:07:17.8589352+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Speedo\pozadinaTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:34.4536045+02:00</Time>
     </Item>
     <Item>
       <Source>Speedo\Strelica.png</Source>
@@ -322,8 +322,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Speedo\strelicaTekstura.xnb</Output>
-      <Time>2012-05-02T16:07:17.8589352+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Speedo\strelicaTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:34.5206083+02:00</Time>
     </Item>
     <Item>
       <Source>MapaCelija.png</Source>
@@ -331,8 +331,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\mapaCelijaTekstura.xnb</Output>
-      <Time>2012-05-06T18:12:21.9888603+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\mapaCelijaTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:40.9529762+02:00</Time>
     </Item>
     <Item>
       <Source>mapaAutobus.png</Source>
@@ -340,8 +340,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\mapaAutobusTekstura.xnb</Output>
-      <Time>2012-05-06T18:12:21.9576603+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\mapaAutobusTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:39.5478959+02:00</Time>
     </Item>
     <Item>
       <Source>brojevi.png</Source>
@@ -349,8 +349,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\brojeviTekstura.xnb</Output>
-      <Time>2012-05-06T18:12:11.2404414+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\brojeviTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:34.5796117+02:00</Time>
     </Item>
     <Item>
       <Source>tacke.png</Source>
@@ -358,8 +358,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\tackeTekstura.xnb</Output>
-      <Time>2012-05-06T18:12:22.0512604+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\tackeTekstura.xnb</Output>
+      <Time>2012-05-09T23:44:41.4630054+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\pomocDugme.png</Source>
@@ -367,8 +367,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\pomocDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.2716415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\pomocDugme.xnb</Output>
+      <Time>2012-05-09T23:44:37.6407868+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\brzinomjerDugmeOff.png</Source>
@@ -376,8 +376,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\brzinomjerDugmeOff.xnb</Output>
-      <Time>2012-05-06T18:12:11.2716415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\brzinomjerDugmeOff.xnb</Output>
+      <Time>2012-05-09T23:44:37.3417697+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\brzinomjerDugmeOn.png</Source>
@@ -385,8 +385,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\brzinomjerDugmeOn.xnb</Output>
-      <Time>2012-05-06T18:12:11.2716415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\brzinomjerDugmeOn.xnb</Output>
+      <Time>2012-05-09T23:44:37.7027903+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\daDugme.png</Source>
@@ -394,8 +394,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\daDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.3028416+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\daDugme.xnb</Output>
+      <Time>2012-05-09T23:44:38.0708114+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\igrajDugme.png</Source>
@@ -403,8 +403,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\igrajDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.3496416+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\igrajDugme.xnb</Output>
+      <Time>2012-05-09T23:44:38.3458271+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\izadjiDugme.png</Source>
@@ -412,8 +412,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\izadjiDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.2560415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\izadjiDugme.xnb</Output>
+      <Time>2012-05-09T23:44:37.1417582+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\mapaDugmeOff.png</Source>
@@ -421,8 +421,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\mapaDugmeOff.xnb</Output>
-      <Time>2012-05-06T18:12:11.3652417+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\mapaDugmeOff.xnb</Output>
+      <Time>2012-05-09T23:44:38.6108423+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\mapaDugmeOn.png</Source>
@@ -430,8 +430,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\mapaDugmeOn.xnb</Output>
-      <Time>2012-05-06T18:12:11.2560415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\mapaDugmeOn.xnb</Output>
+      <Time>2012-05-09T23:44:37.2827663+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\nasumicnoDugme.png</Source>
@@ -439,8 +439,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\nasumicnoDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.3340416+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\nasumicnoDugme.xnb</Output>
+      <Time>2012-05-09T23:44:38.3848293+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\neDugme.png</Source>
@@ -448,8 +448,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\neDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.3652417+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\neDugme.xnb</Output>
+      <Time>2012-05-09T23:44:38.4588336+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\opcijeDugme.png</Source>
@@ -457,8 +457,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\opcijeDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.3808417+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\opcijeDugme.xnb</Output>
+      <Time>2012-05-09T23:44:38.9678627+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\satDugmeOff.png</Source>
@@ -466,8 +466,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\satDugmeOff.xnb</Output>
-      <Time>2012-05-06T18:12:11.2872415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\satDugmeOff.xnb</Output>
+      <Time>2012-05-09T23:44:37.9488044+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\satDugmeOn.png</Source>
@@ -475,8 +475,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\satDugmeOn.xnb</Output>
-      <Time>2012-05-06T18:12:11.2872415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\satDugmeOn.xnb</Output>
+      <Time>2012-05-09T23:44:38.1758174+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\snijegDugme.png</Source>
@@ -484,8 +484,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\snijegDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.2872415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\snijegDugme.xnb</Output>
+      <Time>2012-05-09T23:44:37.7737944+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\travaDugme.png</Source>
@@ -493,8 +493,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\travaDugme.xnb</Output>
-      <Time>2012-05-06T18:12:11.2716415+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\travaDugme.xnb</Output>
+      <Time>2012-05-09T23:44:37.4927783+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\velicinaDugmeMala.png</Source>
@@ -502,8 +502,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeMala.xnb</Output>
-      <Time>2012-05-06T18:12:11.3028416+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeMala.xnb</Output>
+      <Time>2012-05-09T23:44:38.2418212+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\velicinaDugmeSrednja.png</Source>
@@ -511,8 +511,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeSrednja.xnb</Output>
-      <Time>2012-05-06T18:12:11.3496416+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeSrednja.xnb</Output>
+      <Time>2012-05-09T23:44:38.4148311+02:00</Time>
     </Item>
     <Item>
       <Source>Dugme\velicinaDugmeVelika.png</Source>
@@ -520,8 +520,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeVelika.xnb</Output>
-      <Time>2012-05-06T18:12:11.3028416+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Dugme\velicinaDugmeVelika.xnb</Output>
+      <Time>2012-05-09T23:44:38.290824+02:00</Time>
     </Item>
     <Item>
       <Source>Desert_road_UAE.JPG</Source>
@@ -529,8 +529,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\pozadinaInace.xnb</Output>
-      <Time>2012-05-06T18:12:21.9888603+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\pozadinaInace.xnb</Output>
+      <Time>2012-05-09T23:44:39.7019047+02:00</Time>
     </Item>
     <Item>
       <Source>Poruka\Kraj.png</Source>
@@ -538,8 +538,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Kraj.xnb</Output>
-      <Time>2012-05-06T18:12:11.8956426+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Kraj.xnb</Output>
+      <Time>2012-05-09T23:44:39.4998931+02:00</Time>
     </Item>
     <Item>
       <Source>Poruka\Pauza.png</Source>
@@ -547,8 +547,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pauza.xnb</Output>
-      <Time>2012-05-06T18:12:11.8956426+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pauza.xnb</Output>
+      <Time>2012-05-09T23:44:39.4268889+02:00</Time>
     </Item>
     <Item>
       <Source>Poruka\Pobjeda.png</Source>
@@ -556,8 +556,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pobjeda.xnb</Output>
-      <Time>2012-05-06T18:12:11.8956426+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pobjeda.xnb</Output>
+      <Time>2012-05-09T23:44:39.4568907+02:00</Time>
     </Item>
     <Item>
       <Source>Poruka\Pomoc.png</Source>
@@ -565,8 +565,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pomoc.xnb</Output>
-      <Time>2012-05-06T18:12:11.8800426+02:00</Time>
+      <Output>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\Poruka\Pomoc.xnb</Output>
+      <Time>2012-05-09T23:44:39.3828864+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -574,39 +574,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Amer\Desktop\Bobo Trans\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporterContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\MalaMarina\Desktop\projekatOOAD\IgricaXNA\BoboTransporter\BoboTransporter\BoboTransporter\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-04-29T15:44:46.9505279+02:00</Value>
+        <Value>2012-05-09T23:58:09.9052456+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
