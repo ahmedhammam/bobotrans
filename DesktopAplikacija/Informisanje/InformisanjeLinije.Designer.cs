@@ -183,6 +183,7 @@
             this.tsBtnPrikaziVoznje.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBtnPrikaziVoznje.Name = "tsBtnPrikaziVoznje";
             this.tsBtnPrikaziVoznje.Size = new System.Drawing.Size(23, 22);
+            this.tsBtnPrikaziVoznje.Text = "Informisanje o vožnji";
             this.tsBtnPrikaziVoznje.ToolTipText = "Prikazi raspored voznji selektirane linije";
             this.tsBtnPrikaziVoznje.Click += new System.EventHandler(this.tsBtnPrikaziVoznje_Click);
             // 
@@ -193,7 +194,7 @@
             this.btnPrikaziCijene.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrikaziCijene.Name = "btnPrikaziCijene";
             this.btnPrikaziCijene.Size = new System.Drawing.Size(23, 22);
-            this.btnPrikaziCijene.Text = "toolStripButton1";
+            this.btnPrikaziCijene.Text = "Cijene na liniji";
             this.btnPrikaziCijene.ToolTipText = "Prikazi cijene između svih stanica odabrane linije";
             this.btnPrikaziCijene.Click += new System.EventHandler(this.btnPrikaziCijene_Click);
             // 

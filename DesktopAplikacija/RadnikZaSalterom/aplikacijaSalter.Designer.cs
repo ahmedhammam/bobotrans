@@ -43,6 +43,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -93,7 +93,7 @@
             // najjeftinijiPutToolStripMenuItem
             // 
             this.najjeftinijiPutToolStripMenuItem.Name = "najjeftinijiPutToolStripMenuItem";
-            this.najjeftinijiPutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.najjeftinijiPutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.najjeftinijiPutToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.najjeftinijiPutToolStripMenuItem.Text = "Najjeftiniji put";
             this.najjeftinijiPutToolStripMenuItem.Click += new System.EventHandler(this.najjeftinijiPutToolStripMenuItem_Click);
@@ -117,7 +117,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(85, 49);
+            this.comboBox1.Location = new System.Drawing.Point(85, 52);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
@@ -153,7 +153,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(212, 47);
+            this.button2.Location = new System.Drawing.Point(212, 52);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 23);
             this.button2.TabIndex = 9;
@@ -203,6 +203,16 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "Informisanje iz reda vožnje";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = global::DesktopAplikacija.Properties.Resources.email_new;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // button3
             // 
@@ -395,16 +405,6 @@
             this.button5.Text = "Prodaj";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::DesktopAplikacija.Properties.Resources.email_new;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "toolStripButton4";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // aplikacijaSalter
             // 

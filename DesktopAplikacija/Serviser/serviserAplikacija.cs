@@ -50,40 +50,10 @@ namespace DesktopAplikacija.Serviser
 
         }
 
-        private void izađiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-                this.Close();
-        }
-
         private void Izađi_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void kreirajIzvještajToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            KreirajIzvjestaj k = new KreirajIzvjestaj(logovaniKorisnik);
-            k.Show();
-        }
-
-        private void prikažiIzvještajToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PrikaziIzvjestaj p = new PrikaziIzvjestaj();
-            p.Show();
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            KreirajIzvjestaj k = new KreirajIzvjestaj(logovaniKorisnik);
-            k.Show();
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            PrikaziIzvjestaj p = new PrikaziIzvjestaj();
-            p.Show();
-        }
-
 
         private void serviserAplikacija_Load(object sender, EventArgs e)
         {
@@ -138,26 +108,8 @@ namespace DesktopAplikacija.Serviser
         private void serviserAplikacija_FormClosing(object sender, FormClosingEventArgs e)
         {
             login.Visible = true;
-        }
 
-        private void informisanjeOLinijamaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Informisanje.InformisanjeLinije il = new Informisanje.InformisanjeLinije();
-            il.Show();
         }
-
-        private void izvodIzRedaVožnjeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Informisanje.IzvodIzRedaVoznje irv = new Informisanje.IzvodIzRedaVoznje();
-            irv.Show();
-        }
-
-        private void nalaženjeNajjeftinijegPutaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Informisanje.NajjeftinijiPut np = new Informisanje.NajjeftinijiPut();
-            np.Show();
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -208,6 +160,54 @@ namespace DesktopAplikacija.Serviser
             DesktopAplikacija.Poruke.aplikacijaPoruke ap = new DesktopAplikacija.Poruke.aplikacijaPoruke(logovaniKorisnik);
             ap.Show();
         }
+
+        private void izađiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void kreirajIzvještajToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            KreirajIzvjestaj k = new KreirajIzvjestaj(logovaniKorisnik);
+            k.Show();
+        }
+
+        private void prikažiIzvještajToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrikaziIzvjestaj p = new PrikaziIzvjestaj();
+            p.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            KreirajIzvjestaj k = new KreirajIzvjestaj(logovaniKorisnik);
+            k.Show();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            PrikaziIzvjestaj p = new PrikaziIzvjestaj();
+            p.Show();
+        }
+
+        private void informisanjeOLinijamaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Informisanje.InformisanjeLinije il = new Informisanje.InformisanjeLinije();
+            il.Show();
+        }
+
+        private void izvOdIzRedaVožnjeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Informisanje.IzvodIzRedaVoznje irv = new Informisanje.IzvodIzRedaVoznje();
+            irv.Show();
+        }
+
+        private void najjeftinijiPutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Informisanje.NajjeftinijiPut np = new Informisanje.NajjeftinijiPut();
+            np.Show();
+        }
+
     }
 
 }
