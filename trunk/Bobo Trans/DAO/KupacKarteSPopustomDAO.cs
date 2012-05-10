@@ -81,7 +81,7 @@ namespace DAL
                     c = new MySqlCommand(string.Format("DELETE FROM karte WHERE idKupca='{0}'", entity.SifraKupca), con);
                     c.ExecuteNonQuery();
 
-                    c = new MySqlCommand(string.Format("DELETE FROM kupcikarti WHERE id='{0}' AND tipKupca='{1}'", entity.SifraKupca, (int)(entity.TipKupca)), con);
+                    c = new MySqlCommand(string.Format("DELETE FROM kupcikarti WHERE id='{0}'", entity.SifraKupca), con);
                     c.ExecuteNonQuery();
 
                     c = new MySqlCommand("COMMIT;", con);

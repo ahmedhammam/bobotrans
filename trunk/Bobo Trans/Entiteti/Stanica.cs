@@ -41,5 +41,10 @@ namespace DAL.Entiteti
             get { return mjesto; }
             set { mjesto = value; }
         }
+        public override string ToString()
+        {
+            string naziv = String.Format("{0}, {1}",Naziv,Mjesto);
+            return naziv;
+        }
     }
 }

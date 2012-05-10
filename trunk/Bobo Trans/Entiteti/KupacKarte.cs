@@ -79,7 +79,12 @@ namespace DAL.Entiteti
 
         public double proracunajCijenu()
         {
-            return 1;
+            double suma = 0;
+            foreach (double cijena in cijene)
+            {
+                suma += cijena;
+            }
+            return suma;
         }
     }
 }

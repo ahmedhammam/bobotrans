@@ -81,7 +81,7 @@ namespace DAL
                     c = new MySqlCommand(string.Format("DELETE FROM karte WHERE idKupca='{0}'", entity.SifraKupca), con);
                     c.ExecuteNonQuery();
 
-                    c = new MySqlCommand(string.Format("DELETE FROM kupcikarti WHERE id='{0}' AND tipKupca='{1}'", entity.SifraKupca, (int)(TipoviPodataka.TipoviKupaca.BEZ_POPUSTA)), con);
+                    c = new MySqlCommand(string.Format("DELETE FROM kupcikarti WHERE id='{0}'", entity.SifraKupca), con);
                     c.ExecuteNonQuery();
 
                     c = new MySqlCommand("COMMIT;", con);
@@ -113,26 +113,17 @@ namespace DAL
                 {
                     c = new MySqlCommand("START TRANSACTION;", con);
                     c.ExecuteNonQuery();
-                    System.Diagnostics.Debug.WriteLine("VALJA1");
                     ime = ocitajIme(id);
-                    System.Diagnostics.Debug.WriteLine("VALJA2");
                     ocitajKarte(id, ref pocetnaStanicaId, ref krajnjaStanicaId, ref voznjaId, sjedista, cijene, out datumIVrijemeKupovine);
-                    System.Diagnostics.Debug.WriteLine("VALJA3");
                     pocetnaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(pocetnaStanicaId);
-                    System.Diagnostics.Debug.WriteLine("VALJA4");
                     krajnjaStanica = DAL.Instanca.getDAO.getStaniceDAO().getById(krajnjaStanicaId);
-                    System.Diagnostics.Debug.WriteLine("VALJA5");
                     voznja = DAL.Instanca.getDAO.getVoznjaDAO().getById(voznjaId);
-                    System.Diagnostics.Debug.WriteLine("VALJA6");
 
                     c = new MySqlCommand("COMMIT;", con);
-                    System.Diagnostics.Debug.WriteLine("VALJA7");
                     c.ExecuteNonQuery();
-                    System.Diagnostics.Debug.WriteLine("VALJA8");
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Debug.WriteLine("BELOOJ U GET BY ID");
                     c = new MySqlCommand("ROLLBACK;", con);
                     c.ExecuteNonQuery();
                     throw e;
@@ -164,7 +155,6 @@ namespace DAL
                 }
                 catch (Exception ex)
                 {
-                    System.Diagnostics.Debug.WriteLine("BELOOJ U OCITAJ KARTE");
                     r.Close();
                     throw ex;
                 }
@@ -203,7 +193,6 @@ namespace DAL
                 catch (Exception ex)
                 {
                     r.Close();
-                    System.Diagnostics.Debug.WriteLine("BELOOJ U GET ALL");
                     throw ex;
                 }
 
