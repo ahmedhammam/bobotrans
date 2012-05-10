@@ -35,7 +35,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 389);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(934, 389);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 34);
             this.button1.TabIndex = 1;

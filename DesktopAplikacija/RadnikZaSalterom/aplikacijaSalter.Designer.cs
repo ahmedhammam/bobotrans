@@ -34,6 +34,8 @@
             this.najjeftinijiPutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informisanjeOLinijiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izvodIzRedaVožnjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kupciKartiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prikazKupacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,6 +67,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,7 +77,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informisanjeToolStripMenuItem});
+            this.informisanjeToolStripMenuItem,
+            this.kupciKartiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(711, 24);
@@ -94,7 +99,7 @@
             // 
             this.najjeftinijiPutToolStripMenuItem.Name = "najjeftinijiPutToolStripMenuItem";
             this.najjeftinijiPutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.najjeftinijiPutToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.najjeftinijiPutToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.najjeftinijiPutToolStripMenuItem.Text = "Najjeftiniji put";
             this.najjeftinijiPutToolStripMenuItem.Click += new System.EventHandler(this.najjeftinijiPutToolStripMenuItem_Click);
             // 
@@ -102,17 +107,33 @@
             // 
             this.informisanjeOLinijiToolStripMenuItem.Name = "informisanjeOLinijiToolStripMenuItem";
             this.informisanjeOLinijiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.informisanjeOLinijiToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.informisanjeOLinijiToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.informisanjeOLinijiToolStripMenuItem.Text = "Informisanje o liniji";
             this.informisanjeOLinijiToolStripMenuItem.Click += new System.EventHandler(this.informisanjeOLinijiToolStripMenuItem_Click);
             // 
             // izvodIzRedaVožnjeToolStripMenuItem
             // 
             this.izvodIzRedaVožnjeToolStripMenuItem.Name = "izvodIzRedaVožnjeToolStripMenuItem";
-            this.izvodIzRedaVožnjeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.izvodIzRedaVožnjeToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.izvodIzRedaVožnjeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
+                        | System.Windows.Forms.Keys.V)));
+            this.izvodIzRedaVožnjeToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.izvodIzRedaVožnjeToolStripMenuItem.Text = "Izvod iz reda vožnje";
             this.izvodIzRedaVožnjeToolStripMenuItem.Click += new System.EventHandler(this.izvodIzRedaVožnjeToolStripMenuItem_Click);
+            // 
+            // kupciKartiToolStripMenuItem
+            // 
+            this.kupciKartiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prikazKupacaToolStripMenuItem});
+            this.kupciKartiToolStripMenuItem.Name = "kupciKartiToolStripMenuItem";
+            this.kupciKartiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.kupciKartiToolStripMenuItem.Text = "Kupci karti";
+            // 
+            // prikazKupacaToolStripMenuItem
+            // 
+            this.prikazKupacaToolStripMenuItem.Name = "prikazKupacaToolStripMenuItem";
+            this.prikazKupacaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.prikazKupacaToolStripMenuItem.Text = "Prikaz kupaca";
+            this.prikazKupacaToolStripMenuItem.Click += new System.EventHandler(this.prikazKupacaToolStripMenuItem_Click);
             // 
             // comboBox1
             // 
@@ -143,7 +164,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(624, 326);
+            this.button1.Location = new System.Drawing.Point(624, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -398,7 +419,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(624, 297);
+            this.button5.Location = new System.Drawing.Point(624, 302);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 33;
@@ -406,11 +427,30 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(522, 299);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(71, 20);
+            this.textBox4.TabIndex = 35;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(477, 302);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Cijena:";
+            // 
             // aplikacijaSalter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 355);
+            this.ClientSize = new System.Drawing.Size(711, 363);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
@@ -429,7 +469,9 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "aplikacijaSalter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bobo Trans-Radnik za šalterom";
@@ -484,5 +526,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolStripMenuItem kupciKartiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prikazKupacaToolStripMenuItem;
     }
 }

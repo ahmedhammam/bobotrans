@@ -33,11 +33,6 @@ namespace DAL.Entiteti
             set { tipKupca = value; }
         }
 
-        public new double proracunajCijenu()
-        {
-            return base.proracunajCijenu() * (1 - popust);
-        }
-
         public KupacSaPopustom(int sK, string i, Stanica pS, Stanica kS, Voznja v, List<int> s, List<double> c, DateTime dIVK, double p, string pod, TipoviKupaca tK)
             : base(sK, i, pS, kS, v, s, c, dIVK)
         {

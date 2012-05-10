@@ -225,6 +225,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                 //}
                 textBox1.Text = (velicinaBusaTrenutnog - odgovor).ToString();
             }
+            updateujCijenu();
         }
 
         private int dajIndexStanice(DAL.Entiteti.Stanica stan)
@@ -270,6 +271,42 @@ namespace DesktopAplikacija.RadnikZaSalterom
             }
             button5.Enabled = (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex);
             if (odabranaMjesta.Count == 0) button5.Enabled = false;
+            updateujCijenu();
+        }
+
+        private void updateujCijenu()
+        {
+            textBox4.Text = "0 KM";
+            if (listBox1.SelectedItems.Count > 0 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > comboBox2.SelectedIndex)
+            {
+                DAL.Entiteti.Stanica prvaStanica = staniceUVoznji[comboBox2.SelectedIndex];
+                DAL.Entiteti.Stanica drugaStanica = staniceUVoznji[comboBox3.SelectedIndex];
+                DAL.Entiteti.Voznja voznja = voznje[listBox1.SelectedIndices[0]];
+                DAL.Entiteti.Linija odabranaLinija = comboBox1.SelectedItem as DAL.Entiteti.Linija;
+                double cijena = odabranaLinija.vratiCijenu(prvaStanica, drugaStanica);
+                List<double> cijene = new List<double>();
+                for (int i = 0; i < odabranaMjesta.Count; i++)
+                {
+                    cijene.Add(cijena * (1 - tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta / 100.0));
+                }
+                try
+                {
+                    if (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta == 0)
+                    {
+                        DAL.Entiteti.KupacKarte kupac = new DAL.Entiteti.KupacKarte(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Now);
+                        textBox4.Text = kupac.proracunajCijenu().ToString()+" KM";
+                    }
+                    else
+                    {
+                        DAL.Entiteti.KupacSaPopustom kupac = new DAL.Entiteti.KupacSaPopustom(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Now, tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta, textBox3.Text, (DAL.TipoviPodataka.TipoviKupaca)(tipPopusta[comboBox4.SelectedIndex].Indeks));
+                        textBox4.Text = kupac.proracunajCijenu().ToString() + " KM";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -307,7 +344,6 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             MessageBox.Show("Obavljeno");
                         }
                         updateujBrojSlobodnihSjedista();
-                        MessageBox.Show("Obavljeno2");
                     }
                     catch (Exception ex)
                     {
@@ -320,6 +356,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox3.Enabled = (tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta != 0);
+            updateujCijenu();
         }
 
         private void aplikacijaSalter_FormClosing(object sender, FormClosingEventArgs e)
@@ -331,6 +368,12 @@ namespace DesktopAplikacija.RadnikZaSalterom
         {
             DesktopAplikacija.Poruke.aplikacijaPoruke ap = new DesktopAplikacija.Poruke.aplikacijaPoruke(logovaniKorisnik);
             ap.Show();
+        }
+
+        private void prikazKupacaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            podaciORezervaciji pOR = new podaciORezervaciji();
+            pOR.Show();
         }
     }
 }

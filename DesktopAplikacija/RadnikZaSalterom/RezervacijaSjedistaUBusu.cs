@@ -18,6 +18,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
             InitializeComponent();
             postaviDugmad(brojSjedista, zauzetostSjedista, odabirSjedista);
             pozivalac = pozivaoc;
+            this.Width = (brojSjedista / 4) * 50+50;
         }
 
         private void RezervacijaSjedistaUBusu_Load(object sender, EventArgs e)
