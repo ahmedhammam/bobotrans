@@ -146,3 +146,4 @@ C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\D
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeRasporedaVoznje.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.podaciORezervaciji.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.RezervacijaSjedistaUBusu.resources
+D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeRasporedaVoznje.resources

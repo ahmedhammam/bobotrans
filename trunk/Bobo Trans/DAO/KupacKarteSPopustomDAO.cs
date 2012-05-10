@@ -157,6 +157,7 @@ namespace DAL
                         cijene.Add(r.GetDouble("cijena"));
                         datumIVrijemeKupovine = r.GetDateTime("vrijemeIDatumKupovine");
                     }
+                    r.Close();
                 }
                 catch (Exception ex)
                 {
