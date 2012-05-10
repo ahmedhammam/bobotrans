@@ -307,6 +307,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             MessageBox.Show("Obavljeno");
                         }
                         updateujBrojSlobodnihSjedista();
+                        MessageBox.Show("Obavljeno2");
                     }
                     catch (Exception ex)
                     {
