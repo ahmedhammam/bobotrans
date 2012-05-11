@@ -146,7 +146,7 @@
 
 - id (primary, int, autoincrement)
 
-- idVoznje (int): foreign key na Voznje.id: on UPDATE - CASCADE, on DELETE - CASCADE
+- idVoznje (int): foreign key na Voznje.id: on UPDATE - CASCADE, on DELETE - RESTRICT
 
 - idPocetneStanice (int) : foreignKey na Stanice.id: on update: CASCADE, on DELETE: RESTRICT
 
