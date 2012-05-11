@@ -203,6 +203,23 @@ namespace DAL
                 }
             }
 
+            public long dajIdLinije(long idVoznje)
+            {
+                try
+                {
+                    c = new MySqlCommand(string.Format("SELECT idLinije FROM linijevoznje WHERE idVoznje='{0}';", idVoznje), con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    long sifraLinije = r.GetInt32("idLinije");
+                    r.Close();
+                    return sifraLinije;
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+
             public void deletePoSifriLinije(long idLinije)
             {
                 try
