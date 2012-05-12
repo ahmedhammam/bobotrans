@@ -24,10 +24,8 @@ namespace DesktopAplikacija.Entiteti
         private KolekcijaKorisnika()
         {
             DAL.DAL d = DAL.DAL.Instanca;
-            d.kreirajKonekciju();
             DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
             korisnici = kd.GetAll();
-            d.terminirajKonekciju();
         }
 
         public string getNameById(long sifra)

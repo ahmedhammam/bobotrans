@@ -85,7 +85,7 @@ namespace DesktopAplikacija.Menadzer
                     return;
                 }
             }
-            DialogResult dres = MessageBox.Show("Da li ste sigurni da zelite obrisati oznacene poruke?", "Obrisati?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dres = MessageBox.Show("Da li ste sigurni da zelite obrisati oznacene autobuse?", "Obrisati?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dres == DialogResult.Yes)
             {
                 d.kreirajKonekciju();

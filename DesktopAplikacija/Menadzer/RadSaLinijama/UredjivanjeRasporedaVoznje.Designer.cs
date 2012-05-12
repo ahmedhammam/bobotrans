@@ -108,6 +108,7 @@
             // 
             // btnSpasi
             // 
+            this.btnSpasi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSpasi.Location = new System.Drawing.Point(278, 270);
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
@@ -118,6 +119,7 @@
             // 
             // btnBrisi
             // 
+            this.btnBrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBrisi.Location = new System.Drawing.Point(359, 270);
             this.btnBrisi.Name = "btnBrisi";
             this.btnBrisi.Size = new System.Drawing.Size(75, 23);

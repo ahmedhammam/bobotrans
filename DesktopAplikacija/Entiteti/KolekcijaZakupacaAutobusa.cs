@@ -29,7 +29,6 @@ namespace DesktopAplikacija.Entiteti
             d.kreirajKonekciju();
             DAL.DAL.ZakupacAutobusaDAO zd = d.getDAO.getZakupacAutobusaDAO();
             zakupci = zd.GetAll();
-            d.terminirajKonekciju();
         }
 
         public List<ZakupacAutobusa> dajTekuceZakupe()

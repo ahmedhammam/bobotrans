@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tbNaziv = new System.Windows.Forms.TextBox();
             this.lblNaziv = new System.Windows.Forms.Label();
             this.lblSifra = new System.Windows.Forms.Label();
@@ -50,19 +51,18 @@
             this.colTrajanjeDoDolaska = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTrajanjeDoPolaska = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnBrisiStanicu = new System.Windows.Forms.Button();
-            this.gbCijene = new System.Windows.Forms.GroupBox();
-            this.dgvCijene = new System.Windows.Forms.DataGridView();
             this.btnIzadji = new System.Windows.Forms.Button();
             this.btnSpasi = new System.Windows.Forms.Button();
             this.gbRasporediVoznje = new System.Windows.Forms.GroupBox();
             this.btnPrikaziRasporede = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dgvCijene = new System.Windows.Forms.DataGridView();
+            this.gbCijene = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.gbStanice.SuspendLayout();
             this.gbDodajStanicu.SuspendLayout();
-            this.gbCijene.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).BeginInit();
             this.gbRasporediVoznje.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).BeginInit();
+            this.gbCijene.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,6 +77,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Linija";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Šifra:";
             // 
             // tbNaziv
             // 
@@ -270,33 +279,6 @@
             this.btnBrisiStanicu.UseVisualStyleBackColor = true;
             this.btnBrisiStanicu.Click += new System.EventHandler(this.btnBrisiStanicu_Click);
             // 
-            // gbCijene
-            // 
-            this.gbCijene.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbCijene.Controls.Add(this.dgvCijene);
-            this.gbCijene.Location = new System.Drawing.Point(13, 330);
-            this.gbCijene.Name = "gbCijene";
-            this.gbCijene.Size = new System.Drawing.Size(961, 237);
-            this.gbCijene.TabIndex = 2;
-            this.gbCijene.TabStop = false;
-            this.gbCijene.Text = "Cijene (Unositi zarez kao decimalno mjesto)";
-            // 
-            // dgvCijene
-            // 
-            this.dgvCijene.AllowUserToAddRows = false;
-            this.dgvCijene.AllowUserToDeleteRows = false;
-            this.dgvCijene.AllowUserToResizeColumns = false;
-            this.dgvCijene.AllowUserToResizeRows = false;
-            this.dgvCijene.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCijene.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCijene.Location = new System.Drawing.Point(7, 20);
-            this.dgvCijene.Name = "dgvCijene";
-            this.dgvCijene.RowHeadersWidth = 180;
-            this.dgvCijene.Size = new System.Drawing.Size(948, 204);
-            this.dgvCijene.TabIndex = 0;
-            // 
             // btnIzadji
             // 
             this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -339,14 +321,33 @@
             this.btnPrikaziRasporede.UseVisualStyleBackColor = true;
             this.btnPrikaziRasporede.Click += new System.EventHandler(this.btnPrikaziRasporede_Click);
             // 
-            // label4
+            // dgvCijene
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Šifra:";
+            this.dgvCijene.AllowUserToAddRows = false;
+            this.dgvCijene.AllowUserToDeleteRows = false;
+            this.dgvCijene.AllowUserToResizeColumns = false;
+            this.dgvCijene.AllowUserToResizeRows = false;
+            this.dgvCijene.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCijene.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvCijene.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCijene.Location = new System.Drawing.Point(7, 20);
+            this.dgvCijene.Name = "dgvCijene";
+            this.dgvCijene.RowHeadersWidth = 180;
+            this.dgvCijene.Size = new System.Drawing.Size(948, 204);
+            this.dgvCijene.TabIndex = 0;
+            // 
+            // gbCijene
+            // 
+            this.gbCijene.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbCijene.Controls.Add(this.dgvCijene);
+            this.gbCijene.Location = new System.Drawing.Point(13, 329);
+            this.gbCijene.Name = "gbCijene";
+            this.gbCijene.Size = new System.Drawing.Size(961, 237);
+            this.gbCijene.TabIndex = 2;
+            this.gbCijene.TabStop = false;
+            this.gbCijene.Text = "Cijene (Unositi zarez kao decimalno mjesto)";
             // 
             // UredjivanjeLinije
             // 
@@ -361,7 +362,7 @@
             this.Controls.Add(this.gbCijene);
             this.Controls.Add(this.gbStanice);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.MaximumSize = new System.Drawing.Size(1000, 659);
             this.MinimumSize = new System.Drawing.Size(600, 659);
             this.Name = "UredjivanjeLinije";
             this.Text = "UređivanjeLinije";
@@ -370,9 +371,9 @@
             this.gbStanice.ResumeLayout(false);
             this.gbDodajStanicu.ResumeLayout(false);
             this.gbDodajStanicu.PerformLayout();
-            this.gbCijene.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).EndInit();
             this.gbRasporediVoznje.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).EndInit();
+            this.gbCijene.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -388,8 +389,6 @@
         private System.Windows.Forms.ColumnHeader colSifra;
         private System.Windows.Forms.ColumnHeader colNaziv;
         private System.Windows.Forms.ColumnHeader colMjesto;
-        private System.Windows.Forms.GroupBox gbCijene;
-        private System.Windows.Forms.DataGridView dgvCijene;
         private System.Windows.Forms.ColumnHeader colTrajanjeDoDolaska;
         private System.Windows.Forms.ColumnHeader colTrajanjeDoPolaska;
         private System.Windows.Forms.Button btnIzadji;
@@ -408,5 +407,7 @@
         private System.Windows.Forms.GroupBox gbRasporediVoznje;
         private System.Windows.Forms.Button btnPrikaziRasporede;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvCijene;
+        private System.Windows.Forms.GroupBox gbCijene;
     }
 }

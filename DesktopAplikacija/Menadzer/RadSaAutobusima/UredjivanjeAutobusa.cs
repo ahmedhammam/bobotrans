@@ -62,7 +62,6 @@ namespace DesktopAplikacija.Menadzer
                 d.kreirajKonekciju();
                 id = d.getDAO.getIzvjestajDAO();
                 izvjestaji = id.getByExample("idAutobusa",autobus.SifraAutobusa.ToString());
-                d.terminirajKonekciju();
             }
             catch(Exception e)
             {
@@ -143,7 +142,6 @@ namespace DesktopAplikacija.Menadzer
                     ad.update(autobus);
                     pa.promjenjenAutobus(autobus);
                     MessageBox.Show("Podaci o autobusu su uspješno promjenjeni.");
-                    d.terminirajKonekciju();
                 }
                 catch (Exception ex)
                 {

@@ -89,5 +89,11 @@ namespace DesktopAplikacija.Menadzer
         {
             pozvanOd.Show();
         }
+
+        private void btnStanice_Click(object sender, EventArgs e)
+        {
+            PregledStanica ps = new PregledStanica();
+            ps.Show();
+        }
     }
 }

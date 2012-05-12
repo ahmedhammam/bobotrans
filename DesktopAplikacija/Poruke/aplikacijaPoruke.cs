@@ -154,7 +154,6 @@ namespace DesktopAplikacija.Poruke
 
         private void izađiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            d.terminirajKonekciju();
             this.Close();
         }
 

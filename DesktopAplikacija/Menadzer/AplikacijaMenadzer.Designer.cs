@@ -47,11 +47,14 @@
             this.informisanjeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbPoruke = new System.Windows.Forms.ToolStripButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnStanice = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -123,7 +126,7 @@
             this.informisanjeToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(814, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1074, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -200,7 +203,7 @@
             this.tsbPoruke});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(814, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1074, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -214,17 +217,41 @@
             this.tsbPoruke.ToolTipText = "Otvori poruke";
             this.tsbPoruke.Click += new System.EventHandler(this.tsbPoruke_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnStanice);
+            this.groupBox4.Location = new System.Drawing.Point(792, 56);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(247, 208);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Pregled stanica";
+            // 
+            // btnStanice
+            // 
+            this.btnStanice.BackgroundImage = global::DesktopAplikacija.Properties.Resources.Berlin_Hauptbahnhof;
+            this.btnStanice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStanice.Location = new System.Drawing.Point(6, 30);
+            this.btnStanice.Name = "btnStanice";
+            this.btnStanice.Size = new System.Drawing.Size(213, 157);
+            this.btnStanice.TabIndex = 0;
+            this.btnStanice.UseVisualStyleBackColor = true;
+            this.btnStanice.Click += new System.EventHandler(this.btnStanice_Click);
+            // 
             // AplikacijaMenadzer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 306);
+            this.ClientSize = new System.Drawing.Size(1074, 306);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1090, 344);
+            this.MinimumSize = new System.Drawing.Size(1090, 344);
             this.Name = "AplikacijaMenadzer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AplikacijaMenadzer";
@@ -236,6 +263,7 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +289,8 @@
         private System.Windows.Forms.ToolStripMenuItem prikazNajjeftinijegPutaToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbPoruke;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnStanice;
 
 
     }

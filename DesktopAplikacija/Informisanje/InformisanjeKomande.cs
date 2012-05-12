@@ -108,7 +108,6 @@ namespace DesktopAplikacija.Informisanje
             d.kreirajKonekciju();
             DAL.DAL.VoznjaDAO vd = d.getDAO.getVoznjaDAO();
             List<int> zauzetaMjesta = vd.dajZauzetaSjedista(trazenaVoznja);
-            d.terminirajKonekciju();
             return zauzetaMjesta;
         }
 

@@ -88,7 +88,8 @@ namespace DesktopAplikacija.Menadzer
             cbRedniBroj.Items.Clear();
             for (int i = 1; i <= linija.Stanice.Count;i++ )
                 cbRedniBroj.Items.Add(i);
-            cbRedniBroj.SelectedIndex = 0;
+            if (cbRedniBroj.Items.Count > 0) 
+                cbRedniBroj.SelectedIndex = 0;
         }
 
         void popuniCijene()
@@ -99,7 +100,10 @@ namespace DesktopAplikacija.Menadzer
             if (dgvCijene.ColumnCount == 0)
             {
                 for (int i = 1; i < linija.Stanice.Count; i++)
+                {
                     dgvCijene.Columns.Add("col" + i.ToString(), linija.Stanice[i].Naziv);
+                    dgvCijene.Columns[i - 1].SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
             }
             for (int i = 0; i < linija.Cijene.Count; i++)
             {
@@ -134,7 +138,11 @@ namespace DesktopAplikacija.Menadzer
 
         private void btnIzadji_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult dres = MessageBox.Show("Da li ste sigurni da želite izaći bez spašavanja promjena?", "Izaći?", MessageBoxButtons.YesNo);
+            if (dres == DialogResult.Yes)
+            {
+                Close();
+            }
         }
 
         private void tbMinute_KeyPress(object sender, KeyPressEventArgs e)
