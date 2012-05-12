@@ -76,6 +76,7 @@
     <Compile Include="Entiteti\KolekcijaLinija.cs" />
     <Compile Include="Entiteti\KolekcijaStanica.cs" />
     <Compile Include="Entiteti\KolekcijaZakupacaAutobusa.cs" />
+    <Compile Include="Entiteti\StampacKarti.cs" />
     <Compile Include="Menadzer\RadSaLinijama\DodajNovuLiniju.cs">
       <SubType>Form</SubType>
     </Compile>

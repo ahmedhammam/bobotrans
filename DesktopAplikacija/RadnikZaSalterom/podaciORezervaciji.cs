@@ -44,10 +44,10 @@ namespace DesktopAplikacija.RadnikZaSalterom
             sadasnji.SubItems.Add(String.Format("{0}, {1}", kupac.PocetnaStanica.Naziv, kupac.PocetnaStanica.Mjesto));
             sadasnji.SubItems.Add(String.Format("{0}, {1}", kupac.KrajnjaStanica.Naziv, kupac.KrajnjaStanica.Naziv));
             sadasnji.SubItems.Add(kupac.Voznja.VrijemePolaska.ToString("dd.MM.yy"));
-            sadasnji.SubItems.Add(kupac.Voznja.VrijemePolaska.ToString("hh:mm:ss"));
+            sadasnji.SubItems.Add(kupac.Voznja.VrijemePolaska.ToString("HH:mm:ss"));
             sadasnji.SubItems.Add(kupac.Sjedista.Count.ToString());
             sadasnji.SubItems.Add(kupac.proracunajCijenu().ToString());
-            sadasnji.SubItems.Add(kupac.DatumIVrijemeKupovine.ToString("dd.MM.yy hh:mm:ss"));
+            sadasnji.SubItems.Add(kupac.DatumIVrijemeKupovine.ToString("dd.MM.yy HH:mm:ss"));
             sadasnji.Tag = kupac;
         }
 

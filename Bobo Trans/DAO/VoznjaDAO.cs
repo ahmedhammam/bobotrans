@@ -209,6 +209,7 @@ namespace DAL
                 {
                     c = new MySqlCommand(string.Format("SELECT idLinije FROM linijevoznje WHERE idVoznje='{0}';", idVoznje), con);
                     MySqlDataReader r = c.ExecuteReader();
+                    r.Read();
                     long sifraLinije = r.GetInt32("idLinije");
                     r.Close();
                     return sifraLinije;
