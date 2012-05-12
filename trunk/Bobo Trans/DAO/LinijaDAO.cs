@@ -73,7 +73,7 @@ namespace DAL
 
             private void unesiVoznje(ref Linija entity, long idLinije)
             {
-                if (entity.Voznje.Count < 1) throw new Exception("Nedovoljno voznji u liniji");
+                //if (entity.Voznje.Count < 1) throw new Exception("Nedovoljno voznji u liniji");
                 for (int i = 0; i < entity.Voznje.Count; i++)
                 {
                     entity.Voznje[i].SifraVoznje = DAOFactory.Instanca.getVoznjaDAO().create(entity.Voznje[i]);
@@ -167,7 +167,8 @@ namespace DAL
                     c = new MySqlCommand("START TRANSACTION;", con);
                     c.ExecuteNonQuery();
 
-                    DAOFactory.Instanca.getVoznjaDAO().deletePoSifriLinije(entity.SifraLinije);
+                    //Brisanje ce raditi automatski program
+                    //DAOFactory.Instanca.getVoznjaDAO().deletePoSifriLinije(entity.SifraLinije);
 
                     DAOFactory.Instanca.getRasporedVoznjiDAO().deletePoSifriLinije(entity.SifraLinije);
 

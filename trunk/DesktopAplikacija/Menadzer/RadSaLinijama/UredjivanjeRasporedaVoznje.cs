@@ -17,6 +17,8 @@ namespace DesktopAplikacija.Menadzer
         private Linija linija;
         private DesktopAplikacija.Entiteti.KolekcijaAutobusa ka = DesktopAplikacija.Entiteti.KolekcijaAutobusa.Instanca;
 
+        private DesktopAplikacija.Entiteti.KolekcijaLinija kl = DesktopAplikacija.Entiteti.KolekcijaLinija.Instanca;
+
         public UredjivanjeRasporedaVoznje(Linija l)
         {
             InitializeComponent();
@@ -35,7 +37,11 @@ namespace DesktopAplikacija.Menadzer
 
         private void btnIzadji_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult dres = MessageBox.Show("Da li ste sigurni da želite izaći bez spašavanja promjena?", "Izaći?", MessageBoxButtons.YesNo);
+            if (dres == DialogResult.Yes)
+            {
+                Close();
+            }
         }
 
         private bool sadrziSlovo(string s)
@@ -50,6 +56,8 @@ namespace DesktopAplikacija.Menadzer
 
         private bool validirajDan(int red)
         {
+            if (dgvRasporediVoznji.Rows[red].Cells[1].Value == null)
+                return false;
             string dan = dgvRasporediVoznji.Rows[red].Cells[1].Value.ToString();
 
             if (dan.Length > 1) return false;
@@ -64,6 +72,10 @@ namespace DesktopAplikacija.Menadzer
 
         private bool validirajDatum(int red)
         {
+
+            if (dgvRasporediVoznji.Rows[red].Cells[2].Value == null)
+                return false;
+
             string vrijeme = dgvRasporediVoznji.Rows[red].Cells[2].Value.ToString();
             if (vrijeme.Length != 5) 
             {
@@ -89,6 +101,8 @@ namespace DesktopAplikacija.Menadzer
         }
         bool validirajBrojSjedista(int red)
         {
+            if (dgvRasporediVoznji.Rows[red].Cells[3].Value == null)
+                return false;
             string brojSjedista = dgvRasporediVoznji.Rows[red].Cells[3].Value.ToString();
             if(brojSjedista.Length>3 || brojSjedista.Length==0)
                 return false;
@@ -100,6 +114,8 @@ namespace DesktopAplikacija.Menadzer
 
         bool validirajSifruAutobusa(int red)
         {
+            if (dgvRasporediVoznji.Rows[red].Cells[4].Value == null)
+                return false;
             string sifraAutobusa = dgvRasporediVoznji.Rows[red].Cells[4].Value.ToString();
             if (sifraAutobusa.Length > 3 || sifraAutobusa.Length == 0)
                 return false;
@@ -110,7 +126,6 @@ namespace DesktopAplikacija.Menadzer
             sa = long.Parse(sifraAutobusa);
 
             DAL.Entiteti.Autobus a = ka.dajPoSifri(sa);
-            //MessageBox.Show(sa.ToString());
             if (a == null)
                 return false;
 
@@ -134,6 +149,13 @@ namespace DesktopAplikacija.Menadzer
             }
         }
 
+        private DateTime ocitajDatum(string vrijeme)
+        {
+            int sat = (Convert.ToInt16(vrijeme[0]) - 48) * 10 + (Convert.ToInt16(vrijeme[1]) - 48);
+            int minuta = (Convert.ToInt16(vrijeme[3]) - 48) * 10 + (Convert.ToInt16(vrijeme[4]) - 48);
+            return new DateTime(1,1,1,sat,minuta,0);
+        }
+
         private void btnSpasi_Click(object sender, EventArgs e)
         {
             try
@@ -148,21 +170,38 @@ namespace DesktopAplikacija.Menadzer
             DialogResult dres = MessageBox.Show("Da li ste sigurni da želite spasiti promjene?","Spasiti?",MessageBoxButtons.YesNo);
             if (dres==DialogResult.Yes)
             {
+                this.Enabled = false;
                 int dan, brSjed, sifraAutobusa;
                 DateTime vrijeme;
                 List<DAL.Entiteti.RasporedVoznje> rasporedi = new List<DAL.Entiteti.RasporedVoznje>();
                 for (int i = 0; i < dgvRasporediVoznji.Rows.Count - 1; i++)
                 {
                     dan = Convert.ToInt16(dgvRasporediVoznji.Rows[i].Cells[1].Value.ToString());
-                    //vrijeme = Convert.ToDateTime(dgvRasporediVoznji.Rows[i].Cells[2].ToString(),new IFormatProvider( "hh:mm"));
-                    //rasporedi.Add(new RasporedVoznje(),));
+                    vrijeme = ocitajDatum(dgvRasporediVoznji.Rows[i].Cells[2].Value.ToString());
+                    brSjed = Convert.ToInt16(dgvRasporediVoznji.Rows[i].Cells[3].Value.ToString());
+                    sifraAutobusa = Convert.ToInt32(dgvRasporediVoznji.Rows[i].Cells[4].Value.ToString());
+                    rasporedi.Add(new RasporedVoznje(dan, vrijeme, brSjed, sifraAutobusa));
                 }
+
+
+                linija.RasporediVoznje = rasporedi;
+                try
+                {
+                    kl.updateujLiniju(linija);
+                    for (int i = 0; i < dgvRasporediVoznji.Rows.Count - 1; i++)
+                    {
+                        dgvRasporediVoznji.Rows[i].Cells[0].Value = linija.RasporediVoznje[i].SifraRasporedaVoznji.ToString();
+                    }
+
+                    MessageBox.Show("Promjene su uspješno spašene!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+                this.Enabled = true;
             }
-        }
-
-        private void spasi()
-        {
-
         }
 
         private void btnBrisi_Click(object sender, EventArgs e)

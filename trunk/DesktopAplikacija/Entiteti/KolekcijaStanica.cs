@@ -10,6 +10,9 @@ namespace DesktopAplikacija.Entiteti
         List<DAL.Entiteti.Stanica> stanice;
         private static KolekcijaStanica instanca = null;
 
+        DAL.DAL d = DAL.DAL.Instanca;
+        DAL.DAL.StanicaDAO sd;
+
         internal static KolekcijaStanica Instanca
         {
             get { return (KolekcijaStanica.instanca==null)? new KolekcijaStanica():instanca; }
@@ -27,6 +30,27 @@ namespace DesktopAplikacija.Entiteti
             return -1;
         }
 
+        public long kreirajStanicu(DAL.Entiteti.Stanica s)
+        {
+            s.SifraStanice = sd.create(s);
+            stanice.Add(s);
+            return s.SifraStanice;
+        }
+
+        public void updateStanice(DAL.Entiteti.Stanica s)
+        {
+            sd.update(s);
+        }
+
+        public void brisiStanicu(DAL.Entiteti.Stanica s)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            DAL.DAL.StanicaDAO sd = d.getDAO.getStaniceDAO();
+
+            sd.delete(s);
+            stanice.Remove(s);
+        }
+
         public List<DAL.Entiteti.Stanica> Stanice
         {
             get { return stanice; }
@@ -35,12 +59,8 @@ namespace DesktopAplikacija.Entiteti
 
         private KolekcijaStanica()
         {
-            DAL.DAL d = DAL.DAL.Instanca;
-            DAL.DAL.StanicaDAO sd = d.getDAO.getStaniceDAO();
-
-            d.kreirajKonekciju();
+            sd = d.getDAO.getStaniceDAO();
             stanice = sd.GetAll();
-            d.terminirajKonekciju();
         }
 
         public DAL.Entiteti.Stanica getById(long id)

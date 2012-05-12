@@ -60,9 +60,23 @@ namespace DesktopAplikacija.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _1336259801_add {
+            get {
+                object obj = ResourceManager.GetObject("1336259801_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _1bus22_med {
             get {
                 object obj = ResourceManager.GetObject("1bus22-med", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Berlin_Hauptbahnhof {
+            get {
+                object obj = ResourceManager.GetObject("Berlin_Hauptbahnhof", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

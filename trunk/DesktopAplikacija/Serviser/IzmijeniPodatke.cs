@@ -67,11 +67,9 @@ namespace DesktopAplikacija.Serviser
                 {
                     ad.update(odabraniAutobus);
                 }
-                d.terminirajKonekciju();
             }
             catch (Exception ex)
             {
-                d.terminirajKonekciju();
                 MessageBox.Show(ex.Message);
             }
         }

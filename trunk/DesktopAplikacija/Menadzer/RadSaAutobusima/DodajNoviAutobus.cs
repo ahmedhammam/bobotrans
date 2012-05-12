@@ -81,7 +81,6 @@ namespace DesktopAplikacija.Menadzer
                     ka.Autobusi.Add(a);
                     pa.noviAutobus(a);
                     MessageBox.Show("Uspješno je dodan novi autobus!");
-                    d.terminirajKonekciju();
                 }
                 catch (Exception ex)
                 {

@@ -64,7 +64,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand(String.Format("UPDATE Stanice SET naziv='{0}', mjesto='{1}' WHERE id='{3}';", entity.Naziv, entity.Mjesto, entity.SifraStanice), con);
+                    c = new MySqlCommand(String.Format("UPDATE Stanice SET naziv='{0}', mjesto='{1}' WHERE id='{2}';", entity.Naziv, entity.Mjesto, entity.SifraStanice), con);
                     c.ExecuteNonQuery();
                     return entity;
                 }

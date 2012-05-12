@@ -76,10 +76,40 @@
     <Compile Include="Entiteti\KolekcijaLinija.cs" />
     <Compile Include="Entiteti\KolekcijaStanica.cs" />
     <Compile Include="Entiteti\KolekcijaZakupacaAutobusa.cs" />
-    <Compile Include="Menadzer\NoviZakupAutobusa.cs">
+    <Compile Include="Menadzer\RadSaLinijama\DodajNovuLiniju.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\NoviZakupAutobusa.Designer.cs">
+    <Compile Include="Menadzer\RadSaLinijama\DodajNovuLiniju.Designer.cs">
+      <DependentUpon>DodajNovuLiniju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menadzer\RadSaLinijama\DodajRasporedVoznje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menadzer\RadSaLinijama\DodajRasporedVoznje.Designer.cs">
+      <DependentUpon>DodajRasporedVoznje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menadzer\RadSaLinijama\UnosCijena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menadzer\RadSaLinijama\UnosCijena.Designer.cs">
+      <DependentUpon>UnosCijena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menadzer\RadSaStanicama\PregledStanica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menadzer\RadSaStanicama\PregledStanica.Designer.cs">
+      <DependentUpon>PregledStanica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menadzer\RadSaStanicama\UredjivanjeStanice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menadzer\RadSaStanicama\UredjivanjeStanice.Designer.cs">
+      <DependentUpon>UredjivanjeStanice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menadzer\ZakupAutobusa\NoviZakupAutobusa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menadzer\ZakupAutobusa\NoviZakupAutobusa.Designer.cs">
       <DependentUpon>NoviZakupAutobusa.cs</DependentUpon>
     </Compile>
     <Compile Include="Entiteti\Put.cs" />
@@ -133,46 +163,46 @@
     <Compile Include="Menadzer\AplikacijaMenadzer.Designer.cs">
       <DependentUpon>AplikacijaMenadzer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menadzer\DodajNoviAutobus.cs">
+    <Compile Include="Menadzer\RadSaAutobusima\DodajNoviAutobus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\DodajNoviAutobus.Designer.cs">
+    <Compile Include="Menadzer\RadSaAutobusima\DodajNoviAutobus.Designer.cs">
       <DependentUpon>DodajNoviAutobus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menadzer\IznajmljivanjeAutobusa.cs">
+    <Compile Include="Menadzer\ZakupAutobusa\IznajmljivanjeAutobusa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\IznajmljivanjeAutobusa.Designer.cs">
+    <Compile Include="Menadzer\ZakupAutobusa\IznajmljivanjeAutobusa.Designer.cs">
       <DependentUpon>IznajmljivanjeAutobusa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menadzer\PregledAutobusa.cs">
+    <Compile Include="Menadzer\RadSaAutobusima\PregledAutobusa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\PregledAutobusa.Designer.cs">
+    <Compile Include="Menadzer\RadSaAutobusima\PregledAutobusa.Designer.cs">
       <DependentUpon>PregledAutobusa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menadzer\UredjivanjeAutobusa.cs">
+    <Compile Include="Menadzer\RadSaAutobusima\UredjivanjeAutobusa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\UredjivanjeAutobusa.Designer.cs">
+    <Compile Include="Menadzer\RadSaAutobusima\UredjivanjeAutobusa.Designer.cs">
       <DependentUpon>UredjivanjeAutobusa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menadzer\PregledLinija.cs">
+    <Compile Include="Menadzer\RadSaLinijama\PregledLinija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\PregledLinija.Designer.cs">
+    <Compile Include="Menadzer\RadSaLinijama\PregledLinija.Designer.cs">
       <DependentUpon>PregledLinija.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menadzer\UredjivanjeLinije.cs">
+    <Compile Include="Menadzer\RadSaLinijama\UredjivanjeLinije.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\UredjivanjeLinije.Designer.cs">
+    <Compile Include="Menadzer\RadSaLinijama\UredjivanjeLinije.Designer.cs">
       <DependentUpon>UredjivanjeLinije.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menadzer\UredjivanjeRasporedaVoznje.cs">
+    <Compile Include="Menadzer\RadSaLinijama\UredjivanjeRasporedaVoznje.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menadzer\UredjivanjeRasporedaVoznje.Designer.cs">
+    <Compile Include="Menadzer\RadSaLinijama\UredjivanjeRasporedaVoznje.Designer.cs">
       <DependentUpon>UredjivanjeRasporedaVoznje.cs</DependentUpon>
     </Compile>
     <Compile Include="Poruke\aplikacijaPoruke.cs">
@@ -246,7 +276,22 @@
     <Compile Include="Serviser\tekstIzvjestaja.Designer.cs">
       <DependentUpon>tekstIzvjestaja.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Menadzer\NoviZakupAutobusa.resx">
+    <EmbeddedResource Include="Menadzer\RadSaLinijama\DodajNovuLiniju.resx">
+      <DependentUpon>DodajNovuLiniju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menadzer\RadSaLinijama\DodajRasporedVoznje.resx">
+      <DependentUpon>DodajRasporedVoznje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menadzer\RadSaLinijama\UnosCijena.resx">
+      <DependentUpon>UnosCijena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menadzer\RadSaStanicama\PregledStanica.resx">
+      <DependentUpon>PregledStanica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menadzer\RadSaStanicama\UredjivanjeStanice.resx">
+      <DependentUpon>UredjivanjeStanice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menadzer\ZakupAutobusa\NoviZakupAutobusa.resx">
       <DependentUpon>NoviZakupAutobusa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -273,25 +318,25 @@
     <EmbeddedResource Include="Menadzer\AplikacijaMenadzer.resx">
       <DependentUpon>AplikacijaMenadzer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menadzer\DodajNoviAutobus.resx">
+    <EmbeddedResource Include="Menadzer\RadSaAutobusima\DodajNoviAutobus.resx">
       <DependentUpon>DodajNoviAutobus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menadzer\IznajmljivanjeAutobusa.resx">
+    <EmbeddedResource Include="Menadzer\ZakupAutobusa\IznajmljivanjeAutobusa.resx">
       <DependentUpon>IznajmljivanjeAutobusa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menadzer\PregledAutobusa.resx">
+    <EmbeddedResource Include="Menadzer\RadSaAutobusima\PregledAutobusa.resx">
       <DependentUpon>PregledAutobusa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menadzer\UredjivanjeAutobusa.resx">
+    <EmbeddedResource Include="Menadzer\RadSaAutobusima\UredjivanjeAutobusa.resx">
       <DependentUpon>UredjivanjeAutobusa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menadzer\PregledLinija.resx">
+    <EmbeddedResource Include="Menadzer\RadSaLinijama\PregledLinija.resx">
       <DependentUpon>PregledLinija.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menadzer\UredjivanjeLinije.resx">
+    <EmbeddedResource Include="Menadzer\RadSaLinijama\UredjivanjeLinije.resx">
       <DependentUpon>UredjivanjeLinije.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menadzer\UredjivanjeRasporedaVoznje.resx">
+    <EmbeddedResource Include="Menadzer\RadSaLinijama\UredjivanjeRasporedaVoznje.resx">
       <DependentUpon>UredjivanjeRasporedaVoznje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Poruke\aplikacijaPoruke.resx">
@@ -411,6 +456,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1336259801_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berlin_Hauptbahnhof.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
