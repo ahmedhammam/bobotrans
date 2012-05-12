@@ -36,6 +36,7 @@
             this.izvodIzRedaVožnjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kupciKartiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikazKupacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preuzmiInternetRezervacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -123,7 +125,8 @@
             // kupciKartiToolStripMenuItem
             // 
             this.kupciKartiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.prikazKupacaToolStripMenuItem});
+            this.prikazKupacaToolStripMenuItem,
+            this.preuzmiInternetRezervacijuToolStripMenuItem});
             this.kupciKartiToolStripMenuItem.Name = "kupciKartiToolStripMenuItem";
             this.kupciKartiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.kupciKartiToolStripMenuItem.Text = "Kupci karti";
@@ -131,9 +134,15 @@
             // prikazKupacaToolStripMenuItem
             // 
             this.prikazKupacaToolStripMenuItem.Name = "prikazKupacaToolStripMenuItem";
-            this.prikazKupacaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.prikazKupacaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.prikazKupacaToolStripMenuItem.Text = "Prikaz kupaca";
             this.prikazKupacaToolStripMenuItem.Click += new System.EventHandler(this.prikazKupacaToolStripMenuItem_Click);
+            // 
+            // preuzmiInternetRezervacijuToolStripMenuItem
+            // 
+            this.preuzmiInternetRezervacijuToolStripMenuItem.Name = "preuzmiInternetRezervacijuToolStripMenuItem";
+            this.preuzmiInternetRezervacijuToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.preuzmiInternetRezervacijuToolStripMenuItem.Text = "Preuzmi Internet rezervaciju";
             // 
             // comboBox1
             // 
@@ -188,7 +197,8 @@
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripButton3,
-            this.toolStripButton4});
+            this.toolStripButton4,
+            this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(711, 25);
@@ -232,8 +242,17 @@
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Text = "Poruke";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = global::DesktopAplikacija.Properties.Resources.stock_inbox;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "Preuzmi Internet rezervaciju";
             // 
             // button3
             // 
@@ -530,5 +549,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem kupciKartiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prikazKupacaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preuzmiInternetRezervacijuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
     }
 }

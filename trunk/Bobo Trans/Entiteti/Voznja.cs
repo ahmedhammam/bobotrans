@@ -51,7 +51,7 @@ namespace DAL.Entiteti
         }*/
         public override string ToString()
         {
-            string naziv = vrijemePolaska.ToString("dd.MM.yy, hh:mm:ss");
+            string naziv = vrijemePolaska.ToString("dd.MM.yy, HH:mm:ss");
             return naziv;
         }
     }

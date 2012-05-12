@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -336,14 +337,19 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             DAL.Entiteti.KupacKarte kupac = new DAL.Entiteti.KupacKarte(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today);
                             d.getDAO.getKupacKarteDAO().create(kupac);
                             MessageBox.Show("Obavljeno");
+                            StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji);
+                            stampac.Stampaj();
                         }
                         else
                         {
                             DAL.Entiteti.KupacSaPopustom kupac = new DAL.Entiteti.KupacSaPopustom(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today, tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta, textBox3.Text, (DAL.TipoviPodataka.TipoviKupaca)(tipPopusta[comboBox4.SelectedIndex].Indeks));
                             d.getDAO.getKupacKarteSPopustomDAO().create(kupac);
                             MessageBox.Show("Obavljeno");
+                            StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji);
+                            stampac.Stampaj();
                         }
                         updateujBrojSlobodnihSjedista();
+                        
                     }
                     catch (Exception ex)
                     {
@@ -375,5 +381,6 @@ namespace DesktopAplikacija.RadnikZaSalterom
             podaciORezervaciji pOR = new podaciORezervaciji();
             pOR.Show();
         }
+
     }
 }

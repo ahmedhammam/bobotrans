@@ -152,3 +152,8 @@ C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAp
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.DodajRasporedVoznje.resources
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.PregledStanica.resources
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeStanice.resources
+D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.DodajNovuLiniju.resources
+D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.DodajRasporedVoznje.resources
+D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UnosCijena.resources
+D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.PregledStanica.resources
+D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeStanice.resources
