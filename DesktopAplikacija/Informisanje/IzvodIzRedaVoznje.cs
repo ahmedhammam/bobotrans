@@ -24,8 +24,8 @@ namespace DesktopAplikacija.Informisanje
         {
             int indeks = cbStanice.SelectedIndex;
             
-            List<Entiteti.VoznjaNaStanici> dolazneVoznje = InformisanjeKomande.vratiPolazneVoznjeStanice(ks.Stanice[indeks]);
-            List<Entiteti.VoznjaNaStanici> polazneVoznje = InformisanjeKomande.vratiDolazneVoznjeStanice(ks.Stanice[indeks]);
+            List<Entiteti.VoznjaNaStanici> dolazneVoznje = InformisanjeKomande.vratiDolazneVoznjeStanice(ks.Stanice[indeks]);
+            List<Entiteti.VoznjaNaStanici> polazneVoznje = InformisanjeKomande.vratiPolazneVoznjeStanice(ks.Stanice[indeks]);
 
             dgvIzvodIzRedaVoznje.Rows.Clear();
 

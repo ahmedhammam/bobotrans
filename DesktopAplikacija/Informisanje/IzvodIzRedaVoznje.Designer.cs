@@ -60,7 +60,8 @@
             // 
             this.dgvIzvodIzRedaVoznje.AllowUserToAddRows = false;
             this.dgvIzvodIzRedaVoznje.AllowUserToDeleteRows = false;
-            this.dgvIzvodIzRedaVoznje.AllowUserToOrderColumns = true;
+            this.dgvIzvodIzRedaVoznje.AllowUserToResizeColumns = false;
+            this.dgvIzvodIzRedaVoznje.AllowUserToResizeRows = false;
             this.dgvIzvodIzRedaVoznje.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvIzvodIzRedaVoznje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -69,6 +70,7 @@
             this.colVrijemeDolaska,
             this.colVrijemePolaska});
             this.dgvIzvodIzRedaVoznje.Location = new System.Drawing.Point(16, 37);
+            this.dgvIzvodIzRedaVoznje.MultiSelect = false;
             this.dgvIzvodIzRedaVoznje.Name = "dgvIzvodIzRedaVoznje";
             this.dgvIzvodIzRedaVoznje.ReadOnly = true;
             this.dgvIzvodIzRedaVoznje.Size = new System.Drawing.Size(267, 133);
