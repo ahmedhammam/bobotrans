@@ -1,0 +1,7 @@
+D:\OOAD\SVN\trunk\WebServis\bin\WebServis.dll
+D:\OOAD\SVN\trunk\WebServis\bin\WebServis.pdb
+D:\OOAD\SVN\trunk\WebServis\bin\Bobo Trans.dll
+D:\OOAD\SVN\trunk\WebServis\bin\Bobo Trans.pdb
+D:\OOAD\SVN\trunk\WebServis\obj\Debug\ResolveAssemblyReference.cache
+D:\OOAD\SVN\trunk\WebServis\obj\Debug\WebServis.dll
+D:\OOAD\SVN\trunk\WebServis\obj\Debug\WebServis.pdb
