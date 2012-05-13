@@ -1,2 +1,5 @@
 #labels BOBO
-[[Image:sreca_sunce_free-390x259.jpg|thumb|Caption]]
+
+WikiWordLink
+[http://domain/page label]
+http://domain/page
