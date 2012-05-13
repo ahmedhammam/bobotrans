@@ -450,7 +450,8 @@
     <None Include="Resources\stock_mail_delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mail_delete.png" />
+    <None Include="Resources\LOGOblijed.png" />
+    <Content Include="Resources\mail_delete.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1bus22-med.jpg" />

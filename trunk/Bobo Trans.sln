@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestnaAplikacija", "TestnaA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopAplikacija", "DesktopAplikacija\DesktopAplikacija.csproj", "{C5A3F6B0-FE2D-4928-AB63-EC91CC082920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServis", "WebServis\WebServis.csproj", "{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{C5A3F6B0-FE2D-4928-AB63-EC91CC082920}.Release|Mixed Platforms.Build.0 = Release|x86
 		{C5A3F6B0-FE2D-4928-AB63-EC91CC082920}.Release|x86.ActiveCfg = Release|x86
 		{C5A3F6B0-FE2D-4928-AB63-EC91CC082920}.Release|x86.Build.0 = Release|x86
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
