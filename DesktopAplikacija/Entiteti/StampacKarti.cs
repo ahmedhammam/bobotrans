@@ -19,8 +19,9 @@ namespace DesktopAplikacija.Entiteti
         int indeks;
         DAL.Entiteti.KupacKarte kupacKarte;
         DAL.Entiteti.Linija linija;
+        DAL.Entiteti.Korisnik prodavac;
 
-        public StampacKarti(DAL.Entiteti.KupacSaPopustom kupac, List<DAL.Entiteti.Stanica> staniceUVoznji_)
+        public StampacKarti(DAL.Entiteti.KupacSaPopustom kupac, List<DAL.Entiteti.Stanica> staniceUVoznji_, DAL.Entiteti.Korisnik prodavac_)
         {
             saPopustom = true;
             tip_kupca = kupac.TipKupca.ToString();
@@ -30,9 +31,10 @@ namespace DesktopAplikacija.Entiteti
             dokumentZaPrintanje = new PrintDocument();
             dokumentZaPrintanje.PrintPage += new PrintPageEventHandler(printanje);
             staniceUVoznji = staniceUVoznji_;
+            prodavac = prodavac_;
         }
 
-        public StampacKarti(DAL.Entiteti.KupacKarte kupac, List<DAL.Entiteti.Stanica> staniceUVoznji_)
+        public StampacKarti(DAL.Entiteti.KupacKarte kupac, List<DAL.Entiteti.Stanica> staniceUVoznji_, DAL.Entiteti.Korisnik prodavac_)
         {
             saPopustom = false;
             indeks = 0;
@@ -40,6 +42,7 @@ namespace DesktopAplikacija.Entiteti
             dokumentZaPrintanje = new PrintDocument();
             dokumentZaPrintanje.PrintPage += new PrintPageEventHandler(printanje);
             staniceUVoznji = staniceUVoznji_;
+            prodavac = prodavac_;
         }
 
         public void Stampaj()
@@ -52,9 +55,6 @@ namespace DesktopAplikacija.Entiteti
             int vrijemePocetak, vrijemeKraj;
             vrijemePocetak = linija.TrajanjeDoPolaska[dajIndexStanice(kupacKarte.PocetnaStanica)];
             vrijemeKraj = linija.TrajanjeDoDolaska[dajIndexStanice(kupacKarte.KrajnjaStanica)];
-            System.Diagnostics.Debug.WriteLine("BLAAA");
-            System.Diagnostics.Debug.WriteLine(vrijemePocetak);
-            System.Diagnostics.Debug.WriteLine(vrijemeKraj);
             pocetak = pocetak.AddMinutes((double)vrijemePocetak);
             kraj = kraj.AddMinutes((double)vrijemeKraj);
             dokumentZaPrintanje.Print();
@@ -93,6 +93,9 @@ namespace DesktopAplikacija.Entiteti
             e.Graphics.DrawString(String.Format("Broj sjedišta: {0}", kupacKarte.Sjedista[indeks]), new Font(FontFamily.GenericSansSerif, 12), new SolidBrush(bojaTeksta), new PointF(30, 350));
             e.Graphics.DrawString("Vozna karta", new Font(FontFamily.GenericSansSerif, 12), new SolidBrush(bojaTeksta), new PointF(360, 90));
             e.Graphics.DrawString(String.Format("Cijena: {0} KM", kupacKarte.Cijene[indeks]), new Font(FontFamily.GenericSansSerif, 12), new SolidBrush(bojaTeksta), new PointF(340, 150));
+            e.Graphics.DrawString(String.Format("Datum: {0}", DateTime.Today.ToString("dd.MM.yyyy")), new Font(FontFamily.GenericSansSerif, 8), new SolidBrush(bojaTeksta), new PointF(320, 20));
+            e.Graphics.DrawString("Prodavač:", new Font(FontFamily.GenericSansSerif, 8), new SolidBrush(bojaTeksta), new PointF(320, 40));
+            e.Graphics.DrawString(prodavac.ImeIPrezime, new Font(FontFamily.GenericSansSerif, 8), new SolidBrush(bojaTeksta), new PointF(320, 60));
 
 
             e.Graphics.DrawRectangle(new Pen(bojaLinija), 410, 230, 150, 150);
