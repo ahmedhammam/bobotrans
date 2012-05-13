@@ -337,7 +337,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             DAL.Entiteti.KupacKarte kupac = new DAL.Entiteti.KupacKarte(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today);
                             d.getDAO.getKupacKarteDAO().create(kupac);
                             MessageBox.Show("Obavljeno");
-                            StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji);
+                            StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji, logovaniKorisnik);
                             stampac.Stampaj();
                         }
                         else
@@ -345,7 +345,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             DAL.Entiteti.KupacSaPopustom kupac = new DAL.Entiteti.KupacSaPopustom(textBox2.Text, prvaStanica, drugaStanica, voznja, odabranaMjesta, cijene, System.DateTime.Today, tipPopusta[comboBox4.SelectedIndex].VrijednostPopusta, textBox3.Text, (DAL.TipoviPodataka.TipoviKupaca)(tipPopusta[comboBox4.SelectedIndex].Indeks));
                             d.getDAO.getKupacKarteSPopustomDAO().create(kupac);
                             MessageBox.Show("Obavljeno");
-                            StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji);
+                            StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji, logovaniKorisnik);
                             stampac.Stampaj();
                         }
                         updateujBrojSlobodnihSjedista();
