@@ -74,7 +74,7 @@ namespace DesktopAplikacija.Entiteti
 
             Color bojaLinija = Color.Black;
             Color bojaTeksta = Color.Black;
-            //e.Graphics.DrawImage(pictureBox1.Image, 280, -20, 300, 300);
+            e.Graphics.DrawImage(DesktopAplikacija.Properties.Resources.LOGOblijed, 280, -20, 300, 300);
 
             e.Graphics.DrawRectangle(new Pen(bojaLinija), 20, 20, 260, 130);
             e.Graphics.DrawRectangle(new Pen(bojaLinija), 20, 150, 260, 170);
