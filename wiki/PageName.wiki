@@ -1,8 +1,2 @@
 #labels BOBO
-=_*BOBO TRNAS*_=
-
-Bobo trans je nova autobuska kompanija u Bosni i Hercegovini. Odlučili su da organizuju prevoz između raznih lokalnih, ali i internacionalnih lokacija. Kupci će moći doći na jednu od stanica Bobo transa gdje će im radnici za šalterom biti na raspolaganju. Kupac će se moći informisati o svim linijama koje pruža Bobo trans tako što će se obratiti uposleniku. Prodaja karata je ipak glavna aktivnost koja će se dešavati u stanici. Ukoliko postoje slobodna sjedišta u autobusu na željenoj liniji, kupac će moći kupiti ili izvršiti rezervaciju željenih sjedišta uz plaćanje na licu mjesta. Pri tome će moći ostvariti popust ukoliko je student ili penzioner. Održavanje i upravljanje linijama će biti zadatak menadžera. Oni će određivati da li postoje linije koje su viška, odnosno da li postoji potreba za novim linijama. U skladu s tim, upravljat će i rasporedom autobusa po linijama. Također, Bobo trans će raspolagati i određenim brojem autobusa koji nisu u redovnim linijama. Njih će menadžeri koristiti u slučaju kvara postojećih autobusa ili će ih iznajmljivati za vandredne vožnje. Cijena vandrednih vožnji će se određivati na osnovu dužine, trajanja puta i drugih faktora, dok će cijena redovnih vožnji biti određena na osnovu udaljenosti, cestarine i sl. Za održavanje autobusa u funkciji će biti zaduženi serviseri. Oni će vršiti redovan pregled autobusa i otklanjanje kvarova ukoliko postoje. Pratit će vrijeme isteka registracije pojedinih autobusa. Bobo trans će uzmeđu ostalog nuditi svojim kupcima mogućnost pregleda rasporeda vožnje i rezervaciju karata putem interneta. Pri tome će kupci plaćanje vršiti putem kreditne kartice. Svi zaposlenici Bobo transa će aktivno komunicirati i prijavljivati probleme, ukoliko oni postoje, zaduženoj osobi
-
-http://code.google.com/images/code_sm.png
-
-Attach:do I smell cake.jpg
+[[Image:sreca_sunce_free-390x259.jpg|thumb|Caption]]
