@@ -382,5 +382,20 @@ namespace DesktopAplikacija.RadnikZaSalterom
             pOR.Show();
         }
 
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            otvoriInternetRezervacije();
+        }
+
+        private void preuzmiInternetRezervacijuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            otvoriInternetRezervacije();
+        }
+
+        private void otvoriInternetRezervacije()
+        {
+            PreuzimanjeInternetRezervacije pIR = new PreuzimanjeInternetRezervacije();
+            pIR.Show();
+        }
     }
 }

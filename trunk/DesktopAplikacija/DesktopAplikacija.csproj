@@ -238,6 +238,12 @@
     <Compile Include="RadnikZaSalterom\podaciORezervaciji.Designer.cs">
       <DependentUpon>podaciORezervaciji.cs</DependentUpon>
     </Compile>
+    <Compile Include="RadnikZaSalterom\PreuzimanjeInternetRezervacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadnikZaSalterom\PreuzimanjeInternetRezervacije.Designer.cs">
+      <DependentUpon>PreuzimanjeInternetRezervacije.cs</DependentUpon>
+    </Compile>
     <Compile Include="RadnikZaSalterom\RezervacijaSjedista.xaml.cs">
       <DependentUpon>RezervacijaSjedista.xaml</DependentUpon>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RadnikZaSalterom\podaciORezervaciji.resx">
       <DependentUpon>podaciORezervaciji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadnikZaSalterom\PreuzimanjeInternetRezervacije.resx">
+      <DependentUpon>PreuzimanjeInternetRezervacije.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RadnikZaSalterom\RezervacijaSjedistaUBusu.resx">
       <DependentUpon>RezervacijaSjedistaUBusu.cs</DependentUpon>
