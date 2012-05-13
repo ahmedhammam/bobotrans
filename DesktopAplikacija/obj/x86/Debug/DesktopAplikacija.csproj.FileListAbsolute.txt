@@ -157,3 +157,4 @@ D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.Dod
 D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UnosCijena.resources
 D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.PregledStanica.resources
 D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Menadzer.UredjivanjeStanice.resources
+D:\OOAD\SVN\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.RadnikZaSalterom.PreuzimanjeInternetRezervacije.resources
