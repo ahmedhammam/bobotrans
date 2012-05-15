@@ -23,9 +23,7 @@ C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOAD\trunk\T
 C:\Users\MediaMarket\Documents\fax\IV semestar\dzenisa\OOADprojekat\OOAD\trunk\TestnaAplikacija\bin\Debug\DesktopAplikacija.pdb
 D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\TestnaAplikacija.exe
 D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\TestnaAplikacija.pdb
-D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\Bobo Trans.dll
 D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\DesktopAplikacija.exe
-D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\Bobo Trans.pdb
 D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\DesktopAplikacija.pdb
 D:\OOAD\SVN\trunk\TestnaAplikacija\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\OOAD\SVN\trunk\TestnaAplikacija\obj\x86\Debug\TestnaAplikacija.exe
@@ -35,3 +33,8 @@ C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\DAL.pdb
 C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\QRCodeGenerator.exe
 C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\OnBarcode.Barcode.WinForms.dll
 C:\Users\Amer\Desktop\Bobo Trans\trunk\TestnaAplikacija\bin\Debug\QRCodeGenerator.pdb
+D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\DAL.dll
+D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\QRCodeGenerator.exe
+D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\OnBarcode.Barcode.WinForms.dll
+D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\DAL.pdb
+D:\OOAD\SVN\trunk\TestnaAplikacija\bin\Debug\QRCodeGenerator.pdb
