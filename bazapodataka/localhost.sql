@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.10.1
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 08, 2012 at 12:15 AM
+-- Generation Time: May 15, 2012 at 06:13 PM
 -- Server version: 5.5.20
--- PHP Version: 5.3.10
+-- PHP Version: 5.3.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -51,6 +51,20 @@ INSERT INTO `autobusi` (`id`, `registracijskeTablice`, `istekRegistracije`, `bro
 (5, '324-A-322', '2013-04-17', 69, '2012-04-11', 0, 0, 1),
 (13, '159-M-753', '2013-05-05', 61, '2012-05-05', 0, 1, 1),
 (14, '871-N-869', '2013-07-10', 45, '2012-05-06', 1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `internetrezervacije`
+--
+
+CREATE TABLE IF NOT EXISTS `internetrezervacije` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idKupca` int(11) NOT NULL,
+  `sifra` varchar(10) COLLATE utf8_slovenian_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `sifra` (`sifra`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

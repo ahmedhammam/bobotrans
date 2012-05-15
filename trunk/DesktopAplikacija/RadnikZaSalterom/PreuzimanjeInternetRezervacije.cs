@@ -37,21 +37,9 @@ namespace DesktopAplikacija.RadnikZaSalterom
 
         private int deshifruj(string sifra)
         {
-            if (sifra.Length != 14) throw new Exception("ne valja");
-            int idKupca=0;
-            for (int i = 0; i < 7; i++)
-            {
-                idKupca *= 32;
-                idKupca += dajCifru(sifra[i * 2]);
-            }
-            MessageBox.Show(idKupca.ToString());
+
             return -1;
         }
 
-        private int dajCifru(char x)
-        {
-            if (x >= '0' && x <= '9') return ((int)x - 48);
-            else return ((int)x - 65);
-        }
     }
 }
