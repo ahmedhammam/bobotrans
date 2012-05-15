@@ -73,6 +73,12 @@ namespace DAL
             {
                 return new KupacKarteSPopustomDAO();
             }
+
+            public SifraZaInternetKupovinuDAO getSifraZaInternetKupovinuDAO()
+            {
+                return new SifraZaInternetKupovinuDAO();
+            }
+
         }
     }
 }
