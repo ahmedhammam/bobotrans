@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopAplikacija", "Deskto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServis", "WebServis\WebServis.csproj", "{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeReader", "QRCodeReader\QRCodeReader.csproj", "{CFE38385-936F-4CEE-9CDE-6E5251B4888E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeGenerator", "QRCodeGenerator\QRCodeGenerator.csproj", "{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,26 @@ Global
 		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{202C2389-B41D-4FBD-94CC-FDEA86CA77E7}.Release|x86.ActiveCfg = Release|Any CPU
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Debug|x86.ActiveCfg = Debug|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Debug|x86.Build.0 = Debug|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Release|Any CPU.ActiveCfg = Release|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Release|x86.ActiveCfg = Release|x86
+		{CFE38385-936F-4CEE-9CDE-6E5251B4888E}.Release|x86.Build.0 = Release|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Debug|x86.ActiveCfg = Debug|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Debug|x86.Build.0 = Debug|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Release|Any CPU.ActiveCfg = Release|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Release|x86.ActiveCfg = Release|x86
+		{B2CE8D7D-2DD8-404A-885B-EAF445A8D1B2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

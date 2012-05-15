@@ -27,8 +27,8 @@ namespace DesktopAplikacija
         {
             if (Validiraj())
             {
-                //try
-                //{
+                try
+                {
                    
                     DAL.DAL.KorisnikDAO kd = d.getDAO.getKorisnikDAO();
                     DAL.Entiteti.Korisnik k = kd.getByUsernameAndPassword(t_nazivKorisnika.Text, t_sifraKorisnika.Text);
@@ -55,13 +55,12 @@ namespace DesktopAplikacija
                         
                     }
 
-
-                //}
-                //catch (Exception e1)
-                //{
-                  //  MessageBox.Show(e1.Message);
-                    //toolStripStatusLabel1.Text = e1.Message;
-                //}
+                }
+                catch (Exception e1)
+                {
+                    MessageBox.Show(e1.Message);
+                    toolStripStatusLabel1.Text = e1.Message;
+                }
             }
             
         }
