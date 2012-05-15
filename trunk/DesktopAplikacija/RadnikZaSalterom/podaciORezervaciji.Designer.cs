@@ -51,6 +51,8 @@
             this.tbImeIPrez = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnIzlaz = new System.Windows.Forms.Button();
+            this.btnStampajKarte = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +76,7 @@
             this.lbSpisakKarti.Location = new System.Drawing.Point(12, 150);
             this.lbSpisakKarti.MultiSelect = false;
             this.lbSpisakKarti.Name = "lbSpisakKarti";
-            this.lbSpisakKarti.Size = new System.Drawing.Size(657, 322);
+            this.lbSpisakKarti.Size = new System.Drawing.Size(615, 211);
             this.lbSpisakKarti.TabIndex = 22;
             this.lbSpisakKarti.UseCompatibleStateImageBehavior = false;
             this.lbSpisakKarti.View = System.Windows.Forms.View.Details;
@@ -121,7 +123,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(582, 478);
+            this.button1.Location = new System.Drawing.Point(540, 367);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 34);
             this.button1.TabIndex = 23;
@@ -245,7 +247,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(582, 110);
+            this.button2.Location = new System.Drawing.Point(540, 110);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 34);
             this.button2.TabIndex = 49;
@@ -253,17 +255,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIzlaz.Location = new System.Drawing.Point(540, 407);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(87, 34);
+            this.btnIzlaz.TabIndex = 50;
+            this.btnIzlaz.Text = "Izađi";
+            this.btnIzlaz.UseVisualStyleBackColor = true;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
+            // 
+            // btnStampajKarte
+            // 
+            this.btnStampajKarte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStampajKarte.Location = new System.Drawing.Point(447, 367);
+            this.btnStampajKarte.Name = "btnStampajKarte";
+            this.btnStampajKarte.Size = new System.Drawing.Size(87, 34);
+            this.btnStampajKarte.TabIndex = 51;
+            this.btnStampajKarte.Text = "Štampaj karte";
+            this.btnStampajKarte.UseVisualStyleBackColor = true;
+            this.btnStampajKarte.Click += new System.EventHandler(this.btnStampajKarte_Click);
+            // 
             // podaciORezervaciji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 524);
+            this.ClientSize = new System.Drawing.Size(639, 453);
+            this.Controls.Add(this.btnStampajKarte);
+            this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbSpisakKarti);
-            this.MinimumSize = new System.Drawing.Size(655, 309);
+            this.MinimumSize = new System.Drawing.Size(655, 339);
             this.Name = "podaciORezervaciji";
             this.Text = "Kupci karti";
             this.Load += new System.EventHandler(this.podaciORezervaciji_Load);
@@ -300,5 +326,7 @@
         private System.Windows.Forms.ComboBox cbPocStan;
         private System.Windows.Forms.ComboBox cbVoznje;
         private System.Windows.Forms.ComboBox cbLinije;
+        private System.Windows.Forms.Button btnIzlaz;
+        private System.Windows.Forms.Button btnStampajKarte;
     }
 }
