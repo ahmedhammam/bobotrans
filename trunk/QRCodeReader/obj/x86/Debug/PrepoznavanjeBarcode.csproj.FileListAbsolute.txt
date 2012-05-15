@@ -1,0 +1,18 @@
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\bin\Debug\PrepoznavanjeBarcode.exe
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\bin\Debug\PrepoznavanjeBarcode.pdb
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.Form1.resources
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.Properties.Resources.resources
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\obj\x86\Debug\ResGen.read.1.tlog
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\obj\x86\Debug\ResGen.write.1.tlog
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.exe
+c:\users\teo\documents\visual studio 2010\Projects\PrepoznavanjeBarcode\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.pdb
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.exe
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.pdb
+D:\Downloads\PrepoznavanjeBarcode\bin\Debug\PrepoznavanjeBarcode.exe
+D:\Downloads\PrepoznavanjeBarcode\bin\Debug\PrepoznavanjeBarcode.pdb
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.Properties.Resources.resources
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\ResGen.read.1.tlog
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\ResGen.write.1.tlog
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\PrepoznavanjeBarcode.QRCodeReader.resources

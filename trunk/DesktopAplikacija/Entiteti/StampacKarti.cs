@@ -7,6 +7,12 @@ using System.Drawing;
 
 namespace DesktopAplikacija.Entiteti
 {
+    /*Primjer koda za QRCodeGenerator
+     * Bitmap kod = QRCodeGenerator.QRCodeGenerator.dajQRCode(string sifra, float velicina u pixelima (opcionalno, ali premalo je 3 pixela), int rezolucija (opcionalno, ovo je ok ja mislim));
+     * 
+     * to je sve =)
+     * */
+
     class StampacKarti
     {
         PrintDocument dokumentZaPrintanje;

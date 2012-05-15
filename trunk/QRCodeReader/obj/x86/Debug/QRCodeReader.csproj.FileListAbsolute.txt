@@ -1,0 +1,24 @@
+D:\Downloads\PrepoznavanjeBarcode\bin\Debug\QRCodeReader.exe.config
+D:\Downloads\PrepoznavanjeBarcode\bin\Debug\QRCodeReader.exe
+D:\Downloads\PrepoznavanjeBarcode\bin\Debug\QRCodeReader.pdb
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\QRCodeReader.Properties.Resources.resources
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\ResGen.read.1.tlog
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\ResGen.write.1.tlog
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\QRCodeReader.exe
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\QRCodeReader.pdb
+D:\Downloads\PrepoznavanjeBarcode\obj\x86\Debug\QRCodeReader.QRCodeReader.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\bin\Debug\QRCodeReader.exe.config
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\bin\Debug\QRCodeReader.exe
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\bin\Debug\QRCodeReader.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.QRCodeReader.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.Properties.Resources.resources
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.exe
+C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.pdb
