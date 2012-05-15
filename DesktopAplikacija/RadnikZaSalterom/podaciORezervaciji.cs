@@ -14,13 +14,15 @@ namespace DesktopAplikacija.RadnikZaSalterom
     {
         List<DAL.Entiteti.KupacKarte> kupci;
         KolekcijaLinija kl = KolekcijaLinija.Instanca;
-        public podaciORezervaciji()
+        DAL.Entiteti.Korisnik prodavac;
+        public podaciORezervaciji(DAL.Entiteti.Korisnik prodavac_)
         {
             InitializeComponent();
             //postavi bazu podataka karti
             kupci = DAL.DAL.Instanca.getDAO.getKupacKarteDAO().GetAll();
             kupci.AddRange(DAL.DAL.Instanca.getDAO.getKupacKarteSPopustomDAO().GetAll());
             cbLinije.Items.AddRange(kl.Linije.ToArray());
+            prodavac = prodavac_;
         }
 
         private void podaciORezervaciji_Load(object sender, EventArgs e)
@@ -104,7 +106,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
         {
             if (lbSpisakKarti.CheckedIndices.Count > 0)
             {
-                DialogResult rezultat = MessageBox.Show("Da li ste sigurni da želite poništiti odabrane karte","Pažnja", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                DialogResult rezultat = MessageBox.Show("Da li ste sigurni da želite poništiti odabrane karte","Pažnja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rezultat == DialogResult.Yes)
                 {
                     //brisanje odabranih
@@ -151,6 +153,63 @@ namespace DesktopAplikacija.RadnikZaSalterom
                 cbPocStan.Items.AddRange(linija.Stanice.ToArray());
                 cbKrajStan.Items.AddRange(linija.Stanice.ToArray());
             }
+        }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnStampajKarte_Click(object sender, EventArgs e)
+        {
+                if (lbSpisakKarti.CheckedIndices.Count > 0)
+                {
+                    DialogResult rezultat = MessageBox.Show("Da li ste sigurni da želite štampati odabrane karte?", "Pažnja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rezultat == DialogResult.Yes)
+                    {
+                        foreach (int indeks in lbSpisakKarti.CheckedIndices)
+                        {
+                            stampanjeRadi((lbSpisakKarti.Items[indeks].Tag as DAL.Entiteti.KupacKarte).SifraKupca);
+                        }
+                    }
+                }
+        }
+
+
+        private void stampanjeRadi(long id)
+        {
+            try
+            {
+                try
+                {
+                    DAL.Entiteti.KupacKarte kupac = DAL.DAL.Instanca.getDAO.getKupacKarteDAO().getById(id);
+
+                    //uzimanje spiska stanica
+                    long idLinije = DAL.DAL.Instanca.getDAO.getVoznjaDAO().dajIdLinije(kupac.Voznja.SifraVoznje);
+                    List<DAL.Entiteti.Stanica> stanice = DAL.DAL.Instanca.getDAO.getLinijaDAO().getById(idLinije).Stanice;
+                    StampacKarti stampac = new StampacKarti(kupac, stanice, prodavac);
+                    stampac.Stampaj();
+                    //Ent
+
+                }
+                catch (Exception ex)
+                {
+                    //znaci kupac karte sa popustom je
+                    DAL.Entiteti.KupacSaPopustom kupac = DAL.DAL.Instanca.getDAO.getKupacKarteSPopustomDAO().getById(id);
+
+                    //uzimanje spiska stanica
+                    long idLinije = DAL.DAL.Instanca.getDAO.getVoznjaDAO().dajIdLinije(kupac.Voznja.SifraVoznje);
+                    List<DAL.Entiteti.Stanica> stanice = DAL.DAL.Instanca.getDAO.getLinijaDAO().getById(idLinije).Stanice;
+                    StampacKarti stampac = new StampacKarti(kupac, stanice, prodavac);
+                    stampac.Stampaj();
+                }
+            }
+            catch
+            {
+                //MessageBox.Show("Neispravna šifra", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                id = -1;
+            }
+            if (id < 0) MessageBox.Show("Neispravna šifra", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

@@ -378,7 +378,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
 
         private void prikazKupacaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            podaciORezervaciji pOR = new podaciORezervaciji();
+            podaciORezervaciji pOR = new podaciORezervaciji(logovaniKorisnik);
             pOR.Show();
         }
 
@@ -394,7 +394,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
 
         private void otvoriInternetRezervacije()
         {
-            PreuzimanjeInternetRezervacije pIR = new PreuzimanjeInternetRezervacije();
+            PreuzimanjeInternetRezervacije pIR = new PreuzimanjeInternetRezervacije(logovaniKorisnik);
             pIR.Show();
         }
     }
