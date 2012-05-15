@@ -21,6 +21,7 @@
  # LinijeCijene
  # StaniceULiniji
  # RasporedVoznjeAutobus
+ # InternetRezervacije
 
 
 ===Linije:===
@@ -225,3 +226,11 @@
 - idRasporedaVoznje - foreign key na RasporedVoznji.id: on UPDATE i DELETE - restrict
 
 - idAutobusa - foreign key na Autobusi.id: on UPDATE i DELETE - restrict
+
+===InternetRezervacije===
+
+- id (primary, int, autoincrement)
+
+- idKupca (int)
+
+- sifra (varchar)
