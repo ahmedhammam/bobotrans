@@ -102,9 +102,10 @@ namespace DesktopAplikacija.Entiteti
             e.Graphics.DrawString(String.Format("Datum: {0}", DateTime.Today.ToString("dd.MM.yyyy")), new Font(FontFamily.GenericSansSerif, 8), new SolidBrush(bojaTeksta), new PointF(320, 20));
             e.Graphics.DrawString("Prodavač:", new Font(FontFamily.GenericSansSerif, 8), new SolidBrush(bojaTeksta), new PointF(320, 40));
             e.Graphics.DrawString(prodavac.ImeIPrezime, new Font(FontFamily.GenericSansSerif, 8), new SolidBrush(bojaTeksta), new PointF(320, 60));
-
-
-            e.Graphics.DrawRectangle(new Pen(bojaLinija), 410, 230, 150, 150);
+            System.Diagnostics.Debug.WriteLine(String.Format("{0}-{1}",kupacKarte.SifraKupca,indeks));
+            Bitmap kod = QRCodeGenerator.QRCodeGenerator.dajQRCode(String.Format("{0}-{1}",kupacKarte.SifraKupca,indeks)/*, float velicina u pixelima (opcionalno, ali premalo je 3 pixela), int rezolucija (opcionalno, ovo je ok ja mislim)*/);
+            //e.Graphics.DrawRectangle(new Pen(bojaLinija), 410, 230, 150, 150);
+            e.Graphics.DrawImage(kod, 410, 230, 150, 150);
         }
 
         private int dajIndexStanice(DAL.Entiteti.Stanica stan)

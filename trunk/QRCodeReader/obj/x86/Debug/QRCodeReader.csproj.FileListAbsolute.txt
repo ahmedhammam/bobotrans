@@ -22,3 +22,15 @@ C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\GenerateResour
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\ResGen.write.1.tlog
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.exe
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.pdb
+D:\OOAD\SVN\trunk\QRCodeReader\bin\Debug\QRCodeReader.exe.config
+D:\OOAD\SVN\trunk\QRCodeReader\bin\Debug\QRCodeReader.exe
+D:\OOAD\SVN\trunk\QRCodeReader\bin\Debug\QRCodeReader.pdb
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.QRCodeReader.resources
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.Properties.Resources.resources
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\ResGen.read.1.tlog
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\ResGen.write.1.tlog
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.exe
+D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.pdb

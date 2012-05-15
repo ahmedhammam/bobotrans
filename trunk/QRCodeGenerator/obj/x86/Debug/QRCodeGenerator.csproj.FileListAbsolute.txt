@@ -16,3 +16,11 @@ C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeGenerator\obj\x86\Debug\GenerateRes
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeGenerator\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.exe
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.pdb
+D:\OOAD\SVN\trunk\QRCodeGenerator\bin\Debug\QRCodeGenerator.exe
+D:\OOAD\SVN\trunk\QRCodeGenerator\bin\Debug\QRCodeGenerator.pdb
+D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.Properties.Resources.resources
+D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.exe
+D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.pdb
