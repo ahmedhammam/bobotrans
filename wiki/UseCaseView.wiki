@@ -1,2 +1,6 @@
                     ===Use case dijagram===
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/UseCaseDiagram.jpg]
+
+===Use case dijagram: Otkazivanje,kupovanje karte i otkazivanje rezervacije ===
+
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/Informisanje,%20kupovanje%20karte%20i%20otkazivanje%20rezervacije.jpg]
