@@ -1,0 +1,17 @@
+klase i objekti kad se promjenje:)
+
+==Dijagrami interakcije==
+
+==Dijagram sekvence-Radnik za šalterom==
+
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/SequenceDiagram1RadnikZaSalterom.jpg]
+
+
+
+==Dijagram sekvence-Online rezervacija==
+
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/SequenceDiagramOnlineRezervacija.jpg]
+
+==Dijagram sekvence-Serviser==
+
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/Servis.jpg]
