@@ -1,17 +1,24 @@
-klase i objekti kad se promjenje:)
+=Dijagrami aktivnosti=
 
-==Dijagrami interakcije==
+==Kupovina i otkazivanje karte==
 
-==Dijagram sekvence-Radnik za šalterom==
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/KupovinaIOtkazivanjeRezervacije.jpg]
 
-[http://code.google.com/ https://bobotrans.googlecode.com/svn/SequenceDiagram1RadnikZaSalterom.jpg]
+==Kupovina karte==
 
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/KupovinaKarte.jpg]
 
+==Otkazivanje rezervacija==
 
-==Dijagram sekvence-Online rezervacija==
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/OtkazivanjeRezervacije.jpg]
 
-[http://code.google.com/ https://bobotrans.googlecode.com/svn/SequenceDiagramOnlineRezervacija.jpg]
+==Internet rezervacija==
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/InternetRezervacija.jpg]
 
-==Dijagram sekvence-Serviser==
+==Servisiranje==
 
-[http://code.google.com/ https://bobotrans.googlecode.com/svn/Servis.jpg]
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/Servisiranje.jpg]
+
+==Zakupo autobusa==
+
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/ZakupAutobusa.jpg]
