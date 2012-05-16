@@ -15,3 +15,7 @@ klase i objekti kad se promjenje:)
 ==Dijagram sekvence-Serviser==
 
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/Servis.jpg]
+
+==Dijagram komunikacije==
+
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/dijagramkomunikacije.jpg]
