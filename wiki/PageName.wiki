@@ -1,4 +1,4 @@
 #labels BOBO
-[http://code.google.com/ http://code.google.com/images/code_sm.png]
+[http://code.google.com/ http://bobotrans.googlecode.com/svn/bus.png]
 [http://code.google.com/ http://code.google.com/images/code_sm.png]
 [https://code.google.com/ https://code.google.com/p/bobotrans/source/browse/weee.jpg]
