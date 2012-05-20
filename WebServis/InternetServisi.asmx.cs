@@ -23,7 +23,14 @@ namespace WebServis
         {
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju();
-            return d.getDAO.getLinijaDAO().getById(sifraLinije).NazivLinije;
+            try
+            {
+                return d.getDAO.getLinijaDAO().getById(sifraLinije).NazivLinije;
+            }
+            catch (Exception ex)
+            {
+                return "__GRESHKA__";
+            }
         }
 
         [WebMethod]
