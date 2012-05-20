@@ -31,7 +31,14 @@ namespace WebServis
         {
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju();
-            return d.getDAO.getStaniceDAO().getById(sifraStanice).ToString();
+            try
+            {
+                return d.getDAO.getStaniceDAO().getById(sifraStanice).ToString();
+            }
+            catch (Exception ex)
+            {
+                return "__GRESHKA__";
+            }
         }
 
         [WebMethod]
