@@ -1,24 +1,30 @@
 =Dijagrami aktivnosti=
 
+
 ==Kupovina i otkazivanje karte==
 
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/KupovinaIOtkazivanjeRezervacije.jpg]
+
 
 ==Kupovina karte==
 
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/KupovinaKarte.jpg]
 
+
 ==Otkazivanje rezervacija==
 
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/OtkazivanjeRezervacije.jpg]
 
+
 ==Internet rezervacija==
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/InternetRezervacija.jpg]
+
 
 ==Servisiranje==
 
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/Servisiranje.jpg]
 
-==Zakupo autobusa==
+
+==Zakup autobusa==
 
 [http://code.google.com/ https://bobotrans.googlecode.com/svn/ZakupAutobusa.jpg]
