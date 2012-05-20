@@ -5,3 +5,8 @@ D:\OOAD\SVN\trunk\WebServis\obj\Debug\WebServis.dll
 D:\OOAD\SVN\trunk\WebServis\obj\Debug\WebServis.pdb
 D:\OOAD\SVN\trunk\WebServis\bin\DAL.dll
 D:\OOAD\SVN\trunk\WebServis\bin\DAL.pdb
+D:\OOAD\SVN\trunk\WebServis\bin\DesktopAplikacija.exe
+D:\OOAD\SVN\trunk\WebServis\bin\QRCodeGenerator.exe
+D:\OOAD\SVN\trunk\WebServis\bin\OnBarcode.Barcode.WinForms.dll
+D:\OOAD\SVN\trunk\WebServis\bin\DesktopAplikacija.pdb
+D:\OOAD\SVN\trunk\WebServis\bin\QRCodeGenerator.pdb

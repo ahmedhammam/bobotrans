@@ -73,6 +73,10 @@
       <Project>{FFC456D3-D22A-427A-80FD-6F0587BE6BCB}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesktopAplikacija\DesktopAplikacija.csproj">
+      <Project>{C5A3F6B0-FE2D-4928-AB63-EC91CC082920}</Project>
+      <Name>DesktopAplikacija</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

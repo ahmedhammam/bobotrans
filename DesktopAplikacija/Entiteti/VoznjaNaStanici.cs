@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DesktopAplikacija.Entiteti
 {
-    class VoznjaNaStanici
+    public class VoznjaNaStanici
     {
         private string nazivLinije;
         private int sati, minute;

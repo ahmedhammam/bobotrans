@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DesktopAplikacija.Informisanje
 {
-    class InformisanjeKomande
+    public class InformisanjeKomande
     {
         private static Entiteti.KolekcijaLinija kolekcijaLinija = Entiteti.KolekcijaLinija.Instanca;
         private static DesktopAplikacija.Entiteti.KolekcijaStanica ks = DesktopAplikacija.Entiteti.KolekcijaStanica.Instanca;

@@ -27,6 +27,10 @@ namespace DesktopAplikacija.Entiteti
             cijena = c;
             opisPuta = oP;
         }
-        
+
+        public override string ToString()
+        {
+            return (String.Format("{0}\nCijena: {1}", opisPuta, cijena.ToString()));
+        }
     }
 }

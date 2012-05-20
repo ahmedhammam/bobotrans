@@ -69,5 +69,95 @@ namespace WebServis
             d.kreirajKonekciju();
             return d.getDAO.getVoznjaDAO().getById(sifraVoznje).ToString();
         }
+
+        [WebMethod]
+        public List<long> dajLinijeKrozStanicu(long sifraStanice)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju();
+            List<long> spisak = new List<long>();
+            List<DAL.Entiteti.Linija> linije = d.getDAO.getLinijaDAO().GetAll();
+            foreach (DAL.Entiteti.Linija linija in linije)
+            {
+                bool nasao = false;
+                foreach (DAL.Entiteti.Stanica stanica in linija.Stanice)
+                {
+                    if (stanica.SifraStanice == sifraStanice) nasao=true;
+                }
+                if (nasao) spisak.Add(linija.SifraLinije);
+            }
+            return spisak;
+        }
+
+        [WebMethod]
+        public List<long> dajStaniceULiniji(long sifraLinije)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju();
+            List<long> spisak = new List<long>();
+            DAL.Entiteti.Linija linija = d.getDAO.getLinijaDAO().getById(sifraLinije);
+            foreach (DAL.Entiteti.Stanica stanica in linija.Stanice)
+            {
+                spisak.Add(stanica.SifraStanice);
+            }
+            return spisak;
+        }
+
+        [WebMethod]
+        public List<long> dajStanice()
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju();
+            List<long> spisak = new List<long>();
+            List<DAL.Entiteti.Stanica> stanice= d.getDAO.getStaniceDAO().GetAll();
+            foreach (DAL.Entiteti.Stanica stanica in stanice)
+            {
+                spisak.Add(stanica.SifraStanice);
+            }
+            return spisak;
+        }
+
+        [WebMethod]
+        public string dajNajjeftinijiPut(long sifraPocetneStanice, long sifraKrajnjeStanice)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju();
+            DAL.Entiteti.Stanica pocetnaStanica = d.getDAO.getStaniceDAO().getById(sifraPocetneStanice);
+            DAL.Entiteti.Stanica krajnjaStanica = d.getDAO.getStaniceDAO().getById(sifraKrajnjeStanice);
+            DesktopAplikacija.Entiteti.Put put = DesktopAplikacija.Informisanje.InformisanjeKomande.vratiNajjeftinijiPut(pocetnaStanica,krajnjaStanica);
+            return put.ToString().Replace("\n", "; ");
+        }
+
+        [WebMethod]
+        public List<string> dajVoznjeKrozStanicu(long sifraStanice)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju();
+            List<string> spisak = new List<string>();
+            List<DAL.Entiteti.Linija> linije = d.getDAO.getLinijaDAO().GetAll();
+            foreach (DAL.Entiteti.Linija linija in linije)
+            {
+                bool nasao = false;
+                int pozicija = 0;
+                for (int i=0;i<linija.Stanice.Count;i++)
+                {
+                    if (linija.Stanice[i].SifraStanice == sifraStanice)
+                    {
+                        nasao = true;
+                        pozicija = i;
+                    }
+                }
+                if (nasao)
+                {
+                    List<DAL.Entiteti.Voznja> voznje = linija.Voznje;
+                    foreach (DAL.Entiteti.Voznja voznja in voznje)
+                    {
+                        string naziv = String.Format("{0}, {1}",linija.NazivLinije, voznja.VrijemePolaska.AddMinutes((double)linija.TrajanjeDoPolaska[pozicija]).ToString("dd.MM.yy, HH:mm:ss"));
+                        spisak.Add(naziv);
+                    }
+                }
+            }
+            return spisak;
+        }
     }
 }
