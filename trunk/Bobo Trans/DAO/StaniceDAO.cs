@@ -99,8 +99,12 @@ namespace DAL
                         r.Close();
                         return a;
                     }
-                    else throw
+                    else 
+                    {
+                        r.Close();
+                        throw
                         new Exception("nije nadjen nijedan element");
+                    }
                 }
                 catch (Exception e)
                 {
