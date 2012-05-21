@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CijeneNaLiniji));
             this.gbLinija = new System.Windows.Forms.GroupBox();
             this.lblBrojStanica = new System.Windows.Forms.Label();
             this.lblSifraLinije = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             this.lblSifraLinije.Name = "lblSifraLinije";
             this.lblSifraLinije.Size = new System.Drawing.Size(57, 13);
             this.lblSifraLinije.TabIndex = 0;
-            this.lblSifraLinije.Text = "Sifra linije: ";
+            this.lblSifraLinije.Text = "Šifra linije: ";
             // 
             // dgvCijene
             // 
@@ -79,13 +80,13 @@
             this.dgvCijene.Name = "dgvCijene";
             this.dgvCijene.ReadOnly = true;
             this.dgvCijene.RowHeadersWidth = 180;
-            this.dgvCijene.Size = new System.Drawing.Size(591, 150);
+            this.dgvCijene.Size = new System.Drawing.Size(579, 160);
             this.dgvCijene.TabIndex = 1;
             // 
             // btnIzadji
             // 
             this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIzadji.Location = new System.Drawing.Point(528, 227);
+            this.btnIzadji.Location = new System.Drawing.Point(517, 237);
             this.btnIzadji.Name = "btnIzadji";
             this.btnIzadji.Size = new System.Drawing.Size(75, 23);
             this.btnIzadji.TabIndex = 2;
@@ -97,10 +98,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 262);
+            this.ClientSize = new System.Drawing.Size(604, 272);
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.dgvCijene);
             this.Controls.Add(this.gbLinija);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(99999, 999999);
             this.MinimumSize = new System.Drawing.Size(200, 200);
             this.Name = "CijeneNaLiniji";

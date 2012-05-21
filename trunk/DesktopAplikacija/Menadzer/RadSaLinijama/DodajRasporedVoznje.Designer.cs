@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajRasporedVoznje));
             this.btnBrisi = new System.Windows.Forms.Button();
             this.btnSpasi = new System.Windows.Forms.Button();
             this.btnIzadji = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.btnBrisi.Name = "btnBrisi";
             this.btnBrisi.Size = new System.Drawing.Size(75, 23);
             this.btnBrisi.TabIndex = 11;
-            this.btnBrisi.Text = "Brisi red";
+            this.btnBrisi.Text = "Briši red";
             this.btnBrisi.UseVisualStyleBackColor = true;
             this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
             // 
@@ -60,7 +61,7 @@
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 10;
-            this.btnSpasi.Text = "Spasi";
+            this.btnSpasi.Text = "Spremi";
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
@@ -138,8 +139,10 @@
             this.Controls.Add(this.btnSpasi);
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.gbRasporedi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DodajRasporedVoznje";
-            this.Text = "DodajRasporedVoznje";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodavanje rasporeda vožnje";
             this.gbRasporedi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRasporediVoznji)).EndInit();
             this.ResumeLayout(false);

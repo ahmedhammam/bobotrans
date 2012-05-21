@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UredjivanjeLinije));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbNaziv = new System.Windows.Forms.TextBox();
@@ -275,7 +276,7 @@
             this.btnBrisiStanicu.Name = "btnBrisiStanicu";
             this.btnBrisiStanicu.Size = new System.Drawing.Size(75, 23);
             this.btnBrisiStanicu.TabIndex = 2;
-            this.btnBrisiStanicu.Text = "Izbrisi";
+            this.btnBrisiStanicu.Text = "Izbriši";
             this.btnBrisiStanicu.UseVisualStyleBackColor = true;
             this.btnBrisiStanicu.Click += new System.EventHandler(this.btnBrisiStanicu_Click);
             // 
@@ -297,7 +298,7 @@
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 5;
-            this.btnSpasi.Text = "Spasi";
+            this.btnSpasi.Text = "Spremi";
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
@@ -362,10 +363,12 @@
             this.Controls.Add(this.gbCijene);
             this.Controls.Add(this.gbStanice);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1000, 659);
             this.MinimumSize = new System.Drawing.Size(600, 659);
             this.Name = "UredjivanjeLinije";
-            this.Text = "UređivanjeLinije";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Uređivanje linije";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbStanice.ResumeLayout(false);

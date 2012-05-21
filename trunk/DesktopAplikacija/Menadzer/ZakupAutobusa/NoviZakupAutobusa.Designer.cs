@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NoviZakupAutobusa));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nudCijena = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -119,7 +120,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Pocetak:";
+            this.label3.Text = "Početak:";
             // 
             // groupBox2
             // 
@@ -190,7 +191,7 @@
             // 
             // colSifra
             // 
-            this.colSifra.Text = "Sifra";
+            this.colSifra.Text = "Šifra";
             // 
             // colRegistracija
             // 
@@ -200,7 +201,7 @@
             // 
             // colDatumServisa
             // 
-            this.colDatumServisa.Text = "Datum Servisa";
+            this.colDatumServisa.Text = "Datum servisa";
             this.colDatumServisa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colDatumServisa.Width = 108;
             // 
@@ -217,7 +218,7 @@
             // 
             // colBrojSjedista
             // 
-            this.colBrojSjedista.Text = "Broj sjedista";
+            this.colBrojSjedista.Text = "Broj sjedišta";
             this.colBrojSjedista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colBrojSjedista.Width = 82;
             // 
@@ -257,7 +258,7 @@
             this.btnUnesi.Name = "btnUnesi";
             this.btnUnesi.Size = new System.Drawing.Size(75, 23);
             this.btnUnesi.TabIndex = 6;
-            this.btnUnesi.Text = "Unesi";
+            this.btnUnesi.Text = "Spremi";
             this.btnUnesi.UseVisualStyleBackColor = true;
             this.btnUnesi.Click += new System.EventHandler(this.btnUnesi_Click);
             // 
@@ -271,8 +272,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NoviZakupAutobusa";
-            this.Text = "NoviZakupAutobusa";
+            this.Text = "Zakup autobusa";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCijena)).EndInit();

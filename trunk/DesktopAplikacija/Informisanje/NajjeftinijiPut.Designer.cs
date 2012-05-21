@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NajjeftinijiPut));
             this.cbPocetna = new System.Windows.Forms.ComboBox();
             this.cbKrajnja = new System.Windows.Forms.ComboBox();
             this.lblPocetnaStanica = new System.Windows.Forms.Label();
@@ -66,7 +67,7 @@
             this.lblPocetnaStanica.Name = "lblPocetnaStanica";
             this.lblPocetnaStanica.Size = new System.Drawing.Size(87, 13);
             this.lblPocetnaStanica.TabIndex = 2;
-            this.lblPocetnaStanica.Text = "Pocetna stanica:";
+            this.lblPocetnaStanica.Text = "Početna stanica:";
             // 
             // lblKrajnjaStanica
             // 
@@ -172,6 +173,7 @@
             this.Controls.Add(this.tbCijena);
             this.Controls.Add(this.lblCijena);
             this.Controls.Add(this.gbOdabir);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(331, 440);
             this.MinimumSize = new System.Drawing.Size(331, 440);
             this.Name = "NajjeftinijiPut";

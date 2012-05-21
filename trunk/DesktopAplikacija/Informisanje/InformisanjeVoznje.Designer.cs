@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformisanjeVoznje));
             this.lblSifraLinije = new System.Windows.Forms.Label();
             this.dgvVremena = new System.Windows.Forms.DataGridView();
             this.colVrijemeDolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,6 +155,7 @@
             this.Controls.Add(this.cbVoznje);
             this.Controls.Add(this.gbLinija);
             this.Controls.Add(this.dgvVremena);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(366, 999999);
             this.MinimumSize = new System.Drawing.Size(366, 340);
             this.Name = "InformisanjeVoznje";

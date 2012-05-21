@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajNoviAutobus));
             this.nudBrojSjedista = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbSlobodan = new System.Windows.Forms.TextBox();
@@ -182,7 +183,7 @@
             this.lblBrojSjedista.Name = "lblBrojSjedista";
             this.lblBrojSjedista.Size = new System.Drawing.Size(66, 13);
             this.lblBrojSjedista.TabIndex = 4;
-            this.lblBrojSjedista.Text = "Broj sjedista:";
+            this.lblBrojSjedista.Text = "Broj sjedišta:";
             // 
             // label1
             // 
@@ -208,7 +209,7 @@
             this.lblSifra.Name = "lblSifra";
             this.lblSifra.Size = new System.Drawing.Size(78, 13);
             this.lblSifra.TabIndex = 0;
-            this.lblSifra.Text = "Sifra autobusa:";
+            this.lblSifra.Text = "Šifra autobusa:";
             // 
             // btnIzadji
             // 
@@ -226,7 +227,7 @@
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(75, 23);
             this.btnDodaj.TabIndex = 3;
-            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.Text = "Spremi";
             this.btnDodaj.UseVisualStyleBackColor = true;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
@@ -238,8 +239,10 @@
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DodajNoviAutobus";
-            this.Text = "DodajNoviAutobus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Novi autobus";
             ((System.ComponentModel.ISupportInitialize)(this.nudBrojSjedista)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

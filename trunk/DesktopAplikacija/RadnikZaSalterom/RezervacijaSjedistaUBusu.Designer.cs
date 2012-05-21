@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RezervacijaSjedistaUBusu));
             this.button1 = new System.Windows.Forms.Button();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.rezervacijaSjedista1 = new DesktopAplikacija.RadnikZaSalterom.RezervacijaSjedista();
@@ -36,11 +37,11 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(934, 389);
+            this.button1.Location = new System.Drawing.Point(934, 397);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 34);
+            this.button1.Size = new System.Drawing.Size(82, 26);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Prihvati";
+            this.button1.Text = "Spremi";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -60,8 +61,10 @@
             this.ClientSize = new System.Drawing.Size(1028, 435);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.elementHost1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RezervacijaSjedistaUBusu";
-            this.Text = "RezervacijaSjedistaUBusu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Rezervacija sjedišta u autobusu";
             this.Load += new System.EventHandler(this.RezervacijaSjedistaUBusu_Load);
             this.ResumeLayout(false);
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UredjivanjeAutobusa));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbSlobodan = new System.Windows.Forms.TextBox();
             this.cbKlima = new System.Windows.Forms.ComboBox();
@@ -85,6 +86,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Podaci o autobusu";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tbSlobodan
             // 
@@ -159,11 +161,12 @@
             this.lblServis.Size = new System.Drawing.Size(77, 13);
             this.lblServis.TabIndex = 8;
             this.lblServis.Text = "Datum servisa:";
+            this.lblServis.Click += new System.EventHandler(this.lblServis_Click);
             // 
             // lblIstek
             // 
             this.lblIstek.AutoSize = true;
-            this.lblIstek.Location = new System.Drawing.Point(46, 142);
+            this.lblIstek.Location = new System.Drawing.Point(45, 136);
             this.lblIstek.Name = "lblIstek";
             this.lblIstek.Size = new System.Drawing.Size(86, 13);
             this.lblIstek.TabIndex = 7;
@@ -192,7 +195,7 @@
             this.lblBrojSjedista.Name = "lblBrojSjedista";
             this.lblBrojSjedista.Size = new System.Drawing.Size(66, 13);
             this.lblBrojSjedista.TabIndex = 4;
-            this.lblBrojSjedista.Text = "Broj sjedista:";
+            this.lblBrojSjedista.Text = "Broj sjedišta:";
             // 
             // label1
             // 
@@ -218,7 +221,7 @@
             this.lblSifra.Name = "lblSifra";
             this.lblSifra.Size = new System.Drawing.Size(78, 13);
             this.lblSifra.TabIndex = 0;
-            this.lblSifra.Text = "Sifra autobusa:";
+            this.lblSifra.Text = "Šifra autobusa:";
             // 
             // btnIzadji
             // 
@@ -275,7 +278,7 @@
             this.groupBox2.Size = new System.Drawing.Size(384, 280);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Izvjestaji za autobus";
+            this.groupBox2.Text = "Izvještaji za autobus";
             // 
             // groupBox3
             // 
@@ -285,7 +288,7 @@
             this.groupBox3.Size = new System.Drawing.Size(683, 165);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tekst odabranog izvjestaja";
+            this.groupBox3.Text = "Tekst odabranog izvještaja";
             // 
             // rtbTekst
             // 
@@ -301,7 +304,7 @@
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 5;
-            this.btnSpasi.Text = "Spasi";
+            this.btnSpasi.Text = "Spremi";
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
@@ -315,7 +318,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UredjivanjeAutobusa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Podaci o autobusu";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

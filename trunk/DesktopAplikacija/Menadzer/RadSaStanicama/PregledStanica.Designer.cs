@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PregledStanica));
             this.lvStanice = new System.Windows.Forms.ListView();
             this.colSifra = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colNaziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMjesto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnIzaji = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
             this.tsbNovaStanica = new System.Windows.Forms.ToolStripButton();
             this.tsbBrisi = new System.Windows.Forms.ToolStripButton();
+            this.btnIzaji = new System.Windows.Forms.Button();
+            this.btnUredi = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,25 +86,6 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnIzaji
-            // 
-            this.btnIzaji.Location = new System.Drawing.Point(259, 271);
-            this.btnIzaji.Name = "btnIzaji";
-            this.btnIzaji.Size = new System.Drawing.Size(75, 23);
-            this.btnIzaji.TabIndex = 2;
-            this.btnIzaji.Text = "Izađi";
-            this.btnIzaji.UseVisualStyleBackColor = true;
-            this.btnIzaji.Click += new System.EventHandler(this.btnIzaji_Click);
-            // 
-            // btnUredi
-            // 
-            this.btnUredi.Location = new System.Drawing.Point(178, 271);
-            this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(75, 23);
-            this.btnUredi.TabIndex = 3;
-            this.btnUredi.Text = "Uredi";
-            this.btnUredi.UseVisualStyleBackColor = true;
-            // 
             // tsbNovaStanica
             // 
             this.tsbNovaStanica.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -124,6 +106,25 @@
             this.tsbBrisi.Text = "toolStripButton2";
             this.tsbBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
             // 
+            // btnIzaji
+            // 
+            this.btnIzaji.Location = new System.Drawing.Point(259, 271);
+            this.btnIzaji.Name = "btnIzaji";
+            this.btnIzaji.Size = new System.Drawing.Size(75, 23);
+            this.btnIzaji.TabIndex = 2;
+            this.btnIzaji.Text = "Izađi";
+            this.btnIzaji.UseVisualStyleBackColor = true;
+            this.btnIzaji.Click += new System.EventHandler(this.btnIzaji_Click);
+            // 
+            // btnUredi
+            // 
+            this.btnUredi.Location = new System.Drawing.Point(178, 271);
+            this.btnUredi.Name = "btnUredi";
+            this.btnUredi.Size = new System.Drawing.Size(75, 23);
+            this.btnUredi.TabIndex = 3;
+            this.btnUredi.Text = "Uredi";
+            this.btnUredi.UseVisualStyleBackColor = true;
+            // 
             // PregledStanica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,8 +134,10 @@
             this.Controls.Add(this.btnIzaji);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lvStanice);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PregledStanica";
-            this.Text = "PregledStanica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pregled stanica";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

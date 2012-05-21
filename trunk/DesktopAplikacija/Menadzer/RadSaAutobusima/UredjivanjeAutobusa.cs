@@ -164,5 +164,15 @@ namespace DesktopAplikacija.Menadzer
 
             rtbTekst.Text = (lv.SelectedItems[0].Tag as DAL.Entiteti.Izvjestaj).Tekst;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblServis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

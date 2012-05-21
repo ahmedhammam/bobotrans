@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajNovuLiniju));
             this.lblNaziv = new System.Windows.Forms.Label();
             this.tbNaziv = new System.Windows.Forms.TextBox();
             this.dgvStanice = new System.Windows.Forms.DataGridView();
-            this.colSifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNaziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBrisiStanice = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbStanice = new System.Windows.Forms.ComboBox();
             this.btnDodajStanicu = new System.Windows.Forms.Button();
@@ -50,7 +48,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSpasi = new System.Windows.Forms.Button();
-            this.btnBrisiStanice = new System.Windows.Forms.Button();
+            this.colSifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNaziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPolazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanice)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -93,28 +94,6 @@
             this.dgvStanice.Size = new System.Drawing.Size(425, 187);
             this.dgvStanice.TabIndex = 2;
             // 
-            // colSifra
-            // 
-            this.colSifra.HeaderText = "Šifra stanice";
-            this.colSifra.Name = "colSifra";
-            this.colSifra.ReadOnly = true;
-            // 
-            // colNaziv
-            // 
-            this.colNaziv.HeaderText = "Naziv Stanice";
-            this.colNaziv.Name = "colNaziv";
-            this.colNaziv.ReadOnly = true;
-            // 
-            // colDolazak
-            // 
-            this.colDolazak.HeaderText = "Trajanje do dolaska";
-            this.colDolazak.Name = "colDolazak";
-            // 
-            // colPolazak
-            // 
-            this.colPolazak.HeaderText = "Trajanje do polaska";
-            this.colPolazak.Name = "colPolazak";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnBrisiStanice);
@@ -126,6 +105,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "1. Stanice na liniji";
+            // 
+            // btnBrisiStanice
+            // 
+            this.btnBrisiStanice.Location = new System.Drawing.Point(648, 183);
+            this.btnBrisiStanice.Name = "btnBrisiStanice";
+            this.btnBrisiStanice.Size = new System.Drawing.Size(75, 23);
+            this.btnBrisiStanice.TabIndex = 12;
+            this.btnBrisiStanice.Text = "Briši";
+            this.btnBrisiStanice.UseVisualStyleBackColor = true;
+            this.btnBrisiStanice.Click += new System.EventHandler(this.btnBrisiStanice_Click);
             // 
             // groupBox2
             // 
@@ -271,19 +260,31 @@
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 9;
-            this.btnSpasi.Text = "Spasi";
+            this.btnSpasi.Text = "Spremi";
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
-            // btnBrisiStanice
+            // colSifra
             // 
-            this.btnBrisiStanice.Location = new System.Drawing.Point(648, 183);
-            this.btnBrisiStanice.Name = "btnBrisiStanice";
-            this.btnBrisiStanice.Size = new System.Drawing.Size(75, 23);
-            this.btnBrisiStanice.TabIndex = 12;
-            this.btnBrisiStanice.Text = "Briši";
-            this.btnBrisiStanice.UseVisualStyleBackColor = true;
-            this.btnBrisiStanice.Click += new System.EventHandler(this.btnBrisiStanice_Click);
+            this.colSifra.HeaderText = "Šifra stanice";
+            this.colSifra.Name = "colSifra";
+            this.colSifra.ReadOnly = true;
+            // 
+            // colNaziv
+            // 
+            this.colNaziv.HeaderText = "Naziv stanice";
+            this.colNaziv.Name = "colNaziv";
+            this.colNaziv.ReadOnly = true;
+            // 
+            // colDolazak
+            // 
+            this.colDolazak.HeaderText = "Trajanje do dolaska";
+            this.colDolazak.Name = "colDolazak";
+            // 
+            // colPolazak
+            // 
+            this.colPolazak.HeaderText = "Trajanje do polaska";
+            this.colPolazak.Name = "colPolazak";
             // 
             // DodajNovuLiniju
             // 
@@ -297,10 +298,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tbNaziv);
             this.Controls.Add(this.lblNaziv);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(781, 402);
             this.MinimumSize = new System.Drawing.Size(781, 402);
             this.Name = "DodajNovuLiniju";
-            this.Text = "Dodaj novu liniju";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nova linija";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStanice)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -317,10 +320,6 @@
         private System.Windows.Forms.Label lblNaziv;
         private System.Windows.Forms.TextBox tbNaziv;
         private System.Windows.Forms.DataGridView dgvStanice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSifra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNaziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDolazak;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPolazak;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbStanice;
@@ -337,5 +336,9 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnSpasi;
         private System.Windows.Forms.Button btnBrisiStanice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSifra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNaziv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDolazak;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPolazak;
     }
 }
