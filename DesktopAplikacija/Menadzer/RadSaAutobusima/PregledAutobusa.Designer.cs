@@ -69,7 +69,7 @@
             // 
             // colSifra
             // 
-            this.colSifra.Text = "Sifra";
+            this.colSifra.Text = "Šifra";
             // 
             // colRegistracija
             // 
@@ -79,7 +79,7 @@
             // 
             // colDatumServisa
             // 
-            this.colDatumServisa.Text = "Datum Servisa";
+            this.colDatumServisa.Text = "Datum servisa";
             this.colDatumServisa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colDatumServisa.Width = 108;
             // 
@@ -96,7 +96,7 @@
             // 
             // colBrojSjedista
             // 
-            this.colBrojSjedista.Text = "Broj sjedista";
+            this.colBrojSjedista.Text = "Broj sjedišta";
             this.colBrojSjedista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colBrojSjedista.Width = 82;
             // 
@@ -128,7 +128,7 @@
             this.tsbNoviAutobus.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNoviAutobus.Name = "tsbNoviAutobus";
             this.tsbNoviAutobus.Size = new System.Drawing.Size(23, 22);
-            this.tsbNoviAutobus.Text = "toolStripButton1";
+            this.tsbNoviAutobus.Text = "Dodaj novi autobus";
             this.tsbNoviAutobus.ToolTipText = "Dodaj novi autobus";
             this.tsbNoviAutobus.Click += new System.EventHandler(this.tsbNoviAutobus_Click);
             // 
@@ -139,6 +139,7 @@
             this.tsbBrisi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBrisi.Name = "tsbBrisi";
             this.tsbBrisi.Size = new System.Drawing.Size(23, 22);
+            this.tsbBrisi.Text = "Brisanje autobusa";
             this.tsbBrisi.ToolTipText = "Izbriši selektirane autobuse";
             this.tsbBrisi.Click += new System.EventHandler(this.tsbBrisi_Click);
             // 
@@ -149,9 +150,10 @@
             this.ClientSize = new System.Drawing.Size(657, 283);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lvAutobusi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PregledAutobusa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PregledAutobusa";
+            this.Text = "Pregled autobusa";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

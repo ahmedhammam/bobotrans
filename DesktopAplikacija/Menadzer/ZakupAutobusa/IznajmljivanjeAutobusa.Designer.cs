@@ -74,7 +74,7 @@
             // 
             // colSifra
             // 
-            this.colSifra.Text = "Sifra";
+            this.colSifra.Text = "Šifra";
             this.colSifra.Width = 37;
             // 
             // colIme
@@ -84,7 +84,7 @@
             // 
             // colPocetak
             // 
-            this.colPocetak.Text = "Pocetak";
+            this.colPocetak.Text = "Početak";
             this.colPocetak.Width = 68;
             // 
             // colKraj
@@ -122,6 +122,7 @@
             this.tsbNovi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNovi.Name = "tsbNovi";
             this.tsbNovi.Size = new System.Drawing.Size(23, 22);
+            this.tsbNovi.Text = "Novi zakup";
             this.tsbNovi.ToolTipText = "Dodaj novi zakup";
             this.tsbNovi.Click += new System.EventHandler(this.tsbNovi_Click);
             // 
@@ -132,6 +133,7 @@
             this.tsbTekuci.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTekuci.Name = "tsbTekuci";
             this.tsbTekuci.Size = new System.Drawing.Size(23, 22);
+            this.tsbTekuci.Text = "Tekući zakupi";
             this.tsbTekuci.ToolTipText = "Prikazi tekuce zakupe";
             this.tsbTekuci.Click += new System.EventHandler(this.tsbTekuci_Click);
             // 
@@ -142,6 +144,7 @@
             this.tsbProsli.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbProsli.Name = "tsbProsli";
             this.tsbProsli.Size = new System.Drawing.Size(23, 22);
+            this.tsbProsli.Text = "Prošli zakupi";
             this.tsbProsli.ToolTipText = "Prikazi prosle zakupe";
             this.tsbProsli.Click += new System.EventHandler(this.tsbProsli_Click);
             // 
@@ -152,7 +155,7 @@
             this.tsbBuduci.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBuduci.Name = "tsbBuduci";
             this.tsbBuduci.Size = new System.Drawing.Size(23, 22);
-            this.tsbBuduci.Text = "toolStripButton1";
+            this.tsbBuduci.Text = "Budući zakupi";
             this.tsbBuduci.ToolTipText = "Prikazi buduce zakupe";
             this.tsbBuduci.Click += new System.EventHandler(this.tsbBuduci_Click);
             // 
@@ -163,6 +166,7 @@
             this.ClientSize = new System.Drawing.Size(455, 269);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gbZakupi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IznajmljivanjeAutobusa";
             this.Text = "Iznajmljivanje autobusa";
             this.gbZakupi.ResumeLayout(false);

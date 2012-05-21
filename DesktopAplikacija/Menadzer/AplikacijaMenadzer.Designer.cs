@@ -249,12 +249,13 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(1090, 344);
             this.MinimumSize = new System.Drawing.Size(1090, 344);
             this.Name = "AplikacijaMenadzer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AplikacijaMenadzer";
+            this.Text = "Bobo Trans-Menadžer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AplikacijaMenadzer_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -30,18 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiserAplikacija));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IstekRegistracije = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.izađiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajIzvještajToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiIzvještajToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.izađiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.informisanjeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.informisanjeOLinijamaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.izvOdIzRedaVožnjeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +60,11 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.Izađi = new System.Windows.Forms.Button();
+            this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IstekRegistracije = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -88,38 +88,6 @@
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(515, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // sifra
-            // 
-            this.sifra.HeaderText = "Id";
-            this.sifra.Name = "sifra";
-            this.sifra.ReadOnly = true;
-            this.sifra.Width = 65;
-            // 
-            // tablice
-            // 
-            this.tablice.HeaderText = "Tablice";
-            this.tablice.Name = "tablice";
-            this.tablice.ReadOnly = true;
-            // 
-            // IstekRegistracije
-            // 
-            this.IstekRegistracije.HeaderText = "Istek registracije";
-            this.IstekRegistracije.Name = "IstekRegistracije";
-            this.IstekRegistracije.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Broj sjedista";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Datum servisa";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 107;
             // 
             // label1
             // 
@@ -163,13 +131,6 @@
             this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem1.Text = "File";
             // 
-            // izađiToolStripMenuItem1
-            // 
-            this.izađiToolStripMenuItem1.Name = "izađiToolStripMenuItem1";
-            this.izađiToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
-            this.izađiToolStripMenuItem1.Text = "Izađi";
-            this.izađiToolStripMenuItem1.Click += new System.EventHandler(this.izađiToolStripMenuItem1_Click);
-            // 
             // kreirajIzvještajToolStripMenuItem1
             // 
             this.kreirajIzvještajToolStripMenuItem1.Name = "kreirajIzvještajToolStripMenuItem1";
@@ -185,6 +146,13 @@
             this.prikažiIzvještajToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
             this.prikažiIzvještajToolStripMenuItem1.Text = "Prikaži izvještaj";
             this.prikažiIzvještajToolStripMenuItem1.Click += new System.EventHandler(this.prikažiIzvještajToolStripMenuItem1_Click);
+            // 
+            // izađiToolStripMenuItem1
+            // 
+            this.izađiToolStripMenuItem1.Name = "izađiToolStripMenuItem1";
+            this.izađiToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
+            this.izađiToolStripMenuItem1.Text = "Izađi";
+            this.izađiToolStripMenuItem1.Click += new System.EventHandler(this.izađiToolStripMenuItem1_Click);
             // 
             // informisanjeToolStripMenuItem1
             // 
@@ -372,13 +340,45 @@
             // Izađi
             // 
             this.Izađi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Izađi.Location = new System.Drawing.Point(449, 249);
+            this.Izađi.Location = new System.Drawing.Point(457, 249);
             this.Izađi.Name = "Izađi";
             this.Izađi.Size = new System.Drawing.Size(75, 23);
             this.Izađi.TabIndex = 9;
             this.Izađi.Text = "Izađi";
             this.Izađi.UseVisualStyleBackColor = true;
             this.Izađi.Click += new System.EventHandler(this.Izađi_Click);
+            // 
+            // sifra
+            // 
+            this.sifra.HeaderText = "Id";
+            this.sifra.Name = "sifra";
+            this.sifra.ReadOnly = true;
+            this.sifra.Width = 65;
+            // 
+            // tablice
+            // 
+            this.tablice.HeaderText = "Tablice";
+            this.tablice.Name = "tablice";
+            this.tablice.ReadOnly = true;
+            // 
+            // IstekRegistracije
+            // 
+            this.IstekRegistracije.HeaderText = "Istek registracije";
+            this.IstekRegistracije.Name = "IstekRegistracije";
+            this.IstekRegistracije.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Broj sjedišta";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Datum servisa";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 107;
             // 
             // ServiserAplikacija
             // 
@@ -391,6 +391,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(560, 999999);
             this.MinimumSize = new System.Drawing.Size(560, 322);
             this.Name = "ServiserAplikacija";
@@ -425,11 +426,6 @@
         private System.Windows.Forms.Button Izađi;
         private System.Windows.Forms.ToolStripMenuItem izađiToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sifra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tablice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IstekRegistracije;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ToolStripMenuItem informisanjeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informisanjeOLinijamaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izvodIzRedaVožnjeToolStripMenuItem;
@@ -446,5 +442,10 @@
         private System.Windows.Forms.ToolStripMenuItem informisanjeOLinijamaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem izvOdIzRedaVožnjeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem najjeftinijiPutToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sifra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tablice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IstekRegistracije;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

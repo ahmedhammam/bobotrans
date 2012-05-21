@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(podaciORezervaciji));
             this.lbSpisakKarti = new System.Windows.Forms.ListView();
             this.imeIPrezime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pocetnaStanica = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,7 +77,7 @@
             this.lbSpisakKarti.Location = new System.Drawing.Point(12, 150);
             this.lbSpisakKarti.MultiSelect = false;
             this.lbSpisakKarti.Name = "lbSpisakKarti";
-            this.lbSpisakKarti.Size = new System.Drawing.Size(615, 211);
+            this.lbSpisakKarti.Size = new System.Drawing.Size(615, 254);
             this.lbSpisakKarti.TabIndex = 22;
             this.lbSpisakKarti.UseCompatibleStateImageBehavior = false;
             this.lbSpisakKarti.View = System.Windows.Forms.View.Details;
@@ -93,7 +94,7 @@
             // 
             // krajnjaStanica
             // 
-            this.krajnjaStanica.Text = "Krajnja Stanica";
+            this.krajnjaStanica.Text = "Krajnja stanica";
             this.krajnjaStanica.Width = 89;
             // 
             // datum
@@ -123,9 +124,9 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(540, 367);
+            this.button1.Location = new System.Drawing.Point(446, 419);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 34);
+            this.button1.Size = new System.Drawing.Size(87, 22);
             this.button1.TabIndex = 23;
             this.button1.Text = "Briši";
             this.button1.UseVisualStyleBackColor = true;
@@ -249,7 +250,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(540, 110);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 34);
+            this.button2.Size = new System.Drawing.Size(87, 21);
             this.button2.TabIndex = 49;
             this.button2.Text = "Pretraži";
             this.button2.UseVisualStyleBackColor = true;
@@ -258,9 +259,9 @@
             // btnIzlaz
             // 
             this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIzlaz.Location = new System.Drawing.Point(540, 407);
+            this.btnIzlaz.Location = new System.Drawing.Point(540, 419);
             this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(87, 34);
+            this.btnIzlaz.Size = new System.Drawing.Size(87, 22);
             this.btnIzlaz.TabIndex = 50;
             this.btnIzlaz.Text = "Izađi";
             this.btnIzlaz.UseVisualStyleBackColor = true;
@@ -269,9 +270,9 @@
             // btnStampajKarte
             // 
             this.btnStampajKarte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStampajKarte.Location = new System.Drawing.Point(447, 367);
+            this.btnStampajKarte.Location = new System.Drawing.Point(350, 419);
             this.btnStampajKarte.Name = "btnStampajKarte";
-            this.btnStampajKarte.Size = new System.Drawing.Size(87, 34);
+            this.btnStampajKarte.Size = new System.Drawing.Size(87, 22);
             this.btnStampajKarte.TabIndex = 51;
             this.btnStampajKarte.Text = "Štampaj karte";
             this.btnStampajKarte.UseVisualStyleBackColor = true;
@@ -289,8 +290,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbSpisakKarti);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(655, 339);
             this.Name = "podaciORezervaciji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kupci karti";
             this.Load += new System.EventHandler(this.podaciORezervaciji_Load);
             this.groupBox2.ResumeLayout(false);

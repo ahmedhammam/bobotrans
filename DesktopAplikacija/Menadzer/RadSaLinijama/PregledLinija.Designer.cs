@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PregledLinija));
             this.lvLinije = new System.Windows.Forms.ListView();
             this.colSifra = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colNaziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -81,7 +82,7 @@
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
             this.tsbAdd.Size = new System.Drawing.Size(23, 22);
-            this.tsbAdd.Text = "toolStripButton1";
+            this.tsbAdd.Text = "Dodaj novu liniju";
             this.tsbAdd.ToolTipText = "Dodaj novu liniju";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -124,6 +125,7 @@
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lvLinije);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(326, 99999);
             this.MinimumSize = new System.Drawing.Size(326, 307);
             this.Name = "PregledLinija";

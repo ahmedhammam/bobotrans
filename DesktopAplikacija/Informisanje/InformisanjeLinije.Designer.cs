@@ -53,7 +53,7 @@
             // btnPrikazi
             // 
             this.btnPrikazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPrikazi.Location = new System.Drawing.Point(245, 363);
+            this.btnPrikazi.Location = new System.Drawing.Point(262, 363);
             this.btnPrikazi.Name = "btnPrikazi";
             this.btnPrikazi.Size = new System.Drawing.Size(75, 23);
             this.btnPrikazi.TabIndex = 3;
@@ -147,7 +147,7 @@
             // btnIzadji
             // 
             this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnIzadji.Location = new System.Drawing.Point(326, 363);
+            this.btnIzadji.Location = new System.Drawing.Point(343, 363);
             this.btnIzadji.Name = "btnIzadji";
             this.btnIzadji.Size = new System.Drawing.Size(75, 23);
             this.btnIzadji.TabIndex = 8;
@@ -162,7 +162,7 @@
             this.lblSifraLinije.Name = "lblSifraLinije";
             this.lblSifraLinije.Size = new System.Drawing.Size(54, 13);
             this.lblSifraLinije.TabIndex = 9;
-            this.lblSifraLinije.Text = "Sifra linije:";
+            this.lblSifraLinije.Text = "Šifra linije:";
             // 
             // groupBox1
             // 
@@ -221,6 +221,7 @@
             this.Controls.Add(this.lblIzborLinije);
             this.Controls.Add(this.cbLinije);
             this.Controls.Add(this.dgvStanice);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(446, 999999974);
             this.MinimumSize = new System.Drawing.Size(446, 327);
             this.Name = "InformisanjeLinije";

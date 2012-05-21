@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreuzimanjeInternetRezervacije));
             this.btnStampaj = new System.Windows.Forms.Button();
             this.tbSifra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,9 +37,9 @@
             // 
             // btnStampaj
             // 
-            this.btnStampaj.Location = new System.Drawing.Point(68, 66);
+            this.btnStampaj.Location = new System.Drawing.Point(90, 66);
             this.btnStampaj.Name = "btnStampaj";
-            this.btnStampaj.Size = new System.Drawing.Size(102, 31);
+            this.btnStampaj.Size = new System.Drawing.Size(80, 21);
             this.btnStampaj.TabIndex = 0;
             this.btnStampaj.Text = "Štampaj";
             this.btnStampaj.UseVisualStyleBackColor = true;
@@ -46,15 +47,15 @@
             // 
             // tbSifra
             // 
-            this.tbSifra.Location = new System.Drawing.Point(68, 28);
+            this.tbSifra.Location = new System.Drawing.Point(49, 28);
             this.tbSifra.Name = "tbSifra";
-            this.tbSifra.Size = new System.Drawing.Size(189, 20);
+            this.tbSifra.Size = new System.Drawing.Size(198, 20);
             this.tbSifra.TabIndex = 44;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 31);
+            this.label3.Location = new System.Drawing.Point(12, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 43;
@@ -64,7 +65,7 @@
             // 
             this.btnIzadji.Location = new System.Drawing.Point(176, 66);
             this.btnIzadji.Name = "btnIzadji";
-            this.btnIzadji.Size = new System.Drawing.Size(81, 31);
+            this.btnIzadji.Size = new System.Drawing.Size(71, 21);
             this.btnIzadji.TabIndex = 45;
             this.btnIzadji.Text = "Izađi";
             this.btnIzadji.UseVisualStyleBackColor = true;
@@ -74,16 +75,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 120);
+            this.ClientSize = new System.Drawing.Size(259, 102);
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.tbSifra);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnStampaj);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PreuzimanjeInternetRezervacije";
-            this.Text = "Preuzimanje Internet Rezervacije";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Preuzimanje internet rezervacije";
             this.ResumeLayout(false);
             this.PerformLayout();
 

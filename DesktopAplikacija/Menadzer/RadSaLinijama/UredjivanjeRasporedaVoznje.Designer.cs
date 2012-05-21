@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UredjivanjeRasporedaVoznje));
             this.dgvRasporediVoznji = new System.Windows.Forms.DataGridView();
             this.colSifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDanUSedmici = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,7 +114,7 @@
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 6;
-            this.btnSpasi.Text = "Spasi";
+            this.btnSpasi.Text = "Spremi";
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
@@ -124,7 +125,7 @@
             this.btnBrisi.Name = "btnBrisi";
             this.btnBrisi.Size = new System.Drawing.Size(75, 23);
             this.btnBrisi.TabIndex = 7;
-            this.btnBrisi.Text = "Brisi red";
+            this.btnBrisi.Text = "Briši red";
             this.btnBrisi.UseVisualStyleBackColor = true;
             this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
             // 
@@ -137,8 +138,10 @@
             this.Controls.Add(this.btnSpasi);
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.gbRasporedi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UredjivanjeRasporedaVoznje";
-            this.Text = "UredjivanjeRasporedaVoznje";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Uređivanje rasporeda vožnje";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRasporediVoznji)).EndInit();
             this.gbRasporedi.ResumeLayout(false);
             this.ResumeLayout(false);

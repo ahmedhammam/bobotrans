@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aplikacijaPoruke));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaPorukaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -198,7 +199,7 @@
             this.tsbPretragaPoImenu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPretragaPoImenu.Name = "tsbPretragaPoImenu";
             this.tsbPretragaPoImenu.Size = new System.Drawing.Size(23, 22);
-            this.tsbPretragaPoImenu.Text = "Pretrazi primljene po imenu";
+            this.tsbPretragaPoImenu.Text = "Pretraži primljene po imenu";
             this.tsbPretragaPoImenu.Click += new System.EventHandler(this.tsbPretragaPoImenu_Click);
             // 
             // tsbPretragaPoslanih
@@ -208,7 +209,7 @@
             this.tsbPretragaPoslanih.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPretragaPoslanih.Name = "tsbPretragaPoslanih";
             this.tsbPretragaPoslanih.Size = new System.Drawing.Size(23, 22);
-            this.tsbPretragaPoslanih.Text = "Pretrazi poslane po imenu";
+            this.tsbPretragaPoslanih.Text = "Pretraži poslane po imenu";
             this.tsbPretragaPoslanih.Click += new System.EventHandler(this.tsbPretragaPoslanih_Click);
             // 
             // toolStripSeparator3
@@ -223,7 +224,7 @@
             this.tsbIzbrisi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbIzbrisi.Name = "tsbIzbrisi";
             this.tsbIzbrisi.Size = new System.Drawing.Size(23, 22);
-            this.tsbIzbrisi.Text = "Izbrisi oznaceno";
+            this.tsbIzbrisi.Text = "Izbriši označeno";
             this.tsbIzbrisi.Click += new System.EventHandler(this.tsbIzbrisi_Click);
             // 
             // rtbTekst
@@ -240,7 +241,7 @@
             // b_Izadi
             // 
             this.b_Izadi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.b_Izadi.Location = new System.Drawing.Point(378, 427);
+            this.b_Izadi.Location = new System.Drawing.Point(369, 427);
             this.b_Izadi.Name = "b_Izadi";
             this.b_Izadi.Size = new System.Drawing.Size(75, 23);
             this.b_Izadi.TabIndex = 4;
@@ -289,7 +290,6 @@
             this.gbPoruke.Size = new System.Drawing.Size(441, 193);
             this.gbPoruke.TabIndex = 10;
             this.gbPoruke.TabStop = false;
-            this.gbPoruke.Text = "groupBox1";
             // 
             // aplikacijaPoruke
             // 
@@ -301,12 +301,13 @@
             this.Controls.Add(this.rtbTekst);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(478, 900000);
             this.MinimumSize = new System.Drawing.Size(478, 500);
             this.Name = "aplikacijaPoruke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "aplikacijaPoruke";
+            this.Text = "Bobo Trans-Poruke";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

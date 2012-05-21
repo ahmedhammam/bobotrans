@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IzvodIzRedaVoznje));
             this.lblOdabirStanice = new System.Windows.Forms.Label();
             this.cbStanice = new System.Windows.Forms.ComboBox();
             this.dgvIzvodIzRedaVoznje = new System.Windows.Forms.DataGridView();
@@ -73,7 +74,7 @@
             this.dgvIzvodIzRedaVoznje.MultiSelect = false;
             this.dgvIzvodIzRedaVoznje.Name = "dgvIzvodIzRedaVoznje";
             this.dgvIzvodIzRedaVoznje.ReadOnly = true;
-            this.dgvIzvodIzRedaVoznje.Size = new System.Drawing.Size(267, 133);
+            this.dgvIzvodIzRedaVoznje.Size = new System.Drawing.Size(267, 143);
             this.dgvIzvodIzRedaVoznje.TabIndex = 2;
             // 
             // colLinija
@@ -99,7 +100,7 @@
             // btnIzadji
             // 
             this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnIzadji.Location = new System.Drawing.Point(208, 176);
+            this.btnIzadji.Location = new System.Drawing.Point(208, 186);
             this.btnIzadji.Name = "btnIzadji";
             this.btnIzadji.Size = new System.Drawing.Size(75, 23);
             this.btnIzadji.TabIndex = 3;
@@ -116,6 +117,7 @@
             this.Controls.Add(this.dgvIzvodIzRedaVoznje);
             this.Controls.Add(this.cbStanice);
             this.Controls.Add(this.lblOdabirStanice);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(311, 99999);
             this.MinimumSize = new System.Drawing.Size(311, 250);
             this.Name = "IzvodIzRedaVoznje";

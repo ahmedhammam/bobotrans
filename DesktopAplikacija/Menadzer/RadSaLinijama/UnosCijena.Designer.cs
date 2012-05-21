@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnosCijena));
             this.gbCijene = new System.Windows.Forms.GroupBox();
             this.dgvCijene = new System.Windows.Forms.DataGridView();
             this.btnIzadji = new System.Windows.Forms.Button();
@@ -85,7 +86,7 @@
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 5;
-            this.btnSpasi.Text = "Spasi";
+            this.btnSpasi.Text = "Spremi";
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
@@ -98,9 +99,11 @@
             this.Controls.Add(this.btnSpasi);
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.gbCijene);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1487, 673);
             this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "UnosCijena";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unos cijena za novu liniju";
             this.gbCijene.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCijene)).EndInit();

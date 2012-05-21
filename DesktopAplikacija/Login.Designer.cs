@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.l_nazivKorisnika = new System.Windows.Forms.Label();
             this.l_sifra = new System.Windows.Forms.Label();
             this.t_nazivKorisnika = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@
             // l_sifra
             // 
             this.l_sifra.AutoSize = true;
-            this.l_sifra.Location = new System.Drawing.Point(66, 82);
+            this.l_sifra.Location = new System.Drawing.Point(117, 85);
             this.l_sifra.Name = "l_sifra";
             this.l_sifra.Size = new System.Drawing.Size(31, 13);
             this.l_sifra.TabIndex = 1;
@@ -140,6 +141,7 @@
             this.Controls.Add(this.b_izadi);
             this.Controls.Add(this.b_ok);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(409, 260);
             this.MinimizeBox = false;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UredjivanjeStanice));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbNaziv = new System.Windows.Forms.TextBox();
@@ -84,7 +85,7 @@
             this.btnSpasi.Name = "btnSpasi";
             this.btnSpasi.Size = new System.Drawing.Size(75, 23);
             this.btnSpasi.TabIndex = 5;
-            this.btnSpasi.Text = "Spasi";
+            this.btnSpasi.Text = "Spremi";
             this.btnSpasi.UseVisualStyleBackColor = true;
             this.btnSpasi.Click += new System.EventHandler(this.btnSpasi_Click);
             // 
@@ -99,6 +100,7 @@
             this.Controls.Add(this.tbNaziv);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(252, 150);
             this.MinimumSize = new System.Drawing.Size(252, 150);
             this.Name = "UredjivanjeStanice";
