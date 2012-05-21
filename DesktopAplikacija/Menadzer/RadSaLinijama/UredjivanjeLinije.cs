@@ -8,12 +8,21 @@ using System.Text;
 using System.Windows.Forms;
 
 using DAL.Entiteti;
+using DesktopAplikacija.Menadzer;
+using System.Threading;
 
 namespace DesktopAplikacija.Menadzer
 {
     public partial class UredjivanjeLinije : Form
     {
-        
+        public delegate void AddListItem();
+        public AddListItem myDelegate;
+     
+        private Thread myThread;
+        public delegate void AddListItem1();
+        public AddListItem1 myDelegate1;
+
+        private Thread myThread1;
         private Linija linija;
         private PregledLinija pozvanOd;
         private DesktopAplikacija.Entiteti.KolekcijaStanica ks = DesktopAplikacija.Entiteti.KolekcijaStanica.Instanca;
@@ -30,7 +39,8 @@ namespace DesktopAplikacija.Menadzer
             InitializeComponent();
             linija = l;
             pozvanOd = pl;
-
+            myDelegate = new AddListItem(AddListItemMethod);
+            myDelegate1 = new AddListItem1(AddListItemMethod1);
             popuniKomponente();
             
         }
@@ -196,10 +206,10 @@ namespace DesktopAplikacija.Menadzer
             }
         }
 
-        private void btnDodajStanicu_Click(object sender, EventArgs e)
+        public void AddListItemMethod()
         {
             redniBroj = cbRedniBroj.SelectedIndex + 1;
-            
+
             try
             {
                 validirajUnosStanica();
@@ -216,12 +226,50 @@ namespace DesktopAplikacija.Menadzer
             lvStanice.Items[redniBroj].SubItems.Add(odabranaStanica.Mjesto);
             lvStanice.Items[redniBroj].SubItems.Add(trajanjeDoDolaska.ToString());
             lvStanice.Items[redniBroj].SubItems.Add(trajanjeDoPolaska.ToString());
+            updateDgvCijene(redniBroj, trajanjeDoPolaska, trajanjeDoDolaska, odabranaStanica);
+            dodanaStanica = true;
+            btnDodajStanicu.Enabled = false;
+            btnBrisiStanicu.Enabled = false;
+        }
 
+        private void ThreadFunction()
+        {
+            MyThreadClass myThreadClassObject = new MyThreadClass(this);
+            myThreadClassObject.Run();
+        }
+
+        public void AddListItemMethod1()
+        {
+            redniBroj = cbRedniBroj.SelectedIndex + 1;
+
+            try
+            {
+                validirajUnosStanica();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message);
+                return;
+            }
+            odabranaStanica = moguceStanice[cbStanice.SelectedIndex];
 
             updateDgvCijene(redniBroj, trajanjeDoPolaska, trajanjeDoDolaska, odabranaStanica);
             dodanaStanica = true;
             btnDodajStanicu.Enabled = false;
             btnBrisiStanicu.Enabled = false;
+        }
+
+        private void ThreadFunction1()
+        {
+            MyThreadClass myThreadClassObject = new MyThreadClass(this);
+            myThreadClassObject.Run();
+        }
+        private void btnDodajStanicu_Click(object sender, EventArgs e)
+        {
+            myThread = new Thread(new ThreadStart(ThreadFunction));
+            myThread.Start();
+            myThread1 = new Thread(new ThreadStart(ThreadFunction1));
+            myThread1.Start();
         }
 
         private bool sadrziSlovo(string s)
@@ -372,5 +420,22 @@ namespace DesktopAplikacija.Menadzer
             urv.Show();
         }
 
+    }
+}
+
+
+public class MyThreadClass
+{
+    UredjivanjeLinije myFormControl1;
+    public MyThreadClass(UredjivanjeLinije myForm)
+    {
+        myFormControl1 = myForm;
+    }
+
+    public void Run()
+    {
+        
+        myFormControl1.Invoke(myFormControl1.myDelegate);
+        myFormControl1.Invoke(myFormControl1.myDelegate);
     }
 }
