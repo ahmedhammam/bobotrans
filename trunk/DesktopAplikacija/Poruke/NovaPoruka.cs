@@ -99,5 +99,10 @@ namespace DesktopAplikacija.Poruke
                 
              }
         }
+
+        private void NovaPoruka_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -243,6 +243,7 @@
             this.Name = "DodajNoviAutobus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novi autobus";
+            this.Load += new System.EventHandler(this.DodajNoviAutobus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudBrojSjedista)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

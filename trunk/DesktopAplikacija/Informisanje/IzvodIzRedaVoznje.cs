@@ -39,5 +39,10 @@ namespace DesktopAplikacija.Informisanje
         {
             this.Close();
         }
+
+        private void IzvodIzRedaVoznje_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

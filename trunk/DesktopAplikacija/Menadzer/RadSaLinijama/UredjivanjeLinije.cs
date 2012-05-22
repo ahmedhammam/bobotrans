@@ -209,7 +209,6 @@ namespace DesktopAplikacija.Menadzer
         public void AddListItemMethod()
         {
             redniBroj = cbRedniBroj.SelectedIndex + 1;
-
             try
             {
                 validirajUnosStanica();
@@ -220,13 +219,12 @@ namespace DesktopAplikacija.Menadzer
                 return;
             }
             odabranaStanica = moguceStanice[cbStanice.SelectedIndex];
-
             lvStanice.Items.Insert(redniBroj, odabranaStanica.SifraStanice.ToString());
             lvStanice.Items[redniBroj].SubItems.Add(odabranaStanica.Naziv);
             lvStanice.Items[redniBroj].SubItems.Add(odabranaStanica.Mjesto);
             lvStanice.Items[redniBroj].SubItems.Add(trajanjeDoDolaska.ToString());
             lvStanice.Items[redniBroj].SubItems.Add(trajanjeDoPolaska.ToString());
-            updateDgvCijene(redniBroj, trajanjeDoPolaska, trajanjeDoDolaska, odabranaStanica);
+            //updateDgvCijene(redniBroj, trajanjeDoPolaska, trajanjeDoDolaska, odabranaStanica);
             dodanaStanica = true;
             btnDodajStanicu.Enabled = false;
             btnBrisiStanicu.Enabled = false;
@@ -234,7 +232,7 @@ namespace DesktopAplikacija.Menadzer
 
         private void ThreadFunction()
         {
-            MyThreadClass myThreadClassObject = new MyThreadClass(this);
+            MyThreadClass myThreadClassObject = new MyThreadClass(this,1);
             myThreadClassObject.Run();
         }
 
@@ -261,7 +259,7 @@ namespace DesktopAplikacija.Menadzer
 
         private void ThreadFunction1()
         {
-            MyThreadClass myThreadClassObject = new MyThreadClass(this);
+            MyThreadClass myThreadClassObject = new MyThreadClass(this,2);
             myThreadClassObject.Run();
         }
         private void btnDodajStanicu_Click(object sender, EventArgs e)
@@ -427,15 +425,18 @@ namespace DesktopAplikacija.Menadzer
 public class MyThreadClass
 {
     UredjivanjeLinije myFormControl1;
-    public MyThreadClass(UredjivanjeLinije myForm)
+    int _odabir;
+    public MyThreadClass(UredjivanjeLinije myForm, int odabir)
     {
         myFormControl1 = myForm;
+        _odabir = odabir;
     }
 
     public void Run()
     {
-        
+        if (_odabir==1)
         myFormControl1.Invoke(myFormControl1.myDelegate);
-        myFormControl1.Invoke(myFormControl1.myDelegate);
+        else
+        myFormControl1.Invoke(myFormControl1.myDelegate1);
     }
 }

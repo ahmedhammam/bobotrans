@@ -89,5 +89,10 @@ namespace DesktopAplikacija.Menadzer
             
             }
         }
+
+        private void DodajNoviAutobus_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

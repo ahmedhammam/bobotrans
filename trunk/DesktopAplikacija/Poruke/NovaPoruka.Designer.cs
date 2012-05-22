@@ -164,6 +164,7 @@
             this.Name = "NovaPoruka";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nova poruka";
+            this.Load += new System.EventHandler(this.NovaPoruka_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

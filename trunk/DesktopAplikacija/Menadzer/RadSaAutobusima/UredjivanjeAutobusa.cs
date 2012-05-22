@@ -174,5 +174,10 @@ namespace DesktopAplikacija.Menadzer
         {
 
         }
+
+        private void UredjivanjeAutobusa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

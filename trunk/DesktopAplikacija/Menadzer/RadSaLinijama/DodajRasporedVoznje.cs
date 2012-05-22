@@ -191,5 +191,10 @@ namespace DesktopAplikacija.Menadzer
                 Close();
             }
         }
+
+        private void DodajRasporedVoznje_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
