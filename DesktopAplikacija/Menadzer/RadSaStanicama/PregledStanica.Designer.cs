@@ -93,7 +93,7 @@
             this.tsbNovaStanica.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNovaStanica.Name = "tsbNovaStanica";
             this.tsbNovaStanica.Size = new System.Drawing.Size(23, 22);
-            this.tsbNovaStanica.Text = "toolStripButton1";
+            this.tsbNovaStanica.Text = "Uređivanje stanica";
             this.tsbNovaStanica.Click += new System.EventHandler(this.tsbNovaStanica_Click);
             // 
             // tsbBrisi
@@ -103,7 +103,7 @@
             this.tsbBrisi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBrisi.Name = "tsbBrisi";
             this.tsbBrisi.Size = new System.Drawing.Size(23, 22);
-            this.tsbBrisi.Text = "toolStripButton2";
+            this.tsbBrisi.Text = "Brisane stanica";
             this.tsbBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
             // 
             // btnIzaji

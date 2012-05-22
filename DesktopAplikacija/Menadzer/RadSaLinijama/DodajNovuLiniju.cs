@@ -267,5 +267,10 @@ namespace DesktopAplikacija.Menadzer
             Close();
             
         }
+
+        private void DodajNovuLiniju_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

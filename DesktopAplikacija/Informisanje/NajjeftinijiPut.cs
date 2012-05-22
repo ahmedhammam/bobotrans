@@ -38,5 +38,10 @@ namespace DesktopAplikacija.Informisanje
             tbCijena.Text = najjeftinijiPut.Cijena.ToString();
             rtbOpis.Text = najjeftinijiPut.OpisPuta;
         }
+
+        private void NajjeftinijiPut_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

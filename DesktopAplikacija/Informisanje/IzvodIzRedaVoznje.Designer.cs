@@ -123,6 +123,7 @@
             this.Name = "IzvodIzRedaVoznje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izvod iz reda vožnje";
+            this.Load += new System.EventHandler(this.IzvodIzRedaVoznje_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIzvodIzRedaVoznje)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

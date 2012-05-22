@@ -143,6 +143,7 @@
             this.Name = "DodajRasporedVoznje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje rasporeda vožnje";
+            this.Load += new System.EventHandler(this.DodajRasporedVoznje_Load);
             this.gbRasporedi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRasporediVoznji)).EndInit();
             this.ResumeLayout(false);

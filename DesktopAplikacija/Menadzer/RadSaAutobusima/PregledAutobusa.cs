@@ -110,5 +110,10 @@ namespace DesktopAplikacija.Menadzer
             }
         }
 
+        private void PregledAutobusa_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

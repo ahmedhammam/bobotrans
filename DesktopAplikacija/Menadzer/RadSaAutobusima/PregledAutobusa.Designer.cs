@@ -154,6 +154,7 @@
             this.Name = "PregledAutobusa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pregled autobusa";
+            this.Load += new System.EventHandler(this.PregledAutobusa_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

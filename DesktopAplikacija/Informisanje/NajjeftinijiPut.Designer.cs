@@ -179,6 +179,7 @@
             this.Name = "NajjeftinijiPut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Najjeftiniji put";
+            this.Load += new System.EventHandler(this.NajjeftinijiPut_Load);
             this.gbOdabir.ResumeLayout(false);
             this.gbOdabir.PerformLayout();
             this.ResumeLayout(false);
