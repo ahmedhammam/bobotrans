@@ -111,7 +111,7 @@
             this.tsbBuduci});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(455, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(444, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -163,10 +163,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 269);
+            this.ClientSize = new System.Drawing.Size(444, 269);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gbZakupi);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(460, 9999);
+            this.MinimumSize = new System.Drawing.Size(460, 307);
             this.Name = "IznajmljivanjeAutobusa";
             this.Text = "Iznajmljivanje autobusa";
             this.gbZakupi.ResumeLayout(false);

@@ -62,6 +62,8 @@
             this.dgvCijene.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvCijene.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCijene.Location = new System.Drawing.Point(7, 20);
+            this.dgvCijene.MaximumSize = new System.Drawing.Size(521, 191);
+            this.dgvCijene.MinimumSize = new System.Drawing.Size(521, 191);
             this.dgvCijene.Name = "dgvCijene";
             this.dgvCijene.RowHeadersWidth = 180;
             this.dgvCijene.Size = new System.Drawing.Size(521, 191);
@@ -100,7 +102,7 @@
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.gbCijene);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1487, 673);
+            this.MaximumSize = new System.Drawing.Size(99999, 99999);
             this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "UnosCijena";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

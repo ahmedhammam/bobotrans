@@ -46,6 +46,8 @@
             // 
             // lvAutobusi
             // 
+            this.lvAutobusi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.lvAutobusi.CheckBoxes = true;
             this.lvAutobusi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colSifra,
@@ -112,12 +114,16 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNoviAutobus,
             this.tsbBrisi});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(657, 25);
+            this.toolStrip1.ShowItemToolTips = false;
+            this.toolStrip1.Size = new System.Drawing.Size(58, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -151,6 +157,8 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lvAutobusi);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(673, 99999);
+            this.MinimumSize = new System.Drawing.Size(673, 200);
             this.Name = "PregledAutobusa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pregled autobusa";

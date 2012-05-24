@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OnBarcode.Barcode.BarcodeScanner">
+      <HintPath>D:\Downloads\net_barcode_reader_trial\net_barcode_reader_trial\OnBarcode.Barcode.BarcodeScanner.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,7 +52,7 @@
     </Reference>
     <Reference Include="zxing, Version=1.0.4143.18524, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\zxing.dll</HintPath>
+      <HintPath>D:\Downloads\QR code zynx\trunk\csharp\zxing.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

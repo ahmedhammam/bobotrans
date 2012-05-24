@@ -45,6 +45,9 @@
             // 
             // dgvRasporediVoznji
             // 
+            this.dgvRasporediVoznji.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvRasporediVoznji.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvRasporediVoznji.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRasporediVoznji.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSifra,
@@ -139,6 +142,8 @@
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.gbRasporedi);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(543, 9999);
+            this.MinimumSize = new System.Drawing.Size(543, 339);
             this.Name = "UredjivanjeRasporedaVoznje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uređivanje rasporeda vožnje";

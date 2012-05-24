@@ -10,3 +10,15 @@ D:\OOAD\SVN\trunk\WebServis\bin\QRCodeGenerator.exe
 D:\OOAD\SVN\trunk\WebServis\bin\OnBarcode.Barcode.WinForms.dll
 D:\OOAD\SVN\trunk\WebServis\bin\DesktopAplikacija.pdb
 D:\OOAD\SVN\trunk\WebServis\bin\QRCodeGenerator.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\WebServis.dll
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\WebServis.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\DAL.dll
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\DesktopAplikacija.exe
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\QRCodeGenerator.exe
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\OnBarcode.Barcode.WinForms.dll
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\DAL.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\DesktopAplikacija.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\bin\QRCodeGenerator.pdb
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\obj\Debug\WebServis.dll
+C:\Users\Amer\Desktop\Bobo Trans\trunk\WebServis\obj\Debug\WebServis.pdb
