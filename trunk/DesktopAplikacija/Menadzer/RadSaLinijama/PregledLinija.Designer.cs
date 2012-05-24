@@ -42,6 +42,8 @@
             // 
             // lvLinije
             // 
+            this.lvLinije.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.lvLinije.CheckBoxes = true;
             this.lvLinije.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colSifra,
@@ -98,6 +100,7 @@
             // 
             // btnIzadji
             // 
+            this.btnIzadji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzadji.Location = new System.Drawing.Point(223, 236);
             this.btnIzadji.Name = "btnIzadji";
             this.btnIzadji.Size = new System.Drawing.Size(75, 23);
@@ -108,6 +111,7 @@
             // 
             // btnUredi
             // 
+            this.btnUredi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUredi.Location = new System.Drawing.Point(142, 236);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(75, 23);

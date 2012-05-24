@@ -249,7 +249,15 @@ namespace DAL
                     {
                         for (int j = 0; j < brStanica - i - 1; j++)
                         {
-                            r.Read();
+                            try
+                            {
+                                r.Read();
+                            }
+                            catch(Exception ex)
+                            {
+                                r.Close();
+                                throw ex;
+                            }
                             sifra1 = r.GetInt16("idPrveStanice");
                             sifra2 = r.GetInt16("idDrugeStanice");
                             cijene[i][j] = r.GetDouble("cijena");
@@ -272,8 +280,16 @@ namespace DAL
                 {
                     MySqlDataReader r = c.ExecuteReader();
                     List<long> sifraRasporedaVoznje = new List<long>();
-                    while (r.Read())
-                        sifraRasporedaVoznje.Add(r.GetInt32("idRasporedaVoznje"));
+                    try
+                    {
+                        while (r.Read())
+                            sifraRasporedaVoznje.Add(r.GetInt32("idRasporedaVoznje"));
+                    }
+                    catch(Exception ex)
+                    {
+                        r.Close();
+                        throw ex;
+                    }
                     r.Close();
                     foreach (long sifraR in sifraRasporedaVoznje)
                     {
@@ -294,8 +310,15 @@ namespace DAL
                 try
                 {
                     MySqlDataReader r = c.ExecuteReader();
-                    while (r.Read())
-                        sifraVoznje.Add(r.GetInt32("idVoznje"));
+                    try
+                    {
+                        while (r.Read())
+                            sifraVoznje.Add(r.GetInt32("idVoznje"));
+                    }
+                    catch
+                    {
+                        r.Close();
+                    }
                     r.Close();
                     foreach (long sifraV in sifraVoznje)
                         voznje.Add(DAOFactory.Instanca.getVoznjaDAO().getById(sifraV));
@@ -320,13 +343,22 @@ namespace DAL
                 try
                 {
                     MySqlDataReader r = c.ExecuteReader();
-                    while (r.Read())
+                    try
                     {
-                        stanice.Add(new Stanica(r.GetInt32("idStanice"), r.GetString("naziv"), r.GetString("mjesto")));
-                        trajanjeDoDolaska.Add(r.GetInt32("trajanjeDoDolaska"));
-                        trajanjeDoPolaska.Add(r.GetInt32("trajanjeDoPolaska"));
+                        while (r.Read())
+                        {
+                            stanice.Add(new Stanica(r.GetInt32("idStanice"), r.GetString("naziv"), r.GetString("mjesto")));
+                            trajanjeDoDolaska.Add(r.GetInt32("trajanjeDoDolaska"));
+                            trajanjeDoPolaska.Add(r.GetInt32("trajanjeDoPolaska"));
+                        }
+                        r.Close();
                     }
-                    r.Close();
+                    catch(Exception ex)
+                    {
+                        r.Close();
+                        throw ex;
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -341,14 +373,22 @@ namespace DAL
                 try
                 {
                     MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
+                    try
                     {
-                        sifra = r.GetInt32("id");
-                        r.Close();
-                        return sifra;
+                        if (r.Read())
+                        {
+                            sifra = r.GetInt32("id");
+                            r.Close();
+                            return sifra;
+                        }
+                        else throw
+                         new Exception("nije nadjen nijedan element");
                     }
-                    else throw
-                     new Exception("nije nadjen nijedan element");
+                    catch (Exception ex)
+                    {
+                        r.Close();
+                        throw ex;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -362,14 +402,22 @@ namespace DAL
                 try
                 {
                     MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
+                    try
                     {
-                        string naziv = r.GetString("naziv");
-                        r.Close();
-                        return naziv;
+                        if (r.Read())
+                        {
+                            string naziv = r.GetString("naziv");
+                            r.Close();
+                            return naziv;
+                        }
+                        else throw
+                         new Exception("nije nadjen nijedan element");
                     }
-                    else throw
-                     new Exception("nije nadjen nijedan element");
+                    catch (Exception ex)
+                    {
+                        r.Close();
+                        throw ex;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -386,9 +434,17 @@ namespace DAL
                 {
                     MySqlDataReader r = c.ExecuteReader();
                     List<long> sifre = new List<long>();
-                    while (r.Read())
-                        sifre.Add(r.GetInt32("id"));
-                    r.Close();
+                    try
+                    {
+                        while (r.Read())
+                            sifre.Add(r.GetInt32("id"));
+                        r.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        r.Close();
+                        throw ex;
+                    }
 
                     foreach (long sifra in sifre)
                         linije.Add(getById(sifra));

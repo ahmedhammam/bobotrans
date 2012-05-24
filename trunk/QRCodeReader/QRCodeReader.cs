@@ -10,6 +10,8 @@ using com.google.zxing;
 using com.google.zxing.common;
 using System.Diagnostics;
 
+using OnBarcode.Barcode.BarcodeScanner;
+
 namespace QRCodeReader
 {
     public partial class QRCodeReader : Form
@@ -64,6 +66,7 @@ namespace QRCodeReader
         private void btnUslikaj_Click(object sender, EventArgs e)
         {
             pbSlika.Image = pbCamera.Image;
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -77,8 +80,7 @@ namespace QRCodeReader
             dekodirao = false;
             try
             {
-                Bitmap img2 = (Bitmap) pbSlika.Image;
-
+                Bitmap img2 = (Bitmap)pbCamera.Image;
                 Reader reader = new MultiFormatReader();
                 RGBLuminanceSource source1 = new RGBLuminanceSource(img2, img2.Width, img2.Height);
                 BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source1));
@@ -94,6 +96,7 @@ namespace QRCodeReader
             }
             catch (Exception e1)
             {
+                
                 MessageBox.Show("GRESKA: (vjerovatno je slika lose kvalitete, probaj rotirati) - nisam uspio prepoznati sliku");
             }
         }
@@ -110,6 +113,8 @@ namespace QRCodeReader
             {
                 Bitmap img2 = (Bitmap)pbCamera.Image;
 
+                /*string[] data = BarcodeScanner.Scan(img2, BarcodeType.QRCode);
+                MessageBox.Show(data[0]);*/
                 Reader reader = new MultiFormatReader();
                 RGBLuminanceSource source1 = new RGBLuminanceSource(img2, img2.Width, img2.Height);
                 BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source1));
@@ -125,6 +130,7 @@ namespace QRCodeReader
             }
             catch (Exception e1)
             {
+                Console.WriteLine(e1.Message);
                 Console.WriteLine("GRESKA: (vjerovatno je slika lose kvalitete, probaj rotirati) - tj. nisam uspio prepoznati sliku");
             }
         }

@@ -135,6 +135,8 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lvStanice);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(362, 99999);
+            this.MinimumSize = new System.Drawing.Size(362, 344);
             this.Name = "PregledStanica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pregled stanica";

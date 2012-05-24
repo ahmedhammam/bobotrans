@@ -140,6 +140,8 @@
             this.Controls.Add(this.btnIzadji);
             this.Controls.Add(this.gbRasporedi);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(548, 99999);
+            this.MinimumSize = new System.Drawing.Size(548, 344);
             this.Name = "DodajRasporedVoznje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje rasporeda vožnje";
