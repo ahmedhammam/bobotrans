@@ -37,3 +37,4 @@ D:\OOAD\SVN\trunk\QRCodeReader\obj\x86\Debug\QRCodeReader.pdb
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\bin\Debug\OnBarcode.Barcode.BarcodeScanner.dll
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\bin\Debug\zxing.dll
 C:\Users\Amer\Desktop\Bobo Trans\trunk\QRCodeReader\bin\Debug\zxing.pdb
+D:\OOAD\SVN\trunk\QRCodeReader\bin\Debug\zxing.pdb
