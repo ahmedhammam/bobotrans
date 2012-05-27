@@ -77,7 +77,11 @@ else
 <form name="vracanjeNazad" action="index.php" method="post">
 <input type="submit" value="Nastavi kupovati" />
 </form>
-
 <?php
+if ($_SESSION['brojNarudzbi']>0)
+{
+
 include("formaZaPlacanje.php");
+
+}
 ?>
