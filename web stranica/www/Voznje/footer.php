@@ -1,1 +1,1 @@
-OVO JE FOOTER
+<p>© BoboTrans 2012</p>
