@@ -18,7 +18,6 @@ C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAp
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.serviserAplikacija.resources
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\Amer\Desktop\Bobo Trans\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Form1.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Form1.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.IzmijeniPodatke.resources
 C:\Users\MalaMarina\Desktop\projekatOOAD\trunk\DesktopAplikacija\obj\x86\Debug\DesktopAplikacija.Serviser.KreirajIzvjestaj.resources
