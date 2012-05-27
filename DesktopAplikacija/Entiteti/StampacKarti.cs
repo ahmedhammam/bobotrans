@@ -16,6 +16,12 @@ namespace DesktopAplikacija.Entiteti
     class StampacKarti
     {
         PrintDocument dokumentZaPrintanje;
+
+        public PrintDocument DokumentZaPrintanje
+        {
+            get { return dokumentZaPrintanje; }
+            set { dokumentZaPrintanje = value; }
+        }
         bool saPopustom;
         string tip_kupca;
         string podaci;
