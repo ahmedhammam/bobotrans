@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 using DAL;
+using DesktopAplikacija;
 
 namespace WebServis
 {
@@ -248,6 +249,36 @@ namespace WebServis
                 if (linija.Stanice[i].SifraStanice == sifraStanice) return i;
             }
             return -1;
+        }
+
+        [WebMethod]
+        public double dajCijenuJedneKarte(long sifraLinije, long sifraPocetneStanice, long sifraKrajnjeStanice)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju();
+            DAL.Entiteti.Linija odabranaLinija = d.getDAO.getLinijaDAO().getById(sifraLinije);
+            DAL.Entiteti.Stanica prvaStanica = d.getDAO.getStaniceDAO().getById(sifraPocetneStanice);
+            DAL.Entiteti.Stanica drugaStanica = d.getDAO.getStaniceDAO().getById(sifraKrajnjeStanice);
+            return odabranaLinija.vratiCijenu(prvaStanica, drugaStanica);
+        }
+
+        [WebMethod]
+        public void dodajKupca(string imeKupca, long sifraLinije, long sifraVoznje, long sifraPocetneStanice, long sifraKrajnjeStanice, List<int> sjedista, string kod)
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju();
+            DAL.Entiteti.Linija odabranaLinija = d.getDAO.getLinijaDAO().getById(sifraLinije);
+            DAL.Entiteti.Voznja odabranaVoznja = d.getDAO.getVoznjaDAO().getById(sifraVoznje);
+            DAL.Entiteti.Stanica prvaStanica = d.getDAO.getStaniceDAO().getById(sifraPocetneStanice);
+            DAL.Entiteti.Stanica drugaStanica = d.getDAO.getStaniceDAO().getById(sifraKrajnjeStanice);
+
+            double cijenaKarte = odabranaLinija.vratiCijenu(prvaStanica, drugaStanica);
+            List<double> cijene = new List<double>();
+            for (int i=0;i<sjedista.Count;i++) cijene.Add(cijenaKarte);
+
+            DAL.Entiteti.KupacKarte kupac = new DAL.Entiteti.KupacKarte(imeKupca, prvaStanica, drugaStanica, odabranaVoznja, sjedista, cijene, DateTime.Now);
+            long sifraKupca = d.getDAO.getKupacKarteDAO().create(kupac);
+            d.getDAO.getSifraZaInternetKupovinuDAO().create(new DAL.Entiteti.SifraZaInternetKupovinu(sifraKupca,kod));
         }
     }
 }

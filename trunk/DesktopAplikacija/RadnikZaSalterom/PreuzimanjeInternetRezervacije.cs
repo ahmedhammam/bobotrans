@@ -13,10 +13,13 @@ namespace DesktopAplikacija.RadnikZaSalterom
     public partial class PreuzimanjeInternetRezervacije : Form
     {
         DAL.Entiteti.Korisnik prodavac;
-        public PreuzimanjeInternetRezervacije(DAL.Entiteti.Korisnik prodavac_)
+        aplikacijaSalter pozivaoc;
+        public PreuzimanjeInternetRezervacije(DAL.Entiteti.Korisnik prodavac_, aplikacijaSalter _pozivaoc)
         {
             InitializeComponent();
+
             prodavac = prodavac_;
+            pozivaoc = _pozivaoc;
         }
 
         private void btnIzadji_Click(object sender, EventArgs e)
@@ -43,9 +46,8 @@ namespace DesktopAplikacija.RadnikZaSalterom
                     long idLinije = DAL.DAL.Instanca.getDAO.getVoznjaDAO().dajIdLinije(kupac.Voznja.SifraVoznje);
                     List<DAL.Entiteti.Stanica> stanice = DAL.DAL.Instanca.getDAO.getLinijaDAO().getById(idLinije).Stanice;
                     StampacKarti stampac = new StampacKarti(kupac, stanice, prodavac);
+                    stampac.DokumentZaPrintanje.PrinterSettings = pozivaoc.printDialog.PrinterSettings;
                     stampac.Stampaj();
-                    //Ent
-                    
                 }
                 catch (Exception ex)
                 {
@@ -56,6 +58,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                     long idLinije = DAL.DAL.Instanca.getDAO.getVoznjaDAO().dajIdLinije(kupac.Voznja.SifraVoznje);
                     List<DAL.Entiteti.Stanica> stanice = DAL.DAL.Instanca.getDAO.getLinijaDAO().getById(idLinije).Stanice;
                     StampacKarti stampac = new StampacKarti(kupac, stanice, prodavac);
+                    stampac.DokumentZaPrintanje.PrinterSettings = pozivaoc.printDialog.PrinterSettings;
                     stampac.Stampaj();
                 }
             }

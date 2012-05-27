@@ -7,7 +7,7 @@
 
 <body>
 <?php
-header("location: \\home\\");
+header("location: /home/");
 ?>
 </body>
 </html>

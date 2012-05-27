@@ -1,0 +1,6 @@
+<?php
+include("postavljanjeSesije.php");
+header("location: index.php");
+session_destroy();
+
+?>

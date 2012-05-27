@@ -71,6 +71,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.postavkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stampacToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printDialog = new System.Windows.Forms.PrintDialog();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -80,7 +83,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informisanjeToolStripMenuItem,
-            this.kupciKartiToolStripMenuItem});
+            this.kupciKartiToolStripMenuItem,
+            this.postavkeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(711, 24);
@@ -465,6 +469,25 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Cijena:";
             // 
+            // postavkeToolStripMenuItem
+            // 
+            this.postavkeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stampacToolStripMenuItem});
+            this.postavkeToolStripMenuItem.Name = "postavkeToolStripMenuItem";
+            this.postavkeToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.postavkeToolStripMenuItem.Text = "Postavke";
+            // 
+            // stampacToolStripMenuItem
+            // 
+            this.stampacToolStripMenuItem.Name = "stampacToolStripMenuItem";
+            this.stampacToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stampacToolStripMenuItem.Text = "Štampač";
+            this.stampacToolStripMenuItem.Click += new System.EventHandler(this.stampacToolStripMenuItem_Click);
+            // 
+            // printDialog
+            // 
+            this.printDialog.UseEXDialog = true;
+            // 
             // aplikacijaSalter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,5 +577,8 @@
         private System.Windows.Forms.ToolStripMenuItem prikazKupacaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preuzmiInternetRezervacijuToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripMenuItem postavkeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stampacToolStripMenuItem;
+        public System.Windows.Forms.PrintDialog printDialog;
     }
 }

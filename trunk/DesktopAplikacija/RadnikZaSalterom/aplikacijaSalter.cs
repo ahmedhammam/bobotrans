@@ -338,6 +338,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             d.getDAO.getKupacKarteDAO().create(kupac);
                             MessageBox.Show("Obavljeno");
                             StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji, logovaniKorisnik);
+                            stampac.DokumentZaPrintanje.PrinterSettings = printDialog.PrinterSettings;
                             stampac.Stampaj();
                         }
                         else
@@ -346,6 +347,7 @@ namespace DesktopAplikacija.RadnikZaSalterom
                             d.getDAO.getKupacKarteSPopustomDAO().create(kupac);
                             MessageBox.Show("Obavljeno");
                             StampacKarti stampac = new StampacKarti(kupac, staniceUVoznji, logovaniKorisnik);
+                            stampac.DokumentZaPrintanje.PrinterSettings = printDialog.PrinterSettings;
                             stampac.Stampaj();
                         }
                         updateujBrojSlobodnihSjedista();
@@ -394,8 +396,13 @@ namespace DesktopAplikacija.RadnikZaSalterom
 
         private void otvoriInternetRezervacije()
         {
-            PreuzimanjeInternetRezervacije pIR = new PreuzimanjeInternetRezervacije(logovaniKorisnik);
+            PreuzimanjeInternetRezervacije pIR = new PreuzimanjeInternetRezervacije(logovaniKorisnik,this);
             pIR.Show();
+        }
+
+        private void stampacToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printDialog.ShowDialog();
         }
     }
 }

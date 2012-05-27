@@ -25,3 +25,4 @@ D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.exe
 D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.pdb
 D:\OOAD\SVN\trunk\QRCodeGenerator\obj\x86\Debug\QRCodeGenerator.QRCodeGenerator.resources
+D:\OOAD\SVN\trunk\QRCodeGenerator\bin\Debug\QRCodeGenerator.exe.config
