@@ -1,4 +1,10 @@
 klase i objekti kad se promjenje:)
+=Dijagram klasa=
+
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/Dijagram%20klasa.jpg]
+
+=Dijagram klasa: Dal dio=
+[http://code.google.com/ https://bobotrans.googlecode.com/svn/Dijagram%20klasa%20-%20DAL-dio.jpg]
 
 =Dijagrami interakcije=
 
