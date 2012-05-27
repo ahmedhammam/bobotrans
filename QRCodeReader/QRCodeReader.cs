@@ -10,18 +10,21 @@ using com.google.zxing;
 using com.google.zxing.common;
 using System.Diagnostics;
 
+using System.Threading;
+
 using OnBarcode.Barcode.BarcodeScanner;
 
 namespace QRCodeReader
 {
     public partial class QRCodeReader : Form
     {
-        private WebCam webcam;  // moglo je i bez private jer je po defaultu private
+        private WebCam webcam;
         private bool dekodirao = false;
 
         public QRCodeReader()
         {
             InitializeComponent();
+            BarCodeDetectTimer.Stop();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace QRCodeReader
         private void btnUslikaj_Click(object sender, EventArgs e)
         {
             pbSlika.Image = pbCamera.Image;
-            
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -96,7 +99,6 @@ namespace QRCodeReader
             }
             catch (Exception e1)
             {
-                
                 MessageBox.Show("GRESKA: (vjerovatno je slika lose kvalitete, probaj rotirati) - nisam uspio prepoznati sliku");
             }
         }
@@ -107,14 +109,12 @@ namespace QRCodeReader
             BarCodeDetectTimer.Stop();
         }
 
-        private void BarCodeDetectTimer_Tick(object sender, EventArgs e)
+
+        void skenirajSliku()
         {
             try
             {
                 Bitmap img2 = (Bitmap)pbCamera.Image;
-
-                /*string[] data = BarcodeScanner.Scan(img2, BarcodeType.QRCode);
-                MessageBox.Show(data[0]);*/
                 Reader reader = new MultiFormatReader();
                 RGBLuminanceSource source1 = new RGBLuminanceSource(img2, img2.Width, img2.Height);
                 BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source1));
@@ -123,16 +123,25 @@ namespace QRCodeReader
                 if (!dekodirao)
                 {
                     dekodirao = true;
+                    btnStop_Click(null, null);
                     MessageBox.Show("Dekodirao sam: " + result.Text);
                 }
-                btnStop_Click(null, null);
+                else
+                {
+                    btnStop_Click(null, null);
+                }
 
             }
             catch (Exception e1)
             {
-                Console.WriteLine(e1.Message);
                 Console.WriteLine("GRESKA: (vjerovatno je slika lose kvalitete, probaj rotirati) - tj. nisam uspio prepoznati sliku");
             }
+        }
+
+        private void BarCodeDetectTimer_Tick(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(skenirajSliku));
+            thread.Start();
         }
     }
 }

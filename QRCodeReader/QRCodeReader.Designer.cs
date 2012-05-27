@@ -136,7 +136,7 @@
             // BarCodeDetectTimer
             // 
             this.BarCodeDetectTimer.Enabled = true;
-            this.BarCodeDetectTimer.Interval = 3000;
+            this.BarCodeDetectTimer.Interval = 500;
             this.BarCodeDetectTimer.Tick += new System.EventHandler(this.BarCodeDetectTimer_Tick);
             // 
             // ssStatus
