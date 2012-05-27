@@ -1,1 +1,1 @@
-<p>© BoboTrans 2012</p>
+<p>&copy; BoboTrans 2012</p>
