@@ -1,2 +1,6 @@
 =Dijagram paketa=
 [http://code.google.com https://bobotrans.googlecode.com/svn/Dijagram_Paketa.jpg]
+
+=Dijagram komponenti=
+
+[http://code.google.com https://bobotrans.googlecode.com/svn/Dijagram_Komponenti.jpg]
